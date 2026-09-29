@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
+  <map id="PPA-05" language="process description">
+    <bbox x="-18.00" y="0.00" w="920.00" h="708.24" />
+    <glyph id="comp_plasma_membrane" class="compartment">
+      <label text="Plasma Membrane" />
+      <bbox x="94.52" y="62.00" w="574.26" h="133.65" />
+    </glyph>
+    <glyph id="comp_cytosol" class="compartment">
+      <label text="Cytosol" />
+      <bbox x="48.29" y="173.65" w="666.73" h="464.59" />
+    </glyph>
+    <glyph id="comp_chloroplast_stroma" class="compartment">
+      <label text="Chloroplast Stroma" />
+      <bbox x="14.00" y="285.30" w="735.30" h="245.30" />
+    </glyph>
+    <glyph id="RBOH_BURST" class="complex" compartmentRef="comp_plasma_membrane">
+      <label text="NADPH Oxidases (RBOH)" />
+      <bbox x="120.52" y="102.00" w="171.04" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="RBOH_BURST" compartment="plasma_membrane" mapmanBin="21.4">
+          <ns0:locus>AT5G47910</ns0:locus>
+          <ns0:locus>AT1G64060</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="APOPLAST_H2O2" class="simple chemical" compartmentRef="comp_plasma_membrane">
+      <label text="Apoplastic H2O2" />
+      <bbox x="323.56" y="113.00" w="133.95" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="APOPLAST_H2O2" compartment="plasma_membrane" />
+      </extension>
+    </glyph>
+    <glyph id="METABOLIC_ROS_LEAK" class="simple chemical" compartmentRef="comp_plasma_membrane">
+      <label text="Organellar ROS Leaks" />
+      <bbox x="489.51" y="113.00" w="153.27" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="METABOLIC_ROS_LEAK" compartment="plasma_membrane" />
+      </extension>
+    </glyph>
+    <glyph id="CSD_SOD_CYT" class="complex" compartmentRef="comp_cytosol">
+      <label text="Cu/Zn Superoxide Dismutase" />
+      <bbox x="74.29" y="213.65" w="197.28" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CSD_SOD_CYT" compartment="cytosol" mapmanBin="21.1">
+          <ns0:locus>AT1G08830</ns0:locus>
+          <ns0:locus>AT2G28190</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="FSD_SOD_PLASTID" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Fe Superoxide Dismutase" />
+      <bbox x="303.57" y="224.65" w="174.56" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="FSD_SOD_PLASTID" compartment="cytosol" mapmanBin="21.1">
+          <ns0:locus>AT4G25100</ns0:locus>
+          <ns0:locus>AT5G23310</ns0:locus>
+          <ns0:locus>AT5G51100</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="MSD_SOD_MITO" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Mn Superoxide Dismutase" />
+      <bbox x="510.13" y="224.65" w="178.89" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="MSD_SOD_MITO" compartment="cytosol" mapmanBin="21.1">
+          <ns0:locus>AT3G10920</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="ASCORBATE_PEROXIDASE" class="complex" compartmentRef="comp_chloroplast_stroma">
+      <label text="Ascorbate Peroxidase (APX)" />
+      <bbox x="70.78" y="325.30" w="188.80" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ASCORBATE_PEROXIDASE" compartment="chloroplast_stroma" mapmanBin="21.2">
+          <ns0:locus>AT1G07890</ns0:locus>
+          <ns0:locus>AT3G09640</ns0:locus>
+          <ns0:locus>AT1G77490</ns0:locus>
+          <ns0:locus>AT4G08390</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PEROXIREDOXINS" class="complex" compartmentRef="comp_chloroplast_stroma">
+      <label text="Peroxiredoxins (Prx)" />
+      <bbox x="291.58" y="325.30" w="170.21" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PEROXIREDOXINS" compartment="chloroplast_stroma" mapmanBin="21.2">
+          <ns0:locus>AT3G11630</ns0:locus>
+          <ns0:locus>AT5G06290</ns0:locus>
+          <ns0:locus>AT3G26060</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="CATALASE_SCAVENGING" class="complex" compartmentRef="comp_chloroplast_stroma">
+      <label text="Catalases (CAT)" />
+      <bbox x="493.79" y="325.30" w="198.73" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CATALASE_SCAVENGING" compartment="chloroplast_stroma" mapmanBin="21.3">
+          <ns0:locus>AT1G20630</ns0:locus>
+          <ns0:locus>AT4G35090</ns0:locus>
+          <ns0:locus>AT1G20620</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="MDHAR_ENZYME" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
+      <label text="Monodehydroascorbate Reductase" />
+      <bbox x="40.00" y="447.94" w="230.22" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="MDHAR_ENZYME" compartment="chloroplast_stroma" mapmanBin="21.2">
+          <ns0:locus>AT1G63940</ns0:locus>
+          <ns0:locus>AT3G09940</ns0:locus>
+          <ns0:locus>AT5G03630</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="DHAR_ENZYME" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
+      <label text="Dehydroascorbate Reductase" />
+      <bbox x="302.22" y="447.94" w="199.19" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="DHAR_ENZYME" compartment="chloroplast_stroma" mapmanBin="21.2">
+          <ns0:locus>AT1G19570</ns0:locus>
+          <ns0:locus>AT1G75270</ns0:locus>
+          <ns0:locus>AT5G16710</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="GLUTATHIONE_REDUCTASE" class="complex" compartmentRef="comp_chloroplast_stroma">
+      <label text="Glutathione Reductase (GR)" />
+      <bbox x="533.41" y="436.94" w="189.89" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GLUTATHIONE_REDUCTASE" compartment="chloroplast_stroma" mapmanBin="21.2">
+          <ns0:locus>AT3G24170</ns0:locus>
+          <ns0:locus>AT3G54660</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="THIOREDOXIN_FAMILY" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Thioredoxins (Trx)" />
+      <bbox x="108.09" y="548.59" w="144.00" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="THIOREDOXIN_FAMILY" compartment="cytosol" mapmanBin="21.5">
+          <ns0:locus>AT3G51030</ns0:locus>
+          <ns0:locus>AT5G39950</ns0:locus>
+          <ns0:locus>AT1G03680</ns0:locus>
+          <ns0:locus>AT3G06730</ns0:locus>
+          <ns0:locus>AT2G35010</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="GLUTAREDOXIN_FAMILY" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Glutaredoxins (Grx)" />
+      <bbox x="284.09" y="548.59" w="144.00" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GLUTAREDOXIN_FAMILY" compartment="cytosol" mapmanBin="21.6">
+          <ns0:locus>AT2G30540</ns0:locus>
+          <ns0:locus>AT3G54900</ns0:locus>
+          <ns0:locus>AT4G15660</ns0:locus>
+          <ns0:locus>AT4G15680</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="NPR1_TRANSLOCATION" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="NPR1 Redox Monomerization" />
+      <bbox x="460.09" y="557.59" w="195.12" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="NPR1_TRANSLOCATION" compartment="cytosol" mapmanBin="20.1">
+          <ns0:locus>AT1G64280</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <arc id="arc_0" class="consumption" source="RBOH_BURST" target="APOPLAST_H2O2">
+      <start x="291.56" y="135.82" />
+      <end x="323.56" y="135.82" />
+    </arc>
+    <arc id="arc_1" class="consumption" source="METABOLIC_ROS_LEAK" target="CSD_SOD_CYT">
+      <start x="489.51" y="157.58" />
+      <end x="271.57" y="219.46" />
+    </arc>
+    <arc id="arc_2" class="consumption" source="METABOLIC_ROS_LEAK" target="FSD_SOD_PLASTID">
+      <start x="530.31" y="158.65" />
+      <end x="426.69" y="224.65" />
+    </arc>
+    <arc id="arc_3" class="consumption" source="METABOLIC_ROS_LEAK" target="MSD_SOD_MITO">
+      <start x="572.98" y="158.65" />
+      <end x="592.74" y="224.65" />
+    </arc>
+    <arc id="arc_4" class="consumption" source="FSD_SOD_PLASTID" target="ASCORBATE_PEROXIDASE">
+      <start x="344.72" y="270.30" />
+      <end x="233.55" y="325.30" />
+    </arc>
+    <arc id="arc_5" class="consumption" source="CSD_SOD_CYT" target="ASCORBATE_PEROXIDASE">
+      <start x="170.58" y="281.30" />
+      <end x="167.53" y="325.30" />
+    </arc>
+    <arc id="arc_6" class="consumption" source="ASCORBATE_PEROXIDASE" target="MDHAR_ENZYME">
+      <start x="162.13" y="392.94" />
+      <end x="157.17" y="447.94" />
+    </arc>
+    <arc id="arc_7" class="consumption" source="MDHAR_ENZYME" target="DHAR_ENZYME">
+      <start x="270.22" y="470.77" />
+      <end x="302.22" y="470.77" />
+    </arc>
+    <arc id="arc_8" class="consumption" source="DHAR_ENZYME" target="GLUTATHIONE_REDUCTASE">
+      <start x="501.41" y="470.77" />
+      <end x="533.41" y="470.77" />
+    </arc>
+    <arc id="arc_9" class="catalysis" source="ASCORBATE_PEROXIDASE" target="PEROXIREDOXINS">
+      <start x="259.58" y="359.12" />
+      <end x="291.58" y="359.12" />
+    </arc>
+    <arc id="arc_10" class="consumption" source="PEROXIREDOXINS" target="THIOREDOXIN_FAMILY">
+      <start x="346.64" y="392.94" />
+      <end x="208.36" y="548.59" />
+    </arc>
+    <arc id="arc_11" class="stimulation" source="THIOREDOXIN_FAMILY" target="NPR1_TRANSLOCATION">
+      <start x="252.09" y="580.42" />
+      <end x="460.09" y="580.42" />
+    </arc>
+    <arc id="arc_12" class="consumption" source="METABOLIC_ROS_LEAK" target="CATALASE_SCAVENGING">
+      <start x="568.91" y="158.65" />
+      <end x="589.07" y="325.30" />
+    </arc>
+  </map>
+</sbgn>

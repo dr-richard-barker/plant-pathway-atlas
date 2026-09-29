@@ -1,6 +1,6 @@
-.PHONY: all test maps cache zenodo abai clean serve
+.PHONY: all test maps cache zenodo site abai clean serve
 
-all: maps cache zenodo abai test
+all: maps cache zenodo site abai test
 
 maps:
 	.venv/bin/python scripts/compile_maps.py
@@ -10,6 +10,9 @@ cache:
 
 zenodo:
 	.venv/bin/python scripts/prepare_zenodo.py
+
+site:
+	.venv/bin/python scripts/build_site.py
 
 abai:
 	.venv/bin/python scripts/run_abai_qc_screen.py

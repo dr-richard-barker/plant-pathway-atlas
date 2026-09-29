@@ -1,0 +1,487 @@
+{
+  "id": "PPA-05",
+  "title": "Reactive Oxygen Species (ROS) & Redox Homeostasis",
+  "subtitle": "Superoxide generation, dismutation, the Foyer-Halliwell-Asada cycle, catalases, and thioredoxin relays",
+  "caption": "Spatial and biochemical architecture of plant reactive oxygen species (ROS) metabolism. Covers apoplastic oxidative bursts catalyzed by respiratory burst oxidase homologs (RBOHD/F), superoxide dismutation by compartment-specific SOD isoforms (Cu/Zn-SOD, Fe-SOD, Mn-SOD), peroxide detoxification via the ascorbate-glutathione cycle (APX, MDHAR, DHAR, GR) and peroxisomal catalases, and downstream thioredoxin/glutaredoxin redox switches.",
+  "species_anchor": "arabidopsis_thaliana",
+  "nodes": [
+    {
+      "id": "RBOH_BURST",
+      "label": "NADPH Oxidases (RBOH)",
+      "kind": "complex",
+      "compartment": "plasma_membrane",
+      "mapman_bin": "21.4",
+      "loci": [
+        "AT5G47910",
+        "AT1G64060"
+      ],
+      "subunits": [
+        {
+          "symbol": "RBOHD",
+          "locus": "AT5G47910"
+        },
+        {
+          "symbol": "RBOHF",
+          "locus": "AT1G64060"
+        }
+      ]
+    },
+    {
+      "id": "APOPLAST_H2O2",
+      "label": "Apoplastic H2O2",
+      "kind": "metabolite",
+      "compartment": "plasma_membrane",
+      "mapman_bin": "",
+      "loci": [],
+      "subunits": []
+    },
+    {
+      "id": "METABOLIC_ROS_LEAK",
+      "label": "Organellar ROS Leaks",
+      "kind": "metabolite",
+      "compartment": "plasma_membrane",
+      "mapman_bin": "",
+      "loci": [],
+      "subunits": []
+    },
+    {
+      "id": "CSD_SOD_CYT",
+      "label": "Cu/Zn Superoxide Dismutase",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "21.1",
+      "loci": [
+        "AT1G08830",
+        "AT2G28190"
+      ],
+      "subunits": [
+        {
+          "symbol": "CSD1",
+          "locus": "AT1G08830"
+        },
+        {
+          "symbol": "CSD2",
+          "locus": "AT2G28190"
+        }
+      ]
+    },
+    {
+      "id": "FSD_SOD_PLASTID",
+      "label": "Fe Superoxide Dismutase",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "21.1",
+      "loci": [
+        "AT4G25100",
+        "AT5G23310",
+        "AT5G51100"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "MSD_SOD_MITO",
+      "label": "Mn Superoxide Dismutase",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "21.1",
+      "loci": [
+        "AT3G10920"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "ASCORBATE_PEROXIDASE",
+      "label": "Ascorbate Peroxidase (APX)",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "21.2",
+      "loci": [
+        "AT1G07890",
+        "AT3G09640",
+        "AT1G77490",
+        "AT4G08390"
+      ],
+      "subunits": [
+        {
+          "symbol": "APX1",
+          "locus": "AT1G07890"
+        },
+        {
+          "symbol": "APX2",
+          "locus": "AT3G09640"
+        },
+        {
+          "symbol": "tAPX",
+          "locus": "AT1G77490"
+        },
+        {
+          "symbol": "sAPX",
+          "locus": "AT4G08390"
+        }
+      ]
+    },
+    {
+      "id": "PEROXIREDOXINS",
+      "label": "Peroxiredoxins (Prx)",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "21.2",
+      "loci": [
+        "AT3G11630",
+        "AT5G06290",
+        "AT3G26060"
+      ],
+      "subunits": [
+        {
+          "symbol": "2CysPrxA",
+          "locus": "AT3G11630"
+        },
+        {
+          "symbol": "2CysPrxB",
+          "locus": "AT5G06290"
+        },
+        {
+          "symbol": "PrxQ",
+          "locus": "AT3G26060"
+        }
+      ]
+    },
+    {
+      "id": "CATALASE_SCAVENGING",
+      "label": "Catalases (CAT)",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "21.3",
+      "loci": [
+        "AT1G20630",
+        "AT4G35090",
+        "AT1G20620"
+      ],
+      "subunits": [
+        {
+          "symbol": "CAT1",
+          "locus": "AT1G20630"
+        },
+        {
+          "symbol": "CAT2",
+          "locus": "AT4G35090"
+        },
+        {
+          "symbol": "CAT3",
+          "locus": "AT1G20620"
+        }
+      ]
+    },
+    {
+      "id": "MDHAR_ENZYME",
+      "label": "Monodehydroascorbate Reductase",
+      "kind": "simple",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "21.2",
+      "loci": [
+        "AT1G63940",
+        "AT3G09940",
+        "AT5G03630"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "DHAR_ENZYME",
+      "label": "Dehydroascorbate Reductase",
+      "kind": "simple",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "21.2",
+      "loci": [
+        "AT1G19570",
+        "AT1G75270",
+        "AT5G16710"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "GLUTATHIONE_REDUCTASE",
+      "label": "Glutathione Reductase (GR)",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "21.2",
+      "loci": [
+        "AT3G24170",
+        "AT3G54660"
+      ],
+      "subunits": [
+        {
+          "symbol": "GR1",
+          "locus": "AT3G24170"
+        },
+        {
+          "symbol": "GR2",
+          "locus": "AT3G54660"
+        }
+      ]
+    },
+    {
+      "id": "THIOREDOXIN_FAMILY",
+      "label": "Thioredoxins (Trx)",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "21.5",
+      "loci": [
+        "AT3G51030",
+        "AT5G39950",
+        "AT1G03680",
+        "AT3G06730",
+        "AT2G35010"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "GLUTAREDOXIN_FAMILY",
+      "label": "Glutaredoxins (Grx)",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "21.6",
+      "loci": [
+        "AT2G30540",
+        "AT3G54900",
+        "AT4G15660",
+        "AT4G15680"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "NPR1_TRANSLOCATION",
+      "label": "NPR1 Redox Monomerization",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "20.1",
+      "loci": [
+        "AT1G64280"
+      ],
+      "subunits": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "RBOH_BURST",
+      "to": "APOPLAST_H2O2",
+      "start": [
+        291.5605,
+        135.824
+      ],
+      "end": [
+        323.5605,
+        135.824
+      ],
+      "class": "flux",
+      "label": "Superoxide -> H2O2"
+    },
+    {
+      "from": "METABOLIC_ROS_LEAK",
+      "to": "CSD_SOD_CYT",
+      "start": [
+        489.512,
+        157.5832934198227
+      ],
+      "end": [
+        271.5709375,
+        219.46420328040097
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "METABOLIC_ROS_LEAK",
+      "to": "FSD_SOD_PLASTID",
+      "start": [
+        530.311221544497,
+        158.648
+      ],
+      "end": [
+        426.68515345550304,
+        224.648
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "METABOLIC_ROS_LEAK",
+      "to": "MSD_SOD_MITO",
+      "start": [
+        572.9797954777515,
+        158.648
+      ],
+      "end": [
+        592.7381420222486,
+        224.648
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "FSD_SOD_PLASTID",
+      "to": "ASCORBATE_PEROXIDASE",
+      "start": [
+        344.7166789250591,
+        270.296
+      ],
+      "end": [
+        233.5486854041273,
+        325.296
+      ],
+      "class": "flux",
+      "label": "H2O2"
+    },
+    {
+      "from": "CSD_SOD_CYT",
+      "to": "ASCORBATE_PEROXIDASE",
+      "start": [
+        170.58219171413728,
+        281.296
+      ],
+      "end": [
+        167.52926141086272,
+        325.296
+      ],
+      "class": "flux",
+      "label": "H2O2"
+    },
+    {
+      "from": "ASCORBATE_PEROXIDASE",
+      "to": "MDHAR_ENZYME",
+      "start": [
+        162.130370342505,
+        392.94399999999996
+      ],
+      "end": [
+        157.16758901749245,
+        447.94399999999996
+      ],
+      "class": "flux",
+      "label": "MDHA"
+    },
+    {
+      "from": "MDHAR_ENZYME",
+      "to": "DHAR_ENZYME",
+      "start": [
+        270.21624999999995,
+        470.768
+      ],
+      "end": [
+        302.21624999999995,
+        470.768
+      ],
+      "class": "flux",
+      "label": "DHA"
+    },
+    {
+      "from": "DHAR_ENZYME",
+      "to": "GLUTATHIONE_REDUCTASE",
+      "start": [
+        501.4106249999999,
+        470.768
+      ],
+      "end": [
+        533.410625,
+        470.768
+      ],
+      "class": "flux",
+      "label": "GSSG -> GSH"
+    },
+    {
+      "from": "ASCORBATE_PEROXIDASE",
+      "to": "PEROXIREDOXINS",
+      "start": [
+        259.583015625,
+        359.12
+      ],
+      "end": [
+        291.583015625,
+        359.12
+      ],
+      "class": "catalysis",
+      "label": ""
+    },
+    {
+      "from": "PEROXIREDOXINS",
+      "to": "THIOREDOXIN_FAMILY",
+      "start": [
+        346.6395611488685,
+        392.94399999999996
+      ],
+      "end": [
+        208.36442153495764,
+        548.592
+      ],
+      "class": "flux",
+      "label": "Disulfide exchange"
+    },
+    {
+      "from": "THIOREDOXIN_FAMILY",
+      "to": "NPR1_TRANSLOCATION",
+      "start": [
+        252.09249999999997,
+        580.4159999999999
+      ],
+      "end": [
+        460.0925,
+        580.4159999999999
+      ],
+      "class": "activation",
+      "label": "Monomerization"
+    },
+    {
+      "from": "METABOLIC_ROS_LEAK",
+      "to": "CATALASE_SCAVENGING",
+      "start": [
+        568.9077501763355,
+        158.648
+      ],
+      "end": [
+        589.0651938928597,
+        325.296
+      ],
+      "class": "flux",
+      "label": "Peroxisomal H2O2"
+    }
+  ],
+  "total_nodes": 15,
+  "distinct_loci": 36,
+  "loci_list": [
+    "AT1G03680",
+    "AT1G07890",
+    "AT1G08830",
+    "AT1G19570",
+    "AT1G20620",
+    "AT1G20630",
+    "AT1G63940",
+    "AT1G64060",
+    "AT1G64280",
+    "AT1G75270",
+    "AT1G77490",
+    "AT2G28190",
+    "AT2G30540",
+    "AT2G35010",
+    "AT3G06730",
+    "AT3G09640",
+    "AT3G09940",
+    "AT3G10920",
+    "AT3G11630",
+    "AT3G24170",
+    "AT3G26060",
+    "AT3G51030",
+    "AT3G54660",
+    "AT3G54900",
+    "AT4G08390",
+    "AT4G15660",
+    "AT4G15680",
+    "AT4G25100",
+    "AT4G35090",
+    "AT5G03630",
+    "AT5G06290",
+    "AT5G16710",
+    "AT5G23310",
+    "AT5G39950",
+    "AT5G47910",
+    "AT5G51100"
+  ]
+}

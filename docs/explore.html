@@ -37,9 +37,9 @@
     <a href="explore.html" class="btn active">Explore Your Data</a>
     <a href="spatial.html" class="btn">ggPlant Spatial Anatomy</a>
     <span class="tab-label">Data & Specs:</span>
-    <a href="../catalog/manifest.json" class="btn">Catalog Manifest</a>
-    <a href="../catalog/orthologs.json" class="btn">Orthology Matrix</a>
-    <a href="../CITATION.cff" class="btn">Citation (CFF)</a>
+    <a href="catalog/manifest.json" class="btn">Catalog Manifest</a>
+    <a href="catalog/orthologs.json" class="btn">Orthology Matrix</a>
+    <a href="CITATION.cff" class="btn">Citation (CFF)</a>
     <span class="tab-label">Links:</span>
     <a href="https://github.com/dr-richard-barker/plant-pathway-atlas" class="btn primary">GitHub Code</a>
   </nav>
@@ -156,14 +156,14 @@
   const cachedSvgs = new Map();
 
   // Load orthology matrix
-  fetch('../catalog/orthologs.json')
+  fetch('catalog/orthologs.json')
     .then(r => r.json())
     .then(data => { cachedOrthologs = data; })
     .catch(err => console.warn('Could not load orthologs.json:', err));
 
   async function loadMapSvg(mapId) {
     if (!cachedSvgs.has(mapId)) {
-      const resp = await fetch(`../maps/svg/${mapId}.svg`);
+      const resp = await fetch(`maps/svg/${mapId}.svg`);
       if (!resp.ok) throw new Error(`Failed to load SVG for ${mapId}`);
       cachedSvgs.set(mapId, await resp.text());
     }
@@ -172,7 +172,7 @@
 
   async function loadSidecar(mapId) {
     if (!cachedSidecars.has(mapId)) {
-      const resp = await fetch(`../catalog/sidecars/${mapId}.json`);
+      const resp = await fetch(`catalog/sidecars/${mapId}.json`);
       if (!resp.ok) throw new Error(`Failed to load sidecar for ${mapId}`);
       cachedSidecars.set(mapId, await resp.json());
     }

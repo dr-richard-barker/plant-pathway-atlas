@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 708" width="920" height="708" data-theme="dark" data-map-id="PPA-05"><defs><style>
+:root {
+  --ppa-bg: #ffffff;
+  --ppa-ink: #0f172a;
+  --ppa-ink-soft: #475569;
+  --ppa-node-fill: #f8fafc;
+  --ppa-node-stroke: #1e293b;
+  --ppa-hairline: #cbd5e1;
+  --ppa-edge: #475569;
+  --ppa-compartment-fill: rgba(15, 23, 42, 0.035);
+  --ppa-compartment-stroke: rgba(15, 23, 42, 0.22);
+  --ppa-accent: #0284c7;
+  --ppa-up: #D55E00;
+  --ppa-down: #0072B2;
+}
+:root[data-theme="dark"] {
+  --ppa-bg: #0b0f17;
+  --ppa-ink: #f1f5f9;
+  --ppa-ink-soft: #94a3b8;
+  --ppa-node-fill: #151c28;
+  --ppa-node-stroke: #cbd5e1;
+  --ppa-hairline: #334155;
+  --ppa-edge: #94a3b8;
+  --ppa-compartment-fill: rgba(255, 255, 255, 0.04);
+  --ppa-compartment-stroke: rgba(255, 255, 255, 0.25);
+  --ppa-accent: #38bdf8;
+  --ppa-up: #ea580c;
+  --ppa-down: #38bdf8;
+}
+
+.ppa-canvas { fill: var(--ppa-bg, #ffffff); }
+text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: var(--ppa-ink); }
+.ppa-title { font-size: 20.0px; font-weight: 700; fill: var(--ppa-ink); }
+.ppa-subtitle { font-size: 12.0px; fill: var(--ppa-ink-soft); }
+.ppa-caption { font-size: 11.0px; fill: var(--ppa-ink-soft); line-height: 1.4; }
+.ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
+.ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
+.ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
+.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+
+.ppa-compartment-band {
+  fill: var(--ppa-compartment-fill);
+  stroke: var(--ppa-compartment-stroke);
+  stroke-width: 1.5px;
+  stroke-dasharray: 6 3;
+  rx: 10px;
+}
+.ppa-compartment-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  fill: var(--ppa-ink-soft);
+}
+
+.ppa-node {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ppa-node:hover {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.ppa-node rect, .ppa-node circle, .ppa-node path {
+  stroke: var(--ppa-node-stroke);
+  stroke-width: 1.5px;
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+.ppa-node.significant rect {
+  stroke-width: 2.5px;
+  stroke: var(--ppa-ink);
+}
+.ppa-node.non-significant rect {
+  stroke-width: 1.0px;
+  stroke-dasharray: 3 2;
+  stroke: var(--ppa-hairline);
+}
+</style>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ppa-edge)" /></marker>
+<marker id="inhibit" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><line x1="5" y1="1" x2="5" y2="9" stroke="var(--ppa-edge)" stroke-width="2" /></marker>
+</defs>
+<rect class="ppa-canvas" width="920" height="708" />
+<text class="ppa-title" x="40.0" y="36.0">Reactive Oxygen Species (ROS) &amp; Redox Homeostasis</text>
+<text class="ppa-subtitle" x="40.0" y="56.0">Superoxide generation, dismutation, the Foyer-Halliwell-Asada cycle, catalases, and thioredoxin relays</text>
+<rect class="ppa-compartment-band" x="94.5" y="62.0" width="574.3" height="133.6" />
+<text class="ppa-compartment-title" x="108.5" y="80.0">Plasma Membrane</text>
+<rect class="ppa-compartment-band" x="48.3" y="173.6" width="666.7" height="464.6" />
+<text class="ppa-compartment-title" x="62.3" y="191.6">Cytosol</text>
+<rect class="ppa-compartment-band" x="14.0" y="285.3" width="735.3" height="245.3" />
+<text class="ppa-compartment-title" x="28.0" y="303.3">Chloroplast Stroma</text>
+<path d="M 291.6 135.8 L 323.6 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="307.6" y="131.8">Superoxide -&gt; H2O2</text>
+<path d="M 489.5 157.6 L 271.6 219.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 530.3 158.6 L 426.7 224.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 573.0 158.6 L 592.7 224.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 344.7 270.3 L 233.5 325.3" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="289.1" y="293.8">H2O2</text>
+<path d="M 170.6 281.3 L 167.5 325.3" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="169.1" y="299.3">H2O2</text>
+<path d="M 162.1 392.9 L 157.2 447.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="159.6" y="416.4">MDHA</text>
+<path d="M 270.2 470.8 L 302.2 470.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="286.2" y="466.8">DHA</text>
+<path d="M 501.4 470.8 L 533.4 470.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="517.4" y="466.8">GSSG -&gt; GSH</text>
+<path d="M 259.6 359.1 L 291.6 359.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)" stroke-dasharray="4 3" />
+<path d="M 346.6 392.9 L 208.4 548.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="277.5" y="466.8">Disulfide exchange</text>
+<path d="M 252.1 580.4 L 460.1 580.4" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="356.1" y="576.4">Monomerization</text>
+<path d="M 568.9 158.6 L 589.1 325.3" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="579.0" y="238.0">Peroxisomal H2O2</text>
+<g class="ppa-node complex " id="node-RBOH_BURST" data-node-id="RBOH_BURST" data-loci="AT5G47910,AT1G64060" data-bin="21.4">
+<rect x="120.5" y="102.0" width="171.0" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="206.0" y="120.0">NADPH Oxidases (RBOH)</text>
+<text class="ppa-sub" x="206.0" y="135.4">BIN 21.4 Apoplastic Burst</text>
+<g class="ppa-subunit" data-locus="AT5G47910"><rect x="161.5" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="182.8" y="160.1">RBOHD</text></g>
+<g class="ppa-subunit" data-locus="AT1G64060"><rect x="208.0" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="229.3" y="160.1">RBOHF</text></g>
+</g>
+<g class="ppa-node metabolite " id="node-APOPLAST_H2O2" data-node-id="APOPLAST_H2O2" data-loci="" data-bin="">
+<rect x="323.6" y="113.0" width="134.0" height="45.6" rx="16" ry="16" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="390.5" y="131.0">Apoplastic H2O2</text>
+<text class="ppa-sub" x="390.5" y="146.4">Cell Wall Signaling Pool</text>
+</g>
+<g class="ppa-node metabolite " id="node-METABOLIC_ROS_LEAK" data-node-id="METABOLIC_ROS_LEAK" data-loci="" data-bin="">
+<rect x="489.5" y="113.0" width="153.3" height="45.6" rx="16" ry="16" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="566.1" y="131.0">Organellar ROS Leaks</text>
+<text class="ppa-sub" x="566.1" y="146.4">PSI / PSII / Complex I/III</text>
+</g>
+<g class="ppa-node complex " id="node-CSD_SOD_CYT" data-node-id="CSD_SOD_CYT" data-loci="AT1G08830,AT2G28190" data-bin="21.1">
+<rect x="74.3" y="213.6" width="197.3" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="172.9" y="231.6">Cu/Zn Superoxide Dismutase</text>
+<text class="ppa-sub" x="172.9" y="247.0">CSD1 (Cyt) / CSD2 (Plastid)</text>
+<g class="ppa-subunit" data-locus="AT1G08830"><rect x="134.9" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="152.9" y="271.8">CSD1</text></g>
+<g class="ppa-subunit" data-locus="AT2G28190"><rect x="174.9" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="192.9" y="271.8">CSD2</text></g>
+</g>
+<g class="ppa-node simple " id="node-FSD_SOD_PLASTID" data-node-id="FSD_SOD_PLASTID" data-loci="AT4G25100,AT5G23310,AT5G51100" data-bin="21.1">
+<rect x="303.6" y="224.6" width="174.6" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="390.8" y="242.6">Fe Superoxide Dismutase</text>
+<text class="ppa-sub" x="390.8" y="258.0">FSD1 / FSD2 / FSD3 (Plastidial)</text>
+</g>
+<g class="ppa-node simple " id="node-MSD_SOD_MITO" data-node-id="MSD_SOD_MITO" data-loci="AT3G10920" data-bin="21.1">
+<rect x="510.1" y="224.6" width="178.9" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="599.6" y="242.6">Mn Superoxide Dismutase</text>
+<text class="ppa-sub" x="599.6" y="258.0">MSD1 (Mitochondrial Matrix)</text>
+</g>
+<g class="ppa-node complex " id="node-ASCORBATE_PEROXIDASE" data-node-id="ASCORBATE_PEROXIDASE" data-loci="AT1G07890,AT3G09640,AT1G77490,AT4G08390" data-bin="21.2">
+<rect x="70.8" y="325.3" width="188.8" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="165.2" y="343.3">Ascorbate Peroxidase (APX)</text>
+<text class="ppa-sub" x="165.2" y="358.7">BIN 21.2 Ascorbate Oxidation</text>
+<g class="ppa-subunit" data-locus="AT1G07890"><rect x="87.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="105.2" y="383.4">APX1</text></g>
+<g class="ppa-subunit" data-locus="AT3G09640"><rect x="127.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="145.2" y="383.4">APX2</text></g>
+<g class="ppa-subunit" data-locus="AT1G77490"><rect x="167.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="185.2" y="383.4">tAPX</text></g>
+<g class="ppa-subunit" data-locus="AT4G08390"><rect x="207.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="225.2" y="383.4">sAPX</text></g>
+</g>
+<g class="ppa-node complex " id="node-PEROXIREDOXINS" data-node-id="PEROXIREDOXINS" data-loci="AT3G11630,AT5G06290,AT3G26060" data-bin="21.2">
+<rect x="291.6" y="325.3" width="170.2" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="376.7" y="343.3">Peroxiredoxins (Prx)</text>
+<text class="ppa-sub" x="376.7" y="358.7">2-Cys Prx A/B &amp; Prx Q</text>
+<g class="ppa-subunit" data-locus="AT3G11630"><rect x="292.7" y="372.9" width="62.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="323.7" y="383.4">2CysPrxA</text></g>
+<g class="ppa-subunit" data-locus="AT5G06290"><rect x="358.7" y="372.9" width="62.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="389.7" y="383.4">2CysPrxB</text></g>
+<g class="ppa-subunit" data-locus="AT3G26060"><rect x="424.7" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="442.7" y="383.4">PrxQ</text></g>
+</g>
+<g class="ppa-node complex " id="node-CATALASE_SCAVENGING" data-node-id="CATALASE_SCAVENGING" data-loci="AT1G20630,AT4G35090,AT1G20620" data-bin="21.3">
+<rect x="493.8" y="325.3" width="198.7" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="593.2" y="343.3">Catalases (CAT)</text>
+<text class="ppa-sub" x="593.2" y="358.7">BIN 21.3 Peroxisomal H2O2 Removal</text>
+<g class="ppa-subunit" data-locus="AT1G20630"><rect x="535.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="553.2" y="383.4">CAT1</text></g>
+<g class="ppa-subunit" data-locus="AT4G35090"><rect x="575.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="593.2" y="383.4">CAT2</text></g>
+<g class="ppa-subunit" data-locus="AT1G20620"><rect x="615.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="633.2" y="383.4">CAT3</text></g>
+</g>
+<g class="ppa-node simple " id="node-MDHAR_ENZYME" data-node-id="MDHAR_ENZYME" data-loci="AT1G63940,AT3G09940,AT5G03630" data-bin="21.2">
+<rect x="40.0" y="447.9" width="230.2" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="155.1" y="465.9">Monodehydroascorbate Reductase</text>
+<text class="ppa-sub" x="155.1" y="481.3">MDHAR (NADH-dependent)</text>
+</g>
+<g class="ppa-node simple " id="node-DHAR_ENZYME" data-node-id="DHAR_ENZYME" data-loci="AT1G19570,AT1G75270,AT5G16710" data-bin="21.2">
+<rect x="302.2" y="447.9" width="199.2" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="401.8" y="465.9">Dehydroascorbate Reductase</text>
+<text class="ppa-sub" x="401.8" y="481.3">DHAR1 / DHAR2 / DHAR3</text>
+</g>
+<g class="ppa-node complex " id="node-GLUTATHIONE_REDUCTASE" data-node-id="GLUTATHIONE_REDUCTASE" data-loci="AT3G24170,AT3G54660" data-bin="21.2">
+<rect x="533.4" y="436.9" width="189.9" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="628.4" y="454.9">Glutathione Reductase (GR)</text>
+<text class="ppa-sub" x="628.4" y="470.3">GR1 (Cyt) / GR2 (Plastid/Mito)</text>
+<g class="ppa-subunit" data-locus="AT3G24170"><rect x="596.9" y="484.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="611.6" y="495.1">GR1</text></g>
+<g class="ppa-subunit" data-locus="AT3G54660"><rect x="630.4" y="484.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="645.1" y="495.1">GR2</text></g>
+</g>
+<g class="ppa-node family " id="node-THIOREDOXIN_FAMILY" data-node-id="THIOREDOXIN_FAMILY" data-loci="AT3G51030,AT5G39950,AT1G03680,AT3G06730,AT2G35010" data-bin="21.5">
+<rect x="108.1" y="548.6" width="144.0" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="180.1" y="566.6">Thioredoxins (Trx)</text>
+<text class="ppa-sub" x="180.1" y="582.0">Trx-h / Trx-m / Trx-f</text>
+<rect class="ppa-family-tile" x="150.1" y="596.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="162.1" y="596.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="174.1" y="596.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="186.1" y="596.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="198.1" y="596.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node family " id="node-GLUTAREDOXIN_FAMILY" data-node-id="GLUTAREDOXIN_FAMILY" data-loci="AT2G30540,AT3G54900,AT4G15660,AT4G15680" data-bin="21.6">
+<rect x="284.1" y="548.6" width="144.0" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="356.1" y="566.6">Glutaredoxins (Grx)</text>
+<text class="ppa-sub" x="356.1" y="582.0">CC-type / CPYC / CGFS</text>
+<rect class="ppa-family-tile" x="332.1" y="596.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="344.1" y="596.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="356.1" y="596.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="368.1" y="596.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node simple " id="node-NPR1_TRANSLOCATION" data-node-id="NPR1_TRANSLOCATION" data-loci="AT1G64280" data-bin="20.1">
+<rect x="460.1" y="557.6" width="195.1" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="557.7" y="575.6">NPR1 Redox Monomerization</text>
+<text class="ppa-sub" x="557.7" y="591.0">Master Immune Transcriptional Hub</text>
+</g>
+<text class="ppa-caption" x="40.0" y="682.2">Spatial and biochemical architecture of plant reactive oxygen species (ROS) metabolism. Covers apoplastic oxidative bursts</text>
+<text class="ppa-caption" x="40.0" y="697.1">catalyzed by respiratory burst oxidase homologs (RBOHD/F), superoxide dismutation by compartment-specific SOD isoforms (Cu/Zn-SOD,</text>
+<text class="ppa-caption" x="40.0" y="711.9">Fe-SOD, Mn-SOD), peroxide detoxification via the ascorbate-glutathione cycle (APX, MDHAR, DHAR, GR) and peroxisomal catalases, and</text>
+<text class="ppa-caption" x="40.0" y="726.8">downstream thioredoxin/glutaredoxin redox switches.</text>
+</svg>

@@ -1,0 +1,496 @@
+{
+  "id": "PPA-01",
+  "title": "Central Metabolism Overview",
+  "subtitle": "Compartmentalized carbon flux, photosynthesis, glycolysis, TCA cycle, and mitochondrial bioenergetics",
+  "caption": "Modernized MapMan central metabolism overview. Integrates Calvin-Benson carbon fixation in the chloroplast stroma, cytosolic sucrose partitioning and glycolysis, mitochondrial tricarboxylic acid (TCA) flux, and respiratory electron transport via the cytochrome and alternative oxidase (AOX) pathways. Multi-subunit holoenzymes and multi-gene families are rendered using adaptive vector glyphs (\"Chicklets 2.0\") with true font metrics.",
+  "species_anchor": "arabidopsis_thaliana",
+  "nodes": [
+    {
+      "id": "CALVIN_CYCLE",
+      "label": "Calvin-Benson Cycle",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "1.2",
+      "loci": [
+        "ATCG00490",
+        "AT1G67090",
+        "AT1G79550",
+        "AT3G26650"
+      ],
+      "subunits": [
+        {
+          "symbol": "RbcL",
+          "locus": "ATCG00490"
+        },
+        {
+          "symbol": "RbcS",
+          "locus": "AT1G67090"
+        },
+        {
+          "symbol": "PGK",
+          "locus": "AT1G79550"
+        },
+        {
+          "symbol": "GAPDH",
+          "locus": "AT3G26650"
+        }
+      ]
+    },
+    {
+      "id": "STARCH_TURNOVER",
+      "label": "Starch Metabolism",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "2.2",
+      "loci": [
+        "AT5G48300",
+        "AT5G19220",
+        "AT3G23920"
+      ],
+      "subunits": [
+        {
+          "symbol": "AGPase",
+          "locus": "AT5G48300"
+        },
+        {
+          "symbol": "SS",
+          "locus": "AT5G19220"
+        },
+        {
+          "symbol": "BAM1",
+          "locus": "AT3G23920"
+        }
+      ]
+    },
+    {
+      "id": "PLASTID_FA_SYNTH",
+      "label": "Plastidial FA Synthesis",
+      "kind": "family",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "11.1",
+      "loci": [
+        "AT1G36160",
+        "AT2G05990",
+        "AT3G25110",
+        "AT2G19450"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "TRIOSE_P_EXPORT",
+      "label": "Triose-P Translocator",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "34.1",
+      "loci": [
+        "AT5G46110"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "SUCROSE_METABOLISM",
+      "label": "Sucrose Metabolism",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "2.1",
+      "loci": [
+        "AT5G20830",
+        "AT5G20840",
+        "AT3G13790"
+      ],
+      "subunits": [
+        {
+          "symbol": "SPS1",
+          "locus": "AT5G20830"
+        },
+        {
+          "symbol": "SUS1",
+          "locus": "AT5G20840"
+        },
+        {
+          "symbol": "CINV1",
+          "locus": "AT3G13790"
+        }
+      ]
+    },
+    {
+      "id": "HEXOSE_P_POOL",
+      "label": "Hexose Phosphates",
+      "kind": "metabolite",
+      "compartment": "cytosol",
+      "mapman_bin": "",
+      "loci": [],
+      "subunits": []
+    },
+    {
+      "id": "GLYCOLYSIS_UPPER",
+      "label": "Upper Glycolysis",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "4.1",
+      "loci": [
+        "AT4G24620",
+        "AT1G79550"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "GLYCOLYSIS_LOWER",
+      "label": "Lower Glycolysis",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "4.2",
+      "loci": [
+        "AT2G36530",
+        "AT5G56580"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "PYRUVATE_POOL",
+      "label": "Pyruvate",
+      "kind": "metabolite",
+      "compartment": "cytosol",
+      "mapman_bin": "",
+      "loci": [],
+      "subunits": []
+    },
+    {
+      "id": "PYRUVATE_DH",
+      "label": "Pyruvate Dehydrogenase",
+      "kind": "complex",
+      "compartment": "mitochondrial_matrix",
+      "mapman_bin": "8.1",
+      "loci": [
+        "AT1G01090",
+        "AT3G13930",
+        "AT1G48030"
+      ],
+      "subunits": [
+        {
+          "symbol": "E1a",
+          "locus": "AT1G01090"
+        },
+        {
+          "symbol": "E2",
+          "locus": "AT3G13930"
+        },
+        {
+          "symbol": "E3",
+          "locus": "AT1G48030"
+        }
+      ]
+    },
+    {
+      "id": "TCA_CYCLE",
+      "label": "Citric Acid Cycle (TCA)",
+      "kind": "complex",
+      "compartment": "mitochondrial_matrix",
+      "mapman_bin": "8.2",
+      "loci": [
+        "AT3G58610",
+        "AT4G35830",
+        "AT4G35260",
+        "AT1G53240"
+      ],
+      "subunits": [
+        {
+          "symbol": "CSY",
+          "locus": "AT3G58610"
+        },
+        {
+          "symbol": "ACO",
+          "locus": "AT4G35830"
+        },
+        {
+          "symbol": "IDH",
+          "locus": "AT4G35260"
+        },
+        {
+          "symbol": "MDH",
+          "locus": "AT1G53240"
+        }
+      ]
+    },
+    {
+      "id": "AMINO_ACID_PRECURSORS",
+      "label": "2-Oxoglutarate & Oxaloacetate",
+      "kind": "metabolite",
+      "compartment": "mitochondrial_matrix",
+      "mapman_bin": "",
+      "loci": [],
+      "subunits": []
+    },
+    {
+      "id": "RESPIRATORY_ETC",
+      "label": "Mitochondrial ETC (I-IV)",
+      "kind": "complex",
+      "compartment": "mitochondrial_inner_membrane",
+      "mapman_bin": "9.1",
+      "loci": [
+        "AT5G08530",
+        "AT5G40650",
+        "AT4G03280",
+        "AT1G22450"
+      ],
+      "subunits": [
+        {
+          "symbol": "CI",
+          "locus": "AT5G08530"
+        },
+        {
+          "symbol": "CII",
+          "locus": "AT5G40650"
+        },
+        {
+          "symbol": "CIII",
+          "locus": "AT4G03280"
+        },
+        {
+          "symbol": "CIV",
+          "locus": "AT1G22450"
+        }
+      ]
+    },
+    {
+      "id": "AOX_BYPASS",
+      "label": "Alternative Oxidase",
+      "kind": "simple",
+      "compartment": "mitochondrial_inner_membrane",
+      "mapman_bin": "9.2",
+      "loci": [
+        "AT3G22370",
+        "AT1G32350"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "ATP_SYNTHASE",
+      "label": "Mitochondrial F1-F0 ATP Synthase",
+      "kind": "complex",
+      "compartment": "mitochondrial_inner_membrane",
+      "mapman_bin": "9.4",
+      "loci": [
+        "AT2G07698",
+        "AT5G08670"
+      ],
+      "subunits": [
+        {
+          "symbol": "alpha",
+          "locus": "AT2G07698"
+        },
+        {
+          "symbol": "beta",
+          "locus": "AT5G08670"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "CALVIN_CYCLE",
+      "to": "STARCH_TURNOVER",
+      "start": [
+        257.859015625,
+        135.824
+      ],
+      "end": [
+        289.859015625,
+        135.824
+      ],
+      "class": "flux",
+      "label": "Hexose-P"
+    },
+    {
+      "from": "CALVIN_CYCLE",
+      "to": "TRIOSE_P_EXPORT",
+      "start": [
+        173.69223344797936,
+        169.648
+      ],
+      "end": [
+        178.88118107803095,
+        224.648
+      ],
+      "class": "flux",
+      "label": "Triose-P"
+    },
+    {
+      "from": "TRIOSE_P_EXPORT",
+      "to": "HEXOSE_P_POOL",
+      "start": [
+        260.5585,
+        247.472
+      ],
+      "end": [
+        499.4375,
+        247.472
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "HEXOSE_P_POOL",
+      "to": "SUCROSE_METABOLISM",
+      "start": [
+        499.4375,
+        247.472
+      ],
+      "end": [
+        467.4375,
+        247.47199999999998
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "HEXOSE_P_POOL",
+      "to": "GLYCOLYSIS_UPPER",
+      "start": [
+        499.4375,
+        266.88237371100126
+      ],
+      "end": [
+        269.146,
+        331.05614477070395
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "GLYCOLYSIS_UPPER",
+      "to": "GLYCOLYSIS_LOWER",
+      "start": [
+        269.146,
+        348.12
+      ],
+      "end": [
+        301.146,
+        348.12
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "GLYCOLYSIS_LOWER",
+      "to": "PYRUVATE_POOL",
+      "start": [
+        427.452,
+        348.12
+      ],
+      "end": [
+        459.452,
+        348.12
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "PYRUVATE_POOL",
+      "to": "PYRUVATE_DH",
+      "start": [
+        459.452,
+        366.2880854268677
+      ],
+      "end": [
+        241.97556250000002,
+        425.20302607893444
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "PYRUVATE_DH",
+      "to": "TCA_CYCLE",
+      "start": [
+        241.97556250000002,
+        448.76800000000003
+      ],
+      "end": [
+        273.9755625,
+        448.76800000000003
+      ],
+      "class": "flux",
+      "label": "Acetyl-CoA"
+    },
+    {
+      "from": "TCA_CYCLE",
+      "to": "AMINO_ACID_PRECURSORS",
+      "start": [
+        429.91931250000005,
+        448.76800000000003
+      ],
+      "end": [
+        461.91931250000005,
+        448.76800000000003
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "TCA_CYCLE",
+      "to": "RESPIRATORY_ETC",
+      "start": [
+        285.69773201490403,
+        482.592
+      ],
+      "end": [
+        199.516705485096,
+        526.592
+      ],
+      "class": "flux",
+      "label": "NADH / FADH2"
+    },
+    {
+      "from": "TCA_CYCLE",
+      "to": "AOX_BYPASS",
+      "start": [
+        351.485,
+        482.592
+      ],
+      "end": [
+        350.733046875,
+        537.592
+      ],
+      "class": "flux",
+      "label": "Ubiquinol"
+    }
+  ],
+  "total_nodes": 15,
+  "distinct_loci": 33,
+  "loci_list": [
+    "AT1G01090",
+    "AT1G22450",
+    "AT1G32350",
+    "AT1G36160",
+    "AT1G48030",
+    "AT1G53240",
+    "AT1G67090",
+    "AT1G79550",
+    "AT2G05990",
+    "AT2G07698",
+    "AT2G19450",
+    "AT2G36530",
+    "AT3G13790",
+    "AT3G13930",
+    "AT3G22370",
+    "AT3G23920",
+    "AT3G25110",
+    "AT3G26650",
+    "AT3G58610",
+    "AT4G03280",
+    "AT4G24620",
+    "AT4G35260",
+    "AT4G35830",
+    "AT5G08530",
+    "AT5G08670",
+    "AT5G19220",
+    "AT5G20830",
+    "AT5G20840",
+    "AT5G40650",
+    "AT5G46110",
+    "AT5G48300",
+    "AT5G56580",
+    "ATCG00490"
+  ]
+}

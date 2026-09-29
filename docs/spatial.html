@@ -90,9 +90,9 @@
     <a href="explore.html" class="btn">Explore Your Data</a>
     <a href="spatial.html" class="btn active">ggPlant Spatial Anatomy</a>
     <span class="tab-label">Data & Specs:</span>
-    <a href="../catalog/manifest.json" class="btn">Catalog Manifest</a>
-    <a href="../catalog/orthologs.json" class="btn">Orthology Matrix</a>
-    <a href="../CITATION.cff" class="btn">Citation (CFF)</a>
+    <a href="catalog/manifest.json" class="btn">Catalog Manifest</a>
+    <a href="catalog/orthologs.json" class="btn">Orthology Matrix</a>
+    <a href="CITATION.cff" class="btn">Citation (CFF)</a>
     <span class="tab-label">Links:</span>
     <a href="https://github.com/dr-richard-barker/plant-pathway-atlas" class="btn primary">GitHub Code</a>
   </nav>
@@ -211,7 +211,7 @@
 
   async function loadAndRenderOrgan() {
     if (!rawOrganData) {
-      const resp = await fetch('../spatial/data/ggplant_organs.json');
+      const resp = await fetch('spatial/data/ggplant_organs.json');
       rawOrganData = await resp.json();
     }
 
