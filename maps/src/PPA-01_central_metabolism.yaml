@@ -1,0 +1,238 @@
+# PPA-01 — Central Metabolism Overview (Modernized MapMan Overview)
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-01
+title: Central Metabolism Overview
+subtitle: Compartmentalized carbon flux, photosynthesis, glycolysis, TCA cycle, and mitochondrial bioenergetics
+derived_from: MapMan Classic Metabolism Overview & PlantCyc Central Carbon Flux
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Modernized MapMan central metabolism overview. Integrates Calvin-Benson carbon fixation
+  in the chloroplast stroma, cytosolic sucrose partitioning and glycolysis, mitochondrial
+  tricarboxylic acid (TCA) flux, and respiratory electron transport via the cytochrome
+  and alternative oxidase (AOX) pathways. Multi-subunit holoenzymes and multi-gene families
+  are rendered using adaptive vector glyphs ("Chicklets 2.0") with true font metrics.
+
+lanes:
+  - id: plastid_carbon
+    compartment: chloroplast_stroma
+    node_width: 200
+    nodes: [CALVIN_CYCLE, STARCH_TURNOVER, PLASTID_FA_SYNTH]
+
+  - id: carbon_export
+    compartment: cytosol
+    node_width: 190
+    nodes: [TRIOSE_P_EXPORT, SUCROSE_METABOLISM, HEXOSE_P_POOL]
+
+  - id: cytosolic_glycolysis
+    compartment: cytosol
+    node_width: 200
+    nodes: [GLYCOLYSIS_UPPER, GLYCOLYSIS_LOWER, PYRUVATE_POOL]
+
+  - id: mitochondrial_flux
+    compartment: mitochondrial_matrix
+    node_width: 210
+    nodes: [PYRUVATE_DH, TCA_CYCLE, AMINO_ACID_PRECURSORS]
+
+  - id: mitochondrial_etc
+    compartment: mitochondrial_inner_membrane
+    node_width: 210
+    nodes: [RESPIRATORY_ETC, AOX_BYPASS, ATP_SYNTHASE]
+
+nodes:
+  - id: CALVIN_CYCLE
+    label: "Calvin-Benson Cycle"
+    sublabel: "BIN 1.2 Carbon Fixation"
+    kind: "complex"
+    mapman_bin: "1.2"
+    subunits:
+      - symbol: "RbcL"
+        locus: "ATCG00490"
+      - symbol: "RbcS"
+        locus: "AT1G67090"
+      - symbol: "PGK"
+        locus: "AT1G79550"
+      - symbol: "GAPDH"
+        locus: "AT3G26650"
+    loci: ["ATCG00490", "AT1G67090", "AT1G79550", "AT3G26650"]
+
+  - id: STARCH_TURNOVER
+    label: "Starch Metabolism"
+    sublabel: "BIN 2.2 Synthesis & Degradation"
+    kind: "complex"
+    mapman_bin: "2.2"
+    subunits:
+      - symbol: "AGPase"
+        locus: "AT5G48300"
+      - symbol: "SS"
+        locus: "AT5G19220"
+      - symbol: "BAM1"
+        locus: "AT3G23920"
+    loci: ["AT5G48300", "AT5G19220", "AT3G23920"]
+
+  - id: PLASTID_FA_SYNTH
+    label: "Plastidial FA Synthesis"
+    sublabel: "BIN 11.1 De Novo FAS"
+    kind: "family"
+    mapman_bin: "11.1"
+    family_loci: ["AT1G36160", "AT2G05990", "AT3G25110", "AT2G19450"]
+    loci: ["AT1G36160", "AT2G05990", "AT3G25110", "AT2G19450"]
+
+  - id: TRIOSE_P_EXPORT
+    label: "Triose-P Translocator"
+    sublabel: "TPT1 (Chloroplast Envelope)"
+    kind: "simple"
+    mapman_bin: "34.1"
+    loci: ["AT5G46110"]
+
+  - id: SUCROSE_METABOLISM
+    label: "Sucrose Metabolism"
+    sublabel: "BIN 2.1 Synthesis & Partitioning"
+    kind: "complex"
+    mapman_bin: "2.1"
+    subunits:
+      - symbol: "SPS1"
+        locus: "AT5G20830"
+      - symbol: "SUS1"
+        locus: "AT5G20840"
+      - symbol: "CINV1"
+        locus: "AT3G13790"
+    loci: ["AT5G20830", "AT5G20840", "AT3G13790"]
+
+  - id: HEXOSE_P_POOL
+    label: "Hexose Phosphates"
+    sublabel: "G6P / F6P Pool"
+    kind: "metabolite"
+
+  - id: GLYCOLYSIS_UPPER
+    label: "Upper Glycolysis"
+    sublabel: "Hexokinase / PFK"
+    kind: "simple"
+    mapman_bin: "4.1"
+    loci: ["AT4G24620", "AT1G79550"]
+
+  - id: GLYCOLYSIS_LOWER
+    label: "Lower Glycolysis"
+    sublabel: "GAPDH / Enolase / PK"
+    kind: "simple"
+    mapman_bin: "4.2"
+    loci: ["AT2G36530", "AT5G56580"]
+
+  - id: PYRUVATE_POOL
+    label: "Pyruvate"
+    sublabel: "Cytosolic / Matrix Node"
+    kind: "metabolite"
+
+  - id: PYRUVATE_DH
+    label: "Pyruvate Dehydrogenase"
+    sublabel: "PDC Complex (Mitochondrial)"
+    kind: "complex"
+    mapman_bin: "8.1"
+    subunits:
+      - symbol: "E1a"
+        locus: "AT1G01090"
+      - symbol: "E2"
+        locus: "AT3G13930"
+      - symbol: "E3"
+        locus: "AT1G48030"
+    loci: ["AT1G01090", "AT3G13930", "AT1G48030"]
+
+  - id: TCA_CYCLE
+    label: "Citric Acid Cycle (TCA)"
+    sublabel: "BIN 8.2 Closed Cycle"
+    kind: "complex"
+    mapman_bin: "8.2"
+    subunits:
+      - symbol: "CSY"
+        locus: "AT3G58610"
+      - symbol: "ACO"
+        locus: "AT4G35830"
+      - symbol: "IDH"
+        locus: "AT4G35260"
+      - symbol: "MDH"
+        locus: "AT1G53240"
+    loci: ["AT3G58610", "AT4G35830", "AT4G35260", "AT1G53240"]
+
+  - id: AMINO_ACID_PRECURSORS
+    label: "2-Oxoglutarate & Oxaloacetate"
+    sublabel: "Carbon Skeletons for N-Assimilation"
+    kind: "metabolite"
+
+  - id: RESPIRATORY_ETC
+    label: "Mitochondrial ETC (I-IV)"
+    sublabel: "BIN 9.1 Oxidative Phosphorylation"
+    kind: "complex"
+    mapman_bin: "9.1"
+    subunits:
+      - symbol: "CI"
+        locus: "AT5G08530"
+      - symbol: "CII"
+        locus: "AT5G40650"
+      - symbol: "CIII"
+        locus: "AT4G03280"
+      - symbol: "CIV"
+        locus: "AT1G22450"
+    loci: ["AT5G08530", "AT5G40650", "AT4G03280", "AT1G22450"]
+
+  - id: AOX_BYPASS
+    label: "Alternative Oxidase"
+    sublabel: "AOX1A / AOX1D Non-Phos Branch"
+    kind: "simple"
+    mapman_bin: "9.2"
+    loci: ["AT3G22370", "AT1G32350"]
+
+  - id: ATP_SYNTHASE
+    label: "Mitochondrial F1-F0 ATP Synthase"
+    sublabel: "Complex V"
+    kind: "complex"
+    mapman_bin: "9.4"
+    subunits:
+      - symbol: "alpha"
+        locus: "AT2G07698"
+      - symbol: "beta"
+        locus: "AT5G08670"
+    loci: ["AT2G07698", "AT5G08670"]
+
+edges:
+  - from: CALVIN_CYCLE
+    to: STARCH_TURNOVER
+    class: flux
+    label: "Hexose-P"
+  - from: CALVIN_CYCLE
+    to: TRIOSE_P_EXPORT
+    class: flux
+    label: "Triose-P"
+  - from: TRIOSE_P_EXPORT
+    to: HEXOSE_P_POOL
+    class: flux
+  - from: HEXOSE_P_POOL
+    to: SUCROSE_METABOLISM
+    class: flux
+  - from: HEXOSE_P_POOL
+    to: GLYCOLYSIS_UPPER
+    class: flux
+  - from: GLYCOLYSIS_UPPER
+    to: GLYCOLYSIS_LOWER
+    class: flux
+  - from: GLYCOLYSIS_LOWER
+    to: PYRUVATE_POOL
+    class: flux
+  - from: PYRUVATE_POOL
+    to: PYRUVATE_DH
+    class: flux
+  - from: PYRUVATE_DH
+    to: TCA_CYCLE
+    class: flux
+    label: "Acetyl-CoA"
+  - from: TCA_CYCLE
+    to: AMINO_ACID_PRECURSORS
+    class: flux
+  - from: TCA_CYCLE
+    to: RESPIRATORY_ETC
+    class: flux
+    label: "NADH / FADH2"
+  - from: TCA_CYCLE
+    to: AOX_BYPASS
+    class: flux
+    label: "Ubiquinol"

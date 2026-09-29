@@ -1,0 +1,338 @@
+/* Plant Pathway Atlas (PPA) Design System & Styles */
+:root {
+  --ppa-bg: #ffffff;
+  --ppa-ink: #0f172a;
+  --ppa-soft: #475569;
+  --ppa-faint: #94a3b8;
+  --ppa-rule: #e2e8f0;
+  --ppa-card: #f8fafc;
+  --ppa-card2: #f1f5f9;
+  --ppa-accent: #0284c7;
+  --ppa-accent-hover: #0369a1;
+  --ppa-accent2: #059669;
+  --ppa-warn: #d97706;
+  --ppa-err: #dc2626;
+  --header-bg: linear-gradient(180deg, rgba(2, 132, 199, 0.08), transparent);
+}
+
+html[data-theme="dark"] {
+  --ppa-bg: #0b0f17;
+  --ppa-ink: #f1f5f9;
+  --ppa-soft: #94a3b8;
+  --ppa-faint: #64748b;
+  --ppa-rule: #1e293b;
+  --ppa-card: #151c28;
+  --ppa-card2: #1e293b;
+  --ppa-accent: #38bdf8;
+  --ppa-accent-hover: #7dd3fc;
+  --ppa-accent2: #34d399;
+  --ppa-warn: #fbbf24;
+  --ppa-err: #f87171;
+  --header-bg: linear-gradient(180deg, rgba(56, 189, 248, 0.08), transparent);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--ppa-bg);
+  color: var(--ppa-ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* Topbar & Navigation */
+.ppa-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--ppa-rule);
+  margin-bottom: 16px;
+}
+
+.ppa-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--ppa-ink);
+  text-decoration: none;
+}
+
+.ppa-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: rgba(2, 132, 199, 0.12);
+  color: var(--ppa-accent);
+}
+
+.ppa-tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0 16px;
+  border-bottom: 1px solid var(--ppa-rule);
+  margin-bottom: 28px;
+}
+
+.tab-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ppa-soft);
+  margin: 0 4px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border: 1px solid var(--ppa-rule);
+  background: var(--ppa-card);
+  color: var(--ppa-ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  border-color: var(--ppa-accent);
+  background: var(--ppa-card2);
+  color: var(--ppa-accent);
+}
+
+.btn.primary {
+  background: var(--ppa-accent);
+  border-color: var(--ppa-accent);
+  color: #ffffff;
+}
+
+.btn.primary:hover {
+  background: var(--ppa-accent-hover);
+  color: #ffffff;
+}
+
+.btn.active {
+  border-color: var(--ppa-accent);
+  background: var(--ppa-card2);
+  color: var(--ppa-accent);
+  box-shadow: inset 0 0 0 1px var(--ppa-accent);
+}
+
+/* Hero & Headers */
+header.hero {
+  padding: 36px 0 24px;
+  border-bottom: 1px solid var(--ppa-rule);
+  background: var(--header-bg);
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.2;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  color: var(--ppa-accent);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 0 0 8px;
+}
+
+.lede {
+  font-size: 1.15rem;
+  color: var(--ppa-soft);
+  max-width: 68ch;
+  margin: 0 0 20px;
+}
+
+/* Map Cards Grid */
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 22px;
+  margin: 28px 0;
+}
+
+.map-card {
+  border: 1px solid var(--ppa-rule);
+  border-radius: 12px;
+  background: var(--ppa-card);
+  overflow: hidden;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ppa-accent);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+.map-card-preview {
+  background: #ffffff;
+  padding: 12px;
+  border-bottom: 1px solid var(--ppa-rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.map-card-preview img, .map-card-preview svg {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  display: block;
+}
+
+.map-card-body {
+  padding: 16px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ppa-ink);
+}
+
+.map-card-desc {
+  font-size: 0.88rem;
+  color: var(--ppa-soft);
+  line-height: 1.45;
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+.map-card-stats {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--ppa-soft);
+  font-weight: 600;
+  padding-top: 10px;
+  border-top: 1px solid var(--ppa-rule);
+}
+
+/* File Drop Area */
+.dropzone {
+  border: 2px dashed var(--ppa-rule);
+  border-radius: 14px;
+  padding: 36px 20px;
+  text-align: center;
+  background: var(--ppa-card);
+  transition: border-color 0.15s ease, background 0.15s ease;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.dropzone.dragover {
+  border-color: var(--ppa-accent);
+  background: var(--ppa-card2);
+}
+
+/* Controls Toolbar */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  background: var(--ppa-card);
+  border: 1px solid var(--ppa-rule);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.toolbar label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ppa-soft);
+  margin-bottom: 4px;
+}
+
+.toolbar select, .toolbar input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--ppa-rule);
+  background: var(--ppa-bg);
+  color: var(--ppa-ink);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+/* Interactive SVG Canvas */
+.svg-viewport {
+  background: #ffffff;
+  border: 1px solid var(--ppa-rule);
+  border-radius: 12px;
+  overflow: auto;
+  padding: 20px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
+  margin-bottom: 30px;
+}
+
+.svg-viewport svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Messages / Alerts */
+.msg {
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 0.92rem;
+  border: 1px solid transparent;
+}
+
+.msg.ok {
+  background: rgba(5, 150, 105, 0.1);
+  border-color: rgba(5, 150, 105, 0.3);
+  color: var(--ppa-accent2);
+}
+
+.msg.warn {
+  background: rgba(217, 119, 6, 0.1);
+  border-color: rgba(217, 119, 6, 0.3);
+  color: var(--ppa-warn);
+}
+
+.msg.err {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+  color: var(--ppa-err);
+}

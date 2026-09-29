@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ggPlant Spatial Anatomy | Plant Pathway Atlas</title>
+<link rel="stylesheet" href="assets/ppa-core.css">
+<script>
+  (function() {
+    const saved = localStorage.getItem('ppa-theme');
+    const pref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', saved || pref);
+  })();
+</script>
+<style>
+  .spatial-canvas-container {
+    background: #ffffff;
+    border: 1px solid var(--ppa-rule);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 480px;
+    margin-bottom: 24px;
+  }
+  .spatial-canvas-container svg {
+    max-width: 100%;
+    height: auto;
+    max-height: 440px;
+  }
+  .cell-inspector {
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .cell-type-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+  }
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .control-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ppa-soft);
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="ppa-topbar">
+    <a href="index.html" class="ppa-brand">
+      <span>🌱 Plant Pathway Atlas</span>
+      <span class="ppa-badge">ggPlant</span>
+    </a>
+    <button id="theme-toggle" class="btn" type="button" aria-label="Toggle theme">🌓 Theme</button>
+  </div>
+
+  <nav class="ppa-tab-bar" aria-label="Main Navigation">
+    <a href="index.html" class="btn">Atlas Maps</a>
+    <a href="explore.html" class="btn">Explore Your Data</a>
+    <a href="spatial.html" class="btn active">ggPlant Spatial Anatomy</a>
+    <span class="tab-label">Resources:</span>
+    <a href="../catalog/manifest.json" class="btn">Catalog Manifest</a>
+    <a href="../catalog/orthologs.json" class="btn">Orthology Matrix</a>
+  </nav>
+
+  <header class="hero">
+    <div class="eyebrow">Spatial Transcriptomics & Histology</div>
+    <h1>ggPlant Anatomical Integration</h1>
+    <p class="lede">
+      Audited anatomical cell and organ polygons bridging tissue/cell-type expression directly to
+      subcellular metabolic and redox pathways.
+    </p>
+  </header>
+
+  <div class="toolbar" style="margin-bottom:16px;">
+    <div>
+      <label for="organ-select">Select Anatomical Organ / View</label>
+      <select id="organ-select">
+        <option value="rosette" selected>Rosette (Whole-Plant Blade, Petiole, Veins)</option>
+        <option value="root">Root Radial Cross-Section (90 Histological Cells)</option>
+        <option value="inflorescence">Inflorescence & Floral Organs</option>
+      </select>
+    </div>
+    <div style="flex:1;"></div>
+    <div>
+      <a href="explore.html?map=PPA-01" class="btn primary">Bridge to PPA-01 Pathway Map →</a>
+    </div>
+  </div>
+
+  <div class="cell-inspector" id="cell-inspector">
+    <span>Hover over any anatomical cell or polygon to inspect histological layer</span>
+    <span id="inspector-badge" class="ppa-badge" style="display:none;"></span>
+  </div>
+
+  <!-- SVG Spatial Canvas -->
+  <div class="spatial-canvas-container" id="spatial-canvas-container">
+    <div style="color:var(--ppa-soft);">Loading spatial geometry...</div>
+  </div>
+
+  <h3>Tissue-Level Expression Controls</h3>
+  <p style="color:var(--ppa-soft); font-size:0.9rem;">
+    Adjust cell-type log2FoldChange values below to project differential expression across anatomical layers:
+  </p>
+  <div class="cell-type-controls" id="cell-type-controls">
+    <div class="control-group">
+      <label for="slider-meso">Mesophyll <span id="val-meso">+1.8</span></label>
+      <input type="range" id="slider-meso" min="-3" max="3" step="0.1" value="1.8">
+    </div>
+    <div class="control-group">
+      <label for="slider-epi">Epidermis <span id="val-epi">-0.8</span></label>
+      <input type="range" id="slider-epi" min="-3" max="3" step="0.1" value="-0.8">
+    </div>
+    <div class="control-group">
+      <label for="slider-vasc">Vascular / Stele <span id="val-vasc">+0.5</span></label>
+      <input type="range" id="slider-vasc" min="-3" max="3" step="0.1" value="0.5">
+    </div>
+    <div class="control-group">
+      <label for="slider-cortex">Cortex / Parenchyma <span id="val-cortex">0.0</span></label>
+      <input type="range" id="slider-cortex" min="-3" max="3" step="0.1" value="0.0">
+    </div>
+  </div>
+
+  <footer style="margin-top:50px; padding-top:20px; border-top:1px solid var(--ppa-rule); font-size:0.88rem; color:var(--ppa-soft);">
+    Plant Pathway Atlas (PPA) · Designed for high scientific rigor and reproducible omics visualization.
+  </footer>
+</div>
+
+<script>
+  const organSelect = document.getElementById('organ-select');
+  const canvasContainer = document.getElementById('spatial-canvas-container');
+  const inspector = document.getElementById('cell-inspector');
+  const badge = document.getElementById('inspector-badge');
+
+  let rawOrganData = null;
+
+  // Color mapper
+  function colorForVal(val, maxFc = 3.0) {
+    if (val === null || val === undefined || isNaN(val)) return '#e2e8f0';
+    const clamped = Math.max(-maxFc, Math.min(maxFc, val));
+    const ratio = Math.abs(clamped) / maxFc;
+    let r, g, b;
+    if (clamped > 0) {
+      r = Math.round(255 - ratio * (255 - 213));
+      g = Math.round(255 - ratio * (255 - 94));
+      b = Math.round(255 - ratio * (255 - 0));
+    } else if (clamped < 0) {
+      r = Math.round(255 - ratio * (255 - 0));
+      g = Math.round(255 - ratio * (255 - 114));
+      b = Math.round(255 - ratio * (255 - 178));
+    } else {
+      return '#e2e8f0';
+    }
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+
+  function getExpressionMap() {
+    return {
+      'Mesophyll': parseFloat(document.getElementById('slider-meso').value),
+      'Epidermis': parseFloat(document.getElementById('slider-epi').value),
+      'Vascular': parseFloat(document.getElementById('slider-vasc').value),
+      'Stele': parseFloat(document.getElementById('slider-vasc').value),
+      'Cortex': parseFloat(document.getElementById('slider-cortex').value),
+      'Endodermis': parseFloat(document.getElementById('slider-cortex').value),
+    };
+  }
+
+  async function loadAndRenderOrgan() {
+    if (!rawOrganData) {
+      const resp = await fetch('../spatial/data/ggplant_organs.json');
+      rawOrganData = await resp.json();
+    }
+
+    const organKey = organSelect.value;
+    const polys = rawOrganData[organKey] || [];
+    if (polys.length === 0) {
+      canvasContainer.innerHTML = '<div>No polygons found for selected organ.</div>';
+      return;
+    }
+
+    // Compute bounds
+    const allPts = [];
+    polys.forEach(p => {
+      (p.points || '').split(/\s+/).forEach(pair => {
+        const parts = pair.split(',');
+        if (parts.length === 2) {
+          const x = parseFloat(parts[0]);
+          const y = parseFloat(parts[1]);
+          if (!isNaN(x) && !isNaN(y)) allPts.push({ x, y });
+        }
+      });
+    });
+
+    const minX = Math.min(...allPts.map(p => p.x)) - 10;
+    const minY = Math.min(...allPts.map(p => p.y)) - 10;
+    const maxX = Math.max(...allPts.map(p => p.x)) + 10;
+    const maxY = Math.max(...allPts.map(p => p.y)) + 10;
+    const w = maxX - minX;
+    const h = maxY - minY;
+
+    const expr = getExpressionMap();
+
+    const svgParts = [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${minX} ${minY} ${w} ${h}">`,
+      `<style>
+        .plant-poly {
+          stroke: #0f172a;
+          stroke-width: 1.2px;
+          stroke-linejoin: round;
+          transition: fill 0.2s ease, stroke-width 0.15s ease;
+          cursor: pointer;
+        }
+        .plant-poly:hover {
+          stroke: #D55E00 !important;
+          stroke-width: 2.8px !important;
+          filter: drop-shadow(0 0 4px rgba(213,94,0,0.6));
+        }
+      </style>`
+    ];
+
+    polys.forEach(p => {
+      const ctype = p.cellType || 'Cell';
+      const cname = p.name || p.id;
+      const val = expr[ctype] !== undefined ? expr[ctype] : null;
+      const fill = colorForVal(val);
+
+      svgParts.push(
+        `<polygon class="plant-poly" id="${p.id}" points="${p.points}" fill="${fill}" ` +
+        `data-cell-type="${ctype}" data-name="${cname}" data-val="${val !== null ? val.toFixed(2) : ''}">` +
+        `<title>${cname} (${ctype})</title></polygon>`
+      );
+    });
+
+    svgParts.push('</svg>');
+    canvasContainer.innerHTML = svgParts.join('\n');
+
+    // Attach hover listeners
+    canvasContainer.querySelectorAll('.plant-poly').forEach(poly => {
+      poly.addEventListener('mouseenter', () => {
+        const name = poly.getAttribute('data-name');
+        const ctype = poly.getAttribute('data-cell-type');
+        const val = poly.getAttribute('data-val');
+        inspector.innerHTML = `<span><strong>${name}</strong> — Cell Type: <em>${ctype}</em></span>`;
+        badge.style.display = 'inline-block';
+        badge.textContent = val ? `${val > 0 ? '+' : ''}${val} log2FC` : 'No data';
+        inspector.appendChild(badge);
+      });
+    });
+  }
+
+  organSelect.addEventListener('change', loadAndRenderOrgan);
+
+  ['slider-meso', 'slider-epi', 'slider-vasc', 'slider-cortex'].forEach(id => {
+    const slider = document.getElementById(id);
+    const labelSpan = document.getElementById(id.replace('slider-', 'val-'));
+    slider.addEventListener('input', () => {
+      labelSpan.textContent = (slider.value > 0 ? '+' : '') + slider.value;
+      loadAndRenderOrgan();
+    });
+  });
+
+  loadAndRenderOrgan();
+
+  const themeBtn = document.getElementById('theme-toggle');
+  themeBtn.addEventListener('click', () => {
+    const curr = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', curr);
+    localStorage.setItem('ppa-theme', curr);
+  });
+</script>
+</body>
+</html>

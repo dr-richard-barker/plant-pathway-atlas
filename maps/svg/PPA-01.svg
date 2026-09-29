@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 690" width="920" height="690" data-theme="light" data-map-id="PPA-01"><defs><style>
+:root {
+  --ppa-bg: #ffffff;
+  --ppa-ink: #0f172a;
+  --ppa-ink-soft: #475569;
+  --ppa-node-fill: #f8fafc;
+  --ppa-node-stroke: #1e293b;
+  --ppa-hairline: #cbd5e1;
+  --ppa-edge: #475569;
+  --ppa-compartment-fill: rgba(15, 23, 42, 0.035);
+  --ppa-compartment-stroke: rgba(15, 23, 42, 0.22);
+  --ppa-accent: #0284c7;
+  --ppa-up: #D55E00;
+  --ppa-down: #0072B2;
+}
+:root[data-theme="dark"] {
+  --ppa-bg: #0b0f17;
+  --ppa-ink: #f1f5f9;
+  --ppa-ink-soft: #94a3b8;
+  --ppa-node-fill: #151c28;
+  --ppa-node-stroke: #cbd5e1;
+  --ppa-hairline: #334155;
+  --ppa-edge: #94a3b8;
+  --ppa-compartment-fill: rgba(255, 255, 255, 0.04);
+  --ppa-compartment-stroke: rgba(255, 255, 255, 0.25);
+  --ppa-accent: #38bdf8;
+  --ppa-up: #ea580c;
+  --ppa-down: #38bdf8;
+}
+
+.ppa-canvas { fill: var(--ppa-bg, #ffffff); }
+text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: var(--ppa-ink); }
+.ppa-title { font-size: 20.0px; font-weight: 700; fill: var(--ppa-ink); }
+.ppa-subtitle { font-size: 12.0px; fill: var(--ppa-ink-soft); }
+.ppa-caption { font-size: 11.0px; fill: var(--ppa-ink-soft); line-height: 1.4; }
+.ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
+.ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
+.ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
+.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+
+.ppa-compartment-band {
+  fill: var(--ppa-compartment-fill);
+  stroke: var(--ppa-compartment-stroke);
+  stroke-width: 1.5px;
+  stroke-dasharray: 6 3;
+  rx: 10px;
+}
+.ppa-compartment-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  fill: var(--ppa-ink-soft);
+}
+
+.ppa-node {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ppa-node:hover {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.ppa-node rect, .ppa-node circle, .ppa-node path {
+  stroke: var(--ppa-node-stroke);
+  stroke-width: 1.5px;
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+.ppa-node.significant rect {
+  stroke-width: 2.5px;
+  stroke: var(--ppa-ink);
+}
+.ppa-node.non-significant rect {
+  stroke-width: 1.0px;
+  stroke-dasharray: 3 2;
+  stroke: var(--ppa-hairline);
+}
+</style>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ppa-edge)" /></marker>
+<marker id="inhibit" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><line x1="5" y1="1" x2="5" y2="9" stroke="var(--ppa-edge)" stroke-width="2" /></marker>
+</defs>
+<rect class="ppa-canvas" width="920" height="690" />
+<text class="ppa-title" x="40.0" y="36.0">Central Metabolism Overview</text>
+<text class="ppa-subtitle" x="40.0" y="56.0">Compartmentalized carbon flux, photosynthesis, glycolysis, TCA cycle, and mitochondrial bioenergetics</text>
+<rect class="ppa-compartment-band" x="57.1" y="62.0" width="626.0" height="133.6" />
+<text class="ppa-compartment-title" x="71.1" y="80.0">Chloroplast Stroma</text>
+<rect class="ppa-compartment-band" x="75.5" y="173.6" width="589.2" height="223.3" />
+<text class="ppa-compartment-title" x="89.5" y="191.6">Cytosol</text>
+<rect class="ppa-compartment-band" x="42.0" y="374.9" width="656.3" height="133.6" />
+<text class="ppa-compartment-title" x="56.0" y="392.9">Mitochondrial Matrix</text>
+<rect class="ppa-compartment-band" x="14.0" y="486.6" width="712.3" height="133.6" />
+<text class="ppa-compartment-title" x="28.0" y="504.6">Inner Mitochondrial Membrane</text>
+<path d="M 257.9 135.8 L 289.9 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="273.9" y="131.8">Hexose-P</text>
+<path d="M 173.7 169.6 L 178.9 224.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="176.3" y="193.1">Triose-P</text>
+<path d="M 260.6 247.5 L 499.4 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 499.4 247.5 L 467.4 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 499.4 266.9 L 269.1 331.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 269.1 348.1 L 301.1 348.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 427.5 348.1 L 459.5 348.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 459.5 366.3 L 242.0 425.2" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 242.0 448.8 L 274.0 448.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="258.0" y="444.8">Acetyl-CoA</text>
+<path d="M 429.9 448.8 L 461.9 448.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 285.7 482.6 L 199.5 526.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="242.6" y="500.6">NADH / FADH2</text>
+<path d="M 351.5 482.6 L 350.7 537.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="351.1" y="506.1">Ubiquinol</text>
+<g class="ppa-node complex " id="node-CALVIN_CYCLE" data-node-id="CALVIN_CYCLE" data-loci="ATCG00490,AT1G67090,AT1G79550,AT3G26650" data-bin="1.2">
+<rect x="83.1" y="102.0" width="174.7" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="170.5" y="120.0">Calvin-Benson Cycle</text>
+<text class="ppa-sub" x="170.5" y="135.4">BIN 1.2 Carbon Fixation</text>
+<g class="ppa-subunit" data-locus="ATCG00490"><rect x="92.5" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="110.5" y="160.1">RbcL</text></g>
+<g class="ppa-subunit" data-locus="AT1G67090"><rect x="132.5" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="150.5" y="160.1">RbcS</text></g>
+<g class="ppa-subunit" data-locus="AT1G79550"><rect x="172.5" y="149.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="187.3" y="160.1">PGK</text></g>
+<g class="ppa-subunit" data-locus="AT3G26650"><rect x="206.0" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="227.3" y="160.1">GAPDH</text></g>
+</g>
+<g class="ppa-node complex " id="node-STARCH_TURNOVER" data-node-id="STARCH_TURNOVER" data-loci="AT5G48300,AT5G19220,AT3G23920" data-bin="2.2">
+<rect x="289.9" y="102.0" width="179.7" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="379.7" y="120.0">Starch Metabolism</text>
+<text class="ppa-sub" x="379.7" y="135.4">BIN 2.2 Synthesis &amp; Degradation</text>
+<g class="ppa-subunit" data-locus="AT5G48300"><rect x="321.7" y="149.6" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="346.2" y="160.1">AGPase</text></g>
+<g class="ppa-subunit" data-locus="AT5G19220"><rect x="374.7" y="149.6" width="23.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="386.2" y="160.1">SS</text></g>
+<g class="ppa-subunit" data-locus="AT3G23920"><rect x="401.7" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="419.7" y="160.1">BAM1</text></g>
+</g>
+<g class="ppa-node family " id="node-PLASTID_FA_SYNTH" data-node-id="PLASTID_FA_SYNTH" data-loci="AT1G36160,AT2G05990,AT3G25110,AT2G19450" data-bin="11.1">
+<rect x="501.5" y="104.0" width="155.6" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="579.3" y="122.0">Plastidial FA Synthesis</text>
+<text class="ppa-sub" x="579.3" y="137.4">BIN 11.1 De Novo FAS</text>
+<rect class="ppa-family-tile" x="555.3" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="567.3" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="579.3" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="591.3" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node simple " id="node-TRIOSE_P_EXPORT" data-node-id="TRIOSE_P_EXPORT" data-loci="AT5G46110" data-bin="34.1">
+<rect x="101.5" y="224.6" width="159.0" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="181.0" y="242.6">Triose-P Translocator</text>
+<text class="ppa-sub" x="181.0" y="258.0">TPT1 (Chloroplast Envelope)</text>
+</g>
+<g class="ppa-node complex " id="node-SUCROSE_METABOLISM" data-node-id="SUCROSE_METABOLISM" data-loci="AT5G20830,AT5G20840,AT3G13790" data-bin="2.1">
+<rect x="292.6" y="213.6" width="174.9" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="380.0" y="231.6">Sucrose Metabolism</text>
+<text class="ppa-sub" x="380.0" y="247.0">BIN 2.1 Synthesis &amp; Partitioning</text>
+<g class="ppa-subunit" data-locus="AT5G20830"><rect x="318.7" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="336.7" y="271.8">SPS1</text></g>
+<g class="ppa-subunit" data-locus="AT5G20840"><rect x="358.7" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="376.7" y="271.8">SUS1</text></g>
+<g class="ppa-subunit" data-locus="AT3G13790"><rect x="398.7" y="261.3" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="420.0" y="271.8">CINV1</text></g>
+</g>
+<g class="ppa-node metabolite " id="node-HEXOSE_P_POOL" data-node-id="HEXOSE_P_POOL" data-loci="" data-bin="">
+<rect x="499.4" y="224.6" width="139.3" height="45.6" rx="16" ry="16" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="569.1" y="242.6">Hexose Phosphates</text>
+<text class="ppa-sub" x="569.1" y="258.0">G6P / F6P Pool</text>
+</g>
+<g class="ppa-node simple " id="node-GLYCOLYSIS_UPPER" data-node-id="GLYCOLYSIS_UPPER" data-loci="AT4G24620,AT1G79550" data-bin="4.1">
+<rect x="146.7" y="325.3" width="122.5" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="207.9" y="343.3">Upper Glycolysis</text>
+<text class="ppa-sub" x="207.9" y="358.7">Hexokinase / PFK</text>
+</g>
+<g class="ppa-node simple " id="node-GLYCOLYSIS_LOWER" data-node-id="GLYCOLYSIS_LOWER" data-loci="AT2G36530,AT5G56580" data-bin="4.2">
+<rect x="301.1" y="325.3" width="126.3" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="364.3" y="343.3">Lower Glycolysis</text>
+<text class="ppa-sub" x="364.3" y="358.7">GAPDH / Enolase / PK</text>
+</g>
+<g class="ppa-node metabolite " id="node-PYRUVATE_POOL" data-node-id="PYRUVATE_POOL" data-loci="" data-bin="">
+<rect x="459.5" y="325.3" width="134.1" height="45.6" rx="16" ry="16" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="526.5" y="343.3">Pyruvate</text>
+<text class="ppa-sub" x="526.5" y="358.7">Cytosolic / Matrix Node</text>
+</g>
+<g class="ppa-node complex " id="node-PYRUVATE_DH" data-node-id="PYRUVATE_DH" data-loci="AT1G01090,AT3G13930,AT1G48030" data-bin="8.1">
+<rect x="68.0" y="414.9" width="174.0" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="155.0" y="432.9">Pyruvate Dehydrogenase</text>
+<text class="ppa-sub" x="155.0" y="448.3">PDC Complex (Mitochondrial)</text>
+<g class="ppa-subunit" data-locus="AT1G01090"><rect x="113.2" y="462.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="128.0" y="473.1">E1a</text></g>
+<g class="ppa-subunit" data-locus="AT3G13930"><rect x="146.7" y="462.6" width="23.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="158.2" y="473.1">E2</text></g>
+<g class="ppa-subunit" data-locus="AT1G48030"><rect x="173.7" y="462.6" width="23.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="185.2" y="473.1">E3</text></g>
+</g>
+<g class="ppa-node complex " id="node-TCA_CYCLE" data-node-id="TCA_CYCLE" data-loci="AT3G58610,AT4G35830,AT4G35260,AT1G53240" data-bin="8.2">
+<rect x="274.0" y="414.9" width="155.9" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="351.9" y="432.9">Citric Acid Cycle (TCA)</text>
+<text class="ppa-sub" x="351.9" y="448.3">BIN 8.2 Closed Cycle</text>
+<g class="ppa-subunit" data-locus="AT3G58610"><rect x="286.9" y="462.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="301.7" y="473.1">CSY</text></g>
+<g class="ppa-subunit" data-locus="AT4G35830"><rect x="320.4" y="462.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="335.2" y="473.1">ACO</text></g>
+<g class="ppa-subunit" data-locus="AT4G35260"><rect x="353.9" y="462.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="368.7" y="473.1">IDH</text></g>
+<g class="ppa-subunit" data-locus="AT1G53240"><rect x="387.4" y="462.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="402.2" y="473.1">MDH</text></g>
+</g>
+<g class="ppa-node metabolite " id="node-AMINO_ACID_PRECURSORS" data-node-id="AMINO_ACID_PRECURSORS" data-loci="" data-bin="">
+<rect x="461.9" y="425.9" width="210.3" height="45.6" rx="16" ry="16" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="567.1" y="443.9">2-Oxoglutarate &amp; Oxaloacetate</text>
+<text class="ppa-sub" x="567.1" y="459.3">Carbon Skeletons for N-Assimilation</text>
+</g>
+<g class="ppa-node complex " id="node-RESPIRATORY_ETC" data-node-id="RESPIRATORY_ETC" data-loci="AT5G08530,AT5G40650,AT4G03280,AT1G22450" data-bin="9.1">
+<rect x="40.0" y="526.6" width="186.5" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="133.3" y="544.6">Mitochondrial ETC (I-IV)</text>
+<text class="ppa-sub" x="133.3" y="560.0">BIN 9.1 Oxidative Phosphorylation</text>
+<g class="ppa-subunit" data-locus="AT5G08530"><rect x="68.3" y="574.2" width="23.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="79.8" y="584.7">CI</text></g>
+<g class="ppa-subunit" data-locus="AT5G40650"><rect x="95.3" y="574.2" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="110.0" y="584.7">CII</text></g>
+<g class="ppa-subunit" data-locus="AT4G03280"><rect x="128.8" y="574.2" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="146.8" y="584.7">CIII</text></g>
+<g class="ppa-subunit" data-locus="AT1G22450"><rect x="168.8" y="574.2" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="183.5" y="584.7">CIV</text></g>
+</g>
+<g class="ppa-node simple " id="node-AOX_BYPASS" data-node-id="AOX_BYPASS" data-loci="AT3G22370,AT1G32350" data-bin="9.2">
+<rect x="258.5" y="537.6" width="183.8" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="350.4" y="555.6">Alternative Oxidase</text>
+<text class="ppa-sub" x="350.4" y="571.0">AOX1A / AOX1D Non-Phos Branch</text>
+</g>
+<g class="ppa-node complex " id="node-ATP_SYNTHASE" data-node-id="ATP_SYNTHASE" data-loci="AT2G07698,AT5G08670" data-bin="9.4">
+<rect x="474.3" y="526.6" width="226.0" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="587.3" y="544.6">Mitochondrial F1-F0 ATP Synthase</text>
+<text class="ppa-sub" x="587.3" y="560.0">Complex V</text>
+<g class="ppa-subunit" data-locus="AT2G07698"><rect x="546.0" y="574.2" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="567.3" y="584.7">alpha</text></g>
+<g class="ppa-subunit" data-locus="AT5G08670"><rect x="592.5" y="574.2" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="610.5" y="584.7">beta</text></g>
+</g>
+<text class="ppa-caption" x="40.0" y="664.2">Modernized MapMan central metabolism overview. Integrates Calvin-Benson carbon fixation in the chloroplast stroma, cytosolic</text>
+<text class="ppa-caption" x="40.0" y="679.1">sucrose partitioning and glycolysis, mitochondrial tricarboxylic acid (TCA) flux, and respiratory electron transport via the</text>
+<text class="ppa-caption" x="40.0" y="693.9">cytochrome and alternative oxidase (AOX) pathways. Multi-subunit holoenzymes and multi-gene families are rendered using adaptive</text>
+<text class="ppa-caption" x="40.0" y="708.8">vector glyphs (&quot;Chicklets 2.0&quot;) with true font metrics.</text>
+</svg>

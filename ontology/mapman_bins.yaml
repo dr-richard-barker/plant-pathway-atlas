@@ -1,0 +1,108 @@
+# MapMan4 / Mercator4 Curated Core Functional BIN Hierarchy
+version: "4.0"
+species_anchor: "arabidopsis_thaliana"
+
+bins:
+  # 1. Photosynthesis
+  - code: "1"
+    name: "photosynthesis"
+    description: "Light reactions, Calvin cycle and photorespiration"
+  - code: "1.1"
+    name: "photosynthesis.lightreaction"
+    description: "Photophosphorylation, electron transport and photosystems"
+  - code: "1.1.1"
+    name: "photosynthesis.lightreaction.photosystem II"
+    description: "PSII core complex, oxygen evolving complex and antennae"
+    loci: ["AT1G06680", "AT1G07080", "AT3G27690", "AT1G53790", "AT2G30570"]
+  - code: "1.1.2"
+    name: "photosynthesis.lightreaction.photosystem I"
+    description: "PSI core subunits and LHCI light harvesting"
+    loci: ["AT1G31330", "AT4G12800", "AT1G55670", "AT2G20260"]
+  - code: "1.1.3"
+    name: "photosynthesis.lightreaction.cytochrome b6/f"
+    description: "Plastidial electron transport between PSII and PSI"
+    loci: ["ATCG00540", "ATCG00550", "AT4G03280", "ATCG00710"]
+  - code: "1.1.4"
+    name: "photosynthesis.lightreaction.ATP synthase"
+    description: "Chloroplastic CF0-CF1 ATP synthase complex"
+    loci: ["ATCG00120", "ATCG00130", "AT4G04640", "AT2G07698"]
+  - code: "1.2"
+    name: "photosynthesis.calvincycle"
+    description: "Carbon fixation, RuBisCO and reductive pentose phosphate pathway"
+  - code: "1.2.1"
+    name: "photosynthesis.calvincycle.rubisco"
+    description: "Ribulose-1,5-bisphosphate carboxylase/oxygenase large and small subunits"
+    loci: ["ATCG00490", "AT1G67090", "AT5G38430", "AT5G38420"]
+  - code: "1.2.2"
+    name: "photosynthesis.calvincycle.reduction"
+    description: "PGK and GAPDH reduction of 3-PGA to triose-P"
+    loci: ["AT1G79550", "AT3G12780", "AT3G26650"]
+
+  # 2. Carbohydrate metabolism
+  - code: "2"
+    name: "major carbohydrate metabolism"
+    description: "Sucrose synthesis, starch turnover"
+  - code: "2.1"
+    name: "major carbohydrate metabolism.sucrose"
+    description: "Sucrose phosphate synthase, sucrose synthase, invertases"
+    loci: ["AT5G20830", "AT5G11110", "AT5G20280", "AT3G13790"]
+  - code: "2.2"
+    name: "major carbohydrate metabolism.starch"
+    description: "Starch synthesis (AGPase, SS, SBE) and degradation (BAM, AMY, GWD)"
+    loci: ["AT5G48300", "AT5G19220", "AT4G17090", "AT1G69830", "AT4G15210"]
+
+  # 4. Glycolysis
+  - code: "4"
+    name: "glycolysis"
+    description: "Embden-Meyerhof-Parnas glycolytic breakdown"
+    loci: ["AT4G24620", "AT1G79550", "AT2G36530", "AT5G56580"]
+
+  # 8. TCA Cycle
+  - code: "8"
+    name: "TCA cycle"
+    description: "Citric acid cycle enzymes in the mitochondrial matrix"
+    loci: ["AT3G25860", "AT4G35830", "AT2G18440", "AT3G58610", "AT1G22440"]
+
+  # 9. Mitochondrial Electron Transport
+  - code: "9"
+    name: "mitochondrial electron transport"
+    description: "Respiratory Complexes I to V, AOX and alternative NAD(P)H dehydrogenases"
+  - code: "9.1"
+    name: "mitochondrial electron transport.complex I"
+    description: "NADH:ubiquinone oxidoreductase"
+    loci: ["AT5G08530", "AT1G76200", "AT5G37510", "AT1G07890"]
+  - code: "9.2"
+    name: "mitochondrial electron transport.alternative oxidase"
+    description: "Alternative terminal cyanide-resistant oxidase (AOX)"
+    loci: ["AT3G22370", "AT3G22360", "AT1G32350"]
+  - code: "9.3"
+    name: "mitochondrial electron transport.complex IV"
+    description: "Cytochrome c oxidase"
+    loci: ["AT1G22450", "AT3G15640", "AT5G56530"]
+
+  # 11. Lipid Metabolism
+  - code: "11"
+    name: "lipid metabolism"
+    description: "Plastidial fatty acid synthesis, desaturation, Kennedy pathway"
+    loci: ["AT1G36160", "AT2G05990", "AT3G25110", "AT2G19450"]
+
+  # 21. Redox
+  - code: "21"
+    name: "redox"
+    description: "ROS production, scavenging, ascorbate-glutathione cycle and peroxiredoxins"
+  - code: "21.1"
+    name: "redox.superoxide dismutase"
+    description: "SODs: Cu/Zn-SOD, Fe-SOD, Mn-SOD"
+    loci: ["AT1G08830", "AT2G28190", "AT4G25100", "AT3G10920"]
+  - code: "21.2"
+    name: "redox.ascorbate-glutathione"
+    description: "Foyer-Halliwell-Asada pathway (APX, MDHAR, DHAR, GR)"
+    loci: ["AT1G07890", "AT3G09640", "AT1G19570", "AT5G03630", "AT3G24170", "AT3G54660"]
+  - code: "21.3"
+    name: "redox.catalase"
+    description: "Peroxisomal catalases (CAT1, CAT2, CAT3)"
+    loci: ["AT1G20630", "AT4G35090", "AT1G20620"]
+  - code: "21.4"
+    name: "redox.rboh"
+    description: "Respiratory burst oxidase homologs (plasma membrane NADPH oxidases)"
+    loci: ["AT5G47910", "AT1G64060", "AT5G07330"]

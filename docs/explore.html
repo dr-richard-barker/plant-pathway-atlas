@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore — Project Omics Data onto Plant Pathway Atlas</title>
+<link rel="stylesheet" href="assets/ppa-core.css">
+<script>
+  (function() {
+    const saved = localStorage.getItem('ppa-theme');
+    const pref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', saved || pref);
+  })();
+</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="ppa-topbar">
+    <a href="index.html" class="ppa-brand">
+      <span>🌱 Plant Pathway Atlas</span>
+      <span class="ppa-badge">Explore</span>
+    </a>
+    <button id="theme-toggle" class="btn" type="button" aria-label="Toggle theme">🌓 Theme</button>
+  </div>
+
+  <nav class="ppa-tab-bar" aria-label="Main Navigation">
+    <a href="index.html" class="btn">Atlas Maps</a>
+    <a href="explore.html" class="btn active">Explore Your Data</a>
+    <a href="spatial.html" class="btn">ggPlant Spatial Anatomy</a>
+    <span class="tab-label">Resources:</span>
+    <a href="../catalog/manifest.json" class="btn">Catalog Manifest</a>
+    <a href="../catalog/orthologs.json" class="btn">Orthology Matrix</a>
+  </nav>
+
+  <header class="hero">
+    <div class="eyebrow">Zero-Install Browser Analytics</div>
+    <h1>Project Your Data onto Pathway Maps</h1>
+    <p class="lede">
+      Drop your differential expression or proteomics table (CSV or TSV) below.
+      Everything runs <strong>100% locally in your browser</strong>; no data is ever uploaded to a server.
+    </p>
+  </header>
+
+  <!-- Drag and drop zone -->
+  <div class="dropzone" id="dropzone">
+    <input type="file" id="file-input" accept=".csv,.tsv,.txt" style="display:none;">
+    <div style="font-size:2.2rem; margin-bottom:10px;">📂</div>
+    <div style="font-weight:700; font-size:1.1rem; margin-bottom:6px;">Drop your expression file here, or click to browse</div>
+    <div style="font-size:0.85rem; color:var(--ppa-soft);">Supports CSV or TSV with gene/locus column, log2FoldChange, and optional FDR/p-value</div>
+  </div>
+
+  <div style="margin-bottom:18px; display:flex; align-items:center; gap:8px;">
+    <span style="font-size:0.85rem; font-weight:700; color:var(--ppa-soft);">Or load a demonstration preset:</span>
+    <button class="btn" id="preset-h2o2" type="button">At Oxidative Burst (H2O2)</button>
+    <button class="btn" id="preset-light" type="button">At Photosynthesis Acclimation</button>
+    <button class="btn" id="preset-rice" type="button">Rice (Oryza sativa) Stress</button>
+  </div>
+
+  <!-- Projection controls -->
+  <div class="toolbar">
+    <div>
+      <label for="map-select">Target Pathway Map</label>
+      <select id="map-select">
+        <option value="PPA-01">PPA-01 — Central Metabolism Overview</option>
+        <option value="PPA-02">PPA-02 — Photosynthesis & Bioenergetics</option>
+        <option value="PPA-05" selected>PPA-05 — ROS & Redox Homeostasis</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="species-select">Your Data's Species</label>
+      <select id="species-select">
+        <option value="arabidopsis_thaliana" selected>Arabidopsis thaliana (Anchor)</option>
+        <option value="oryza_sativa">Rice (Oryza sativa)</option>
+        <option value="zea_mays">Maize (Zea mays)</option>
+        <option value="solanum_lycopersicum">Tomato (Solanum lycopersicum)</option>
+        <option value="glycine_max">Soybean (Glycine max)</option>
+        <option value="saccharomyces_cerevisiae">Yeast (S. cerevisiae)</option>
+        <option value="homo_sapiens">Human (Comparative)</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="agg-select">Multi-Locus Aggregator</label>
+      <select id="agg-select">
+        <option value="mean" selected>Mean (Average)</option>
+        <option value="median">Median</option>
+        <option value="extreme">Extreme (Max Absolute)</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="alpha-input">Significance α (FDR)</label>
+      <input type="number" id="alpha-input" value="0.05" min="0" max="1" step="0.01" style="width:7em;">
+    </div>
+
+    <div>
+      <button class="btn primary" id="btn-project" type="button">Apply Projection</button>
+    </div>
+  </div>
+
+  <!-- Notification & status report -->
+  <div id="report-box"></div>
+
+  <!-- SVG Map Viewport -->
+  <div class="svg-viewport" id="svg-viewport">
+    <div style="text-align:center; padding:40px; color:var(--ppa-soft);">Loading map vector...</div>
+  </div>
+
+  <footer style="margin-top:50px; padding-top:20px; border-top:1px solid var(--ppa-rule); font-size:0.88rem; color:var(--ppa-soft);">
+    Plant Pathway Atlas (PPA) · Designed for high scientific rigor and reproducible omics visualization.
+  </footer>
+</div>
+
+<script type="module">
+  import { parseTable, projectDataToSvg } from './assets/ppa-explore.js';
+
+  const $ = (id) => document.getElementById(id);
+  const dropzone = $('dropzone');
+  const fileInput = $('file-input');
+  const mapSelect = $('map-select');
+  const speciesSelect = $('species-select');
+  const aggSelect = $('agg-select');
+  const alphaInput = $('alpha-input');
+  const btnProject = $('btn-project');
+  const reportBox = $('report-box');
+  const svgViewport = $('svg-viewport');
+
+  let currentParsedTable = null;
+  let cachedOrthologs = null;
+  const cachedSidecars = new Map();
+  const cachedSvgs = new Map();
+
+  // Load orthology matrix
+  fetch('../catalog/orthologs.json')
+    .then(r => r.json())
+    .then(data => { cachedOrthologs = data; })
+    .catch(err => console.warn('Could not load orthologs.json:', err));
+
+  async function loadMapSvg(mapId) {
+    if (!cachedSvgs.has(mapId)) {
+      const resp = await fetch(`../maps/svg/${mapId}.svg`);
+      if (!resp.ok) throw new Error(`Failed to load SVG for ${mapId}`);
+      cachedSvgs.set(mapId, await resp.text());
+    }
+    return cachedSvgs.get(mapId);
+  }
+
+  async function loadSidecar(mapId) {
+    if (!cachedSidecars.has(mapId)) {
+      const resp = await fetch(`../catalog/sidecars/${mapId}.json`);
+      if (!resp.ok) throw new Error(`Failed to load sidecar for ${mapId}`);
+      cachedSidecars.set(mapId, await resp.json());
+    }
+    return cachedSidecars.get(mapId);
+  }
+
+  async function renderSelectedMap() {
+    const mapId = mapSelect.value;
+    try {
+      const svgText = await loadMapSvg(mapId);
+      svgViewport.innerHTML = svgText;
+      if (currentParsedTable) {
+        applyProjection();
+      }
+    } catch (err) {
+      reportBox.innerHTML = `<div class="msg err"><strong>Error:</strong> ${err.message}</div>`;
+    }
+  }
+
+  mapSelect.addEventListener('change', renderSelectedMap);
+
+  async function applyProjection() {
+    if (!currentParsedTable) {
+      reportBox.innerHTML = '<div class="msg warn">Please upload or select an expression dataset first.</div>';
+      return;
+    }
+    const mapId = mapSelect.value;
+    try {
+      const sidecar = await loadSidecar(mapId);
+      const svgElem = svgViewport.querySelector('svg');
+      if (!svgElem) return;
+
+      const res = await projectDataToSvg(svgElem, currentParsedTable, sidecar, {
+        aggregator: aggSelect.value,
+        alpha: parseFloat(alphaInput.value),
+        species: speciesSelect.value,
+        orthologs: cachedOrthologs,
+      });
+
+      let msgHtml = `Mapped <strong>${res.mappedNodes}</strong> of ${res.totalAddressable} addressable nodes (${(res.fractionMapped * 100).toFixed(1)}%).`;
+      if (res.lowCoverage) {
+        reportBox.innerHTML = `<div class="msg warn"><strong>Low Coverage Warning:</strong> ${msgHtml} Some genes in this pathway may not be represented in your dataset.</div>`;
+      } else {
+        reportBox.innerHTML = `<div class="msg ok"><strong>Projection Applied:</strong> ${msgHtml}</div>`;
+      }
+    } catch (err) {
+      reportBox.innerHTML = `<div class="msg err"><strong>Projection Refused:</strong> ${err.message}</div>`;
+    }
+  }
+
+  btnProject.addEventListener('click', applyProjection);
+
+  // File drop handling
+  dropzone.addEventListener('click', () => fileInput.click());
+  dropzone.addEventListener('dragover', (e) => { e.preventDefault(); dropzone.classList.add('dragover'); });
+  dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
+  dropzone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropzone.classList.remove('dragover');
+    if (e.dataTransfer.files.length > 0) {
+      processFile(e.dataTransfer.files[0]);
+    }
+  });
+
+  fileInput.addEventListener('change', (e) => {
+    if (e.target.files.length > 0) {
+      processFile(e.target.files[0]);
+    }
+  });
+
+  function processFile(file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        currentParsedTable = parseTable(e.target.result);
+        reportBox.innerHTML = `<div class="msg ok">Loaded file <strong>${file.name}</strong> (${currentParsedTable.rows.length} rows). Click "Apply Projection" to overlay.</div>`;
+        applyProjection();
+      } catch (err) {
+        reportBox.innerHTML = `<div class="msg err">Failed to parse file: ${err.message}</div>`;
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  // Preset Demonstrations
+  $('preset-h2o2').addEventListener('click', () => {
+    mapSelect.value = 'PPA-05';
+    speciesSelect.value = 'arabidopsis_thaliana';
+    const csv = `locus,log2FoldChange,padj
+AT5G47910,2.8,0.0001
+AT1G64060,1.9,0.004
+AT1G08830,1.4,0.02
+AT1G07890,2.1,0.0005
+AT4G35090,3.2,0.00001
+AT3G24170,1.2,0.03
+AT3G51030,-1.6,0.01`;
+    currentParsedTable = parseTable(csv);
+    renderSelectedMap();
+  });
+
+  $('preset-light').addEventListener('click', () => {
+    mapSelect.value = 'PPA-02';
+    speciesSelect.value = 'arabidopsis_thaliana';
+    const csv = `locus,log2FoldChange,padj
+ATCG00020,1.5,0.002
+ATCG00540,1.8,0.001
+ATCG00350,1.1,0.04
+AT4G04640,2.2,0.0002
+AT1G29920,-2.1,0.0001`;
+    currentParsedTable = parseTable(csv);
+    renderSelectedMap();
+  });
+
+  $('preset-rice').addEventListener('click', () => {
+    mapSelect.value = 'PPA-05';
+    speciesSelect.value = 'oryza_sativa';
+    const csv = `locus,log2FoldChange,padj
+Os01g0734200,2.4,0.002
+Os03g0219200,1.7,0.01
+Os03g0285700,2.3,0.0004
+Os02g0115700,2.9,0.00005`;
+    currentParsedTable = parseTable(csv);
+    renderSelectedMap();
+  });
+
+  // Initial render
+  renderSelectedMap();
+
+  // Theme toggle
+  const themeBtn = $('theme-toggle');
+  themeBtn.addEventListener('click', () => {
+    const curr = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', curr);
+    localStorage.setItem('ppa-theme', curr);
+  });
+</script>
+</body>
+</html>

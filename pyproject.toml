@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "plantpath"
+version = "0.1.0"
+description = "Plant Pathway Atlas: Modernized MapMan, PlantCyc, and ggPlant visualization and omics projection"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Richard Barker" }
+]
+dependencies = [
+    "pyyaml>=6.0",
+    "matplotlib>=3.5.0",
+    "numpy>=1.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pandas>=1.4.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/plantpath"]

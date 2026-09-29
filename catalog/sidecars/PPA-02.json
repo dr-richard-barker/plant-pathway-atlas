@@ -1,0 +1,473 @@
+{
+  "id": "PPA-02",
+  "title": "Photosynthesis & Chloroplast Bioenergetics",
+  "subtitle": "Z-scheme photochemistry, thylakoid electron transport, cyclic electron flow, and photophosphorylation",
+  "caption": "Photosynthetic light reactions and thylakoid bioenergetics redrawn with deterministic geometry. Captures linear electron flow from water splitting at photosystem II (PSII) through the plastoquinone pool, cytochrome b6f complex, and plastocyanin to photosystem I (PSI), with ferredoxin-NADP+ reductase (FNR) producing NADPH. Cyclic electron flow via PGR5/PGRL1 and the chloroplast ATP synthase CF0-CF1 complex are explicitly resolved.",
+  "species_anchor": "arabidopsis_thaliana",
+  "nodes": [
+    {
+      "id": "LHCII_ANTENNA",
+      "label": "LHCII Antenna Complex",
+      "kind": "family",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "1.1.1.1",
+      "loci": [
+        "AT1G29920",
+        "AT1G29910",
+        "AT2G34430",
+        "AT5G54270",
+        "AT4G10340",
+        "AT2G40100"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "PSII_CORE",
+      "label": "Photosystem II Core",
+      "kind": "complex",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "1.1.1.2",
+      "loci": [
+        "ATCG00020",
+        "ATCG00270",
+        "ATCG00680",
+        "ATCG00280"
+      ],
+      "subunits": [
+        {
+          "symbol": "PsbA",
+          "locus": "ATCG00020"
+        },
+        {
+          "symbol": "PsbD",
+          "locus": "ATCG00270"
+        },
+        {
+          "symbol": "PsbB",
+          "locus": "ATCG00680"
+        },
+        {
+          "symbol": "PsbC",
+          "locus": "ATCG00280"
+        }
+      ]
+    },
+    {
+      "id": "OEC_WATER_SPLITTING",
+      "label": "Oxygen Evolving Complex",
+      "kind": "complex",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "1.1.1.3",
+      "loci": [
+        "AT5G66570",
+        "AT1G06680",
+        "AT4G21280"
+      ],
+      "subunits": [
+        {
+          "symbol": "PsbO",
+          "locus": "AT5G66570"
+        },
+        {
+          "symbol": "PsbP",
+          "locus": "AT1G06680"
+        },
+        {
+          "symbol": "PsbQ",
+          "locus": "AT4G21280"
+        }
+      ]
+    },
+    {
+      "id": "PLASTOQUINONE_POOL",
+      "label": "Plastoquinone (PQ) Pool",
+      "kind": "metabolite",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "",
+      "loci": [],
+      "subunits": []
+    },
+    {
+      "id": "CYTOCHROME_B6F",
+      "label": "Cytochrome b6f Complex",
+      "kind": "complex",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "1.1.3",
+      "loci": [
+        "ATCG00540",
+        "ATCG00550",
+        "AT4G03280",
+        "ATCG00710"
+      ],
+      "subunits": [
+        {
+          "symbol": "PetA",
+          "locus": "ATCG00540"
+        },
+        {
+          "symbol": "PetB",
+          "locus": "ATCG00550"
+        },
+        {
+          "symbol": "PetC",
+          "locus": "AT4G03280"
+        },
+        {
+          "symbol": "PetD",
+          "locus": "ATCG00710"
+        }
+      ]
+    },
+    {
+      "id": "PLASTOCYANIN_POOL",
+      "label": "Plastocyanin (PC)",
+      "kind": "simple",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "1.1.5",
+      "loci": [
+        "AT1G20340",
+        "AT1G76100"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "PSI_CORE",
+      "label": "Photosystem I Core",
+      "kind": "complex",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "1.1.2",
+      "loci": [
+        "ATCG00350",
+        "ATCG00340",
+        "ATCG01060",
+        "AT1G03130"
+      ],
+      "subunits": [
+        {
+          "symbol": "PsaA",
+          "locus": "ATCG00350"
+        },
+        {
+          "symbol": "PsaB",
+          "locus": "ATCG00340"
+        },
+        {
+          "symbol": "PsaC",
+          "locus": "ATCG01060"
+        },
+        {
+          "symbol": "PsaD",
+          "locus": "AT1G03130"
+        }
+      ]
+    },
+    {
+      "id": "FERREDOXIN_POOL",
+      "label": "Ferredoxin (FD)",
+      "kind": "simple",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "1.1.6",
+      "loci": [
+        "AT1G10960",
+        "AT1G60950",
+        "AT2G27510"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "FNR_REDUCTASE",
+      "label": "Ferredoxin-NADP+ Reductase",
+      "kind": "simple",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "1.1.7",
+      "loci": [
+        "AT5G66190",
+        "AT1G20020"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "CYCLIC_FLOW_PGR5",
+      "label": "Cyclic Electron Flow (CEF)",
+      "kind": "complex",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "1.1.8",
+      "loci": [
+        "AT2G05620",
+        "AT4G22890",
+        "AT4G37925"
+      ],
+      "subunits": [
+        {
+          "symbol": "PGR5",
+          "locus": "AT2G05620"
+        },
+        {
+          "symbol": "PGRL1A",
+          "locus": "AT4G22890"
+        },
+        {
+          "symbol": "NDHM",
+          "locus": "AT4G37925"
+        }
+      ]
+    },
+    {
+      "id": "CHLORO_ATP_SYNTHASE",
+      "label": "CF0-CF1 ATP Synthase",
+      "kind": "complex",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "1.1.4",
+      "loci": [
+        "ATCG00120",
+        "ATCG00480",
+        "AT4G04640"
+      ],
+      "subunits": [
+        {
+          "symbol": "AtpA",
+          "locus": "ATCG00120"
+        },
+        {
+          "symbol": "AtpB",
+          "locus": "ATCG00480"
+        },
+        {
+          "symbol": "AtpC",
+          "locus": "AT4G04640"
+        }
+      ]
+    },
+    {
+      "id": "NADPH_ATP_OUTPUT",
+      "label": "NADPH & ATP Pool",
+      "kind": "metabolite",
+      "compartment": "thylakoid_membrane",
+      "mapman_bin": "",
+      "loci": [],
+      "subunits": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "LHCII_ANTENNA",
+      "to": "PSII_CORE",
+      "start": [
+        204.330625,
+        135.824
+      ],
+      "end": [
+        236.330625,
+        135.824
+      ],
+      "class": "flux",
+      "label": "Exciton"
+    },
+    {
+      "from": "OEC_WATER_SPLITTING",
+      "to": "PSII_CORE",
+      "start": [
+        435.29796875,
+        135.824
+      ],
+      "end": [
+        403.29796875,
+        135.824
+      ],
+      "class": "flux",
+      "label": "e- (H2O)"
+    },
+    {
+      "from": "PSII_CORE",
+      "to": "PLASTOQUINONE_POOL",
+      "start": [
+        263.16012691225995,
+        169.648
+      ],
+      "end": [
+        171.03680181911008,
+        224.648
+      ],
+      "class": "flux",
+      "label": "2 e- / 2 H+"
+    },
+    {
+      "from": "PLASTOQUINONE_POOL",
+      "to": "CYTOCHROME_B6F",
+      "start": [
+        215.263234375,
+        247.472
+      ],
+      "end": [
+        247.263234375,
+        247.47199999999998
+      ],
+      "class": "flux",
+      "label": "PQH2"
+    },
+    {
+      "from": "CYTOCHROME_B6F",
+      "to": "PLASTOCYANIN_POOL",
+      "start": [
+        422.755734375,
+        247.47199999999998
+      ],
+      "end": [
+        454.755734375,
+        247.472
+      ],
+      "class": "flux",
+      "label": "1 e-"
+    },
+    {
+      "from": "PLASTOCYANIN_POOL",
+      "to": "PSI_CORE",
+      "start": [
+        454.755734375,
+        268.2587139550337
+      ],
+      "end": [
+        208.54646875,
+        336.194142976608
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "PSI_CORE",
+      "to": "FERREDOXIN_POOL",
+      "start": [
+        208.54646875,
+        359.12
+      ],
+      "end": [
+        240.54646875,
+        359.12
+      ],
+      "class": "flux",
+      "label": "Fd (red)"
+    },
+    {
+      "from": "FERREDOXIN_POOL",
+      "to": "FNR_REDUCTASE",
+      "start": [
+        381.62446875,
+        359.12
+      ],
+      "end": [
+        413.62446875,
+        359.12
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "FNR_REDUCTASE",
+      "to": "NADPH_ATP_OUTPUT",
+      "start": [
+        518.1237471080987,
+        381.944
+      ],
+      "end": [
+        531.4532685169014,
+        447.94399999999996
+      ],
+      "class": "flux",
+      "label": "NADPH"
+    },
+    {
+      "from": "FERREDOXIN_POOL",
+      "to": "CYCLIC_FLOW_PGR5",
+      "start": [
+        274.3133484354847,
+        381.944
+      ],
+      "end": [
+        185.70194739717684,
+        436.94399999999996
+      ],
+      "class": "flux",
+      "label": "CEF"
+    },
+    {
+      "from": "CYCLIC_FLOW_PGR5",
+      "to": "PLASTOQUINONE_POOL",
+      "start": [
+        131.44987071420888,
+        436.94399999999996
+      ],
+      "end": [
+        132.6437798661866,
+        270.296
+      ],
+      "class": "flux",
+      "label": "PQ reduction"
+    },
+    {
+      "from": "CYTOCHROME_B6F",
+      "to": "CHLORO_ATP_SYNTHASE",
+      "start": [
+        335.67187028428634,
+        281.296
+      ],
+      "end": [
+        338.7199734657136,
+        436.94399999999996
+      ],
+      "class": "flux",
+      "label": "\u0394pH Gradient"
+    },
+    {
+      "from": "CHLORO_ATP_SYNTHASE",
+      "to": "NADPH_ATP_OUTPUT",
+      "start": [
+        426.596859375,
+        470.768
+      ],
+      "end": [
+        458.596859375,
+        470.768
+      ],
+      "class": "flux",
+      "label": "ATP"
+    }
+  ],
+  "total_nodes": 12,
+  "distinct_loci": 34,
+  "loci_list": [
+    "AT1G03130",
+    "AT1G06680",
+    "AT1G10960",
+    "AT1G20020",
+    "AT1G20340",
+    "AT1G29910",
+    "AT1G29920",
+    "AT1G60950",
+    "AT1G76100",
+    "AT2G05620",
+    "AT2G27510",
+    "AT2G34430",
+    "AT2G40100",
+    "AT4G03280",
+    "AT4G04640",
+    "AT4G10340",
+    "AT4G21280",
+    "AT4G22890",
+    "AT4G37925",
+    "AT5G54270",
+    "AT5G66190",
+    "AT5G66570",
+    "ATCG00020",
+    "ATCG00120",
+    "ATCG00270",
+    "ATCG00280",
+    "ATCG00340",
+    "ATCG00350",
+    "ATCG00480",
+    "ATCG00540",
+    "ATCG00550",
+    "ATCG00680",
+    "ATCG00710",
+    "ATCG01060"
+  ]
+}

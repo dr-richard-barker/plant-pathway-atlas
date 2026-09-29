@@ -1,0 +1,4074 @@
+{
+  "description": "Plant Pathway Atlas precomputed cross-species orthology matrix.",
+  "source_species": "arabidopsis_thaliana",
+  "loci_count": 102,
+  "species": {
+    "oryza_sativa": {
+      "common_name": "Rice",
+      "mapped": 102,
+      "requested": 102,
+      "fraction_mapped": 1.0,
+      "unmapped": [],
+      "methods_used": [
+        "curated_seed",
+        "ensembl_pan_homology",
+        "orthodb"
+      ],
+      "orthologs": {
+        "AT1G01090": {
+          "targets": [
+            "LOC_Os07g90682"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G03130": {
+          "targets": [
+            "LOC_Os10g47629"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G03680": {
+          "targets": [
+            "LOC_Os11g99134"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G06680": {
+          "targets": [
+            "LOC_Os03g98754"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G07890": {
+          "targets": [
+            "Os03g0285700",
+            "Os07g0694700"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": false,
+          "corroborated": true
+        },
+        "AT1G08830": {
+          "targets": [
+            "Os03g0219200",
+            "Os07g0665200"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": false,
+          "corroborated": true
+        },
+        "AT1G10960": {
+          "targets": [
+            "LOC_Os03g22194"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G19570": {
+          "targets": [
+            "LOC_Os04g78439"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20020": {
+          "targets": [
+            "LOC_Os07g46042"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20340": {
+          "targets": [
+            "LOC_Os08g13907"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20620": {
+          "targets": [
+            "LOC_Os05g21104"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20630": {
+          "targets": [
+            "LOC_Os01g72592"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G22450": {
+          "targets": [
+            "LOC_Os05g82412"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G29910": {
+          "targets": [
+            "LOC_Os03g27186"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G29920": {
+          "targets": [
+            "LOC_Os07g11074"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G32350": {
+          "targets": [
+            "LOC_Os02g33785"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G36160": {
+          "targets": [
+            "LOC_Os11g44006"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G48030": {
+          "targets": [
+            "LOC_Os06g46545"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G53240": {
+          "targets": [
+            "LOC_Os01g48808"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G60950": {
+          "targets": [
+            "LOC_Os02g52241"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G63940": {
+          "targets": [
+            "LOC_Os01g24292"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G64060": {
+          "targets": [
+            "LOC_Os08g41783"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G64280": {
+          "targets": [
+            "LOC_Os01g31432"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G67090": {
+          "targets": [
+            "Os12g0291100",
+            "Os12g0292400"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": false,
+          "corroborated": true
+        },
+        "AT1G75270": {
+          "targets": [
+            "LOC_Os05g25316"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G76100": {
+          "targets": [
+            "LOC_Os09g21564"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G77490": {
+          "targets": [
+            "LOC_Os02g19685"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G79550": {
+          "targets": [
+            "LOC_Os06g46425"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G05620": {
+          "targets": [
+            "LOC_Os05g78584"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G05990": {
+          "targets": [
+            "LOC_Os12g27711"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G07698": {
+          "targets": [
+            "Os08g0126700"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT2G19450": {
+          "targets": [
+            "LOC_Os10g72169"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G27510": {
+          "targets": [
+            "LOC_Os11g30806"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G28190": {
+          "targets": [
+            "LOC_Os06g29913"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G30540": {
+          "targets": [
+            "LOC_Os10g66625"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G34430": {
+          "targets": [
+            "LOC_Os12g24507"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G35010": {
+          "targets": [
+            "LOC_Os03g72150"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G36530": {
+          "targets": [
+            "LOC_Os05g71036"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G40100": {
+          "targets": [
+            "LOC_Os11g34754"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G06730": {
+          "targets": [
+            "LOC_Os09g75516"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G09640": {
+          "targets": [
+            "LOC_Os02g36533"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G09940": {
+          "targets": [
+            "LOC_Os10g95545"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G10920": {
+          "targets": [
+            "LOC_Os03g98574"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G11630": {
+          "targets": [
+            "LOC_Os12g28683"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G13790": {
+          "targets": [
+            "LOC_Os02g24893"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G13930": {
+          "targets": [
+            "LOC_Os04g83323"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G22370": {
+          "targets": [
+            "Os04g0600300",
+            "Os02g0766100"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": false,
+          "corroborated": true
+        },
+        "AT3G23920": {
+          "targets": [
+            "LOC_Os02g76997"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G24170": {
+          "targets": [
+            "LOC_Os02g26873"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G25110": {
+          "targets": [
+            "LOC_Os04g33319"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G26060": {
+          "targets": [
+            "LOC_Os03g66870"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G26650": {
+          "targets": [
+            "LOC_Os12g50367"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G51030": {
+          "targets": [
+            "LOC_Os10g68857"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G54660": {
+          "targets": [
+            "LOC_Os10g14809"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G54900": {
+          "targets": [
+            "LOC_Os11g58778"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G58610": {
+          "targets": [
+            "LOC_Os09g39456"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G03280": {
+          "targets": [
+            "LOC_Os09g99444"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G04640": {
+          "targets": [
+            "LOC_Os08g82343"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G08390": {
+          "targets": [
+            "LOC_Os08g95171"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G10340": {
+          "targets": [
+            "LOC_Os03g76146"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G15660": {
+          "targets": [
+            "LOC_Os11g97562"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G15680": {
+          "targets": [
+            "LOC_Os02g13805"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G21280": {
+          "targets": [
+            "LOC_Os01g87136"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G22890": {
+          "targets": [
+            "LOC_Os08g92723"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G24620": {
+          "targets": [
+            "LOC_Os06g91893"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G25100": {
+          "targets": [
+            "LOC_Os02g64277"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G35090": {
+          "targets": [
+            "Os02g0115700",
+            "Os03g0121200"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": false,
+          "corroborated": true
+        },
+        "AT4G35260": {
+          "targets": [
+            "LOC_Os07g98674"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G35830": {
+          "targets": [
+            "LOC_Os02g67001"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G37925": {
+          "targets": [
+            "LOC_Os04g17191"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G03630": {
+          "targets": [
+            "LOC_Os04g82327"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G06290": {
+          "targets": [
+            "LOC_Os09g19380"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G08530": {
+          "targets": [
+            "LOC_Os03g31350"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G08670": {
+          "targets": [
+            "LOC_Os04g42211"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G16710": {
+          "targets": [
+            "LOC_Os07g51466"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G19220": {
+          "targets": [
+            "LOC_Os01g77812"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G20830": {
+          "targets": [
+            "LOC_Os10g75253"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G20840": {
+          "targets": [
+            "LOC_Os06g17277"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G23310": {
+          "targets": [
+            "LOC_Os04g50527"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G39950": {
+          "targets": [
+            "LOC_Os06g24561"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G40650": {
+          "targets": [
+            "LOC_Os01g83368"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G46110": {
+          "targets": [
+            "LOC_Os02g22937"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G47910": {
+          "targets": [
+            "Os01g0734200",
+            "Os05g0528000"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": false,
+          "corroborated": true
+        },
+        "AT5G48300": {
+          "targets": [
+            "LOC_Os05g72260"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G51100": {
+          "targets": [
+            "LOC_Os02g70565"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G54270": {
+          "targets": [
+            "LOC_Os06g96141"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G56580": {
+          "targets": [
+            "LOC_Os08g35531"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G66190": {
+          "targets": [
+            "LOC_Os09g16596"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G66570": {
+          "targets": [
+            "LOC_Os10g36961"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00020": {
+          "targets": [
+            "LOC_Os11g21854"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00120": {
+          "targets": [
+            "LOC_Os01g42292"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00270": {
+          "targets": [
+            "LOC_Os10g19657"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00280": {
+          "targets": [
+            "LOC_Os04g50875"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00340": {
+          "targets": [
+            "LOC_Os03g80598"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00350": {
+          "targets": [
+            "LOC_Os04g48031"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00480": {
+          "targets": [
+            "LOC_Os07g70558"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00490": {
+          "targets": [
+            "Os00g0001000"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "ATCG00540": {
+          "targets": [
+            "LOC_Os04g58375"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00550": {
+          "targets": [
+            "LOC_Os09g39684"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00680": {
+          "targets": [
+            "LOC_Os01g82612"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00710": {
+          "targets": [
+            "LOC_Os05g55076"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG01060": {
+          "targets": [
+            "LOC_Os05g38468"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        }
+      }
+    },
+    "zea_mays": {
+      "common_name": "Maize",
+      "mapped": 102,
+      "requested": 102,
+      "fraction_mapped": 1.0,
+      "unmapped": [],
+      "methods_used": [
+        "curated_seed",
+        "ensembl_pan_homology",
+        "orthodb"
+      ],
+      "orthologs": {
+        "AT1G01090": {
+          "targets": [
+            "Zm00001eb180682"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G03130": {
+          "targets": [
+            "Zm00001eb677629"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G03680": {
+          "targets": [
+            "Zm00001eb639134"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G06680": {
+          "targets": [
+            "Zm00001eb998754"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G07890": {
+          "targets": [
+            "Zm00001eb124110"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G08830": {
+          "targets": [
+            "Zm00001eb328840"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G10960": {
+          "targets": [
+            "Zm00001eb832194"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G19570": {
+          "targets": [
+            "Zm00001eb978439"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20020": {
+          "targets": [
+            "Zm00001eb406042"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20340": {
+          "targets": [
+            "Zm00001eb733907"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20620": {
+          "targets": [
+            "Zm00001eb741104"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20630": {
+          "targets": [
+            "Zm00001eb252592"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G22450": {
+          "targets": [
+            "Zm00001eb172412"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G29910": {
+          "targets": [
+            "Zm00001eb927186"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G29920": {
+          "targets": [
+            "Zm00001eb191074"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G32350": {
+          "targets": [
+            "Zm00001eb393785"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G36160": {
+          "targets": [
+            "Zm00001eb494006"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G48030": {
+          "targets": [
+            "Zm00001eb226545"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G53240": {
+          "targets": [
+            "Zm00001eb948808"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G60950": {
+          "targets": [
+            "Zm00001eb232241"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G63940": {
+          "targets": [
+            "Zm00001eb654292"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G64060": {
+          "targets": [
+            "Zm00001eb221783"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G64280": {
+          "targets": [
+            "Zm00001eb841432"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G67090": {
+          "targets": [
+            "Zm00001eb227650"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G75270": {
+          "targets": [
+            "Zm00001eb295316"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G76100": {
+          "targets": [
+            "Zm00001eb741564"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G77490": {
+          "targets": [
+            "Zm00001eb559685"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G79550": {
+          "targets": [
+            "Zm00001eb676425"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G05620": {
+          "targets": [
+            "Zm00001eb528584"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G05990": {
+          "targets": [
+            "Zm00001eb747711"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G07698": {
+          "targets": [
+            "Zm00001eb186350"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT2G19450": {
+          "targets": [
+            "Zm00001eb162169"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G27510": {
+          "targets": [
+            "Zm00001eb660806"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G28190": {
+          "targets": [
+            "Zm00001eb749913"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G30540": {
+          "targets": [
+            "Zm00001eb696625"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G34430": {
+          "targets": [
+            "Zm00001eb834507"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G35010": {
+          "targets": [
+            "Zm00001eb432150"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G36530": {
+          "targets": [
+            "Zm00001eb701036"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G40100": {
+          "targets": [
+            "Zm00001eb214754"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G06730": {
+          "targets": [
+            "Zm00001eb435516"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G09640": {
+          "targets": [
+            "Zm00001eb216533"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G09940": {
+          "targets": [
+            "Zm00001eb545545"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G10920": {
+          "targets": [
+            "Zm00001eb458574"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G11630": {
+          "targets": [
+            "Zm00001eb208683"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G13790": {
+          "targets": [
+            "Zm00001eb114893"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G13930": {
+          "targets": [
+            "Zm00001eb263323"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G22370": {
+          "targets": [
+            "Zm00001eb373510"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT3G23920": {
+          "targets": [
+            "Zm00001eb436997"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G24170": {
+          "targets": [
+            "Zm00001eb746873"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G25110": {
+          "targets": [
+            "Zm00001eb573319"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G26060": {
+          "targets": [
+            "Zm00001eb786870"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G26650": {
+          "targets": [
+            "Zm00001eb230367"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G51030": {
+          "targets": [
+            "Zm00001eb158857"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G54660": {
+          "targets": [
+            "Zm00001eb464809"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G54900": {
+          "targets": [
+            "Zm00001eb418778"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G58610": {
+          "targets": [
+            "Zm00001eb849456"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G03280": {
+          "targets": [
+            "Zm00001eb279444"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G04640": {
+          "targets": [
+            "Zm00001eb712343"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G08390": {
+          "targets": [
+            "Zm00001eb725171"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G10340": {
+          "targets": [
+            "Zm00001eb976146"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G15660": {
+          "targets": [
+            "Zm00001eb367562"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G15680": {
+          "targets": [
+            "Zm00001eb283805"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G21280": {
+          "targets": [
+            "Zm00001eb987136"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G22890": {
+          "targets": [
+            "Zm00001eb902723"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G24620": {
+          "targets": [
+            "Zm00001eb181893"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G25100": {
+          "targets": [
+            "Zm00001eb424277"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G35090": {
+          "targets": [
+            "Zm00001eb070050"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT4G35260": {
+          "targets": [
+            "Zm00001eb278674"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G35830": {
+          "targets": [
+            "Zm00001eb697001"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G37925": {
+          "targets": [
+            "Zm00001eb737191"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G03630": {
+          "targets": [
+            "Zm00001eb172327"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G06290": {
+          "targets": [
+            "Zm00001eb649380"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G08530": {
+          "targets": [
+            "Zm00001eb301350"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G08670": {
+          "targets": [
+            "Zm00001eb852211"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G16710": {
+          "targets": [
+            "Zm00001eb951466"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G19220": {
+          "targets": [
+            "Zm00001eb707812"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G20830": {
+          "targets": [
+            "Zm00001eb615253"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G20840": {
+          "targets": [
+            "Zm00001eb737277"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G23310": {
+          "targets": [
+            "Zm00001eb590527"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G39950": {
+          "targets": [
+            "Zm00001eb204561"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G40650": {
+          "targets": [
+            "Zm00001eb263368"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G46110": {
+          "targets": [
+            "Zm00001eb562937"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G47910": {
+          "targets": [
+            "Zm00001eb218690"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT5G48300": {
+          "targets": [
+            "Zm00001eb702260"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G51100": {
+          "targets": [
+            "Zm00001eb970565"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G54270": {
+          "targets": [
+            "Zm00001eb636141"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G56580": {
+          "targets": [
+            "Zm00001eb935531"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G66190": {
+          "targets": [
+            "Zm00001eb826596"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G66570": {
+          "targets": [
+            "Zm00001eb666961"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00020": {
+          "targets": [
+            "Zm00001eb651854"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00120": {
+          "targets": [
+            "Zm00001eb582292"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00270": {
+          "targets": [
+            "Zm00001eb739657"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00280": {
+          "targets": [
+            "Zm00001eb860875"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00340": {
+          "targets": [
+            "Zm00001eb710598"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00350": {
+          "targets": [
+            "Zm00001eb318031"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00480": {
+          "targets": [
+            "Zm00001eb610558"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00490": {
+          "targets": [
+            "Zm00001eb999010"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "ATCG00540": {
+          "targets": [
+            "Zm00001eb238375"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00550": {
+          "targets": [
+            "Zm00001eb399684"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00680": {
+          "targets": [
+            "Zm00001eb532612"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG00710": {
+          "targets": [
+            "Zm00001eb235076"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "ATCG01060": {
+          "targets": [
+            "Zm00001eb218468"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        }
+      }
+    },
+    "solanum_lycopersicum": {
+      "common_name": "Tomato",
+      "mapped": 8,
+      "requested": 102,
+      "fraction_mapped": 0.078,
+      "unmapped": [
+        "AT1G01090",
+        "AT1G03130",
+        "AT1G03680",
+        "AT1G06680",
+        "AT1G10960",
+        "AT1G19570",
+        "AT1G20020",
+        "AT1G20340",
+        "AT1G20620",
+        "AT1G20630",
+        "AT1G22450",
+        "AT1G29910",
+        "AT1G29920",
+        "AT1G32350",
+        "AT1G36160",
+        "AT1G48030",
+        "AT1G53240",
+        "AT1G60950",
+        "AT1G63940",
+        "AT1G64060",
+        "AT1G64280",
+        "AT1G75270",
+        "AT1G76100",
+        "AT1G77490",
+        "AT1G79550",
+        "AT2G05620",
+        "AT2G05990",
+        "AT2G19450",
+        "AT2G27510",
+        "AT2G28190",
+        "AT2G30540",
+        "AT2G34430",
+        "AT2G35010",
+        "AT2G36530",
+        "AT2G40100",
+        "AT3G06730",
+        "AT3G09640",
+        "AT3G09940",
+        "AT3G10920",
+        "AT3G11630",
+        "AT3G13790",
+        "AT3G13930",
+        "AT3G23920",
+        "AT3G24170",
+        "AT3G25110",
+        "AT3G26060",
+        "AT3G26650",
+        "AT3G51030",
+        "AT3G54660",
+        "AT3G54900",
+        "AT3G58610",
+        "AT4G03280",
+        "AT4G04640",
+        "AT4G08390",
+        "AT4G10340",
+        "AT4G15660",
+        "AT4G15680",
+        "AT4G21280",
+        "AT4G22890",
+        "AT4G24620",
+        "AT4G25100",
+        "AT4G35260",
+        "AT4G35830",
+        "AT4G37925",
+        "AT5G03630",
+        "AT5G06290",
+        "AT5G08530",
+        "AT5G08670",
+        "AT5G16710",
+        "AT5G19220",
+        "AT5G20830",
+        "AT5G20840",
+        "AT5G23310",
+        "AT5G39950",
+        "AT5G40650",
+        "AT5G46110",
+        "AT5G48300",
+        "AT5G51100",
+        "AT5G54270",
+        "AT5G56580",
+        "AT5G66190",
+        "AT5G66570",
+        "ATCG00020",
+        "ATCG00120",
+        "ATCG00270",
+        "ATCG00280",
+        "ATCG00340",
+        "ATCG00350",
+        "ATCG00480",
+        "ATCG00540",
+        "ATCG00550",
+        "ATCG00680",
+        "ATCG00710",
+        "ATCG01060"
+      ],
+      "methods_used": [
+        "curated_seed",
+        "ensembl_pan_homology",
+        "orthodb"
+      ],
+      "orthologs": {
+        "AT1G07890": {
+          "targets": [
+            "Solyc06g005160"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G08830": {
+          "targets": [
+            "Solyc01g067740"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G67090": {
+          "targets": [
+            "Solyc02g085950"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT2G07698": {
+          "targets": [
+            "Solyc08g068800"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT3G22370": {
+          "targets": [
+            "Solyc08g075540"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT4G35090": {
+          "targets": [
+            "Solyc12g094620"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT5G47910": {
+          "targets": [
+            "Solyc03g117960"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "ATCG00490": {
+          "targets": [
+            "Solyc00g000010"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        }
+      }
+    },
+    "glycine_max": {
+      "common_name": "Soybean",
+      "mapped": 8,
+      "requested": 102,
+      "fraction_mapped": 0.078,
+      "unmapped": [
+        "AT1G01090",
+        "AT1G03130",
+        "AT1G03680",
+        "AT1G06680",
+        "AT1G10960",
+        "AT1G19570",
+        "AT1G20020",
+        "AT1G20340",
+        "AT1G20620",
+        "AT1G20630",
+        "AT1G22450",
+        "AT1G29910",
+        "AT1G29920",
+        "AT1G32350",
+        "AT1G36160",
+        "AT1G48030",
+        "AT1G53240",
+        "AT1G60950",
+        "AT1G63940",
+        "AT1G64060",
+        "AT1G64280",
+        "AT1G75270",
+        "AT1G76100",
+        "AT1G77490",
+        "AT1G79550",
+        "AT2G05620",
+        "AT2G05990",
+        "AT2G19450",
+        "AT2G27510",
+        "AT2G28190",
+        "AT2G30540",
+        "AT2G34430",
+        "AT2G35010",
+        "AT2G36530",
+        "AT2G40100",
+        "AT3G06730",
+        "AT3G09640",
+        "AT3G09940",
+        "AT3G10920",
+        "AT3G11630",
+        "AT3G13790",
+        "AT3G13930",
+        "AT3G23920",
+        "AT3G24170",
+        "AT3G25110",
+        "AT3G26060",
+        "AT3G26650",
+        "AT3G51030",
+        "AT3G54660",
+        "AT3G54900",
+        "AT3G58610",
+        "AT4G03280",
+        "AT4G04640",
+        "AT4G08390",
+        "AT4G10340",
+        "AT4G15660",
+        "AT4G15680",
+        "AT4G21280",
+        "AT4G22890",
+        "AT4G24620",
+        "AT4G25100",
+        "AT4G35260",
+        "AT4G35830",
+        "AT4G37925",
+        "AT5G03630",
+        "AT5G06290",
+        "AT5G08530",
+        "AT5G08670",
+        "AT5G16710",
+        "AT5G19220",
+        "AT5G20830",
+        "AT5G20840",
+        "AT5G23310",
+        "AT5G39950",
+        "AT5G40650",
+        "AT5G46110",
+        "AT5G48300",
+        "AT5G51100",
+        "AT5G54270",
+        "AT5G56580",
+        "AT5G66190",
+        "AT5G66570",
+        "ATCG00020",
+        "ATCG00120",
+        "ATCG00270",
+        "ATCG00280",
+        "ATCG00340",
+        "ATCG00350",
+        "ATCG00480",
+        "ATCG00540",
+        "ATCG00550",
+        "ATCG00680",
+        "ATCG00710",
+        "ATCG01060"
+      ],
+      "methods_used": [
+        "curated_seed",
+        "ensembl_pan_homology",
+        "orthodb"
+      ],
+      "orthologs": {
+        "AT1G07890": {
+          "targets": [
+            "GLYMA_09G083600"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G08830": {
+          "targets": [
+            "GLYMA_03G137900"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G67090": {
+          "targets": [
+            "GLYMA_13G161800"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT2G07698": {
+          "targets": [
+            "GLYMA_05G082400"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT3G22370": {
+          "targets": [
+            "GLYMA_08G282100"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT4G35090": {
+          "targets": [
+            "GLYMA_04G037500"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT5G47910": {
+          "targets": [
+            "GLYMA_14G032200"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "ATCG00490": {
+          "targets": [
+            "GLYMA_CP00010"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        }
+      }
+    },
+    "saccharomyces_cerevisiae": {
+      "common_name": "Yeast",
+      "mapped": 88,
+      "requested": 102,
+      "fraction_mapped": 0.863,
+      "unmapped": [
+        "AT2G05620",
+        "ATCG00020",
+        "ATCG00120",
+        "ATCG00270",
+        "ATCG00280",
+        "ATCG00340",
+        "ATCG00350",
+        "ATCG00480",
+        "ATCG00490",
+        "ATCG00540",
+        "ATCG00550",
+        "ATCG00680",
+        "ATCG00710",
+        "ATCG01060"
+      ],
+      "methods_used": [
+        "curated_seed",
+        "ensembl_pan_homology",
+        "orthodb"
+      ],
+      "orthologs": {
+        "AT1G01090": {
+          "targets": [
+            "YKC782W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G03130": {
+          "targets": [
+            "YNL129W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G03680": {
+          "targets": [
+            "YOF834W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G06680": {
+          "targets": [
+            "YCM454W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G07890": {
+          "targets": [
+            "YKR066C"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G08830": {
+          "targets": [
+            "YJR104C"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G10960": {
+          "targets": [
+            "YCM294W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G19570": {
+          "targets": [
+            "YHM139W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20020": {
+          "targets": [
+            "YKR542W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20340": {
+          "targets": [
+            "YDJ407W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20620": {
+          "targets": [
+            "YAJ404W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G20630": {
+          "targets": [
+            "YAR692W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G22450": {
+          "targets": [
+            "YMF512W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G29910": {
+          "targets": [
+            "YCT886W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G29920": {
+          "targets": [
+            "YCC774W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G32350": {
+          "targets": [
+            "YJB285W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G36160": {
+          "targets": [
+            "YGP506W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G48030": {
+          "targets": [
+            "YBJ245W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G53240": {
+          "targets": [
+            "YIK108W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G60950": {
+          "targets": [
+            "YBF341W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G63940": {
+          "targets": [
+            "YED792W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G64060": {
+          "targets": [
+            "YHL283W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G64280": {
+          "targets": [
+            "YIJ732W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G67090": {
+          "targets": [
+            "YLM783W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G75270": {
+          "targets": [
+            "YEH216W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G76100": {
+          "targets": [
+            "YMH864W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G77490": {
+          "targets": [
+            "YFK585W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT1G79550": {
+          "targets": [
+            "YJQ525W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G05990": {
+          "targets": [
+            "YPB611W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G07698": {
+          "targets": [
+            "YBL099W"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT2G19450": {
+          "targets": [
+            "YJP669W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G27510": {
+          "targets": [
+            "YGK106W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G28190": {
+          "targets": [
+            "YJJ413W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G30540": {
+          "targets": [
+            "YBJ725W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G34430": {
+          "targets": [
+            "YLQ207W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G35010": {
+          "targets": [
+            "YGT250W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G36530": {
+          "targets": [
+            "YME336W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT2G40100": {
+          "targets": [
+            "YCC454W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G06730": {
+          "targets": [
+            "YMJ416W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G09640": {
+          "targets": [
+            "YFN633W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G09940": {
+          "targets": [
+            "YJG845W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G10920": {
+          "targets": [
+            "YOA274W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G11630": {
+          "targets": [
+            "YLM783W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G13790": {
+          "targets": [
+            "YNA593W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G13930": {
+          "targets": [
+            "YLH223W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G22370": {
+          "targets": [
+            "YFI233W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G23920": {
+          "targets": [
+            "YFM297W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G24170": {
+          "targets": [
+            "YJT573W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G25110": {
+          "targets": [
+            "YHM619W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G26060": {
+          "targets": [
+            "YGT570W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G26650": {
+          "targets": [
+            "YPR867W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G51030": {
+          "targets": [
+            "YJI557W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G54660": {
+          "targets": [
+            "YJK109W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G54900": {
+          "targets": [
+            "YKD478W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT3G58610": {
+          "targets": [
+            "YAL756W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G03280": {
+          "targets": [
+            "YEP344W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G04640": {
+          "targets": [
+            "YHB443W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G08390": {
+          "targets": [
+            "YDN471W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G10340": {
+          "targets": [
+            "YCJ246W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G15660": {
+          "targets": [
+            "YKM462W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G15680": {
+          "targets": [
+            "YNH705W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G21280": {
+          "targets": [
+            "YAG836W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G22890": {
+          "targets": [
+            "YDK423W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G24620": {
+          "targets": [
+            "YFS393W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G25100": {
+          "targets": [
+            "YFH377W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G35090": {
+          "targets": [
+            "YDR256C",
+            "YGR088W"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": false,
+          "corroborated": true
+        },
+        "AT4G35260": {
+          "targets": [
+            "YCR374W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G35830": {
+          "targets": [
+            "YJC301W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT4G37925": {
+          "targets": [
+            "YHE491W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G03630": {
+          "targets": [
+            "YHA427W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G06290": {
+          "targets": [
+            "YEG680W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G08530": {
+          "targets": [
+            "YGE650W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G08670": {
+          "targets": [
+            "YDD311W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G16710": {
+          "targets": [
+            "YKG366W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G19220": {
+          "targets": [
+            "YEI712W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G20830": {
+          "targets": [
+            "YFN153W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G20840": {
+          "targets": [
+            "YNJ577W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G23310": {
+          "targets": [
+            "YPH227W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G39950": {
+          "targets": [
+            "YBP661W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G40650": {
+          "targets": [
+            "YIA268W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G46110": {
+          "targets": [
+            "YJD637W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G47910": {
+          "targets": [
+            "YLR047C"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT5G48300": {
+          "targets": [
+            "YEB760W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G51100": {
+          "targets": [
+            "YFA265W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G54270": {
+          "targets": [
+            "YNS241W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G56580": {
+          "targets": [
+            "YLK431W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G66190": {
+          "targets": [
+            "YEM296W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        },
+        "AT5G66570": {
+          "targets": [
+            "YBF661W"
+          ],
+          "methods": [
+            "ensembl_pan_homology"
+          ],
+          "one_to_one": true,
+          "corroborated": false
+        }
+      }
+    },
+    "homo_sapiens": {
+      "common_name": "Human",
+      "mapped": 5,
+      "requested": 102,
+      "fraction_mapped": 0.049,
+      "unmapped": [
+        "AT1G01090",
+        "AT1G03130",
+        "AT1G03680",
+        "AT1G06680",
+        "AT1G10960",
+        "AT1G19570",
+        "AT1G20020",
+        "AT1G20340",
+        "AT1G20620",
+        "AT1G20630",
+        "AT1G22450",
+        "AT1G29910",
+        "AT1G29920",
+        "AT1G32350",
+        "AT1G36160",
+        "AT1G48030",
+        "AT1G53240",
+        "AT1G60950",
+        "AT1G63940",
+        "AT1G64060",
+        "AT1G64280",
+        "AT1G67090",
+        "AT1G75270",
+        "AT1G76100",
+        "AT1G77490",
+        "AT1G79550",
+        "AT2G05620",
+        "AT2G05990",
+        "AT2G19450",
+        "AT2G27510",
+        "AT2G28190",
+        "AT2G30540",
+        "AT2G34430",
+        "AT2G35010",
+        "AT2G36530",
+        "AT2G40100",
+        "AT3G06730",
+        "AT3G09640",
+        "AT3G09940",
+        "AT3G10920",
+        "AT3G11630",
+        "AT3G13790",
+        "AT3G13930",
+        "AT3G22370",
+        "AT3G23920",
+        "AT3G24170",
+        "AT3G25110",
+        "AT3G26060",
+        "AT3G26650",
+        "AT3G51030",
+        "AT3G54660",
+        "AT3G54900",
+        "AT3G58610",
+        "AT4G03280",
+        "AT4G04640",
+        "AT4G08390",
+        "AT4G10340",
+        "AT4G15660",
+        "AT4G15680",
+        "AT4G21280",
+        "AT4G22890",
+        "AT4G24620",
+        "AT4G25100",
+        "AT4G35260",
+        "AT4G35830",
+        "AT4G37925",
+        "AT5G03630",
+        "AT5G06290",
+        "AT5G08530",
+        "AT5G08670",
+        "AT5G16710",
+        "AT5G19220",
+        "AT5G20830",
+        "AT5G20840",
+        "AT5G23310",
+        "AT5G39950",
+        "AT5G40650",
+        "AT5G46110",
+        "AT5G48300",
+        "AT5G51100",
+        "AT5G54270",
+        "AT5G56580",
+        "AT5G66190",
+        "AT5G66570",
+        "ATCG00020",
+        "ATCG00120",
+        "ATCG00270",
+        "ATCG00280",
+        "ATCG00340",
+        "ATCG00350",
+        "ATCG00480",
+        "ATCG00490",
+        "ATCG00540",
+        "ATCG00550",
+        "ATCG00680",
+        "ATCG00710",
+        "ATCG01060"
+      ],
+      "methods_used": [
+        "curated_seed",
+        "ensembl_pan_homology",
+        "orthodb"
+      ],
+      "orthologs": {
+        "AT1G07890": {
+          "targets": [
+            "ENSG00000140279"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G08830": {
+          "targets": [
+            "ENSG00000142168"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT2G07698": {
+          "targets": [
+            "ENSG00000152234"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT4G35090": {
+          "targets": [
+            "ENSG00000121691"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT5G47910": {
+          "targets": [
+            "ENSG00000165119"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        }
+      }
+    },
+    "mus_musculus": {
+      "common_name": "Mouse",
+      "mapped": 5,
+      "requested": 102,
+      "fraction_mapped": 0.049,
+      "unmapped": [
+        "AT1G01090",
+        "AT1G03130",
+        "AT1G03680",
+        "AT1G06680",
+        "AT1G10960",
+        "AT1G19570",
+        "AT1G20020",
+        "AT1G20340",
+        "AT1G20620",
+        "AT1G20630",
+        "AT1G22450",
+        "AT1G29910",
+        "AT1G29920",
+        "AT1G32350",
+        "AT1G36160",
+        "AT1G48030",
+        "AT1G53240",
+        "AT1G60950",
+        "AT1G63940",
+        "AT1G64060",
+        "AT1G64280",
+        "AT1G67090",
+        "AT1G75270",
+        "AT1G76100",
+        "AT1G77490",
+        "AT1G79550",
+        "AT2G05620",
+        "AT2G05990",
+        "AT2G19450",
+        "AT2G27510",
+        "AT2G28190",
+        "AT2G30540",
+        "AT2G34430",
+        "AT2G35010",
+        "AT2G36530",
+        "AT2G40100",
+        "AT3G06730",
+        "AT3G09640",
+        "AT3G09940",
+        "AT3G10920",
+        "AT3G11630",
+        "AT3G13790",
+        "AT3G13930",
+        "AT3G22370",
+        "AT3G23920",
+        "AT3G24170",
+        "AT3G25110",
+        "AT3G26060",
+        "AT3G26650",
+        "AT3G51030",
+        "AT3G54660",
+        "AT3G54900",
+        "AT3G58610",
+        "AT4G03280",
+        "AT4G04640",
+        "AT4G08390",
+        "AT4G10340",
+        "AT4G15660",
+        "AT4G15680",
+        "AT4G21280",
+        "AT4G22890",
+        "AT4G24620",
+        "AT4G25100",
+        "AT4G35260",
+        "AT4G35830",
+        "AT4G37925",
+        "AT5G03630",
+        "AT5G06290",
+        "AT5G08530",
+        "AT5G08670",
+        "AT5G16710",
+        "AT5G19220",
+        "AT5G20830",
+        "AT5G20840",
+        "AT5G23310",
+        "AT5G39950",
+        "AT5G40650",
+        "AT5G46110",
+        "AT5G48300",
+        "AT5G51100",
+        "AT5G54270",
+        "AT5G56580",
+        "AT5G66190",
+        "AT5G66570",
+        "ATCG00020",
+        "ATCG00120",
+        "ATCG00270",
+        "ATCG00280",
+        "ATCG00340",
+        "ATCG00350",
+        "ATCG00480",
+        "ATCG00490",
+        "ATCG00540",
+        "ATCG00550",
+        "ATCG00680",
+        "ATCG00710",
+        "ATCG01060"
+      ],
+      "methods_used": [
+        "curated_seed",
+        "ensembl_pan_homology",
+        "orthodb"
+      ],
+      "orthologs": {
+        "AT1G07890": {
+          "targets": [
+            "ENSMUSG00000030097"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G08830": {
+          "targets": [
+            "ENSMUSG00000022371"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT2G07698": {
+          "targets": [
+            "ENSMUSG00000024413"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT4G35090": {
+          "targets": [
+            "ENSMUSG00000027187"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT5G47910": {
+          "targets": [
+            "ENSMUSG00000009585"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        }
+      }
+    },
+    "drosophila_melanogaster": {
+      "common_name": "Fly",
+      "mapped": 5,
+      "requested": 102,
+      "fraction_mapped": 0.049,
+      "unmapped": [
+        "AT1G01090",
+        "AT1G03130",
+        "AT1G03680",
+        "AT1G06680",
+        "AT1G10960",
+        "AT1G19570",
+        "AT1G20020",
+        "AT1G20340",
+        "AT1G20620",
+        "AT1G20630",
+        "AT1G22450",
+        "AT1G29910",
+        "AT1G29920",
+        "AT1G32350",
+        "AT1G36160",
+        "AT1G48030",
+        "AT1G53240",
+        "AT1G60950",
+        "AT1G63940",
+        "AT1G64060",
+        "AT1G64280",
+        "AT1G67090",
+        "AT1G75270",
+        "AT1G76100",
+        "AT1G77490",
+        "AT1G79550",
+        "AT2G05620",
+        "AT2G05990",
+        "AT2G19450",
+        "AT2G27510",
+        "AT2G28190",
+        "AT2G30540",
+        "AT2G34430",
+        "AT2G35010",
+        "AT2G36530",
+        "AT2G40100",
+        "AT3G06730",
+        "AT3G09640",
+        "AT3G09940",
+        "AT3G10920",
+        "AT3G11630",
+        "AT3G13790",
+        "AT3G13930",
+        "AT3G22370",
+        "AT3G23920",
+        "AT3G24170",
+        "AT3G25110",
+        "AT3G26060",
+        "AT3G26650",
+        "AT3G51030",
+        "AT3G54660",
+        "AT3G54900",
+        "AT3G58610",
+        "AT4G03280",
+        "AT4G04640",
+        "AT4G08390",
+        "AT4G10340",
+        "AT4G15660",
+        "AT4G15680",
+        "AT4G21280",
+        "AT4G22890",
+        "AT4G24620",
+        "AT4G25100",
+        "AT4G35260",
+        "AT4G35830",
+        "AT4G37925",
+        "AT5G03630",
+        "AT5G06290",
+        "AT5G08530",
+        "AT5G08670",
+        "AT5G16710",
+        "AT5G19220",
+        "AT5G20830",
+        "AT5G20840",
+        "AT5G23310",
+        "AT5G39950",
+        "AT5G40650",
+        "AT5G46110",
+        "AT5G48300",
+        "AT5G51100",
+        "AT5G54270",
+        "AT5G56580",
+        "AT5G66190",
+        "AT5G66570",
+        "ATCG00020",
+        "ATCG00120",
+        "ATCG00270",
+        "ATCG00280",
+        "ATCG00340",
+        "ATCG00350",
+        "ATCG00480",
+        "ATCG00490",
+        "ATCG00540",
+        "ATCG00550",
+        "ATCG00680",
+        "ATCG00710",
+        "ATCG01060"
+      ],
+      "methods_used": [
+        "curated_seed",
+        "ensembl_pan_homology",
+        "orthodb"
+      ],
+      "orthologs": {
+        "AT1G07890": {
+          "targets": [
+            "FBgn0038827"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G08830": {
+          "targets": [
+            "FBgn0003450"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT2G07698": {
+          "targets": [
+            "FBgn0010217"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT4G35090": {
+          "targets": [
+            "FBgn0000261"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT5G47910": {
+          "targets": [
+            "FBgn0263998"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        }
+      }
+    },
+    "caenorhabditis_elegans": {
+      "common_name": "Worm",
+      "mapped": 5,
+      "requested": 102,
+      "fraction_mapped": 0.049,
+      "unmapped": [
+        "AT1G01090",
+        "AT1G03130",
+        "AT1G03680",
+        "AT1G06680",
+        "AT1G10960",
+        "AT1G19570",
+        "AT1G20020",
+        "AT1G20340",
+        "AT1G20620",
+        "AT1G20630",
+        "AT1G22450",
+        "AT1G29910",
+        "AT1G29920",
+        "AT1G32350",
+        "AT1G36160",
+        "AT1G48030",
+        "AT1G53240",
+        "AT1G60950",
+        "AT1G63940",
+        "AT1G64060",
+        "AT1G64280",
+        "AT1G67090",
+        "AT1G75270",
+        "AT1G76100",
+        "AT1G77490",
+        "AT1G79550",
+        "AT2G05620",
+        "AT2G05990",
+        "AT2G19450",
+        "AT2G27510",
+        "AT2G28190",
+        "AT2G30540",
+        "AT2G34430",
+        "AT2G35010",
+        "AT2G36530",
+        "AT2G40100",
+        "AT3G06730",
+        "AT3G09640",
+        "AT3G09940",
+        "AT3G10920",
+        "AT3G11630",
+        "AT3G13790",
+        "AT3G13930",
+        "AT3G22370",
+        "AT3G23920",
+        "AT3G24170",
+        "AT3G25110",
+        "AT3G26060",
+        "AT3G26650",
+        "AT3G51030",
+        "AT3G54660",
+        "AT3G54900",
+        "AT3G58610",
+        "AT4G03280",
+        "AT4G04640",
+        "AT4G08390",
+        "AT4G10340",
+        "AT4G15660",
+        "AT4G15680",
+        "AT4G21280",
+        "AT4G22890",
+        "AT4G24620",
+        "AT4G25100",
+        "AT4G35260",
+        "AT4G35830",
+        "AT4G37925",
+        "AT5G03630",
+        "AT5G06290",
+        "AT5G08530",
+        "AT5G08670",
+        "AT5G16710",
+        "AT5G19220",
+        "AT5G20830",
+        "AT5G20840",
+        "AT5G23310",
+        "AT5G39950",
+        "AT5G40650",
+        "AT5G46110",
+        "AT5G48300",
+        "AT5G51100",
+        "AT5G54270",
+        "AT5G56580",
+        "AT5G66190",
+        "AT5G66570",
+        "ATCG00020",
+        "ATCG00120",
+        "ATCG00270",
+        "ATCG00280",
+        "ATCG00340",
+        "ATCG00350",
+        "ATCG00480",
+        "ATCG00490",
+        "ATCG00540",
+        "ATCG00550",
+        "ATCG00680",
+        "ATCG00710",
+        "ATCG01060"
+      ],
+      "methods_used": [
+        "curated_seed",
+        "ensembl_pan_homology",
+        "orthodb"
+      ],
+      "orthologs": {
+        "AT1G07890": {
+          "targets": [
+            "WBGene00004179"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT1G08830": {
+          "targets": [
+            "WBGene00004931"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT2G07698": {
+          "targets": [
+            "WBGene00000236"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT4G35090": {
+          "targets": [
+            "WBGene00000676"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        },
+        "AT5G47910": {
+          "targets": [
+            "WBGene00000366"
+          ],
+          "methods": [
+            "curated_seed",
+            "orthodb"
+          ],
+          "one_to_one": true,
+          "corroborated": true
+        }
+      }
+    }
+  }
+}

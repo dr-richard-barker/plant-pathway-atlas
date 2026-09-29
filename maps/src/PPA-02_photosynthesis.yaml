@@ -1,0 +1,218 @@
+# PPA-02 — Photosynthesis & Chloroplast Bioenergetics
+# Modernized MapMan BIN 1.1 Photosynthesis Light Reaction
+
+id: PPA-02
+title: Photosynthesis & Chloroplast Bioenergetics
+subtitle: Z-scheme photochemistry, thylakoid electron transport, cyclic electron flow, and photophosphorylation
+derived_from: MapMan BIN 1.1 & PlantCyc Photosynthetic Reactions
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Photosynthetic light reactions and thylakoid bioenergetics redrawn with deterministic
+  geometry. Captures linear electron flow from water splitting at photosystem II (PSII)
+  through the plastoquinone pool, cytochrome b6f complex, and plastocyanin to photosystem I
+  (PSI), with ferredoxin-NADP+ reductase (FNR) producing NADPH. Cyclic electron flow via
+  PGR5/PGRL1 and the chloroplast ATP synthase CF0-CF1 complex are explicitly resolved.
+
+lanes:
+  - id: photosystem_ii
+    compartment: thylakoid_membrane
+    node_width: 210
+    nodes: [LHCII_ANTENNA, PSII_CORE, OEC_WATER_SPLITTING]
+
+  - id: plastoquinone_cytochrome
+    compartment: thylakoid_membrane
+    node_width: 200
+    nodes: [PLASTOQUINONE_POOL, CYTOCHROME_B6F, PLASTOCYANIN_POOL]
+
+  - id: photosystem_i
+    compartment: thylakoid_membrane
+    node_width: 210
+    nodes: [PSI_CORE, FERREDOXIN_POOL, FNR_REDUCTASE]
+
+  - id: photophosphorylation
+    compartment: thylakoid_membrane
+    node_width: 210
+    nodes: [CYCLIC_FLOW_PGR5, CHLORO_ATP_SYNTHASE, NADPH_ATP_OUTPUT]
+
+nodes:
+  - id: LHCII_ANTENNA
+    label: "LHCII Antenna Complex"
+    sublabel: "BIN 1.1.1.1 Light Harvesting"
+    kind: "family"
+    mapman_bin: "1.1.1.1"
+    family_loci: ["AT1G29920", "AT1G29910", "AT2G34430", "AT5G54270", "AT4G10340", "AT2G40100"]
+    loci: ["AT1G29920", "AT1G29910", "AT2G34430", "AT5G54270", "AT4G10340", "AT2G40100"]
+
+  - id: PSII_CORE
+    label: "Photosystem II Core"
+    sublabel: "BIN 1.1.1.2 Reaction Center"
+    kind: "complex"
+    mapman_bin: "1.1.1.2"
+    subunits:
+      - symbol: "PsbA"
+        locus: "ATCG00020"
+      - symbol: "PsbD"
+        locus: "ATCG00270"
+      - symbol: "PsbB"
+        locus: "ATCG00680"
+      - symbol: "PsbC"
+        locus: "ATCG00280"
+    loci: ["ATCG00020", "ATCG00270", "ATCG00680", "ATCG00280"]
+
+  - id: OEC_WATER_SPLITTING
+    label: "Oxygen Evolving Complex"
+    sublabel: "Lumenal Mn4CaO5 Cluster"
+    kind: "complex"
+    mapman_bin: "1.1.1.3"
+    subunits:
+      - symbol: "PsbO"
+        locus: "AT5G66570"
+      - symbol: "PsbP"
+        locus: "AT1G06680"
+      - symbol: "PsbQ"
+        locus: "AT4G21280"
+    loci: ["AT5G66570", "AT1G06680", "AT4G21280"]
+
+  - id: PLASTOQUINONE_POOL
+    label: "Plastoquinone (PQ) Pool"
+    sublabel: "Mobile Lipophilic Carrier"
+    kind: "metabolite"
+
+  - id: CYTOCHROME_B6F
+    label: "Cytochrome b6f Complex"
+    sublabel: "BIN 1.1.3 Plastoquinol Oxidase"
+    kind: "complex"
+    mapman_bin: "1.1.3"
+    subunits:
+      - symbol: "PetA"
+        locus: "ATCG00540"
+      - symbol: "PetB"
+        locus: "ATCG00550"
+      - symbol: "PetC"
+        locus: "AT4G03280"
+      - symbol: "PetD"
+        locus: "ATCG00710"
+    loci: ["ATCG00540", "ATCG00550", "AT4G03280", "ATCG00710"]
+
+  - id: PLASTOCYANIN_POOL
+    label: "Plastocyanin (PC)"
+    sublabel: "Lumenal Cu-Protein (PETE)"
+    kind: "simple"
+    mapman_bin: "1.1.5"
+    loci: ["AT1G20340", "AT1G76100"]
+
+  - id: PSI_CORE
+    label: "Photosystem I Core"
+    sublabel: "BIN 1.1.2 Reaction Center"
+    kind: "complex"
+    mapman_bin: "1.1.2"
+    subunits:
+      - symbol: "PsaA"
+        locus: "ATCG00350"
+      - symbol: "PsaB"
+        locus: "ATCG00340"
+      - symbol: "PsaC"
+        locus: "ATCG01060"
+      - symbol: "PsaD"
+        locus: "AT1G03130"
+    loci: ["ATCG00350", "ATCG00340", "ATCG01060", "AT1G03130"]
+
+  - id: FERREDOXIN_POOL
+    label: "Ferredoxin (FD)"
+    sublabel: "Stromal [2Fe-2S] Cluster"
+    kind: "simple"
+    mapman_bin: "1.1.6"
+    loci: ["AT1G10960", "AT1G60950", "AT2G27510"]
+
+  - id: FNR_REDUCTASE
+    label: "Ferredoxin-NADP+ Reductase"
+    sublabel: "FNR1 / FNR2"
+    kind: "simple"
+    mapman_bin: "1.1.7"
+    loci: ["AT5G66190", "AT1G20020"]
+
+  - id: CYCLIC_FLOW_PGR5
+    label: "Cyclic Electron Flow (CEF)"
+    sublabel: "PGR5 / PGRL1 / NDH Complex"
+    kind: "complex"
+    mapman_bin: "1.1.8"
+    subunits:
+      - symbol: "PGR5"
+        locus: "AT2G05620"
+      - symbol: "PGRL1A"
+        locus: "AT4G22890"
+      - symbol: "NDHM"
+        locus: "AT4G37925"
+    loci: ["AT2G05620", "AT4G22890", "AT4G37925"]
+
+  - id: CHLORO_ATP_SYNTHASE
+    label: "CF0-CF1 ATP Synthase"
+    sublabel: "BIN 1.1.4 Photophosphorylation"
+    kind: "complex"
+    mapman_bin: "1.1.4"
+    subunits:
+      - symbol: "AtpA"
+        locus: "ATCG00120"
+      - symbol: "AtpB"
+        locus: "ATCG00480"
+      - symbol: "AtpC"
+        locus: "AT4G04640"
+    loci: ["ATCG00120", "ATCG00480", "AT4G04640"]
+
+  - id: NADPH_ATP_OUTPUT
+    label: "NADPH & ATP Pool"
+    sublabel: "Stromal Assimilatory Power"
+    kind: "metabolite"
+
+edges:
+  - from: LHCII_ANTENNA
+    to: PSII_CORE
+    class: flux
+    label: "Exciton"
+  - from: OEC_WATER_SPLITTING
+    to: PSII_CORE
+    class: flux
+    label: "e- (H2O)"
+  - from: PSII_CORE
+    to: PLASTOQUINONE_POOL
+    class: flux
+    label: "2 e- / 2 H+"
+  - from: PLASTOQUINONE_POOL
+    to: CYTOCHROME_B6F
+    class: flux
+    label: "PQH2"
+  - from: CYTOCHROME_B6F
+    to: PLASTOCYANIN_POOL
+    class: flux
+    label: "1 e-"
+  - from: PLASTOCYANIN_POOL
+    to: PSI_CORE
+    class: flux
+  - from: PSI_CORE
+    to: FERREDOXIN_POOL
+    class: flux
+    label: "Fd (red)"
+  - from: FERREDOXIN_POOL
+    to: FNR_REDUCTASE
+    class: flux
+  - from: FNR_REDUCTASE
+    to: NADPH_ATP_OUTPUT
+    class: flux
+    label: "NADPH"
+  - from: FERREDOXIN_POOL
+    to: CYCLIC_FLOW_PGR5
+    class: flux
+    label: "CEF"
+  - from: CYCLIC_FLOW_PGR5
+    to: PLASTOQUINONE_POOL
+    class: flux
+    label: "PQ reduction"
+  - from: CYTOCHROME_B6F
+    to: CHLORO_ATP_SYNTHASE
+    class: flux
+    label: "ΔpH Gradient"
+  - from: CHLORO_ATP_SYNTHASE
+    to: NADPH_ATP_OUTPUT
+    class: flux
+    label: "ATP"

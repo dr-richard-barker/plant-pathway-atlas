@@ -1,0 +1,233 @@
+# PPA-05 — ROS Dynamics & Redox Homeostasis
+# Modernized MapMan BIN 21 Redox & Stress Response
+
+id: PPA-05
+title: Reactive Oxygen Species (ROS) & Redox Homeostasis
+subtitle: Superoxide generation, dismutation, the Foyer-Halliwell-Asada cycle, catalases, and thioredoxin relays
+derived_from: MapMan BIN 21 & PlantCyc Redox Pathways
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Spatial and biochemical architecture of plant reactive oxygen species (ROS) metabolism.
+  Covers apoplastic oxidative bursts catalyzed by respiratory burst oxidase homologs
+  (RBOHD/F), superoxide dismutation by compartment-specific SOD isoforms (Cu/Zn-SOD, Fe-SOD,
+  Mn-SOD), peroxide detoxification via the ascorbate-glutathione cycle (APX, MDHAR, DHAR, GR)
+  and peroxisomal catalases, and downstream thioredoxin/glutaredoxin redox switches.
+
+lanes:
+  - id: superoxide_sources
+    compartment: plasma_membrane
+    node_width: 210
+    nodes: [RBOH_BURST, APOPLAST_H2O2, METABOLIC_ROS_LEAK]
+
+  - id: superoxide_dismutation
+    compartment: cytosol
+    node_width: 200
+    nodes: [CSD_SOD_CYT, FSD_SOD_PLASTID, MSD_SOD_MITO]
+
+  - id: peroxide_detoxification
+    compartment: chloroplast_stroma
+    node_width: 210
+    nodes: [ASCORBATE_PEROXIDASE, PEROXIREDOXINS, CATALASE_SCAVENGING]
+
+  - id: ascorbate_glutathione_cycle
+    compartment: chloroplast_stroma
+    node_width: 210
+    nodes: [MDHAR_ENZYME, DHAR_ENZYME, GLUTATHIONE_REDUCTASE]
+
+  - id: redox_relays
+    compartment: cytosol
+    node_width: 200
+    nodes: [THIOREDOXIN_FAMILY, GLUTAREDOXIN_FAMILY, NPR1_TRANSLOCATION]
+
+nodes:
+  - id: RBOH_BURST
+    label: "NADPH Oxidases (RBOH)"
+    sublabel: "BIN 21.4 Apoplastic Burst"
+    kind: "complex"
+    mapman_bin: "21.4"
+    subunits:
+      - symbol: "RBOHD"
+        locus: "AT5G47910"
+      - symbol: "RBOHF"
+        locus: "AT1G64060"
+    loci: ["AT5G47910", "AT1G64060"]
+
+  - id: APOPLAST_H2O2
+    label: "Apoplastic H2O2"
+    sublabel: "Cell Wall Signaling Pool"
+    kind: "metabolite"
+
+  - id: METABOLIC_ROS_LEAK
+    label: "Organellar ROS Leaks"
+    sublabel: "PSI / PSII / Complex I/III"
+    kind: "metabolite"
+
+  - id: CSD_SOD_CYT
+    label: "Cu/Zn Superoxide Dismutase"
+    sublabel: "CSD1 (Cyt) / CSD2 (Plastid)"
+    kind: "complex"
+    mapman_bin: "21.1"
+    subunits:
+      - symbol: "CSD1"
+        locus: "AT1G08830"
+      - symbol: "CSD2"
+        locus: "AT2G28190"
+    loci: ["AT1G08830", "AT2G28190"]
+
+  - id: FSD_SOD_PLASTID
+    label: "Fe Superoxide Dismutase"
+    sublabel: "FSD1 / FSD2 / FSD3 (Plastidial)"
+    kind: "simple"
+    mapman_bin: "21.1"
+    loci: ["AT4G25100", "AT5G23310", "AT5G51100"]
+
+  - id: MSD_SOD_MITO
+    label: "Mn Superoxide Dismutase"
+    sublabel: "MSD1 (Mitochondrial Matrix)"
+    kind: "simple"
+    mapman_bin: "21.1"
+    loci: ["AT3G10920"]
+
+  - id: ASCORBATE_PEROXIDASE
+    label: "Ascorbate Peroxidase (APX)"
+    sublabel: "BIN 21.2 Ascorbate Oxidation"
+    kind: "complex"
+    mapman_bin: "21.2"
+    subunits:
+      - symbol: "APX1"
+        locus: "AT1G07890"
+      - symbol: "APX2"
+        locus: "AT3G09640"
+      - symbol: "tAPX"
+        locus: "AT1G77490"
+      - symbol: "sAPX"
+        locus: "AT4G08390"
+    loci: ["AT1G07890", "AT3G09640", "AT1G77490", "AT4G08390"]
+
+  - id: PEROXIREDOXINS
+    label: "Peroxiredoxins (Prx)"
+    sublabel: "2-Cys Prx A/B & Prx Q"
+    kind: "complex"
+    mapman_bin: "21.2"
+    subunits:
+      - symbol: "2CysPrxA"
+        locus: "AT3G11630"
+      - symbol: "2CysPrxB"
+        locus: "AT5G06290"
+      - symbol: "PrxQ"
+        locus: "AT3G26060"
+    loci: ["AT3G11630", "AT5G06290", "AT3G26060"]
+
+  - id: CATALASE_SCAVENGING
+    label: "Catalases (CAT)"
+    sublabel: "BIN 21.3 Peroxisomal H2O2 Removal"
+    kind: "complex"
+    mapman_bin: "21.3"
+    subunits:
+      - symbol: "CAT1"
+        locus: "AT1G20630"
+      - symbol: "CAT2"
+        locus: "AT4G35090"
+      - symbol: "CAT3"
+        locus: "AT1G20620"
+    loci: ["AT1G20630", "AT4G35090", "AT1G20620"]
+
+  - id: MDHAR_ENZYME
+    label: "Monodehydroascorbate Reductase"
+    sublabel: "MDHAR (NADH-dependent)"
+    kind: "simple"
+    mapman_bin: "21.2"
+    loci: ["AT1G63940", "AT3G09940", "AT5G03630"]
+
+  - id: DHAR_ENZYME
+    label: "Dehydroascorbate Reductase"
+    sublabel: "DHAR1 / DHAR2 / DHAR3"
+    kind: "simple"
+    mapman_bin: "21.2"
+    loci: ["AT1G19570", "AT1G75270", "AT5G16710"]
+
+  - id: GLUTATHIONE_REDUCTASE
+    label: "Glutathione Reductase (GR)"
+    sublabel: "GR1 (Cyt) / GR2 (Plastid/Mito)"
+    kind: "complex"
+    mapman_bin: "21.2"
+    subunits:
+      - symbol: "GR1"
+        locus: "AT3G24170"
+      - symbol: "GR2"
+        locus: "AT3G54660"
+    loci: ["AT3G24170", "AT3G54660"]
+
+  - id: THIOREDOXIN_FAMILY
+    label: "Thioredoxins (Trx)"
+    sublabel: "Trx-h / Trx-m / Trx-f"
+    kind: "family"
+    mapman_bin: "21.5"
+    family_loci: ["AT3G51030", "AT5G39950", "AT1G03680", "AT3G06730", "AT2G35010"]
+    loci: ["AT3G51030", "AT5G39950", "AT1G03680", "AT3G06730", "AT2G35010"]
+
+  - id: GLUTAREDOXIN_FAMILY
+    label: "Glutaredoxins (Grx)"
+    sublabel: "CC-type / CPYC / CGFS"
+    kind: "family"
+    mapman_bin: "21.6"
+    family_loci: ["AT2G30540", "AT3G54900", "AT4G15660", "AT4G15680"]
+    loci: ["AT2G30540", "AT3G54900", "AT4G15660", "AT4G15680"]
+
+  - id: NPR1_TRANSLOCATION
+    label: "NPR1 Redox Monomerization"
+    sublabel: "Master Immune Transcriptional Hub"
+    kind: "simple"
+    mapman_bin: "20.1"
+    loci: ["AT1G64280"]
+
+edges:
+  - from: RBOH_BURST
+    to: APOPLAST_H2O2
+    class: flux
+    label: "Superoxide -> H2O2"
+  - from: METABOLIC_ROS_LEAK
+    to: CSD_SOD_CYT
+    class: flux
+  - from: METABOLIC_ROS_LEAK
+    to: FSD_SOD_PLASTID
+    class: flux
+  - from: METABOLIC_ROS_LEAK
+    to: MSD_SOD_MITO
+    class: flux
+  - from: FSD_SOD_PLASTID
+    to: ASCORBATE_PEROXIDASE
+    class: flux
+    label: "H2O2"
+  - from: CSD_SOD_CYT
+    to: ASCORBATE_PEROXIDASE
+    class: flux
+    label: "H2O2"
+  - from: ASCORBATE_PEROXIDASE
+    to: MDHAR_ENZYME
+    class: flux
+    label: "MDHA"
+  - from: MDHAR_ENZYME
+    to: DHAR_ENZYME
+    class: flux
+    label: "DHA"
+  - from: DHAR_ENZYME
+    to: GLUTATHIONE_REDUCTASE
+    class: flux
+    label: "GSSG -> GSH"
+  - from: ASCORBATE_PEROXIDASE
+    to: PEROXIREDOXINS
+    class: catalysis
+  - from: PEROXIREDOXINS
+    to: THIOREDOXIN_FAMILY
+    class: flux
+    label: "Disulfide exchange"
+  - from: THIOREDOXIN_FAMILY
+    to: NPR1_TRANSLOCATION
+    class: activation
+    label: "Monomerization"
+  - from: METABOLIC_ROS_LEAK
+    to: CATALASE_SCAVENGING
+    class: flux
+    label: "Peroxisomal H2O2"
