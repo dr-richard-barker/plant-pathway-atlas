@@ -13,6 +13,7 @@ __author__ = "Richard Barker"
 
 from .layout import Box, LaidOutNode, place_rows, size_node, bounding_box
 from .render import render_svg, OKABE_ITO
+from .sbgn import export_sbgn
 from .maps import MapSpec, LaidOutMap, load_map, compile_map
 from .project import project_expression, Projection, NodeValue
 from .ortho import project_orthologs, Coverage, Ortholog, OrthologyError
@@ -26,6 +27,7 @@ __all__ = [
     "size_node",
     "bounding_box",
     "render_svg",
+    "export_sbgn",
     "OKABE_ITO",
     "MapSpec",
     "LaidOutMap",

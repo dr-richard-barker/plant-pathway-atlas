@@ -17,7 +17,7 @@
       "orthologs": {
         "AT1G01090": {
           "targets": [
-            "LOC_Os07g90682"
+            "LOC_Os05g18404"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -27,7 +27,7 @@
         },
         "AT1G03130": {
           "targets": [
-            "LOC_Os10g47629"
+            "LOC_Os12g73695"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -37,7 +37,7 @@
         },
         "AT1G03680": {
           "targets": [
-            "LOC_Os11g99134"
+            "LOC_Os09g71304"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -47,7 +47,7 @@
         },
         "AT1G06680": {
           "targets": [
-            "LOC_Os03g98754"
+            "LOC_Os07g41542"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -81,7 +81,7 @@
         },
         "AT1G10960": {
           "targets": [
-            "LOC_Os03g22194"
+            "LOC_Os01g93052"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -91,7 +91,7 @@
         },
         "AT1G19570": {
           "targets": [
-            "LOC_Os04g78439"
+            "LOC_Os12g92211"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -101,7 +101,7 @@
         },
         "AT1G20020": {
           "targets": [
-            "LOC_Os07g46042"
+            "LOC_Os01g24724"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -111,7 +111,7 @@
         },
         "AT1G20340": {
           "targets": [
-            "LOC_Os08g13907"
+            "LOC_Os07g63706"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -121,7 +121,7 @@
         },
         "AT1G20620": {
           "targets": [
-            "LOC_Os05g21104"
+            "LOC_Os11g77174"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -131,7 +131,7 @@
         },
         "AT1G20630": {
           "targets": [
-            "LOC_Os01g72592"
+            "LOC_Os09g85992"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -141,7 +141,7 @@
         },
         "AT1G22450": {
           "targets": [
-            "LOC_Os05g82412"
+            "LOC_Os08g10727"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -151,7 +151,7 @@
         },
         "AT1G29910": {
           "targets": [
-            "LOC_Os03g27186"
+            "LOC_Os08g84071"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -161,7 +161,7 @@
         },
         "AT1G29920": {
           "targets": [
-            "LOC_Os07g11074"
+            "LOC_Os12g87675"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -171,7 +171,7 @@
         },
         "AT1G32350": {
           "targets": [
-            "LOC_Os02g33785"
+            "LOC_Os12g73443"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -181,7 +181,7 @@
         },
         "AT1G36160": {
           "targets": [
-            "LOC_Os11g44006"
+            "LOC_Os10g43801"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -191,7 +191,7 @@
         },
         "AT1G48030": {
           "targets": [
-            "LOC_Os06g46545"
+            "LOC_Os11g83774"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -201,7 +201,7 @@
         },
         "AT1G53240": {
           "targets": [
-            "LOC_Os01g48808"
+            "LOC_Os11g56366"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -211,7 +211,7 @@
         },
         "AT1G60950": {
           "targets": [
-            "LOC_Os02g52241"
+            "LOC_Os11g33362"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -221,7 +221,7 @@
         },
         "AT1G63940": {
           "targets": [
-            "LOC_Os01g24292"
+            "LOC_Os12g31071"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -231,7 +231,7 @@
         },
         "AT1G64060": {
           "targets": [
-            "LOC_Os08g41783"
+            "LOC_Os11g51494"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -241,7 +241,7 @@
         },
         "AT1G64280": {
           "targets": [
-            "LOC_Os01g31432"
+            "LOC_Os12g86451"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -263,7 +263,7 @@
         },
         "AT1G75270": {
           "targets": [
-            "LOC_Os05g25316"
+            "LOC_Os09g71316"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -273,7 +273,7 @@
         },
         "AT1G76100": {
           "targets": [
-            "LOC_Os09g21564"
+            "LOC_Os04g59287"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -283,7 +283,7 @@
         },
         "AT1G77490": {
           "targets": [
-            "LOC_Os02g19685"
+            "LOC_Os05g30740"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -293,7 +293,7 @@
         },
         "AT1G79550": {
           "targets": [
-            "LOC_Os06g46425"
+            "LOC_Os09g80388"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -303,7 +303,7 @@
         },
         "AT2G05620": {
           "targets": [
-            "LOC_Os05g78584"
+            "LOC_Os07g18562"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -313,7 +313,7 @@
         },
         "AT2G05990": {
           "targets": [
-            "LOC_Os12g27711"
+            "LOC_Os05g64832"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -334,7 +334,7 @@
         },
         "AT2G19450": {
           "targets": [
-            "LOC_Os10g72169"
+            "LOC_Os09g25428"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -344,7 +344,7 @@
         },
         "AT2G27510": {
           "targets": [
-            "LOC_Os11g30806"
+            "LOC_Os03g45282"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -354,7 +354,7 @@
         },
         "AT2G28190": {
           "targets": [
-            "LOC_Os06g29913"
+            "LOC_Os08g36023"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -364,7 +364,7 @@
         },
         "AT2G30540": {
           "targets": [
-            "LOC_Os10g66625"
+            "LOC_Os05g80924"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -374,7 +374,7 @@
         },
         "AT2G34430": {
           "targets": [
-            "LOC_Os12g24507"
+            "LOC_Os11g25514"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -384,7 +384,7 @@
         },
         "AT2G35010": {
           "targets": [
-            "LOC_Os03g72150"
+            "LOC_Os08g46823"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -394,7 +394,7 @@
         },
         "AT2G36530": {
           "targets": [
-            "LOC_Os05g71036"
+            "LOC_Os03g55074"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -404,7 +404,7 @@
         },
         "AT2G40100": {
           "targets": [
-            "LOC_Os11g34754"
+            "LOC_Os04g27643"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -414,7 +414,7 @@
         },
         "AT3G06730": {
           "targets": [
-            "LOC_Os09g75516"
+            "LOC_Os05g64904"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -424,7 +424,7 @@
         },
         "AT3G09640": {
           "targets": [
-            "LOC_Os02g36533"
+            "LOC_Os04g55999"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -434,7 +434,7 @@
         },
         "AT3G09940": {
           "targets": [
-            "LOC_Os10g95545"
+            "LOC_Os07g98518"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -444,7 +444,7 @@
         },
         "AT3G10920": {
           "targets": [
-            "LOC_Os03g98574"
+            "LOC_Os12g67155"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -454,7 +454,7 @@
         },
         "AT3G11630": {
           "targets": [
-            "LOC_Os12g28683"
+            "LOC_Os07g65146"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -464,7 +464,7 @@
         },
         "AT3G13790": {
           "targets": [
-            "LOC_Os02g24893"
+            "LOC_Os10g16597"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -474,7 +474,7 @@
         },
         "AT3G13930": {
           "targets": [
-            "LOC_Os04g83323"
+            "LOC_Os12g96795"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -496,7 +496,7 @@
         },
         "AT3G23920": {
           "targets": [
-            "LOC_Os02g76997"
+            "LOC_Os10g39733"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -506,7 +506,7 @@
         },
         "AT3G24170": {
           "targets": [
-            "LOC_Os02g26873"
+            "LOC_Os08g82607"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -516,7 +516,7 @@
         },
         "AT3G25110": {
           "targets": [
-            "LOC_Os04g33319"
+            "LOC_Os06g17265"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -526,7 +526,7 @@
         },
         "AT3G26060": {
           "targets": [
-            "LOC_Os03g66870"
+            "LOC_Os05g86624"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -536,7 +536,7 @@
         },
         "AT3G26650": {
           "targets": [
-            "LOC_Os12g50367"
+            "LOC_Os06g10341"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -546,7 +546,7 @@
         },
         "AT3G51030": {
           "targets": [
-            "LOC_Os10g68857"
+            "LOC_Os05g82700"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -556,7 +556,7 @@
         },
         "AT3G54660": {
           "targets": [
-            "LOC_Os10g14809"
+            "LOC_Os08g38759"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -566,7 +566,7 @@
         },
         "AT3G54900": {
           "targets": [
-            "LOC_Os11g58778"
+            "LOC_Os05g95024"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -576,7 +576,7 @@
         },
         "AT3G58610": {
           "targets": [
-            "LOC_Os09g39456"
+            "LOC_Os09g40020"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -586,7 +586,7 @@
         },
         "AT4G03280": {
           "targets": [
-            "LOC_Os09g99444"
+            "LOC_Os04g63139"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -596,7 +596,7 @@
         },
         "AT4G04640": {
           "targets": [
-            "LOC_Os08g82343"
+            "LOC_Os06g84333"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -606,7 +606,7 @@
         },
         "AT4G08390": {
           "targets": [
-            "LOC_Os08g95171"
+            "LOC_Os02g65789"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -616,7 +616,7 @@
         },
         "AT4G10340": {
           "targets": [
-            "LOC_Os03g76146"
+            "LOC_Os09g95712"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -626,7 +626,7 @@
         },
         "AT4G15660": {
           "targets": [
-            "LOC_Os11g97562"
+            "LOC_Os01g91480"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -636,7 +636,7 @@
         },
         "AT4G15680": {
           "targets": [
-            "LOC_Os02g13805"
+            "LOC_Os07g45022"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -646,7 +646,7 @@
         },
         "AT4G21280": {
           "targets": [
-            "LOC_Os01g87136"
+            "LOC_Os06g76377"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -656,7 +656,7 @@
         },
         "AT4G22890": {
           "targets": [
-            "LOC_Os08g92723"
+            "LOC_Os06g72201"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -666,7 +666,7 @@
         },
         "AT4G24620": {
           "targets": [
-            "LOC_Os06g91893"
+            "LOC_Os09g47292"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -676,7 +676,7 @@
         },
         "AT4G25100": {
           "targets": [
-            "LOC_Os02g64277"
+            "LOC_Os02g41885"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -698,7 +698,7 @@
         },
         "AT4G35260": {
           "targets": [
-            "LOC_Os07g98674"
+            "LOC_Os09g50592"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -708,7 +708,7 @@
         },
         "AT4G35830": {
           "targets": [
-            "LOC_Os02g67001"
+            "LOC_Os12g71031"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -718,7 +718,7 @@
         },
         "AT4G37925": {
           "targets": [
-            "LOC_Os04g17191"
+            "LOC_Os01g85084"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -728,7 +728,7 @@
         },
         "AT5G03630": {
           "targets": [
-            "LOC_Os04g82327"
+            "LOC_Os09g87744"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -738,7 +738,7 @@
         },
         "AT5G06290": {
           "targets": [
-            "LOC_Os09g19380"
+            "LOC_Os12g27639"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -748,7 +748,7 @@
         },
         "AT5G08530": {
           "targets": [
-            "LOC_Os03g31350"
+            "LOC_Os09g61620"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -758,7 +758,7 @@
         },
         "AT5G08670": {
           "targets": [
-            "LOC_Os04g42211"
+            "LOC_Os06g27585"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -768,7 +768,7 @@
         },
         "AT5G16710": {
           "targets": [
-            "LOC_Os07g51466"
+            "LOC_Os05g43340"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -778,7 +778,7 @@
         },
         "AT5G19220": {
           "targets": [
-            "LOC_Os01g77812"
+            "LOC_Os10g15517"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -788,7 +788,7 @@
         },
         "AT5G20830": {
           "targets": [
-            "LOC_Os10g75253"
+            "LOC_Os02g99605"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -798,7 +798,7 @@
         },
         "AT5G20840": {
           "targets": [
-            "LOC_Os06g17277"
+            "LOC_Os10g77209"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -808,7 +808,7 @@
         },
         "AT5G23310": {
           "targets": [
-            "LOC_Os04g50527"
+            "LOC_Os09g73152"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -818,7 +818,7 @@
         },
         "AT5G39950": {
           "targets": [
-            "LOC_Os06g24561"
+            "LOC_Os03g78906"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -828,7 +828,7 @@
         },
         "AT5G40650": {
           "targets": [
-            "LOC_Os01g83368"
+            "LOC_Os12g35079"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -838,7 +838,7 @@
         },
         "AT5G46110": {
           "targets": [
-            "LOC_Os02g22937"
+            "LOC_Os06g47649"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -860,7 +860,7 @@
         },
         "AT5G48300": {
           "targets": [
-            "LOC_Os05g72260"
+            "LOC_Os10g88021"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -870,7 +870,7 @@
         },
         "AT5G51100": {
           "targets": [
-            "LOC_Os02g70565"
+            "LOC_Os12g61083"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -880,7 +880,7 @@
         },
         "AT5G54270": {
           "targets": [
-            "LOC_Os06g96141"
+            "LOC_Os01g82276"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -890,7 +890,7 @@
         },
         "AT5G56580": {
           "targets": [
-            "LOC_Os08g35531"
+            "LOC_Os06g53517"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -900,7 +900,7 @@
         },
         "AT5G66190": {
           "targets": [
-            "LOC_Os09g16596"
+            "LOC_Os07g10390"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -910,7 +910,7 @@
         },
         "AT5G66570": {
           "targets": [
-            "LOC_Os10g36961"
+            "LOC_Os10g53725"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -920,7 +920,7 @@
         },
         "ATCG00020": {
           "targets": [
-            "LOC_Os11g21854"
+            "LOC_Os08g50963"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -930,7 +930,7 @@
         },
         "ATCG00120": {
           "targets": [
-            "LOC_Os01g42292"
+            "LOC_Os01g85192"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -940,7 +940,7 @@
         },
         "ATCG00270": {
           "targets": [
-            "LOC_Os10g19657"
+            "LOC_Os04g16219"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -950,7 +950,7 @@
         },
         "ATCG00280": {
           "targets": [
-            "LOC_Os04g50875"
+            "LOC_Os11g65774"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -960,7 +960,7 @@
         },
         "ATCG00340": {
           "targets": [
-            "LOC_Os03g80598"
+            "LOC_Os03g47430"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -970,7 +970,7 @@
         },
         "ATCG00350": {
           "targets": [
-            "LOC_Os04g48031"
+            "LOC_Os05g25664"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -980,7 +980,7 @@
         },
         "ATCG00480": {
           "targets": [
-            "LOC_Os07g70558"
+            "LOC_Os07g89506"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1001,7 +1001,7 @@
         },
         "ATCG00540": {
           "targets": [
-            "LOC_Os04g58375"
+            "LOC_Os08g46775"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1011,7 +1011,7 @@
         },
         "ATCG00550": {
           "targets": [
-            "LOC_Os09g39684"
+            "LOC_Os07g36190"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1021,7 +1021,7 @@
         },
         "ATCG00680": {
           "targets": [
-            "LOC_Os01g82612"
+            "LOC_Os09g72924"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1031,7 +1031,7 @@
         },
         "ATCG00710": {
           "targets": [
-            "LOC_Os05g55076"
+            "LOC_Os04g72523"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1041,7 +1041,7 @@
         },
         "ATCG01060": {
           "targets": [
-            "LOC_Os05g38468"
+            "LOC_Os04g47023"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1065,7 +1065,7 @@
       "orthologs": {
         "AT1G01090": {
           "targets": [
-            "Zm00001eb180682"
+            "Zm00001eb198404"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1075,7 +1075,7 @@
         },
         "AT1G03130": {
           "targets": [
-            "Zm00001eb677629"
+            "Zm00001eb343695"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1085,7 +1085,7 @@
         },
         "AT1G03680": {
           "targets": [
-            "Zm00001eb639134"
+            "Zm00001eb251304"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1095,7 +1095,7 @@
         },
         "AT1G06680": {
           "targets": [
-            "Zm00001eb998754"
+            "Zm00001eb221542"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1127,7 +1127,7 @@
         },
         "AT1G10960": {
           "targets": [
-            "Zm00001eb832194"
+            "Zm00001eb633052"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1137,7 +1137,7 @@
         },
         "AT1G19570": {
           "targets": [
-            "Zm00001eb978439"
+            "Zm00001eb272211"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1147,7 +1147,7 @@
         },
         "AT1G20020": {
           "targets": [
-            "Zm00001eb406042"
+            "Zm00001eb744724"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1157,7 +1157,7 @@
         },
         "AT1G20340": {
           "targets": [
-            "Zm00001eb733907"
+            "Zm00001eb963706"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1167,7 +1167,7 @@
         },
         "AT1G20620": {
           "targets": [
-            "Zm00001eb741104"
+            "Zm00001eb617174"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1177,7 +1177,7 @@
         },
         "AT1G20630": {
           "targets": [
-            "Zm00001eb252592"
+            "Zm00001eb535992"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1187,7 +1187,7 @@
         },
         "AT1G22450": {
           "targets": [
-            "Zm00001eb172412"
+            "Zm00001eb910727"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1197,7 +1197,7 @@
         },
         "AT1G29910": {
           "targets": [
-            "Zm00001eb927186"
+            "Zm00001eb714071"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1207,7 +1207,7 @@
         },
         "AT1G29920": {
           "targets": [
-            "Zm00001eb191074"
+            "Zm00001eb447675"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1217,7 +1217,7 @@
         },
         "AT1G32350": {
           "targets": [
-            "Zm00001eb393785"
+            "Zm00001eb703443"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1227,7 +1227,7 @@
         },
         "AT1G36160": {
           "targets": [
-            "Zm00001eb494006"
+            "Zm00001eb493801"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1237,7 +1237,7 @@
         },
         "AT1G48030": {
           "targets": [
-            "Zm00001eb226545"
+            "Zm00001eb623774"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1247,7 +1247,7 @@
         },
         "AT1G53240": {
           "targets": [
-            "Zm00001eb948808"
+            "Zm00001eb686366"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1257,7 +1257,7 @@
         },
         "AT1G60950": {
           "targets": [
-            "Zm00001eb232241"
+            "Zm00001eb573362"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1267,7 +1267,7 @@
         },
         "AT1G63940": {
           "targets": [
-            "Zm00001eb654292"
+            "Zm00001eb841071"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1277,7 +1277,7 @@
         },
         "AT1G64060": {
           "targets": [
-            "Zm00001eb221783"
+            "Zm00001eb951494"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1287,7 +1287,7 @@
         },
         "AT1G64280": {
           "targets": [
-            "Zm00001eb841432"
+            "Zm00001eb716451"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1308,7 +1308,7 @@
         },
         "AT1G75270": {
           "targets": [
-            "Zm00001eb295316"
+            "Zm00001eb431316"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1318,7 +1318,7 @@
         },
         "AT1G76100": {
           "targets": [
-            "Zm00001eb741564"
+            "Zm00001eb509287"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1328,7 +1328,7 @@
         },
         "AT1G77490": {
           "targets": [
-            "Zm00001eb559685"
+            "Zm00001eb120740"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1338,7 +1338,7 @@
         },
         "AT1G79550": {
           "targets": [
-            "Zm00001eb676425"
+            "Zm00001eb710388"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1348,7 +1348,7 @@
         },
         "AT2G05620": {
           "targets": [
-            "Zm00001eb528584"
+            "Zm00001eb738562"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1358,7 +1358,7 @@
         },
         "AT2G05990": {
           "targets": [
-            "Zm00001eb747711"
+            "Zm00001eb604832"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1379,7 +1379,7 @@
         },
         "AT2G19450": {
           "targets": [
-            "Zm00001eb162169"
+            "Zm00001eb475428"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1389,7 +1389,7 @@
         },
         "AT2G27510": {
           "targets": [
-            "Zm00001eb660806"
+            "Zm00001eb225282"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1399,7 +1399,7 @@
         },
         "AT2G28190": {
           "targets": [
-            "Zm00001eb749913"
+            "Zm00001eb126023"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1409,7 +1409,7 @@
         },
         "AT2G30540": {
           "targets": [
-            "Zm00001eb696625"
+            "Zm00001eb980924"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1419,7 +1419,7 @@
         },
         "AT2G34430": {
           "targets": [
-            "Zm00001eb834507"
+            "Zm00001eb295514"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1429,7 +1429,7 @@
         },
         "AT2G35010": {
           "targets": [
-            "Zm00001eb432150"
+            "Zm00001eb676823"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1439,7 +1439,7 @@
         },
         "AT2G36530": {
           "targets": [
-            "Zm00001eb701036"
+            "Zm00001eb505074"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1449,7 +1449,7 @@
         },
         "AT2G40100": {
           "targets": [
-            "Zm00001eb214754"
+            "Zm00001eb297643"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1459,7 +1459,7 @@
         },
         "AT3G06730": {
           "targets": [
-            "Zm00001eb435516"
+            "Zm00001eb514904"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1469,7 +1469,7 @@
         },
         "AT3G09640": {
           "targets": [
-            "Zm00001eb216533"
+            "Zm00001eb775999"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1479,7 +1479,7 @@
         },
         "AT3G09940": {
           "targets": [
-            "Zm00001eb545545"
+            "Zm00001eb278518"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1489,7 +1489,7 @@
         },
         "AT3G10920": {
           "targets": [
-            "Zm00001eb458574"
+            "Zm00001eb607155"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1499,7 +1499,7 @@
         },
         "AT3G11630": {
           "targets": [
-            "Zm00001eb208683"
+            "Zm00001eb425146"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1509,7 +1509,7 @@
         },
         "AT3G13790": {
           "targets": [
-            "Zm00001eb114893"
+            "Zm00001eb376597"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1519,7 +1519,7 @@
         },
         "AT3G13930": {
           "targets": [
-            "Zm00001eb263323"
+            "Zm00001eb456795"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1540,7 +1540,7 @@
         },
         "AT3G23920": {
           "targets": [
-            "Zm00001eb436997"
+            "Zm00001eb399733"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1550,7 +1550,7 @@
         },
         "AT3G24170": {
           "targets": [
-            "Zm00001eb746873"
+            "Zm00001eb622607"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1560,7 +1560,7 @@
         },
         "AT3G25110": {
           "targets": [
-            "Zm00001eb573319"
+            "Zm00001eb647265"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1570,7 +1570,7 @@
         },
         "AT3G26060": {
           "targets": [
-            "Zm00001eb786870"
+            "Zm00001eb716624"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1580,7 +1580,7 @@
         },
         "AT3G26650": {
           "targets": [
-            "Zm00001eb230367"
+            "Zm00001eb730341"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1590,7 +1590,7 @@
         },
         "AT3G51030": {
           "targets": [
-            "Zm00001eb158857"
+            "Zm00001eb622700"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1600,7 +1600,7 @@
         },
         "AT3G54660": {
           "targets": [
-            "Zm00001eb464809"
+            "Zm00001eb488759"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1610,7 +1610,7 @@
         },
         "AT3G54900": {
           "targets": [
-            "Zm00001eb418778"
+            "Zm00001eb365024"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1620,7 +1620,7 @@
         },
         "AT3G58610": {
           "targets": [
-            "Zm00001eb849456"
+            "Zm00001eb580020"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1630,7 +1630,7 @@
         },
         "AT4G03280": {
           "targets": [
-            "Zm00001eb279444"
+            "Zm00001eb153139"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1640,7 +1640,7 @@
         },
         "AT4G04640": {
           "targets": [
-            "Zm00001eb712343"
+            "Zm00001eb354333"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1650,7 +1650,7 @@
         },
         "AT4G08390": {
           "targets": [
-            "Zm00001eb725171"
+            "Zm00001eb965789"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1660,7 +1660,7 @@
         },
         "AT4G10340": {
           "targets": [
-            "Zm00001eb976146"
+            "Zm00001eb815712"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1670,7 +1670,7 @@
         },
         "AT4G15660": {
           "targets": [
-            "Zm00001eb367562"
+            "Zm00001eb361480"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1680,7 +1680,7 @@
         },
         "AT4G15680": {
           "targets": [
-            "Zm00001eb283805"
+            "Zm00001eb855022"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1690,7 +1690,7 @@
         },
         "AT4G21280": {
           "targets": [
-            "Zm00001eb987136"
+            "Zm00001eb706377"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1700,7 +1700,7 @@
         },
         "AT4G22890": {
           "targets": [
-            "Zm00001eb902723"
+            "Zm00001eb702201"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1710,7 +1710,7 @@
         },
         "AT4G24620": {
           "targets": [
-            "Zm00001eb181893"
+            "Zm00001eb767292"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1720,7 +1720,7 @@
         },
         "AT4G25100": {
           "targets": [
-            "Zm00001eb424277"
+            "Zm00001eb491885"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1741,7 +1741,7 @@
         },
         "AT4G35260": {
           "targets": [
-            "Zm00001eb278674"
+            "Zm00001eb590592"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1751,7 +1751,7 @@
         },
         "AT4G35830": {
           "targets": [
-            "Zm00001eb697001"
+            "Zm00001eb521031"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1761,7 +1761,7 @@
         },
         "AT4G37925": {
           "targets": [
-            "Zm00001eb737191"
+            "Zm00001eb985084"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1771,7 +1771,7 @@
         },
         "AT5G03630": {
           "targets": [
-            "Zm00001eb172327"
+            "Zm00001eb177744"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1781,7 +1781,7 @@
         },
         "AT5G06290": {
           "targets": [
-            "Zm00001eb649380"
+            "Zm00001eb657639"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1791,7 +1791,7 @@
         },
         "AT5G08530": {
           "targets": [
-            "Zm00001eb301350"
+            "Zm00001eb511620"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1801,7 +1801,7 @@
         },
         "AT5G08670": {
           "targets": [
-            "Zm00001eb852211"
+            "Zm00001eb657585"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1811,7 +1811,7 @@
         },
         "AT5G16710": {
           "targets": [
-            "Zm00001eb951466"
+            "Zm00001eb133340"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1821,7 +1821,7 @@
         },
         "AT5G19220": {
           "targets": [
-            "Zm00001eb707812"
+            "Zm00001eb555517"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1831,7 +1831,7 @@
         },
         "AT5G20830": {
           "targets": [
-            "Zm00001eb615253"
+            "Zm00001eb189605"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1841,7 +1841,7 @@
         },
         "AT5G20840": {
           "targets": [
-            "Zm00001eb737277"
+            "Zm00001eb797209"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1851,7 +1851,7 @@
         },
         "AT5G23310": {
           "targets": [
-            "Zm00001eb590527"
+            "Zm00001eb883152"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1861,7 +1861,7 @@
         },
         "AT5G39950": {
           "targets": [
-            "Zm00001eb204561"
+            "Zm00001eb708906"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1871,7 +1871,7 @@
         },
         "AT5G40650": {
           "targets": [
-            "Zm00001eb263368"
+            "Zm00001eb845079"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1881,7 +1881,7 @@
         },
         "AT5G46110": {
           "targets": [
-            "Zm00001eb562937"
+            "Zm00001eb407649"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1902,7 +1902,7 @@
         },
         "AT5G48300": {
           "targets": [
-            "Zm00001eb702260"
+            "Zm00001eb538021"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1912,7 +1912,7 @@
         },
         "AT5G51100": {
           "targets": [
-            "Zm00001eb970565"
+            "Zm00001eb871083"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1922,7 +1922,7 @@
         },
         "AT5G54270": {
           "targets": [
-            "Zm00001eb636141"
+            "Zm00001eb802276"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1932,7 +1932,7 @@
         },
         "AT5G56580": {
           "targets": [
-            "Zm00001eb935531"
+            "Zm00001eb683517"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1942,7 +1942,7 @@
         },
         "AT5G66190": {
           "targets": [
-            "Zm00001eb826596"
+            "Zm00001eb370390"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1952,7 +1952,7 @@
         },
         "AT5G66570": {
           "targets": [
-            "Zm00001eb666961"
+            "Zm00001eb953725"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1962,7 +1962,7 @@
         },
         "ATCG00020": {
           "targets": [
-            "Zm00001eb651854"
+            "Zm00001eb140963"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1972,7 +1972,7 @@
         },
         "ATCG00120": {
           "targets": [
-            "Zm00001eb582292"
+            "Zm00001eb895192"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1982,7 +1982,7 @@
         },
         "ATCG00270": {
           "targets": [
-            "Zm00001eb739657"
+            "Zm00001eb286219"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -1992,7 +1992,7 @@
         },
         "ATCG00280": {
           "targets": [
-            "Zm00001eb860875"
+            "Zm00001eb605774"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2002,7 +2002,7 @@
         },
         "ATCG00340": {
           "targets": [
-            "Zm00001eb710598"
+            "Zm00001eb497430"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2012,7 +2012,7 @@
         },
         "ATCG00350": {
           "targets": [
-            "Zm00001eb318031"
+            "Zm00001eb925664"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2022,7 +2022,7 @@
         },
         "ATCG00480": {
           "targets": [
-            "Zm00001eb610558"
+            "Zm00001eb359506"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2043,7 +2043,7 @@
         },
         "ATCG00540": {
           "targets": [
-            "Zm00001eb238375"
+            "Zm00001eb226775"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2053,7 +2053,7 @@
         },
         "ATCG00550": {
           "targets": [
-            "Zm00001eb399684"
+            "Zm00001eb936190"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2063,7 +2063,7 @@
         },
         "ATCG00680": {
           "targets": [
-            "Zm00001eb532612"
+            "Zm00001eb342924"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2073,7 +2073,7 @@
         },
         "ATCG00710": {
           "targets": [
-            "Zm00001eb235076"
+            "Zm00001eb702523"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2083,7 +2083,7 @@
         },
         "ATCG01060": {
           "targets": [
-            "Zm00001eb218468"
+            "Zm00001eb857023"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2516,7 +2516,7 @@
       "orthologs": {
         "AT1G01090": {
           "targets": [
-            "YKC782W"
+            "YEA104W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2526,7 +2526,7 @@
         },
         "AT1G03130": {
           "targets": [
-            "YNL129W"
+            "YPK595W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2536,7 +2536,7 @@
         },
         "AT1G03680": {
           "targets": [
-            "YOF834W"
+            "YIQ204W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2546,7 +2546,7 @@
         },
         "AT1G06680": {
           "targets": [
-            "YCM454W"
+            "YGG842W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2578,7 +2578,7 @@
         },
         "AT1G10960": {
           "targets": [
-            "YCM294W"
+            "YMF352W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2588,7 +2588,7 @@
         },
         "AT1G19570": {
           "targets": [
-            "YHM139W"
+            "YDD311W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2598,7 +2598,7 @@
         },
         "AT1G20020": {
           "targets": [
-            "YKR542W"
+            "YEP824W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2608,7 +2608,7 @@
         },
         "AT1G20340": {
           "targets": [
-            "YDJ407W"
+            "YKL606W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2618,7 +2618,7 @@
         },
         "AT1G20620": {
           "targets": [
-            "YAJ404W"
+            "YGN474W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2628,7 +2628,7 @@
         },
         "AT1G20630": {
           "targets": [
-            "YAR692W"
+            "YIJ892W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2638,7 +2638,7 @@
         },
         "AT1G22450": {
           "targets": [
-            "YMF512W"
+            "YHK427W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2648,7 +2648,7 @@
         },
         "AT1G29910": {
           "targets": [
-            "YCT886W"
+            "YHJ571W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2658,7 +2658,7 @@
         },
         "AT1G29920": {
           "targets": [
-            "YCC774W"
+            "YLT575W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2668,7 +2668,7 @@
         },
         "AT1G32350": {
           "targets": [
-            "YJB285W"
+            "YDP343W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2678,7 +2678,7 @@
         },
         "AT1G36160": {
           "targets": [
-            "YGP506W"
+            "YJC301W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2688,7 +2688,7 @@
         },
         "AT1G48030": {
           "targets": [
-            "YBJ245W"
+            "YOP674W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2698,7 +2698,7 @@
         },
         "AT1G53240": {
           "targets": [
-            "YIK108W"
+            "YOH866W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2708,7 +2708,7 @@
         },
         "AT1G60950": {
           "targets": [
-            "YBF341W"
+            "YCF662W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2718,7 +2718,7 @@
         },
         "AT1G63940": {
           "targets": [
-            "YED792W"
+            "YPG371W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2728,7 +2728,7 @@
         },
         "AT1G64060": {
           "targets": [
-            "YHL283W"
+            "YGI394W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2738,7 +2738,7 @@
         },
         "AT1G64280": {
           "targets": [
-            "YIJ732W"
+            "YDI551W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2748,7 +2748,7 @@
         },
         "AT1G67090": {
           "targets": [
-            "YLM783W"
+            "YJQ365W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2768,7 +2768,7 @@
         },
         "AT1G76100": {
           "targets": [
-            "YMH864W"
+            "YHK587W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2778,7 +2778,7 @@
         },
         "AT1G77490": {
           "targets": [
-            "YFK585W"
+            "YEQ840W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2788,7 +2788,7 @@
         },
         "AT1G79550": {
           "targets": [
-            "YJQ525W"
+            "YET888W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2798,7 +2798,7 @@
         },
         "AT2G05990": {
           "targets": [
-            "YPB611W"
+            "YAM132W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2819,7 +2819,7 @@
         },
         "AT2G19450": {
           "targets": [
-            "YJP669W"
+            "YEO328W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2829,7 +2829,7 @@
         },
         "AT2G27510": {
           "targets": [
-            "YGK106W"
+            "YCK582W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2839,7 +2839,7 @@
         },
         "AT2G28190": {
           "targets": [
-            "YJJ413W"
+            "YHQ523W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2849,7 +2849,7 @@
         },
         "AT2G30540": {
           "targets": [
-            "YBJ725W"
+            "YMH224W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2859,7 +2859,7 @@
         },
         "AT2G34430": {
           "targets": [
-            "YLQ207W"
+            "YKT414W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2869,7 +2869,7 @@
         },
         "AT2G35010": {
           "targets": [
-            "YGT250W"
+            "YHL123W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2879,7 +2879,7 @@
         },
         "AT2G36530": {
           "targets": [
-            "YME336W"
+            "YCR374W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2889,7 +2889,7 @@
         },
         "AT2G40100": {
           "targets": [
-            "YCC454W"
+            "YLC143W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2899,7 +2899,7 @@
         },
         "AT3G06730": {
           "targets": [
-            "YMJ416W"
+            "YIL604W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2909,7 +2909,7 @@
         },
         "AT3G09640": {
           "targets": [
-            "YFN633W"
+            "YPT899W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2919,7 +2919,7 @@
         },
         "AT3G09940": {
           "targets": [
-            "YJG845W"
+            "YGR218W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2929,7 +2929,7 @@
         },
         "AT3G10920": {
           "targets": [
-            "YOA274W"
+            "YDH855W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2939,7 +2939,7 @@
         },
         "AT3G11630": {
           "targets": [
-            "YLM783W"
+            "YKL446W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2949,7 +2949,7 @@
         },
         "AT3G13790": {
           "targets": [
-            "YNA593W"
+            "YFR697W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2959,7 +2959,7 @@
         },
         "AT3G13930": {
           "targets": [
-            "YLH223W"
+            "YLT895W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2969,7 +2969,7 @@
         },
         "AT3G22370": {
           "targets": [
-            "YFI233W"
+            "YGM618W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2979,7 +2979,7 @@
         },
         "AT3G23920": {
           "targets": [
-            "YFM297W"
+            "YFD633W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2989,7 +2989,7 @@
         },
         "AT3G24170": {
           "targets": [
-            "YJT573W"
+            "YPM307W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -2999,7 +2999,7 @@
         },
         "AT3G25110": {
           "targets": [
-            "YHM619W"
+            "YBE165W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3009,7 +3009,7 @@
         },
         "AT3G26060": {
           "targets": [
-            "YGT570W"
+            "YAJ724W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3019,7 +3019,7 @@
         },
         "AT3G26650": {
           "targets": [
-            "YPR867W"
+            "YFG841W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3029,7 +3029,7 @@
         },
         "AT3G51030": {
           "targets": [
-            "YJI557W"
+            "YMI400W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3039,7 +3039,7 @@
         },
         "AT3G54660": {
           "targets": [
-            "YJK109W"
+            "YHH859W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3049,7 +3049,7 @@
         },
         "AT3G54900": {
           "targets": [
-            "YKD478W"
+            "YAE324W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3059,7 +3059,7 @@
         },
         "AT3G58610": {
           "targets": [
-            "YAL756W"
+            "YEB120W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3069,7 +3069,7 @@
         },
         "AT4G03280": {
           "targets": [
-            "YEP344W"
+            "YDL439W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3079,7 +3079,7 @@
         },
         "AT4G04640": {
           "targets": [
-            "YHB443W"
+            "YNP833W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3089,7 +3089,7 @@
         },
         "AT4G08390": {
           "targets": [
-            "YDN471W"
+            "YNB289W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3099,7 +3099,7 @@
         },
         "AT4G10340": {
           "targets": [
-            "YCJ246W"
+            "YAC612W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3109,7 +3109,7 @@
         },
         "AT4G15660": {
           "targets": [
-            "YKM462W"
+            "YIC780W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3119,7 +3119,7 @@
         },
         "AT4G15680": {
           "targets": [
-            "YNH705W"
+            "YOS722W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3129,7 +3129,7 @@
         },
         "AT4G21280": {
           "targets": [
-            "YAG836W"
+            "YJS877W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3139,7 +3139,7 @@
         },
         "AT4G22890": {
           "targets": [
-            "YDK423W"
+            "YJH701W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3149,7 +3149,7 @@
         },
         "AT4G24620": {
           "targets": [
-            "YFS393W"
+            "YMF192W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3159,7 +3159,7 @@
         },
         "AT4G25100": {
           "targets": [
-            "YFH377W"
+            "YNM785W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3181,7 +3181,7 @@
         },
         "AT4G35260": {
           "targets": [
-            "YCR374W"
+            "YAC292W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3191,7 +3191,7 @@
         },
         "AT4G35830": {
           "targets": [
-            "YJC301W"
+            "YHE331W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3201,7 +3201,7 @@
         },
         "AT4G37925": {
           "targets": [
-            "YHE491W"
+            "YMH384W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3211,7 +3211,7 @@
         },
         "AT5G03630": {
           "targets": [
-            "YHA427W"
+            "YAT244W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3221,7 +3221,7 @@
         },
         "AT5G06290": {
           "targets": [
-            "YEG680W"
+            "YHM139W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3231,7 +3231,7 @@
         },
         "AT5G08530": {
           "targets": [
-            "YGE650W"
+            "YEG520W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3241,7 +3241,7 @@
         },
         "AT5G08670": {
           "targets": [
-            "YDD311W"
+            "YBJ885W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3251,7 +3251,7 @@
         },
         "AT5G16710": {
           "targets": [
-            "YKG366W"
+            "YMN640W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3261,7 +3261,7 @@
         },
         "AT5G19220": {
           "targets": [
-            "YEI712W"
+            "YNJ417W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3271,7 +3271,7 @@
         },
         "AT5G20830": {
           "targets": [
-            "YFN153W"
+            "YFA105W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3281,7 +3281,7 @@
         },
         "AT5G20840": {
           "targets": [
-            "YNJ577W"
+            "YJP509W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3291,7 +3291,7 @@
         },
         "AT5G23310": {
           "targets": [
-            "YPH227W"
+            "YAR852W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3301,7 +3301,7 @@
         },
         "AT5G39950": {
           "targets": [
-            "YBP661W"
+            "YKQ206W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3311,7 +3311,7 @@
         },
         "AT5G40650": {
           "targets": [
-            "YIA268W"
+            "YHR379W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3321,7 +3321,7 @@
         },
         "AT5G46110": {
           "targets": [
-            "YJD637W"
+            "YBS549W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3342,7 +3342,7 @@
         },
         "AT5G48300": {
           "targets": [
-            "YEB760W"
+            "YFG521W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3352,7 +3352,7 @@
         },
         "AT5G51100": {
           "targets": [
-            "YFA265W"
+            "YLC783W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3362,7 +3362,7 @@
         },
         "AT5G54270": {
           "targets": [
-            "YNS241W"
+            "YEM776W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3372,7 +3372,7 @@
         },
         "AT5G56580": {
           "targets": [
-            "YLK431W"
+            "YNJ417W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3382,7 +3382,7 @@
         },
         "AT5G66190": {
           "targets": [
-            "YEM296W"
+            "YGT890W"
           ],
           "methods": [
             "ensembl_pan_homology"
@@ -3392,7 +3392,7 @@
         },
         "AT5G66570": {
           "targets": [
-            "YBF661W"
+            "YNR225W"
           ],
           "methods": [
             "ensembl_pan_homology"

@@ -15,15 +15,18 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from plantpath.maps import compile_map, load_map
 from plantpath.render import render_svg
+from plantpath.sbgn import export_sbgn
 
 
 def main():
     src_dir = ROOT / "maps" / "src"
     svg_dir = ROOT / "maps" / "svg"
+    sbgn_dir = ROOT / "maps" / "sbgn"
     sidecar_dir = ROOT / "catalog" / "sidecars"
     manifest_path = ROOT / "catalog" / "manifest.json"
 
     svg_dir.mkdir(parents=True, exist_ok=True)
+    sbgn_dir.mkdir(parents=True, exist_ok=True)
     sidecar_dir.mkdir(parents=True, exist_ok=True)
 
     yaml_files = sorted(src_dir.glob("*.yaml"))
@@ -48,7 +51,11 @@ def main():
         dark_out = svg_dir / f"{spec.id}_dark.svg"
         dark_out.write_text(svg_dark, encoding="utf-8")
 
-        # 3. Create per-map sidecar JSON
+        # 3. Export SBGN-ML PD standard
+        sbgn_out = sbgn_dir / f"{spec.id}.sbgn"
+        export_sbgn(laid_out, sbgn_out)
+
+        # 4. Create per-map sidecar JSON
         node_records = []
         all_loci = set()
         for node in laid_out.nodes:
@@ -95,6 +102,7 @@ def main():
                 "subtitle": spec.subtitle,
                 "svg_light": f"maps/svg/{spec.id}.svg",
                 "svg_dark": f"maps/svg/{spec.id}_dark.svg",
+                "sbgn": f"maps/sbgn/{spec.id}.sbgn",
                 "sidecar": f"catalog/sidecars/{spec.id}.json",
                 "total_nodes": len(laid_out.nodes),
                 "distinct_loci": len(all_loci),

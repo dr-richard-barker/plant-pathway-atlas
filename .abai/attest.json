@@ -1,0 +1,9 @@
+{
+  "digest": "41722d639e7ef77edcfcf6a209b45a266dfacc4efff829eb93a142ae6077cdcc",
+  "files": 42,
+  "verdict": "clear",
+  "standard": "ABAI-QC-2026",
+  "note": "Plant Pathway Atlas verified: 0 blocklist violations, grounded citations, schema valid, FAIR manifest synchronized.",
+  "checked_at": "2026-09-29T21:26:20.912081+00:00",
+  "head": "f4166429d5159cee78c280db81fc23603d035d0b"
+}

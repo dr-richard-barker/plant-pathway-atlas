@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
+  <map id="PPA-01" language="process description">
+    <bbox x="-18.00" y="0.00" w="920.00" h="690.24" />
+    <glyph id="comp_chloroplast_stroma" class="compartment">
+      <label text="Chloroplast Stroma" />
+      <bbox x="57.14" y="62.00" w="625.97" h="133.65" />
+    </glyph>
+    <glyph id="comp_cytosol" class="compartment">
+      <label text="Cytosol" />
+      <bbox x="75.51" y="173.65" w="589.24" h="223.30" />
+    </glyph>
+    <glyph id="comp_mitochondrial_matrix" class="compartment">
+      <label text="Mitochondrial Matrix" />
+      <bbox x="42.00" y="374.94" w="656.25" h="133.65" />
+    </glyph>
+    <glyph id="comp_mitochondrial_inner_membrane" class="compartment">
+      <label text="Mitochondrial Inner Membrane" />
+      <bbox x="14.00" y="486.59" w="712.26" h="133.65" />
+    </glyph>
+    <glyph id="CALVIN_CYCLE" class="complex" compartmentRef="comp_chloroplast_stroma">
+      <label text="Calvin-Benson Cycle" />
+      <bbox x="83.14" y="102.00" w="174.72" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CALVIN_CYCLE" compartment="chloroplast_stroma" mapmanBin="1.2">
+          <ns0:locus>ATCG00490</ns0:locus>
+          <ns0:locus>AT1G67090</ns0:locus>
+          <ns0:locus>AT1G79550</ns0:locus>
+          <ns0:locus>AT3G26650</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="STARCH_TURNOVER" class="complex" compartmentRef="comp_chloroplast_stroma">
+      <label text="Starch Metabolism" />
+      <bbox x="289.86" y="102.00" w="179.67" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="STARCH_TURNOVER" compartment="chloroplast_stroma" mapmanBin="2.2">
+          <ns0:locus>AT5G48300</ns0:locus>
+          <ns0:locus>AT5G19220</ns0:locus>
+          <ns0:locus>AT3G23920</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PLASTID_FA_SYNTH" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
+      <label text="Plastidial FA Synthesis" />
+      <bbox x="501.53" y="104.00" w="155.58" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PLASTID_FA_SYNTH" compartment="chloroplast_stroma" mapmanBin="11.1">
+          <ns0:locus>AT1G36160</ns0:locus>
+          <ns0:locus>AT2G05990</ns0:locus>
+          <ns0:locus>AT3G25110</ns0:locus>
+          <ns0:locus>AT2G19450</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="TRIOSE_P_EXPORT" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Triose-P Translocator" />
+      <bbox x="101.51" y="224.65" w="159.05" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TRIOSE_P_EXPORT" compartment="cytosol" mapmanBin="34.1">
+          <ns0:locus>AT5G46110</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="SUCROSE_METABOLISM" class="complex" compartmentRef="comp_cytosol">
+      <label text="Sucrose Metabolism" />
+      <bbox x="292.56" y="213.65" w="174.88" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SUCROSE_METABOLISM" compartment="cytosol" mapmanBin="2.1">
+          <ns0:locus>AT5G20830</ns0:locus>
+          <ns0:locus>AT5G20840</ns0:locus>
+          <ns0:locus>AT3G13790</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="HEXOSE_P_POOL" class="simple chemical" compartmentRef="comp_cytosol">
+      <label text="Hexose Phosphates" />
+      <bbox x="499.44" y="224.65" w="139.31" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="HEXOSE_P_POOL" compartment="cytosol" />
+      </extension>
+    </glyph>
+    <glyph id="GLYCOLYSIS_UPPER" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Upper Glycolysis" />
+      <bbox x="146.68" y="325.30" w="122.47" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GLYCOLYSIS_UPPER" compartment="cytosol" mapmanBin="4.1">
+          <ns0:locus>AT4G24620</ns0:locus>
+          <ns0:locus>AT1G79550</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="GLYCOLYSIS_LOWER" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Lower Glycolysis" />
+      <bbox x="301.15" y="325.30" w="126.31" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GLYCOLYSIS_LOWER" compartment="cytosol" mapmanBin="4.2">
+          <ns0:locus>AT2G36530</ns0:locus>
+          <ns0:locus>AT5G56580</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PYRUVATE_POOL" class="simple chemical" compartmentRef="comp_cytosol">
+      <label text="Pyruvate" />
+      <bbox x="459.45" y="325.30" w="134.13" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PYRUVATE_POOL" compartment="cytosol" />
+      </extension>
+    </glyph>
+    <glyph id="PYRUVATE_DH" class="complex" compartmentRef="comp_mitochondrial_matrix">
+      <label text="Pyruvate Dehydrogenase" />
+      <bbox x="68.00" y="414.94" w="173.97" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PYRUVATE_DH" compartment="mitochondrial_matrix" mapmanBin="8.1">
+          <ns0:locus>AT1G01090</ns0:locus>
+          <ns0:locus>AT3G13930</ns0:locus>
+          <ns0:locus>AT1G48030</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="TCA_CYCLE" class="complex" compartmentRef="comp_mitochondrial_matrix">
+      <label text="Citric Acid Cycle (TCA)" />
+      <bbox x="273.98" y="414.94" w="155.94" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TCA_CYCLE" compartment="mitochondrial_matrix" mapmanBin="8.2">
+          <ns0:locus>AT3G58610</ns0:locus>
+          <ns0:locus>AT4G35830</ns0:locus>
+          <ns0:locus>AT4G35260</ns0:locus>
+          <ns0:locus>AT1G53240</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="AMINO_ACID_PRECURSORS" class="simple chemical" compartmentRef="comp_mitochondrial_matrix">
+      <label text="2-Oxoglutarate &amp; Oxaloacetate" />
+      <bbox x="461.92" y="425.94" w="210.34" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AMINO_ACID_PRECURSORS" compartment="mitochondrial_matrix" />
+      </extension>
+    </glyph>
+    <glyph id="RESPIRATORY_ETC" class="complex" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Mitochondrial ETC (I-IV)" />
+      <bbox x="40.00" y="526.59" w="186.53" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="RESPIRATORY_ETC" compartment="mitochondrial_inner_membrane" mapmanBin="9.1">
+          <ns0:locus>AT5G08530</ns0:locus>
+          <ns0:locus>AT5G40650</ns0:locus>
+          <ns0:locus>AT4G03280</ns0:locus>
+          <ns0:locus>AT1G22450</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="AOX_BYPASS" class="macromolecule" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Alternative Oxidase" />
+      <bbox x="258.53" y="537.59" w="183.77" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AOX_BYPASS" compartment="mitochondrial_inner_membrane" mapmanBin="9.2">
+          <ns0:locus>AT3G22370</ns0:locus>
+          <ns0:locus>AT1G32350</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="ATP_SYNTHASE" class="complex" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Mitochondrial F1-F0 ATP Synthase" />
+      <bbox x="474.31" y="526.59" w="225.95" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ATP_SYNTHASE" compartment="mitochondrial_inner_membrane" mapmanBin="9.4">
+          <ns0:locus>AT2G07698</ns0:locus>
+          <ns0:locus>AT5G08670</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <arc id="arc_0" class="consumption" source="CALVIN_CYCLE" target="STARCH_TURNOVER">
+      <start x="257.86" y="135.82" />
+      <end x="289.86" y="135.82" />
+    </arc>
+    <arc id="arc_1" class="consumption" source="CALVIN_CYCLE" target="TRIOSE_P_EXPORT">
+      <start x="173.69" y="169.65" />
+      <end x="178.88" y="224.65" />
+    </arc>
+    <arc id="arc_2" class="consumption" source="TRIOSE_P_EXPORT" target="HEXOSE_P_POOL">
+      <start x="260.56" y="247.47" />
+      <end x="499.44" y="247.47" />
+    </arc>
+    <arc id="arc_3" class="consumption" source="HEXOSE_P_POOL" target="SUCROSE_METABOLISM">
+      <start x="499.44" y="247.47" />
+      <end x="467.44" y="247.47" />
+    </arc>
+    <arc id="arc_4" class="consumption" source="HEXOSE_P_POOL" target="GLYCOLYSIS_UPPER">
+      <start x="499.44" y="266.88" />
+      <end x="269.15" y="331.06" />
+    </arc>
+    <arc id="arc_5" class="consumption" source="GLYCOLYSIS_UPPER" target="GLYCOLYSIS_LOWER">
+      <start x="269.15" y="348.12" />
+      <end x="301.15" y="348.12" />
+    </arc>
+    <arc id="arc_6" class="consumption" source="GLYCOLYSIS_LOWER" target="PYRUVATE_POOL">
+      <start x="427.45" y="348.12" />
+      <end x="459.45" y="348.12" />
+    </arc>
+    <arc id="arc_7" class="consumption" source="PYRUVATE_POOL" target="PYRUVATE_DH">
+      <start x="459.45" y="366.29" />
+      <end x="241.98" y="425.20" />
+    </arc>
+    <arc id="arc_8" class="consumption" source="PYRUVATE_DH" target="TCA_CYCLE">
+      <start x="241.98" y="448.77" />
+      <end x="273.98" y="448.77" />
+    </arc>
+    <arc id="arc_9" class="consumption" source="TCA_CYCLE" target="AMINO_ACID_PRECURSORS">
+      <start x="429.92" y="448.77" />
+      <end x="461.92" y="448.77" />
+    </arc>
+    <arc id="arc_10" class="consumption" source="TCA_CYCLE" target="RESPIRATORY_ETC">
+      <start x="285.70" y="482.59" />
+      <end x="199.52" y="526.59" />
+    </arc>
+    <arc id="arc_11" class="consumption" source="TCA_CYCLE" target="AOX_BYPASS">
+      <start x="351.49" y="482.59" />
+      <end x="350.73" y="537.59" />
+    </arc>
+  </map>
+</sbgn>

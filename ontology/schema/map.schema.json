@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PlantPathwayAtlasMap",
+  "description": "JSON schema for declarative pathway maps in Plant Pathway Atlas",
+  "type": "object",
+  "required": ["id", "title", "lanes"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^PPA-[0-9]{2}$"
+    },
+    "title": { "type": "string" },
+    "subtitle": { "type": "string" },
+    "caption": { "type": "string" },
+    "derived_from": { "type": "string" },
+    "species_anchor": {
+      "type": "string",
+      "default": "arabidopsis_thaliana"
+    },
+    "lanes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "nodes"],
+        "properties": {
+          "id": { "type": "string" },
+          "compartment": { "type": "string" },
+          "node_width": { "type": "number" },
+          "nodes": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "sublabel": { "type": "string" },
+          "kind": {
+            "type": "string",
+            "enum": ["simple", "complex", "family", "metabolite", "reaction"]
+          },
+          "mapman_bin": { "type": "string" },
+          "ec": { "type": "string" },
+          "loci": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "subunits": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "symbol": { "type": "string" },
+                "locus": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "class": {
+            "type": "string",
+            "enum": ["flux", "catalysis", "inhibition", "activation"]
+          },
+          "label": { "type": "string" }
+        }
+      }
+    }
+  }
+}

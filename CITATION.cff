@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use the Plant Pathway Atlas software, pathway maps, or orthology projections, please cite it as below."
+title: "Plant Pathway Atlas: Modernizing MapMan, PlantCyc, and ggPlant for Systems Biology and Cross-Species Omics Projection"
+authors:
+  - family-names: "Barker"
+    given-names: "Richard"
+    orcid: "https://orcid.org/0000-0001-5681-9857"
+    affiliation: "University of Wisconsin–Madison"
+version: 0.1.0
+date-released: "2026-09-29"
+license: "MIT"
+repository-code: "https://github.com/dr-richard-barker/plant-pathway-atlas"
+url: "https://dr-richard-barker.github.io/plant-pathway-atlas/"
+keywords:
+  - "systems-biology"
+  - "plant-biology"
+  - "pathway-visualization"
+  - "mapman"
+  - "plantcyc"
+  - "ggplant"
+  - "arabidopsis-thaliana"
+  - "orthology"
+  - "spatial-transcriptomics"
+  - "fair-data"

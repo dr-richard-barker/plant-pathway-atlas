@@ -1,0 +1,30 @@
+{
+  "title": "Plant Pathway Atlas: Modernizing MapMan, PlantCyc, and ggPlant for Systems Biology and Cross-Species Omics Projection",
+  "upload_type": "software",
+  "description": "<p>A high-information-density pathway visualization package and omics projection framework for plant biology. Modernizes classic MapMan functional BIN hierarchies and PlantCyc metabolic networks into deterministic, measured-text vector diagrams with cross-species orthology connectivity (Arabidopsis, Rice, Maize, Tomato, Soybean, Yeast, and animal models) and ggPlant spatial cellular context.</p>",
+  "creators": [
+    {
+      "name": "Barker, Richard",
+      "affiliation": "University of Wisconsin–Madison",
+      "orcid": "0000-0001-5681-9857"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "plant biology",
+    "systems biology",
+    "MapMan",
+    "PlantCyc",
+    "ggPlant",
+    "pathway visualization",
+    "Arabidopsis thaliana",
+    "cross-species orthology",
+    "FAIR data"
+  ],
+  "communities": [
+    {
+      "identifier": "plant-biology"
+    }
+  ]
+}

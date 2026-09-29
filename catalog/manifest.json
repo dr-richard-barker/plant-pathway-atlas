@@ -8,6 +8,7 @@
       "subtitle": "Compartmentalized carbon flux, photosynthesis, glycolysis, TCA cycle, and mitochondrial bioenergetics",
       "svg_light": "maps/svg/PPA-01.svg",
       "svg_dark": "maps/svg/PPA-01_dark.svg",
+      "sbgn": "maps/sbgn/PPA-01.sbgn",
       "sidecar": "catalog/sidecars/PPA-01.json",
       "total_nodes": 15,
       "distinct_loci": 33
@@ -18,6 +19,7 @@
       "subtitle": "Z-scheme photochemistry, thylakoid electron transport, cyclic electron flow, and photophosphorylation",
       "svg_light": "maps/svg/PPA-02.svg",
       "svg_dark": "maps/svg/PPA-02_dark.svg",
+      "sbgn": "maps/sbgn/PPA-02.sbgn",
       "sidecar": "catalog/sidecars/PPA-02.json",
       "total_nodes": 12,
       "distinct_loci": 34
@@ -28,6 +30,7 @@
       "subtitle": "Superoxide generation, dismutation, the Foyer-Halliwell-Asada cycle, catalases, and thioredoxin relays",
       "svg_light": "maps/svg/PPA-05.svg",
       "svg_dark": "maps/svg/PPA-05_dark.svg",
+      "sbgn": "maps/sbgn/PPA-05.sbgn",
       "sidecar": "catalog/sidecars/PPA-05.json",
       "total_nodes": 15,
       "distinct_loci": 36
