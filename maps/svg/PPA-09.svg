@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 680" width="920" height="680" data-theme="light" data-map-id="PPA-09"><defs><style>
+:root {
+  --ppa-bg: #ffffff;
+  --ppa-ink: #0f172a;
+  --ppa-ink-soft: #475569;
+  --ppa-node-fill: #f8fafc;
+  --ppa-node-stroke: #1e293b;
+  --ppa-hairline: #cbd5e1;
+  --ppa-edge: #475569;
+  --ppa-compartment-fill: rgba(15, 23, 42, 0.035);
+  --ppa-compartment-stroke: rgba(15, 23, 42, 0.22);
+  --ppa-accent: #0284c7;
+  --ppa-up: #D55E00;
+  --ppa-down: #0072B2;
+}
+:root[data-theme="dark"] {
+  --ppa-bg: #0b0f17;
+  --ppa-ink: #f1f5f9;
+  --ppa-ink-soft: #94a3b8;
+  --ppa-node-fill: #151c28;
+  --ppa-node-stroke: #cbd5e1;
+  --ppa-hairline: #334155;
+  --ppa-edge: #94a3b8;
+  --ppa-compartment-fill: rgba(255, 255, 255, 0.04);
+  --ppa-compartment-stroke: rgba(255, 255, 255, 0.25);
+  --ppa-accent: #38bdf8;
+  --ppa-up: #ea580c;
+  --ppa-down: #38bdf8;
+}
+
+.ppa-canvas { fill: var(--ppa-bg, #ffffff); }
+text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: var(--ppa-ink); }
+.ppa-title { font-size: 20.0px; font-weight: 700; fill: var(--ppa-ink); }
+.ppa-subtitle { font-size: 12.0px; fill: var(--ppa-ink-soft); }
+.ppa-caption { font-size: 11.0px; fill: var(--ppa-ink-soft); line-height: 1.4; }
+.ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
+.ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
+.ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
+.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+
+.ppa-compartment-band {
+  fill: var(--ppa-compartment-fill);
+  stroke: var(--ppa-compartment-stroke);
+  stroke-width: 1.5px;
+  stroke-dasharray: 6 3;
+  rx: 10px;
+}
+.ppa-compartment-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  fill: var(--ppa-ink-soft);
+}
+
+.ppa-node {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ppa-node:hover {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.ppa-node rect, .ppa-node circle, .ppa-node path {
+  stroke: var(--ppa-node-stroke);
+  stroke-width: 1.5px;
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+.ppa-node.significant rect {
+  stroke-width: 2.5px;
+  stroke: var(--ppa-ink);
+}
+.ppa-node.non-significant rect {
+  stroke-width: 1.0px;
+  stroke-dasharray: 3 2;
+  stroke: var(--ppa-hairline);
+}
+</style>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ppa-edge)" /></marker>
+<marker id="inhibit" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><line x1="5" y1="1" x2="5" y2="9" stroke="var(--ppa-edge)" stroke-width="2" /></marker>
+</defs>
+<rect class="ppa-canvas" width="920" height="680" />
+<text class="ppa-title" x="40.0" y="36.0">Phytohormone Networks &amp; Crosstalk</text>
+<text class="ppa-subtitle" x="40.0" y="56.0">Core biosynthetic modules and derepression signaling circuits for Auxin, ABA, JA, GA, and Ethylene</text>
+<rect class="ppa-compartment-band" x="14.0" y="62.0" width="736.7" height="356.9" />
+<text class="ppa-compartment-title" x="28.0" y="80.0">Cytosol</text>
+<rect class="ppa-compartment-band" x="19.8" y="396.9" width="725.0" height="133.6" />
+<text class="ppa-compartment-title" x="33.8" y="414.9">Nucleus</text>
+<path d="M 260.0 135.8 L 292.0 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="276.0" y="131.8">IAA</text>
+<path d="M 477.8 135.8 L 509.8 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="493.8" y="131.8">Auxin Gradient</text>
+<path d="M 244.5 247.5 L 276.5 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="260.5" y="243.5">(+)-Abscisic Acid</text>
+<path d="M 461.4 247.5 L 493.4 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="477.4" y="243.5">Inhibits PP2C -&gt; Activates Kinase</text>
+<path d="M 244.3 359.1 L 276.3 359.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="260.3" y="355.1">(+)-7-iso-JA-Ile</text>
+<path d="M 492.1 359.1 L 524.1 359.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="508.1" y="355.1">26S JAZ Degradation</text>
+<path d="M 234.5 470.8 L 522.9 470.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="378.7" y="466.8">DELLA Destruction</text>
+<path d="M 490.9 470.8 L 522.9 470.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="506.9" y="466.8">EIN2 C-term Cleavage</text>
+<g class="ppa-node complex " id="node-AUXIN_BIOSYNTHESIS" data-node-id="AUXIN_BIOSYNTHESIS" data-loci="AT1G70560,AT4G32540" data-bin="17.1.1">
+<rect x="62.7" y="102.0" width="197.3" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="161.3" y="120.0">Auxin Biosynthesis (IPyA)</text>
+<text class="ppa-sub" x="161.3" y="135.4">BIN 17.1.1 TAA1 &amp; YUCCA Flavin MO</text>
+<g class="ppa-subunit" data-locus="AT1G70560"><rect x="123.3" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="141.3" y="160.1">TAA1</text></g>
+<g class="ppa-subunit" data-locus="AT4G32540"><rect x="163.3" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="181.3" y="160.1">YUC1</text></g>
+</g>
+<g class="ppa-node family " id="node-PIN_POLAR_TRANSPORTERS" data-node-id="PIN_POLAR_TRANSPORTERS" data-loci="AT1G73590,AT5G57090" data-bin="34.6">
+<rect x="292.0" y="104.0" width="185.9" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="384.9" y="122.0">PIN Auxin Efflux Carriers</text>
+<text class="ppa-sub" x="384.9" y="137.4">BIN 34.6 PIN1 / PIN2 Polar Polarity</text>
+<rect class="ppa-family-tile" x="372.9" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="384.9" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node complex " id="node-AUXIN_RECEPTOR_TIR1" data-node-id="AUXIN_RECEPTOR_TIR1" data-loci="AT3G62980,AT1G59750" data-bin="30.1.1">
+<rect x="509.8" y="102.0" width="192.1" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="605.9" y="120.0">TIR1 / AFB Core &amp; Aux/IAA</text>
+<text class="ppa-sub" x="605.9" y="135.4">BIN 30.1.1 SCFTIR1 Auxin Receptor</text>
+<g class="ppa-subunit" data-locus="AT3G62980"><rect x="567.9" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="585.9" y="160.1">TIR1</text></g>
+<g class="ppa-subunit" data-locus="AT1G59750"><rect x="607.9" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="625.9" y="160.1">ARF5</text></g>
+</g>
+<g class="ppa-node simple " id="node-ABA_BIOSYNTHESIS_NCED3" data-node-id="ABA_BIOSYNTHESIS_NCED3" data-loci="AT3G14440" data-bin="17.2.1">
+<rect x="40.0" y="224.6" width="204.5" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="142.2" y="242.6">ABA Biosynthesis (NCED3)</text>
+<text class="ppa-sub" x="142.2" y="258.0">BIN 17.2.1 9-cis-Neoxanthin Cleavage</text>
+</g>
+<g class="ppa-node family " id="node-PYR_PYL_RECEPTORS" data-node-id="PYR_PYL_RECEPTORS" data-loci="AT5G05440,AT4G26080" data-bin="30.2.1">
+<rect x="276.5" y="215.6" width="184.9" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="368.9" y="233.6">PYR/PYL/RCAR Receptors</text>
+<text class="ppa-sub" x="368.9" y="249.0">BIN 30.2.1 START-domain Sensors</text>
+<rect class="ppa-family-tile" x="356.9" y="263.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="368.9" y="263.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node complex " id="node-SNRK2_KINASE_OST1" data-node-id="SNRK2_KINASE_OST1" data-loci="AT4G33950,AT1G45249" data-bin="30.2.2">
+<rect x="493.4" y="213.6" width="231.3" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="609.0" y="231.6">SnRK2 Kinases &amp; ABF</text>
+<text class="ppa-sub" x="609.0" y="247.0">BIN 30.2.2 OST1 / SnRK2.6 Phosphorylation</text>
+<g class="ppa-subunit" data-locus="AT4G33950"><rect x="571.0" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="589.0" y="271.8">OST1</text></g>
+<g class="ppa-subunit" data-locus="AT1G45249"><rect x="611.0" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="629.0" y="271.8">ABF2</text></g>
+</g>
+<g class="ppa-node complex " id="node-JA_BIOSYNTHESIS_LOX_AOS" data-node-id="JA_BIOSYNTHESIS_LOX_AOS" data-loci="AT3G45140,AT5G42650,AT3G25760" data-bin="17.3.1">
+<rect x="43.8" y="325.3" width="200.5" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="144.1" y="343.3">Jasmonate Biosynthesis</text>
+<text class="ppa-sub" x="144.1" y="358.7">BIN 17.3.1 LOX2, AOS, AOC Oxylipins</text>
+<g class="ppa-subunit" data-locus="AT3G45140"><rect x="89.3" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="107.3" y="383.4">LOX2</text></g>
+<g class="ppa-subunit" data-locus="AT5G42650"><rect x="129.3" y="372.9" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="144.1" y="383.4">AOS</text></g>
+<g class="ppa-subunit" data-locus="AT3G25760"><rect x="162.8" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="180.8" y="383.4">AOC1</text></g>
+</g>
+<g class="ppa-node complex " id="node-COI1_JAZ_DEREPRESSION" data-node-id="COI1_JAZ_DEREPRESSION" data-loci="AT2G39940,AT1G19180" data-bin="30.3.1">
+<rect x="276.3" y="325.3" width="215.8" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="384.2" y="343.3">COI1 Receptor &amp; JAZ Repressors</text>
+<text class="ppa-sub" x="384.2" y="358.7">BIN 30.3.1 SCFCOI1 JA-Ile Core</text>
+<g class="ppa-subunit" data-locus="AT2G39940"><rect x="346.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="364.2" y="383.4">COI1</text></g>
+<g class="ppa-subunit" data-locus="AT1G19180"><rect x="386.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="404.2" y="383.4">JAZ1</text></g>
+</g>
+<g class="ppa-node family " id="node-MYC2_TRANSCRIPTION" data-node-id="MYC2_TRANSCRIPTION" data-loci="AT1G32640,AT5G46760" data-bin="30.3.2">
+<rect x="524.1" y="327.3" width="196.8" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="622.5" y="345.3">MYC2 / MYC3 / MYC4 Regulon</text>
+<text class="ppa-sub" x="622.5" y="360.7">BIN 30.3.2 bHLH Master Regulators</text>
+<rect class="ppa-family-tile" x="610.5" y="374.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="622.5" y="374.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node complex " id="node-GA_GID1_DELLA_CASCADE" data-node-id="GA_GID1_DELLA_CASCADE" data-loci="AT3G05120,AT1G14920,AT2G43790" data-bin="30.4.1">
+<rect x="45.8" y="436.9" width="188.7" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="140.2" y="454.9">Gibberellin GID1 &amp; DELLA</text>
+<text class="ppa-sub" x="140.2" y="470.3">BIN 30.4.1 GAI / RGA Derepression</text>
+<g class="ppa-subunit" data-locus="AT3G05120"><rect x="85.4" y="484.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="106.7" y="495.1">GID1A</text></g>
+<g class="ppa-subunit" data-locus="AT1G14920"><rect x="131.9" y="484.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="146.7" y="495.1">GAI</text></g>
+<g class="ppa-subunit" data-locus="AT2G43790"><rect x="165.4" y="484.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="180.2" y="495.1">RGA</text></g>
+</g>
+<g class="ppa-node complex " id="node-ETHYLENE_ETR1_EIN2" data-node-id="ETHYLENE_ETR1_EIN2" data-loci="AT1G66340,AT5G03280" data-bin="30.5.1">
+<rect x="266.5" y="436.9" width="224.4" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="378.7" y="454.9">Ethylene ETR1 &amp; EIN2</text>
+<text class="ppa-sub" x="378.7" y="470.3">BIN 30.5.1 Endoplasmic Reticulum Sensor</text>
+<g class="ppa-subunit" data-locus="AT1G66340"><rect x="340.7" y="484.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="358.7" y="495.1">ETR1</text></g>
+<g class="ppa-subunit" data-locus="AT5G03280"><rect x="380.7" y="484.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="398.7" y="495.1">EIN2</text></g>
+</g>
+<g class="ppa-node family " id="node-NUCLEAR_TRANSCRIPTION_FACTORS" data-node-id="NUCLEAR_TRANSCRIPTION_FACTORS" data-loci="AT3G20770,AT2G20180" data-bin="30.5.2">
+<rect x="522.9" y="438.9" width="195.9" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="620.9" y="456.9">EIN3 / EIL1 &amp; PIF TFs</text>
+<text class="ppa-sub" x="620.9" y="472.3">BIN 30.5.2 Transcriptional Execution</text>
+<rect class="ppa-family-tile" x="608.9" y="486.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="620.9" y="486.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<text class="ppa-caption" x="40.0" y="654.0">Integrated plant hormone networks. Compares the parallel derepression logic of the major phytohormones: (1) Auxin perception by</text>
+<text class="ppa-caption" x="40.0" y="668.9">SCFTIR1 triggering Aux/IAA degradation and ARF release; (2) Abscisic acid (ABA) binding to PYR/PYL/RCARs relieving PP2C inhibition</text>
+<text class="ppa-caption" x="40.0" y="683.7">of SnRK2 kinases; (3) Jasmonate-isoleucine (JA-Ile) mediated SCFCOI1 destruction of JAZ repressors freeing MYC2; and (4)</text>
+<text class="ppa-caption" x="40.0" y="698.6">Gibberellin (GA) and Ethylene circuits regulating DELLA degradation and EIN2/EIN3 transcriptional activation.</text>
+</svg>

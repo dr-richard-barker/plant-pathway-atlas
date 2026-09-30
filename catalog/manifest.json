@@ -25,6 +25,28 @@
       "distinct_loci": 34
     },
     {
+      "id": "PPA-03",
+      "title": "Calvin-Benson Cycle & Photorespiration",
+      "subtitle": "Chloroplast carbon assimilation and peroxisome-mitochondria photorespiratory salvage flux",
+      "svg_light": "maps/svg/PPA-03.svg",
+      "svg_dark": "maps/svg/PPA-03_dark.svg",
+      "sbgn": "maps/sbgn/PPA-03.sbgn",
+      "sidecar": "catalog/sidecars/PPA-03.json",
+      "total_nodes": 12,
+      "distinct_loci": 23
+    },
+    {
+      "id": "PPA-04",
+      "title": "Cellular Respiration & Mitochondrial ETC",
+      "subtitle": "Tricarboxylic acid cycle, classical respiratory complexes I-V, and plant-specific alternative bypasses",
+      "svg_light": "maps/svg/PPA-04.svg",
+      "svg_dark": "maps/svg/PPA-04_dark.svg",
+      "sbgn": "maps/sbgn/PPA-04.sbgn",
+      "sidecar": "catalog/sidecars/PPA-04.json",
+      "total_nodes": 15,
+      "distinct_loci": 36
+    },
+    {
       "id": "PPA-05",
       "title": "Reactive Oxygen Species (ROS) & Redox Homeostasis",
       "subtitle": "Superoxide generation, dismutation, the Foyer-Halliwell-Asada cycle, catalases, and thioredoxin relays",
@@ -34,6 +56,83 @@
       "sidecar": "catalog/sidecars/PPA-05.json",
       "total_nodes": 15,
       "distinct_loci": 36
+    },
+    {
+      "id": "PPA-06",
+      "title": "Lipid Metabolism & Membrane Dynamics",
+      "subtitle": "Plastid de novo fatty acid synthesis, ER eukaryotic Kennedy pathway, and peroxisomal beta-oxidation",
+      "svg_light": "maps/svg/PPA-06.svg",
+      "svg_dark": "maps/svg/PPA-06_dark.svg",
+      "sbgn": "maps/sbgn/PPA-06.sbgn",
+      "sidecar": "catalog/sidecars/PPA-06.json",
+      "total_nodes": 12,
+      "distinct_loci": 25
+    },
+    {
+      "id": "PPA-07",
+      "title": "Nitrogen & Sulfur Primary Assimilation",
+      "subtitle": "Nitrate and sulfate reduction, GS-GOGAT ammonium incorporation, and cysteine/methionine biosynthesis",
+      "svg_light": "maps/svg/PPA-07.svg",
+      "svg_dark": "maps/svg/PPA-07_dark.svg",
+      "sbgn": "maps/sbgn/PPA-07.sbgn",
+      "sidecar": "catalog/sidecars/PPA-07.json",
+      "total_nodes": 12,
+      "distinct_loci": 22
+    },
+    {
+      "id": "PPA-08",
+      "title": "Specialized & Secondary Metabolism",
+      "subtitle": "Phenylpropanoid entry, monolignol lignin polymerization, and anthocyanin flavonoid branching",
+      "svg_light": "maps/svg/PPA-08.svg",
+      "svg_dark": "maps/svg/PPA-08_dark.svg",
+      "sbgn": "maps/sbgn/PPA-08.sbgn",
+      "sidecar": "catalog/sidecars/PPA-08.json",
+      "total_nodes": 12,
+      "distinct_loci": 18
+    },
+    {
+      "id": "PPA-09",
+      "title": "Phytohormone Networks & Crosstalk",
+      "subtitle": "Core biosynthetic modules and derepression signaling circuits for Auxin, ABA, JA, GA, and Ethylene",
+      "svg_light": "maps/svg/PPA-09.svg",
+      "svg_dark": "maps/svg/PPA-09_dark.svg",
+      "sbgn": "maps/sbgn/PPA-09.sbgn",
+      "sidecar": "catalog/sidecars/PPA-09.json",
+      "total_nodes": 12,
+      "distinct_loci": 25
+    },
+    {
+      "id": "PPA-10",
+      "title": "Biotic & Abiotic Stress Pathways",
+      "subtitle": "Pattern-triggered immunity (PTI), MAPK cascades, CBF/DREB regulon, and heat shock factors",
+      "svg_light": "maps/svg/PPA-10.svg",
+      "svg_dark": "maps/svg/PPA-10_dark.svg",
+      "sbgn": "maps/sbgn/PPA-10.sbgn",
+      "sidecar": "catalog/sidecars/PPA-10.json",
+      "total_nodes": 12,
+      "distinct_loci": 22
+    },
+    {
+      "id": "PPA-11",
+      "title": "Protein Quality Control & Turnover",
+      "subtitle": "Endoplasmic reticulum folding, ubiquitin E1-E2-E3 conjugation, 26S proteasome, and autophagy",
+      "svg_light": "maps/svg/PPA-11.svg",
+      "svg_dark": "maps/svg/PPA-11_dark.svg",
+      "sbgn": "maps/sbgn/PPA-11.sbgn",
+      "sidecar": "catalog/sidecars/PPA-11.json",
+      "total_nodes": 12,
+      "distinct_loci": 20
+    },
+    {
+      "id": "PPA-12",
+      "title": "Plant Transportome & Solute Allocation",
+      "subtitle": "Membrane aquaporins, potassium channels, proton energization, and vacuolar compartmentalization",
+      "svg_light": "maps/svg/PPA-12.svg",
+      "svg_dark": "maps/svg/PPA-12_dark.svg",
+      "sbgn": "maps/sbgn/PPA-12.sbgn",
+      "sidecar": "catalog/sidecars/PPA-12.json",
+      "total_nodes": 12,
+      "distinct_loci": 20
     }
   ]
 }

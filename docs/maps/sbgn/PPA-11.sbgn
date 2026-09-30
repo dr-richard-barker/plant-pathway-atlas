@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
+  <map id="PPA-11" language="process description">
+    <bbox x="-18.00" y="0.00" w="920.00" h="680.00" />
+    <glyph id="comp_endoplasmic_reticulum" class="compartment">
+      <label text="Endoplasmic Reticulum" />
+      <bbox x="62.53" y="62.00" w="690.83" h="133.65" />
+    </glyph>
+    <glyph id="comp_cytosol" class="compartment">
+      <label text="Cytosol" />
+      <bbox x="14.00" y="173.65" w="787.89" h="245.30" />
+    </glyph>
+    <glyph id="comp_vacuole" class="compartment">
+      <label text="Vacuole" />
+      <bbox x="34.17" y="396.94" w="747.55" h="133.65" />
+    </glyph>
+    <glyph id="RIBOSOME_TRANSLATION" class="complex" compartmentRef="comp_endoplasmic_reticulum">
+      <label text="Cytosolic Ribosome Core" />
+      <bbox x="88.53" y="102.00" w="171.78" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="RIBOSOME_TRANSLATION" compartment="endoplasmic_reticulum" mapmanBin="28.1">
+          <ns0:locus>AT4G31700</ns0:locus>
+          <ns0:locus>AT3G49010</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="BIP_ER_CHAPERONES" class="macromolecule" compartmentRef="comp_endoplasmic_reticulum">
+      <label text="ER Luminal BiP Chaperones" />
+      <bbox x="292.31" y="104.00" w="187.39" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="BIP_ER_CHAPERONES" compartment="endoplasmic_reticulum" mapmanBin="29.1.1">
+          <ns0:locus>AT5G28540</ns0:locus>
+          <ns0:locus>AT5G42020</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PDI_DISULFIDE_ISOMERASE" class="macromolecule" compartmentRef="comp_endoplasmic_reticulum">
+      <label text="Protein Disulfide Isomerase" />
+      <bbox x="511.70" y="113.00" w="215.66" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PDI_DISULFIDE_ISOMERASE" compartment="endoplasmic_reticulum" mapmanBin="29.1.2">
+          <ns0:locus>AT1G21750</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="UBIQUITIN_E1_ACTIVATING" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Ubiquitin-Activating E1" />
+      <bbox x="89.57" y="224.65" w="197.55" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="UBIQUITIN_E1_ACTIVATING" compartment="cytosol" mapmanBin="29.2.1">
+          <ns0:locus>AT2G30110</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="UBIQUITIN_E2_CONJUGATING" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Ubiquitin-Conjugating E2" />
+      <bbox x="319.12" y="215.65" w="186.21" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="UBIQUITIN_E2_CONJUGATING" compartment="cytosol" mapmanBin="29.2.2">
+          <ns0:locus>AT1G14400</ns0:locus>
+          <ns0:locus>AT2G36060</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="CULLIN_RING_E3_LIGASES" class="complex" compartmentRef="comp_cytosol">
+      <label text="Cullin-RING E3 Ligases" />
+      <bbox x="537.32" y="213.65" w="189.00" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CULLIN_RING_E3_LIGASES" compartment="cytosol" mapmanBin="29.2.3">
+          <ns0:locus>AT4G02570</ns0:locus>
+          <ns0:locus>AT2G32950</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PROTEASOME_19S_LID" class="complex" compartmentRef="comp_cytosol">
+      <label text="19S Regulatory Particle" />
+      <bbox x="40.00" y="325.30" w="233.55" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PROTEASOME_19S_LID" compartment="cytosol" mapmanBin="29.3.1">
+          <ns0:locus>AT2G20580</ns0:locus>
+          <ns0:locus>AT1G53750</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PROTEASOME_20S_BARREL" class="complex" compartmentRef="comp_cytosol">
+      <label text="20S Proteolytic Barrel" />
+      <bbox x="305.55" y="325.30" w="241.41" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PROTEASOME_20S_BARREL" compartment="cytosol" mapmanBin="29.3.2">
+          <ns0:locus>AT2G27020</ns0:locus>
+          <ns0:locus>AT4G31300</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="DEUBIQUITINATING_ENZYMES" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Deubiquitinating Enzymes" />
+      <bbox x="578.95" y="327.30" w="196.94" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="DEUBIQUITINATING_ENZYMES" compartment="cytosol" mapmanBin="29.3.3">
+          <ns0:locus>AT5G06600</ns0:locus>
+          <ns0:locus>AT3G11910</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="ATG1_KINASE_INITIATION" class="macromolecule" compartmentRef="comp_vacuole">
+      <label text="ATG1 Kinase Complex" />
+      <bbox x="60.17" y="447.94" w="192.83" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ATG1_KINASE_INITIATION" compartment="vacuole" mapmanBin="29.4.1">
+          <ns0:locus>AT3G61960</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="ATG8_AUTOPHAGOSOME" class="complex" compartmentRef="comp_vacuole">
+      <label text="ATG8 / ATG7 Core Lipidation" />
+      <bbox x="285.01" y="436.94" w="228.82" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ATG8_AUTOPHAGOSOME" compartment="vacuole" mapmanBin="29.4.2">
+          <ns0:locus>AT4G21980</ns0:locus>
+          <ns0:locus>AT5G45900</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="VACUOLAR_VPE_PROTEASES" class="macromolecule" compartmentRef="comp_vacuole">
+      <label text="Vacuolar Processing Enzymes" />
+      <bbox x="545.83" y="447.94" w="209.89" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="VACUOLAR_VPE_PROTEASES" compartment="vacuole" mapmanBin="29.4.3">
+          <ns0:locus>AT4G32940</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <arc id="arc_0" class="consumption" source="RIBOSOME_TRANSLATION" target="BIP_ER_CHAPERONES">
+      <start x="260.31" y="135.82" />
+      <end x="292.31" y="135.82" />
+    </arc>
+    <arc id="arc_1" class="consumption" source="BIP_ER_CHAPERONES" target="PDI_DISULFIDE_ISOMERASE">
+      <start x="479.70" y="135.82" />
+      <end x="511.70" y="135.82" />
+    </arc>
+    <arc id="arc_2" class="consumption" source="PDI_DISULFIDE_ISOMERASE" target="UBIQUITIN_E1_ACTIVATING">
+      <start x="531.38" y="158.65" />
+      <end x="276.49" y="224.65" />
+    </arc>
+    <arc id="arc_3" class="consumption" source="UBIQUITIN_E1_ACTIVATING" target="UBIQUITIN_E2_CONJUGATING">
+      <start x="287.12" y="247.47" />
+      <end x="319.12" y="247.47" />
+    </arc>
+    <arc id="arc_4" class="consumption" source="UBIQUITIN_E2_CONJUGATING" target="CULLIN_RING_E3_LIGASES">
+      <start x="505.32" y="247.47" />
+      <end x="537.32" y="247.47" />
+    </arc>
+    <arc id="arc_5" class="consumption" source="CULLIN_RING_E3_LIGASES" target="PROTEASOME_19S_LID">
+      <start x="537.32" y="269.68" />
+      <end x="273.55" y="331.68" />
+    </arc>
+    <arc id="arc_6" class="consumption" source="PROTEASOME_19S_LID" target="PROTEASOME_20S_BARREL">
+      <start x="273.55" y="359.12" />
+      <end x="305.55" y="359.12" />
+    </arc>
+    <arc id="arc_7" class="consumption" source="PROTEASOME_19S_LID" target="DEUBIQUITINATING_ENZYMES">
+      <start x="273.55" y="359.12" />
+      <end x="578.95" y="359.12" />
+    </arc>
+    <arc id="arc_8" class="consumption" source="ATG1_KINASE_INITIATION" target="ATG8_AUTOPHAGOSOME">
+      <start x="253.01" y="470.77" />
+      <end x="285.01" y="470.77" />
+    </arc>
+    <arc id="arc_9" class="consumption" source="ATG8_AUTOPHAGOSOME" target="VACUOLAR_VPE_PROTEASES">
+      <start x="513.83" y="470.77" />
+      <end x="545.83" y="470.77" />
+    </arc>
+  </map>
+</sbgn>

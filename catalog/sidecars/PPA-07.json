@@ -1,0 +1,369 @@
+{
+  "id": "PPA-07",
+  "title": "Nitrogen & Sulfur Primary Assimilation",
+  "subtitle": "Nitrate and sulfate reduction, GS-GOGAT ammonium incorporation, and cysteine/methionine biosynthesis",
+  "caption": "Primary inorganic nitrogen and sulfur assimilation in plants. Soil nitrate is reduced to nitrite in the cytosol by Nitrate Reductase (NIA1/2), transported into the chloroplast, and reduced to ammonium by Nitrite Reductase (NIR1). Ammonium is assimilated into glutamate and glutamine via the coupled GS-GOGAT cycle. Concurrently, imported sulfate is activated by ATP Sulfurylase (APS) and reduced by APR and SiR to sulfide, which is condensed with O-acetylserine by OAS-TL to form cysteine.",
+  "species_anchor": "arabidopsis_thaliana",
+  "nodes": [
+    {
+      "id": "NITRATE_TRANSPORTERS",
+      "label": "Nitrate Transporters (NRT)",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "34.4",
+      "loci": [
+        "AT1G12110",
+        "AT1G08090"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "NITRATE_REDUCTASE_NIA",
+      "label": "Nitrate Reductase (NR)",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "12.1",
+      "loci": [
+        "AT1G77760",
+        "AT1G37130"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "AMINO_ACID_EXPORT",
+      "label": "Aspartate & Asparagine Core",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "12.5",
+      "loci": [
+        "AT2G30970",
+        "AT3G47340"
+      ],
+      "subunits": [
+        {
+          "symbol": "ASP1",
+          "locus": "AT2G30970"
+        },
+        {
+          "symbol": "ASN1",
+          "locus": "AT3G47340"
+        }
+      ]
+    },
+    {
+      "id": "NITRITE_REDUCTASE_NIR",
+      "label": "Nitrite Reductase (NIR)",
+      "kind": "simple",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "12.2",
+      "loci": [
+        "AT2G15620"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "GS_GLUTAMINE_SYNTH",
+      "label": "Glutamine Synthetase (GS)",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "12.3",
+      "loci": [
+        "AT5G37600",
+        "AT5G35630"
+      ],
+      "subunits": [
+        {
+          "symbol": "GLN1;1",
+          "locus": "AT5G37600"
+        },
+        {
+          "symbol": "GLN2",
+          "locus": "AT5G35630"
+        }
+      ]
+    },
+    {
+      "id": "GOGAT_GLUTAMATE_SYNTH",
+      "label": "Glutamate Synthase (GOGAT)",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "12.4",
+      "loci": [
+        "AT5G04140",
+        "AT5G53460"
+      ],
+      "subunits": [
+        {
+          "symbol": "GLU1",
+          "locus": "AT5G04140"
+        },
+        {
+          "symbol": "GLT1",
+          "locus": "AT5G53460"
+        }
+      ]
+    },
+    {
+      "id": "SULFATE_TRANSPORTERS",
+      "label": "Sulfate Transporters (SULTR)",
+      "kind": "family",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "34.5",
+      "loci": [
+        "AT4G08620",
+        "AT1G78000"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "ATP_SULFURYLASE_APS",
+      "label": "ATP Sulfurylase (APS)",
+      "kind": "family",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "14.1",
+      "loci": [
+        "AT3G22890",
+        "AT1G19920"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "APS_REDUCTASE_APR",
+      "label": "APS Reductase (APR)",
+      "kind": "family",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "14.2",
+      "loci": [
+        "AT4G04610",
+        "AT1G62180",
+        "AT4G21990"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "SULFITE_REDUCTASE_SIR",
+      "label": "Sulfite Reductase (SiR)",
+      "kind": "simple",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "14.3",
+      "loci": [
+        "AT5G04590"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "OASTL_CYSTEINE_SYNTH",
+      "label": "OAS Thiol-Lyase (OAS-TL)",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "14.4",
+      "loci": [
+        "AT4G14880",
+        "AT2G43750"
+      ],
+      "subunits": [
+        {
+          "symbol": "OAS-A1",
+          "locus": "AT4G14880"
+        },
+        {
+          "symbol": "OAS-B",
+          "locus": "AT2G43750"
+        }
+      ]
+    },
+    {
+      "id": "CGS_METHIONINE_SYNTH",
+      "label": "Cystathionine Synthase (CGS)",
+      "kind": "simple",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "14.5",
+      "loci": [
+        "AT3G01120"
+      ],
+      "subunits": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "NITRATE_TRANSPORTERS",
+      "to": "NITRATE_REDUCTASE_NIA",
+      "start": [
+        247.12750000000003,
+        135.824
+      ],
+      "end": [
+        279.12750000000005,
+        135.824
+      ],
+      "class": "flux",
+      "label": "NO3-"
+    },
+    {
+      "from": "NITRATE_REDUCTASE_NIA",
+      "to": "NITRITE_REDUCTASE_NIR",
+      "start": [
+        306.1344481405848,
+        167.648
+      ],
+      "end": [
+        181.5131259941961,
+        224.648
+      ],
+      "class": "flux",
+      "label": "NO2-"
+    },
+    {
+      "from": "NITRITE_REDUCTASE_NIR",
+      "to": "GS_GLUTAMINE_SYNTH",
+      "start": [
+        219.14837500000002,
+        247.472
+      ],
+      "end": [
+        251.14837500000002,
+        247.47199999999998
+      ],
+      "class": "flux",
+      "label": "NH4+"
+    },
+    {
+      "from": "GS_GLUTAMINE_SYNTH",
+      "to": "GOGAT_GLUTAMATE_SYNTH",
+      "start": [
+        437.36962500000004,
+        247.47199999999998
+      ],
+      "end": [
+        469.36962500000004,
+        247.47199999999998
+      ],
+      "class": "flux",
+      "label": "Glutamine"
+    },
+    {
+      "from": "GOGAT_GLUTAMATE_SYNTH",
+      "to": "GS_GLUTAMINE_SYNTH",
+      "start": [
+        469.36962500000004,
+        247.47199999999998
+      ],
+      "end": [
+        437.36962500000004,
+        247.47199999999998
+      ],
+      "class": "flux",
+      "label": "Glutamate recycled"
+    },
+    {
+      "from": "GOGAT_GLUTAMATE_SYNTH",
+      "to": "AMINO_ACID_EXPORT",
+      "start": [
+        591.5682596732589,
+        213.648
+      ],
+      "end": [
+        599.2538653267412,
+        169.648
+      ],
+      "class": "flux",
+      "label": "Aspartate Pool"
+    },
+    {
+      "from": "SULFATE_TRANSPORTERS",
+      "to": "ATP_SULFURYLASE_APS",
+      "start": [
+        272.10325,
+        357.12
+      ],
+      "end": [
+        304.10325,
+        357.12
+      ],
+      "class": "flux",
+      "label": "SO4(2-)"
+    },
+    {
+      "from": "ATP_SULFURYLASE_APS",
+      "to": "APS_REDUCTASE_APR",
+      "start": [
+        479.98875,
+        357.12
+      ],
+      "end": [
+        511.98875,
+        357.12
+      ],
+      "class": "flux",
+      "label": "APS"
+    },
+    {
+      "from": "APS_REDUCTASE_APR",
+      "to": "SULFITE_REDUCTASE_SIR",
+      "start": [
+        511.98875,
+        377.1003541808845
+      ],
+      "end": [
+        236.57968750000006,
+        445.69634786544384
+      ],
+      "class": "flux",
+      "label": "Sulfite (SO3(2-))"
+    },
+    {
+      "from": "SULFITE_REDUCTASE_SIR",
+      "to": "OASTL_CYSTEINE_SYNTH",
+      "start": [
+        236.57968750000006,
+        466.76800000000003
+      ],
+      "end": [
+        268.5796875000001,
+        466.76800000000003
+      ],
+      "class": "flux",
+      "label": "Sulfide (S(2-))"
+    },
+    {
+      "from": "OASTL_CYSTEINE_SYNTH",
+      "to": "CGS_METHIONINE_SYNTH",
+      "start": [
+        443.73918750000007,
+        466.76800000000003
+      ],
+      "end": [
+        475.73918750000007,
+        466.76800000000003
+      ],
+      "class": "flux",
+      "label": "Cysteine"
+    }
+  ],
+  "total_nodes": 12,
+  "distinct_loci": 22,
+  "loci_list": [
+    "AT1G08090",
+    "AT1G12110",
+    "AT1G19920",
+    "AT1G37130",
+    "AT1G62180",
+    "AT1G77760",
+    "AT1G78000",
+    "AT2G15620",
+    "AT2G30970",
+    "AT2G43750",
+    "AT3G01120",
+    "AT3G22890",
+    "AT3G47340",
+    "AT4G04610",
+    "AT4G08620",
+    "AT4G14880",
+    "AT4G21990",
+    "AT5G04140",
+    "AT5G04590",
+    "AT5G35630",
+    "AT5G37600",
+    "AT5G53460"
+  ]
+}

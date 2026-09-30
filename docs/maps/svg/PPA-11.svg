@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 680" width="920" height="680" data-theme="light" data-map-id="PPA-11"><defs><style>
+:root {
+  --ppa-bg: #ffffff;
+  --ppa-ink: #0f172a;
+  --ppa-ink-soft: #475569;
+  --ppa-node-fill: #f8fafc;
+  --ppa-node-stroke: #1e293b;
+  --ppa-hairline: #cbd5e1;
+  --ppa-edge: #475569;
+  --ppa-compartment-fill: rgba(15, 23, 42, 0.035);
+  --ppa-compartment-stroke: rgba(15, 23, 42, 0.22);
+  --ppa-accent: #0284c7;
+  --ppa-up: #D55E00;
+  --ppa-down: #0072B2;
+}
+:root[data-theme="dark"] {
+  --ppa-bg: #0b0f17;
+  --ppa-ink: #f1f5f9;
+  --ppa-ink-soft: #94a3b8;
+  --ppa-node-fill: #151c28;
+  --ppa-node-stroke: #cbd5e1;
+  --ppa-hairline: #334155;
+  --ppa-edge: #94a3b8;
+  --ppa-compartment-fill: rgba(255, 255, 255, 0.04);
+  --ppa-compartment-stroke: rgba(255, 255, 255, 0.25);
+  --ppa-accent: #38bdf8;
+  --ppa-up: #ea580c;
+  --ppa-down: #38bdf8;
+}
+
+.ppa-canvas { fill: var(--ppa-bg, #ffffff); }
+text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: var(--ppa-ink); }
+.ppa-title { font-size: 20.0px; font-weight: 700; fill: var(--ppa-ink); }
+.ppa-subtitle { font-size: 12.0px; fill: var(--ppa-ink-soft); }
+.ppa-caption { font-size: 11.0px; fill: var(--ppa-ink-soft); line-height: 1.4; }
+.ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
+.ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
+.ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
+.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+
+.ppa-compartment-band {
+  fill: var(--ppa-compartment-fill);
+  stroke: var(--ppa-compartment-stroke);
+  stroke-width: 1.5px;
+  stroke-dasharray: 6 3;
+  rx: 10px;
+}
+.ppa-compartment-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  fill: var(--ppa-ink-soft);
+}
+
+.ppa-node {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ppa-node:hover {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.ppa-node rect, .ppa-node circle, .ppa-node path {
+  stroke: var(--ppa-node-stroke);
+  stroke-width: 1.5px;
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+.ppa-node.significant rect {
+  stroke-width: 2.5px;
+  stroke: var(--ppa-ink);
+}
+.ppa-node.non-significant rect {
+  stroke-width: 1.0px;
+  stroke-dasharray: 3 2;
+  stroke: var(--ppa-hairline);
+}
+</style>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ppa-edge)" /></marker>
+<marker id="inhibit" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><line x1="5" y1="1" x2="5" y2="9" stroke="var(--ppa-edge)" stroke-width="2" /></marker>
+</defs>
+<rect class="ppa-canvas" width="920" height="680" />
+<text class="ppa-title" x="40.0" y="36.0">Protein Quality Control &amp; Turnover</text>
+<text class="ppa-subtitle" x="40.0" y="56.0">Endoplasmic reticulum folding, ubiquitin E1-E2-E3 conjugation, 26S proteasome, and autophagy</text>
+<rect class="ppa-compartment-band" x="62.5" y="62.0" width="690.8" height="133.6" />
+<text class="ppa-compartment-title" x="76.5" y="80.0">Endoplasmic Reticulum</text>
+<rect class="ppa-compartment-band" x="14.0" y="173.6" width="787.9" height="245.3" />
+<text class="ppa-compartment-title" x="28.0" y="191.6">Cytosol</text>
+<rect class="ppa-compartment-band" x="34.2" y="396.9" width="747.5" height="133.6" />
+<text class="ppa-compartment-title" x="48.2" y="414.9">Vacuole</text>
+<path d="M 260.3 135.8 L 292.3 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="276.3" y="131.8">Nascent Polypeptide</text>
+<path d="M 479.7 135.8 L 511.7 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="495.7" y="131.8">Assisted Folding</text>
+<path d="M 531.4 158.6 L 276.5 224.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="403.9" y="187.6">Terminally Misfolded (ERAD)</text>
+<path d="M 287.1 247.5 L 319.1 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="303.1" y="243.5">Ub-AMP</text>
+<path d="M 505.3 247.5 L 537.3 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="521.3" y="243.5">Ub-Thioester</text>
+<path d="M 537.3 269.7 L 273.5 331.7" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="405.4" y="296.7">Polyubiquitin-Tagged Target</text>
+<path d="M 273.5 359.1 L 305.5 359.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="289.5" y="355.1">Unfolded Peptide</text>
+<path d="M 273.5 359.1 L 579.0 359.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="426.2" y="355.1">Free Ubiquitin Recycling</text>
+<path d="M 253.0 470.8 L 285.0 470.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="269.0" y="466.8">Autophagosome Nucleation</text>
+<path d="M 513.8 470.8 L 545.8 470.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="529.8" y="466.8">Vacuolar Fusion</text>
+<g class="ppa-node complex " id="node-RIBOSOME_TRANSLATION" data-node-id="RIBOSOME_TRANSLATION" data-loci="AT4G31700,AT3G49010" data-bin="28.1">
+<rect x="88.5" y="102.0" width="171.8" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="174.4" y="120.0">Cytosolic Ribosome Core</text>
+<text class="ppa-sub" x="174.4" y="135.4">BIN 28.1 80S Translation</text>
+<g class="ppa-subunit" data-locus="AT4G31700"><rect x="126.7" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="147.9" y="160.1">RPS6A</text></g>
+<g class="ppa-subunit" data-locus="AT3G49010"><rect x="173.2" y="149.6" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="197.7" y="160.1">RPL13A</text></g>
+</g>
+<g class="ppa-node family " id="node-BIP_ER_CHAPERONES" data-node-id="BIP_ER_CHAPERONES" data-loci="AT5G28540,AT5G42020" data-bin="29.1.1">
+<rect x="292.3" y="104.0" width="187.4" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="386.0" y="122.0">ER Luminal BiP Chaperones</text>
+<text class="ppa-sub" x="386.0" y="137.4">BIN 29.1.1 BiP1 / BiP2 Hsp70</text>
+<rect class="ppa-family-tile" x="374.0" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="386.0" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node simple " id="node-PDI_DISULFIDE_ISOMERASE" data-node-id="PDI_DISULFIDE_ISOMERASE" data-loci="AT1G21750" data-bin="29.1.2">
+<rect x="511.7" y="113.0" width="215.7" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="619.5" y="131.0">Protein Disulfide Isomerase</text>
+<text class="ppa-sub" x="619.5" y="146.4">BIN 29.1.2 PDI1 / PDI2 Oxidative Folding</text>
+</g>
+<g class="ppa-node simple " id="node-UBIQUITIN_E1_ACTIVATING" data-node-id="UBIQUITIN_E1_ACTIVATING" data-loci="AT2G30110" data-bin="29.2.1">
+<rect x="89.6" y="224.6" width="197.5" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="188.3" y="242.6">Ubiquitin-Activating E1</text>
+<text class="ppa-sub" x="188.3" y="258.0">BIN 29.2.1 UBA1 / UBA2 Adenylation</text>
+</g>
+<g class="ppa-node family " id="node-UBIQUITIN_E2_CONJUGATING" data-node-id="UBIQUITIN_E2_CONJUGATING" data-loci="AT1G14400,AT2G36060" data-bin="29.2.2">
+<rect x="319.1" y="215.6" width="186.2" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="412.2" y="233.6">Ubiquitin-Conjugating E2</text>
+<text class="ppa-sub" x="412.2" y="249.0">BIN 29.2.2 UBC1 / UBC2 Thioester</text>
+<rect class="ppa-family-tile" x="400.2" y="263.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="412.2" y="263.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node complex " id="node-CULLIN_RING_E3_LIGASES" data-node-id="CULLIN_RING_E3_LIGASES" data-loci="AT4G02570,AT2G32950" data-bin="29.2.3">
+<rect x="537.3" y="213.6" width="189.0" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="631.8" y="231.6">Cullin-RING E3 Ligases</text>
+<text class="ppa-sub" x="631.8" y="247.0">BIN 29.2.3 CUL1 / RBX1 Specificity</text>
+<g class="ppa-subunit" data-locus="AT4G02570"><rect x="593.8" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="611.8" y="271.8">CUL1</text></g>
+<g class="ppa-subunit" data-locus="AT2G32950"><rect x="633.8" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="651.8" y="271.8">COP1</text></g>
+</g>
+<g class="ppa-node complex " id="node-PROTEASOME_19S_LID" data-node-id="PROTEASOME_19S_LID" data-loci="AT2G20580,AT1G53750" data-bin="29.3.1">
+<rect x="40.0" y="325.3" width="233.5" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="156.8" y="343.3">19S Regulatory Particle</text>
+<text class="ppa-sub" x="156.8" y="358.7">BIN 29.3.1 RPN1 / RPT1 Substrate Unfolding</text>
+<g class="ppa-subunit" data-locus="AT2G20580"><rect x="112.3" y="372.9" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="133.5" y="383.4">RPN1A</text></g>
+<g class="ppa-subunit" data-locus="AT1G53750"><rect x="158.8" y="372.9" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="180.0" y="383.4">RPT1A</text></g>
+</g>
+<g class="ppa-node complex " id="node-PROTEASOME_20S_BARREL" data-node-id="PROTEASOME_20S_BARREL" data-loci="AT2G27020,AT4G31300" data-bin="29.3.2">
+<rect x="305.5" y="325.3" width="241.4" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="426.2" y="343.3">20S Proteolytic Barrel</text>
+<text class="ppa-sub" x="426.2" y="358.7">BIN 29.3.2 PAG1 / PBA1 Threonine Peptidases</text>
+<g class="ppa-subunit" data-locus="AT2G27020"><rect x="388.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="406.2" y="383.4">PAG1</text></g>
+<g class="ppa-subunit" data-locus="AT4G31300"><rect x="428.2" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="446.2" y="383.4">PBA1</text></g>
+</g>
+<g class="ppa-node family " id="node-DEUBIQUITINATING_ENZYMES" data-node-id="DEUBIQUITINATING_ENZYMES" data-loci="AT5G06600,AT3G11910" data-bin="29.3.3">
+<rect x="579.0" y="327.3" width="196.9" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="677.4" y="345.3">Deubiquitinating Enzymes</text>
+<text class="ppa-sub" x="677.4" y="360.7">BIN 29.3.3 UBP12 / UBP13 Recycling</text>
+<rect class="ppa-family-tile" x="665.4" y="374.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="677.4" y="374.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node simple " id="node-ATG1_KINASE_INITIATION" data-node-id="ATG1_KINASE_INITIATION" data-loci="AT3G61960" data-bin="29.4.1">
+<rect x="60.2" y="447.9" width="192.8" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="156.6" y="465.9">ATG1 Kinase Complex</text>
+<text class="ppa-sub" x="156.6" y="481.3">BIN 29.4.1 Nutrient Sensing Trigger</text>
+</g>
+<g class="ppa-node complex " id="node-ATG8_AUTOPHAGOSOME" data-node-id="ATG8_AUTOPHAGOSOME" data-loci="AT4G21980,AT5G45900" data-bin="29.4.2">
+<rect x="285.0" y="436.9" width="228.8" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="399.4" y="454.9">ATG8 / ATG7 Core Lipidation</text>
+<text class="ppa-sub" x="399.4" y="470.3">BIN 29.4.2 PE Conjugation &amp; Sequestration</text>
+<g class="ppa-subunit" data-locus="AT4G21980"><rect x="358.2" y="484.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="379.4" y="495.1">ATG8A</text></g>
+<g class="ppa-subunit" data-locus="AT5G45900"><rect x="404.7" y="484.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="422.7" y="495.1">ATG7</text></g>
+</g>
+<g class="ppa-node simple " id="node-VACUOLAR_VPE_PROTEASES" data-node-id="VACUOLAR_VPE_PROTEASES" data-loci="AT4G32940" data-bin="29.4.3">
+<rect x="545.8" y="447.9" width="209.9" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="650.8" y="465.9">Vacuolar Processing Enzymes</text>
+<text class="ppa-sub" x="650.8" y="481.3">BIN 29.4.3 gamma-VPE Lytic Clearance</text>
+</g>
+<text class="ppa-caption" x="40.0" y="654.0">Cellular protein homeostasis, refolding, and degradation machinery. Nascent polypeptide chains are folded in the ER lumen by BiP</text>
+<text class="ppa-caption" x="40.0" y="668.9">chaperones, calreticulin, and protein disulfide isomerases (PDI). Misfolded or regulatory proteins undergo targeted ubiquitination</text>
+<text class="ppa-caption" x="40.0" y="683.7">via sequential E1-E2-E3 cascades (including cullin-RING E3 ligases) and are degraded by the ATP-dependent 26S proteasome. Large</text>
+<text class="ppa-caption" x="40.0" y="698.6">protein aggregates and damaged organelles are sequestered into autophagosomes via the ATG8 core conjugation machinery for vacuolar</text>
+<text class="ppa-caption" x="40.0" y="713.4">lytic turnover.</text>
+</svg>

@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 708" width="920" height="708" data-theme="dark" data-map-id="PPA-04"><defs><style>
+:root {
+  --ppa-bg: #ffffff;
+  --ppa-ink: #0f172a;
+  --ppa-ink-soft: #475569;
+  --ppa-node-fill: #f8fafc;
+  --ppa-node-stroke: #1e293b;
+  --ppa-hairline: #cbd5e1;
+  --ppa-edge: #475569;
+  --ppa-compartment-fill: rgba(15, 23, 42, 0.035);
+  --ppa-compartment-stroke: rgba(15, 23, 42, 0.22);
+  --ppa-accent: #0284c7;
+  --ppa-up: #D55E00;
+  --ppa-down: #0072B2;
+}
+:root[data-theme="dark"] {
+  --ppa-bg: #0b0f17;
+  --ppa-ink: #f1f5f9;
+  --ppa-ink-soft: #94a3b8;
+  --ppa-node-fill: #151c28;
+  --ppa-node-stroke: #cbd5e1;
+  --ppa-hairline: #334155;
+  --ppa-edge: #94a3b8;
+  --ppa-compartment-fill: rgba(255, 255, 255, 0.04);
+  --ppa-compartment-stroke: rgba(255, 255, 255, 0.25);
+  --ppa-accent: #38bdf8;
+  --ppa-up: #ea580c;
+  --ppa-down: #38bdf8;
+}
+
+.ppa-canvas { fill: var(--ppa-bg, #ffffff); }
+text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: var(--ppa-ink); }
+.ppa-title { font-size: 20.0px; font-weight: 700; fill: var(--ppa-ink); }
+.ppa-subtitle { font-size: 12.0px; fill: var(--ppa-ink-soft); }
+.ppa-caption { font-size: 11.0px; fill: var(--ppa-ink-soft); line-height: 1.4; }
+.ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
+.ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
+.ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
+.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+
+.ppa-compartment-band {
+  fill: var(--ppa-compartment-fill);
+  stroke: var(--ppa-compartment-stroke);
+  stroke-width: 1.5px;
+  stroke-dasharray: 6 3;
+  rx: 10px;
+}
+.ppa-compartment-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  fill: var(--ppa-ink-soft);
+}
+
+.ppa-node {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ppa-node:hover {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.ppa-node rect, .ppa-node circle, .ppa-node path {
+  stroke: var(--ppa-node-stroke);
+  stroke-width: 1.5px;
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+.ppa-node.significant rect {
+  stroke-width: 2.5px;
+  stroke: var(--ppa-ink);
+}
+.ppa-node.non-significant rect {
+  stroke-width: 1.0px;
+  stroke-dasharray: 3 2;
+  stroke: var(--ppa-hairline);
+}
+</style>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ppa-edge)" /></marker>
+<marker id="inhibit" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><line x1="5" y1="1" x2="5" y2="9" stroke="var(--ppa-edge)" stroke-width="2" /></marker>
+</defs>
+<rect class="ppa-canvas" width="920" height="708" />
+<text class="ppa-title" x="40.0" y="36.0">Cellular Respiration &amp; Mitochondrial ETC</text>
+<text class="ppa-subtitle" x="40.0" y="56.0">Tricarboxylic acid cycle, classical respiratory complexes I-V, and plant-specific alternative bypasses</text>
+<rect class="ppa-compartment-band" x="29.9" y="62.0" width="654.6" height="133.6" />
+<text class="ppa-compartment-title" x="43.9" y="80.0">Mitochondrial Matrix</text>
+<rect class="ppa-compartment-band" x="14.0" y="173.6" width="686.4" height="464.6" />
+<text class="ppa-compartment-title" x="28.0" y="191.6">Inner Mitochondrial Membrane</text>
+<path d="M 254.4 135.8 L 286.4 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="270.4" y="131.8">Isocitrate</text>
+<path d="M 466.4 135.8 L 498.4 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="482.4" y="131.8">Succinate</text>
+<path d="M 303.4 169.6 L 208.4 213.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="255.9" y="187.6">NADH</text>
+<path d="M 506.3 169.6 L 412.5 213.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="459.4" y="187.6">FADH2</text>
+<path d="M 138.4 281.3 L 143.0 334.3" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="140.7" y="303.8">2e-</text>
+<path d="M 280.1 281.3 L 185.6 334.3" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="232.9" y="303.8">2e-</text>
+<path d="M 462.4 273.7 L 230.7 334.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="346.6" y="300.1">e-</text>
+<path d="M 230.7 357.1 L 262.7 357.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="246.7" y="353.1">Heat + H2O</text>
+<path d="M 147.5 379.9 L 153.3 432.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="150.4" y="402.4">Q-Cycle</text>
+<path d="M 231.3 466.8 L 263.3 466.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="247.3" y="462.8">1e-</text>
+<path d="M 412.9 466.8 L 444.9 466.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 444.9 492.3 L 222.0 553.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="333.5" y="518.9">Proton Motive Force</text>
+<path d="M 222.0 578.4 L 254.0 578.4" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="238.0" y="574.4">ATP Export</text>
+<g class="ppa-node complex " id="node-TCA_SUBSTRATE_CORE" data-node-id="TCA_SUBSTRATE_CORE" data-loci="AT3G58750,AT2G05710" data-bin="8.1">
+<rect x="55.9" y="102.0" width="198.5" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="155.1" y="120.0">Citrate Synthase &amp; Aconitase</text>
+<text class="ppa-sub" x="155.1" y="135.4">BIN 8.1 Entry Condensation</text>
+<g class="ppa-subunit" data-locus="AT3G58750"><rect x="117.1" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="135.1" y="160.1">CSY2</text></g>
+<g class="ppa-subunit" data-locus="AT2G05710"><rect x="157.1" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="175.1" y="160.1">ACO1</text></g>
+</g>
+<g class="ppa-node complex " id="node-TCA_DEHYDROGENASES" data-node-id="TCA_DEHYDROGENASES" data-loci="AT4G35260,AT3G55410" data-bin="8.2">
+<rect x="286.4" y="102.0" width="180.1" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="376.4" y="120.0">IDH &amp; 2-OGDH Complexes</text>
+<text class="ppa-sub" x="376.4" y="135.4">BIN 8.2 Decarboxylations</text>
+<g class="ppa-subunit" data-locus="AT4G35260"><rect x="335.1" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="353.1" y="160.1">IDH1</text></g>
+<g class="ppa-subunit" data-locus="AT3G55410"><rect x="375.1" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="396.4" y="160.1">OGDH1</text></g>
+</g>
+<g class="ppa-node complex " id="node-MALATE_FUMARATE_POOL" data-node-id="MALATE_FUMARATE_POOL" data-loci="AT2G47310,AT1G53240,AT3G47520" data-bin="8.3">
+<rect x="498.4" y="102.0" width="160.1" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="578.5" y="120.0">Fumarase &amp; Malate DH</text>
+<text class="ppa-sub" x="578.5" y="135.4">BIN 8.3 Regeneration</text>
+<g class="ppa-subunit" data-locus="AT2G47310"><rect x="514.0" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="532.0" y="160.1">FUM1</text></g>
+<g class="ppa-subunit" data-locus="AT1G53240"><rect x="554.0" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="575.2" y="160.1">mMDH1</text></g>
+<g class="ppa-subunit" data-locus="AT3G47520"><rect x="600.5" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="621.7" y="160.1">mMDH2</text></g>
+</g>
+<g class="ppa-node complex " id="node-COMPLEX_I_NADH" data-node-id="COMPLEX_I_NADH" data-loci="AT1G16700,AT5G08530,AT5G37510" data-bin="9.1">
+<rect x="52.3" y="213.6" width="166.2" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="135.4" y="231.6">Complex I (NADH DH)</text>
+<text class="ppa-sub" x="135.4" y="247.0">BIN 9.1 40+ Subunit Holocore</text>
+<g class="ppa-subunit" data-locus="AT1G16700"><rect x="64.4" y="261.3" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="88.9" y="271.8">NDUFS1</text></g>
+<g class="ppa-subunit" data-locus="AT5G08530"><rect x="117.4" y="261.3" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="141.9" y="271.8">NDUFV1</text></g>
+<g class="ppa-subunit" data-locus="AT5G37510"><rect x="170.4" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="188.4" y="271.8">CAL1</text></g>
+</g>
+<g class="ppa-node complex " id="node-COMPLEX_II_SDH" data-node-id="COMPLEX_II_SDH" data-loci="AT5G66760,AT3G27380,AT5G40650" data-bin="9.2">
+<rect x="250.5" y="213.6" width="179.9" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="340.4" y="231.6">Complex II (Succinate DH)</text>
+<text class="ppa-sub" x="340.4" y="247.0">BIN 9.2 Flavoprotein Core</text>
+<g class="ppa-subunit" data-locus="AT5G66760"><rect x="262.9" y="261.3" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="287.4" y="271.8">SDH1-1</text></g>
+<g class="ppa-subunit" data-locus="AT3G27380"><rect x="315.9" y="261.3" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="340.4" y="271.8">SDH2-1</text></g>
+<g class="ppa-subunit" data-locus="AT5G40650"><rect x="368.9" y="261.3" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="393.4" y="271.8">SDH3-1</text></g>
+</g>
+<g class="ppa-node family " id="node-ROTENONE_INSENSITIVE_NDH" data-node-id="ROTENONE_INSENSITIVE_NDH" data-loci="AT1G07180,AT2G29990,AT4G05020,AT4G28220" data-bin="9.3">
+<rect x="462.4" y="215.6" width="199.7" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="562.2" y="233.6">External/Internal NAD(P)H DH</text>
+<text class="ppa-sub" x="562.2" y="249.0">BIN 9.3 Type-II Bypass</text>
+<rect class="ppa-family-tile" x="538.2" y="263.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="550.2" y="263.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="562.2" y="263.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="574.2" y="263.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node simple " id="node-UBIQUINONE_POOL" data-node-id="UBIQUINONE_POOL" data-loci="AT1G78510" data-bin="9.4">
+<rect x="59.2" y="334.3" width="171.6" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="144.9" y="352.3">Ubiquinone Pool (Q/QH2)</text>
+<text class="ppa-sub" x="144.9" y="367.7">BIN 9.4 Mobile Lipid Carrier</text>
+</g>
+<g class="ppa-node family " id="node-AOX_ALTERNATIVE_OXIDASE" data-node-id="AOX_ALTERNATIVE_OXIDASE" data-loci="AT3G22370,AT1G32350" data-bin="9.5">
+<rect x="262.7" y="325.3" width="184.7" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="355.0" y="343.3">Alternative Oxidase (AOX)</text>
+<text class="ppa-sub" x="355.0" y="358.7">BIN 9.5 Cyanide-Resistant Bypass</text>
+<rect class="ppa-family-tile" x="343.0" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="355.0" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node family " id="node-UNCOUPLING_PROTEINS" data-node-id="UNCOUPLING_PROTEINS" data-loci="AT3G54110,AT5G58970" data-bin="9.6">
+<rect x="479.4" y="325.3" width="175.9" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="567.3" y="343.3">Plant Uncoupling Proteins</text>
+<text class="ppa-sub" x="567.3" y="358.7">BIN 9.6 UCP1 / UCP2</text>
+<rect class="ppa-family-tile" x="555.3" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="567.3" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node complex " id="node-COMPLEX_III_BC1" data-node-id="COMPLEX_III_BC1" data-loci="AT3G54080,AT2G40610,AT1G60950" data-bin="9.7">
+<rect x="82.9" y="432.9" width="148.4" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="157.1" y="450.9">Complex III (Cyt bc1)</text>
+<text class="ppa-sub" x="157.1" y="466.3">BIN 9.7 Q-Cycle Core</text>
+<g class="ppa-subunit" data-locus="AT3G54080"><rect x="92.6" y="480.6" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="117.1" y="491.1">QCR2-1</text></g>
+<g class="ppa-subunit" data-locus="AT2G40610"><rect x="145.6" y="480.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="163.6" y="491.1">CYC1</text></g>
+<g class="ppa-subunit" data-locus="AT1G60950"><rect x="185.6" y="480.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="203.6" y="491.1">RISP</text></g>
+</g>
+<g class="ppa-node family " id="node-CYTOCHROME_C_SOLUBLE" data-node-id="CYTOCHROME_C_SOLUBLE" data-loci="AT1G22840,AT4G10040" data-bin="9.8">
+<rect x="263.3" y="434.9" width="149.7" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="338.1" y="452.9">Cytochrome c</text>
+<text class="ppa-sub" x="338.1" y="468.3">BIN 9.8 IMS Mobile Shuttle</text>
+<rect class="ppa-family-tile" x="326.1" y="482.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="338.1" y="482.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node complex " id="node-COMPLEX_IV_COX" data-node-id="COMPLEX_IV_COX" data-loci="AT4G39740,AT3G15640" data-bin="9.9">
+<rect x="444.9" y="432.9" width="186.6" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="538.2" y="450.9">Complex IV (Cyt c Oxidase)</text>
+<text class="ppa-sub" x="538.2" y="466.3">BIN 9.9 Terminal O2 Reduction</text>
+<g class="ppa-subunit" data-locus="AT4G39740"><rect x="493.7" y="480.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="515.0" y="491.1">COX5B</text></g>
+<g class="ppa-subunit" data-locus="AT3G15640"><rect x="540.2" y="480.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="561.5" y="491.1">COX6B</text></g>
+</g>
+<g class="ppa-node complex " id="node-COMPLEX_V_F1F0" data-node-id="COMPLEX_V_F1F0" data-loci="AT2G07698,AT5G08670,AT2G23870" data-bin="9.10">
+<rect x="40.0" y="544.6" width="182.0" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="131.0" y="562.6">ATP Synthase (Complex V)</text>
+<text class="ppa-sub" x="131.0" y="578.0">BIN 9.10 F1-F0 Rotary Engine</text>
+<g class="ppa-subunit" data-locus="AT2G07698"><rect x="66.5" y="592.2" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="87.7" y="602.7">alpha</text></g>
+<g class="ppa-subunit" data-locus="AT5G08670"><rect x="113.0" y="592.2" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="131.0" y="602.7">beta</text></g>
+<g class="ppa-subunit" data-locus="AT2G23870"><rect x="153.0" y="592.2" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="174.2" y="602.7">gamma</text></g>
+</g>
+<g class="ppa-node family " id="node-ADENINE_NUCLEOTIDE_TR" data-node-id="ADENINE_NUCLEOTIDE_TR" data-loci="AT3G08580,AT5G13490" data-bin="34.2">
+<rect x="254.0" y="546.6" width="188.3" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="348.1" y="564.6">ADP/ATP Translocator (ANT)</text>
+<text class="ppa-sub" x="348.1" y="580.0">BIN 34.2 Mitochondrial Carrier</text>
+<rect class="ppa-family-tile" x="336.1" y="594.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="348.1" y="594.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node family " id="node-PHOSPHATE_CARRIER" data-node-id="PHOSPHATE_CARRIER" data-loci="AT5G14040,AT3G48850" data-bin="34.3">
+<rect x="474.3" y="546.6" width="200.1" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="574.3" y="564.6">Phosphate Translocator (MPT)</text>
+<text class="ppa-sub" x="574.3" y="580.0">BIN 34.3 Pi/H+ Symport</text>
+<rect class="ppa-family-tile" x="562.3" y="594.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="574.3" y="594.2" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<text class="ppa-caption" x="40.0" y="682.2">Mitochondrial oxidative phosphorylation and respiratory electron transport chain. Substrates derived from the TCA cycle feed</text>
+<text class="ppa-caption" x="40.0" y="697.1">electrons into classical Complex I (NADH DH) and Complex II (Succinate DH), as well as plant-specific rotenone-insensitive</text>
+<text class="ppa-caption" x="40.0" y="711.9">external/internal NAD(P)H dehydrogenases (NDA, NDB). Electrons funnel through ubiquinone to either classical Complex III/IV</text>
+<text class="ppa-caption" x="40.0" y="726.8">(generating a proton gradient for Complex V ATP synthase) or cyanide-resistant Alternative Oxidases (AOX1A/D), dissipating redox</text>
+<text class="ppa-caption" x="40.0" y="741.6">pressure as heat without proton translocation.</text>
+</svg>

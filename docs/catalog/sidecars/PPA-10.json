@@ -1,0 +1,336 @@
+{
+  "id": "PPA-10",
+  "title": "Biotic & Abiotic Stress Pathways",
+  "subtitle": "Pattern-triggered immunity (PTI), MAPK cascades, CBF/DREB regulon, and heat shock factors",
+  "caption": "Integrated plant defense and acclimation pathways. Plasma membrane pattern recognition receptors (FLS2/BAK1) perceive bacterial flagellin (flg22), activating BIK1 transphosphorylation and triggering the canonical MPK3/MPK6 signaling cascade. Concurrently, environmental temperature and osmotic fluctuations activate the CBF1-3/DREB regulon for cold/freezing tolerance and HSFA1/HSFA2 for heat shock protein (HSP70/90) chaperone induction.",
+  "species_anchor": "arabidopsis_thaliana",
+  "nodes": [
+    {
+      "id": "PRR_FLS2_BAK1",
+      "label": "FLS2 / BAK1 Receptor Core",
+      "kind": "complex",
+      "compartment": "plasma_membrane",
+      "mapman_bin": "20.1.1",
+      "loci": [
+        "AT5G46330",
+        "AT4G33430"
+      ],
+      "subunits": [
+        {
+          "symbol": "FLS2",
+          "locus": "AT5G46330"
+        },
+        {
+          "symbol": "BAK1",
+          "locus": "AT4G33430"
+        }
+      ]
+    },
+    {
+      "id": "BIK1_RECEPTOR_KINASE",
+      "label": "BIK1 / PBL Kinase Relay",
+      "kind": "simple",
+      "compartment": "plasma_membrane",
+      "mapman_bin": "20.1.2",
+      "loci": [
+        "AT2G39660"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "RBOHD_BURST",
+      "label": "RBOHD NADPH Oxidase",
+      "kind": "simple",
+      "compartment": "plasma_membrane",
+      "mapman_bin": "20.1.3",
+      "loci": [
+        "AT5G47910"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "MAPKKK_MAPKK_MODULE",
+      "label": "MEKK1 & MKK4 / MKK5",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "20.2.1",
+      "loci": [
+        "AT4G08500",
+        "AT1G51660",
+        "AT3G21220"
+      ],
+      "subunits": [
+        {
+          "symbol": "MEKK1",
+          "locus": "AT4G08500"
+        },
+        {
+          "symbol": "MKK4",
+          "locus": "AT1G51660"
+        },
+        {
+          "symbol": "MKK5",
+          "locus": "AT3G21220"
+        }
+      ]
+    },
+    {
+      "id": "MPK3_MPK6_KINASES",
+      "label": "MPK3 & MPK6 Cascade",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "20.2.2",
+      "loci": [
+        "AT3G45640",
+        "AT2G43790"
+      ],
+      "subunits": [
+        {
+          "symbol": "MPK3",
+          "locus": "AT3G45640"
+        },
+        {
+          "symbol": "MPK6",
+          "locus": "AT2G43790"
+        }
+      ]
+    },
+    {
+      "id": "WRKY33_TF_HUB",
+      "label": "WRKY33 Immune Hub",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "20.2.3",
+      "loci": [
+        "AT2G38470"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "CBF_DREB1_REGULON",
+      "label": "CBF1 / CBF2 / CBF3",
+      "kind": "family",
+      "compartment": "nucleus",
+      "mapman_bin": "20.3.1",
+      "loci": [
+        "AT4G25490",
+        "AT4G25470",
+        "AT4G25480"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "COR_GENE_EFFECTORS",
+      "label": "COR15A & KIN1 Effectors",
+      "kind": "family",
+      "compartment": "nucleus",
+      "mapman_bin": "20.3.2",
+      "loci": [
+        "AT2G42540",
+        "AT5G15960"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "PROLINE_OSMOPROTECTANTS",
+      "label": "Proline Synthase (P5CS1)",
+      "kind": "simple",
+      "compartment": "nucleus",
+      "mapman_bin": "20.3.3",
+      "loci": [
+        "AT2G39800"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "HSFA_MASTER_FACTORS",
+      "label": "Heat Shock Factors (HSFs)",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "20.4.1",
+      "loci": [
+        "AT4G17750",
+        "AT2G26150"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "HSP70_CHAPERONE_CORE",
+      "label": "Hsp70 Chaperone Family",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "20.4.2",
+      "loci": [
+        "AT3G12580",
+        "AT5G02500"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "HSP90_PROTEIN_COMPLEX",
+      "label": "Hsp90 Molecular Machinery",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "20.4.3",
+      "loci": [
+        "AT5G52640",
+        "AT5G56030"
+      ],
+      "subunits": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "PRR_FLS2_BAK1",
+      "to": "BIK1_RECEPTOR_KINASE",
+      "start": [
+        263.761,
+        135.824
+      ],
+      "end": [
+        295.761,
+        135.824
+      ],
+      "class": "flux",
+      "label": "flg22 Perception"
+    },
+    {
+      "from": "BIK1_RECEPTOR_KINASE",
+      "to": "RBOHD_BURST",
+      "start": [
+        476.6775,
+        135.824
+      ],
+      "end": [
+        508.6775,
+        135.824
+      ],
+      "class": "flux",
+      "label": "Phosphorylation"
+    },
+    {
+      "from": "BIK1_RECEPTOR_KINASE",
+      "to": "MAPKKK_MAPKK_MODULE",
+      "start": [
+        341.21636152461315,
+        158.648
+      ],
+      "end": [
+        232.77091523359127,
+        213.648
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "MAPKKK_MAPKK_MODULE",
+      "to": "MPK3_MPK6_KINASES",
+      "start": [
+        263.7754375,
+        247.47199999999998
+      ],
+      "end": [
+        295.7754375,
+        247.47199999999998
+      ],
+      "class": "flux",
+      "label": "Cascade Activation"
+    },
+    {
+      "from": "MPK3_MPK6_KINASES",
+      "to": "WRKY33_TF_HUB",
+      "start": [
+        473.69943750000004,
+        247.47199999999998
+      ],
+      "end": [
+        505.69943750000004,
+        247.472
+      ],
+      "class": "flux",
+      "label": "Transcriptional Activation"
+    },
+    {
+      "from": "CBF_DREB1_REGULON",
+      "to": "COR_GENE_EFFECTORS",
+      "start": [
+        241.72843749999996,
+        357.12
+      ],
+      "end": [
+        273.7284374999999,
+        357.12
+      ],
+      "class": "flux",
+      "label": "CRT/DRE Elements"
+    },
+    {
+      "from": "CBF_DREB1_REGULON",
+      "to": "PROLINE_OSMOPROTECTANTS",
+      "start": [
+        241.72843749999996,
+        357.12
+      ],
+      "end": [
+        519.2474374999999,
+        357.12
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "HSFA_MASTER_FACTORS",
+      "to": "HSP70_CHAPERONE_CORE",
+      "start": [
+        278.16550000000007,
+        464.76800000000003
+      ],
+      "end": [
+        310.16550000000007,
+        464.76800000000003
+      ],
+      "class": "flux",
+      "label": "HSE Promoters"
+    },
+    {
+      "from": "HSFA_MASTER_FACTORS",
+      "to": "HSP90_PROTEIN_COMPLEX",
+      "start": [
+        278.16550000000007,
+        464.76800000000003
+      ],
+      "end": [
+        524.9285000000001,
+        464.76800000000003
+      ],
+      "class": "flux",
+      "label": ""
+    }
+  ],
+  "total_nodes": 12,
+  "distinct_loci": 22,
+  "loci_list": [
+    "AT1G51660",
+    "AT2G26150",
+    "AT2G38470",
+    "AT2G39660",
+    "AT2G39800",
+    "AT2G42540",
+    "AT2G43790",
+    "AT3G12580",
+    "AT3G21220",
+    "AT3G45640",
+    "AT4G08500",
+    "AT4G17750",
+    "AT4G25470",
+    "AT4G25480",
+    "AT4G25490",
+    "AT4G33430",
+    "AT5G02500",
+    "AT5G15960",
+    "AT5G46330",
+    "AT5G47910",
+    "AT5G52640",
+    "AT5G56030"
+  ]
+}

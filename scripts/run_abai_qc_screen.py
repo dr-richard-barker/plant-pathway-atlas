@@ -117,7 +117,8 @@ def run_screen() -> bool:
     # --- CHECK 4: FILE PATHS, SCHEMAS & FORMAT INTEGRITY ---
     print("\n[CHECK 4/5] File Paths & Format Integrity...")
     missing_assets = []
-    for mid in ["PPA-01", "PPA-02", "PPA-05"]:
+    map_ids = [m["id"] for m in manifest_data.get("maps", [])] if manifest_path.exists() else []
+    for mid in map_ids:
         for ext in [".svg", "_dark.svg"]:
             p = ROOT / "maps" / "svg" / f"{mid}{ext}"
             if not p.exists():

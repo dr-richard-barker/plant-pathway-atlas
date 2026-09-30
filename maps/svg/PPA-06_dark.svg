@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 680" width="920" height="680" data-theme="dark" data-map-id="PPA-06"><defs><style>
+:root {
+  --ppa-bg: #ffffff;
+  --ppa-ink: #0f172a;
+  --ppa-ink-soft: #475569;
+  --ppa-node-fill: #f8fafc;
+  --ppa-node-stroke: #1e293b;
+  --ppa-hairline: #cbd5e1;
+  --ppa-edge: #475569;
+  --ppa-compartment-fill: rgba(15, 23, 42, 0.035);
+  --ppa-compartment-stroke: rgba(15, 23, 42, 0.22);
+  --ppa-accent: #0284c7;
+  --ppa-up: #D55E00;
+  --ppa-down: #0072B2;
+}
+:root[data-theme="dark"] {
+  --ppa-bg: #0b0f17;
+  --ppa-ink: #f1f5f9;
+  --ppa-ink-soft: #94a3b8;
+  --ppa-node-fill: #151c28;
+  --ppa-node-stroke: #cbd5e1;
+  --ppa-hairline: #334155;
+  --ppa-edge: #94a3b8;
+  --ppa-compartment-fill: rgba(255, 255, 255, 0.04);
+  --ppa-compartment-stroke: rgba(255, 255, 255, 0.25);
+  --ppa-accent: #38bdf8;
+  --ppa-up: #ea580c;
+  --ppa-down: #38bdf8;
+}
+
+.ppa-canvas { fill: var(--ppa-bg, #ffffff); }
+text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: var(--ppa-ink); }
+.ppa-title { font-size: 20.0px; font-weight: 700; fill: var(--ppa-ink); }
+.ppa-subtitle { font-size: 12.0px; fill: var(--ppa-ink-soft); }
+.ppa-caption { font-size: 11.0px; fill: var(--ppa-ink-soft); line-height: 1.4; }
+.ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
+.ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
+.ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
+.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+
+.ppa-compartment-band {
+  fill: var(--ppa-compartment-fill);
+  stroke: var(--ppa-compartment-stroke);
+  stroke-width: 1.5px;
+  stroke-dasharray: 6 3;
+  rx: 10px;
+}
+.ppa-compartment-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  fill: var(--ppa-ink-soft);
+}
+
+.ppa-node {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ppa-node:hover {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.ppa-node rect, .ppa-node circle, .ppa-node path {
+  stroke: var(--ppa-node-stroke);
+  stroke-width: 1.5px;
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+.ppa-node.significant rect {
+  stroke-width: 2.5px;
+  stroke: var(--ppa-ink);
+}
+.ppa-node.non-significant rect {
+  stroke-width: 1.0px;
+  stroke-dasharray: 3 2;
+  stroke: var(--ppa-hairline);
+}
+</style>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ppa-edge)" /></marker>
+<marker id="inhibit" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><line x1="5" y1="1" x2="5" y2="9" stroke="var(--ppa-edge)" stroke-width="2" /></marker>
+</defs>
+<rect class="ppa-canvas" width="920" height="680" />
+<text class="ppa-title" x="40.0" y="36.0">Lipid Metabolism &amp; Membrane Dynamics</text>
+<text class="ppa-subtitle" x="40.0" y="56.0">Plastid de novo fatty acid synthesis, ER eukaryotic Kennedy pathway, and peroxisomal beta-oxidation</text>
+<rect class="ppa-compartment-band" x="43.4" y="62.0" width="671.0" height="133.6" />
+<text class="ppa-compartment-title" x="57.4" y="80.0">Chloroplast Stroma</text>
+<rect class="ppa-compartment-band" x="14.0" y="173.6" width="729.8" height="133.6" />
+<text class="ppa-compartment-title" x="28.0" y="191.6">Endoplasmic Reticulum</text>
+<rect class="ppa-compartment-band" x="42.3" y="285.3" width="673.1" height="129.6" />
+<text class="ppa-compartment-title" x="56.3" y="303.3">Chloroplast Envelope</text>
+<rect class="ppa-compartment-band" x="43.8" y="392.9" width="670.1" height="129.6" />
+<text class="ppa-compartment-title" x="57.8" y="410.9">Peroxisome</text>
+<path d="M 251.6 135.8 L 283.6 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="267.6" y="131.8">Malonyl-CoA</text>
+<path d="M 473.5 135.8 L 505.5 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="489.5" y="131.8">16:0 / 18:1 ACP</text>
+<path d="M 505.5 158.2 L 241.3 222.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="373.4" y="186.5">Free Fatty Acids</text>
+<path d="M 241.3 247.5 L 273.3 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="257.3" y="243.5">LPA -&gt; PA</text>
+<path d="M 482.0 247.5 L 514.0 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="498.0" y="243.5">DAG -&gt; TAG</text>
+<path d="M 311.8 279.3 L 197.9 334.3" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="254.8" y="302.8">DAG -&gt; MGDG</text>
+<path d="M 233.0 357.1 L 265.0 357.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="249.0" y="353.1">MGDG -&gt; DGDG</text>
+<path d="M 461.7 357.1 L 493.7 357.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 545.1 281.3 L 227.7 432.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="386.4" y="353.1">Acyl-CoA</text>
+<path d="M 252.4 464.8 L 284.4 464.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="268.4" y="460.8">Enoyl-CoA</text>
+<path d="M 473.7 464.8 L 505.7 464.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="489.7" y="460.8">Acetyl-CoA Export</text>
+<g class="ppa-node complex " id="node-PLASTID_ACCASE" data-node-id="PLASTID_ACCASE" data-loci="AT2G05990,AT5G16390,AT1G36160" data-bin="11.1.1">
+<rect x="69.4" y="102.0" width="182.3" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="160.5" y="120.0">Plastidial ACCase Complex</text>
+<text class="ppa-sub" x="160.5" y="135.4">BIN 11.1.1 Committed Step</text>
+<g class="ppa-subunit" data-locus="AT2G05990"><rect x="92.8" y="149.6" width="62.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="123.8" y="160.1">alpha-CT</text></g>
+<g class="ppa-subunit" data-locus="AT5G16390"><rect x="158.8" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="180.0" y="160.1">BCCP1</text></g>
+<g class="ppa-subunit" data-locus="AT1G36160"><rect x="205.3" y="149.6" width="23.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="216.8" y="160.1">BC</text></g>
+</g>
+<g class="ppa-node complex " id="node-FAS_ELONGATION" data-node-id="FAS_ELONGATION" data-loci="AT5G46290,AT1G74960,AT2G04540" data-bin="11.1.2">
+<rect x="283.6" y="102.0" width="189.9" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="378.6" y="120.0">Fatty Acid Synthase (FAS)</text>
+<text class="ppa-sub" x="378.6" y="135.4">BIN 11.1.2 KAS I/II/III Condensation</text>
+<g class="ppa-subunit" data-locus="AT5G46290"><rect x="320.6" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="338.6" y="160.1">KAS1</text></g>
+<g class="ppa-subunit" data-locus="AT1G74960"><rect x="360.6" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="378.6" y="160.1">KAS2</text></g>
+<g class="ppa-subunit" data-locus="AT2G04540"><rect x="400.6" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="418.6" y="160.1">KAS3</text></g>
+</g>
+<g class="ppa-node family " id="node-THIOESTERASE_EXPORT" data-node-id="THIOESTERASE_EXPORT" data-loci="AT1G08510,AT3G25110" data-bin="11.1.3">
+<rect x="505.5" y="104.0" width="182.9" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="596.9" y="122.0">Acyl-ACP Thioesterases</text>
+<text class="ppa-sub" x="596.9" y="137.4">BIN 11.1.3 FATB / FATA Hydrolysis</text>
+<rect class="ppa-family-tile" x="584.9" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="596.9" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node complex " id="node-GLYCEROL_ACYLATION_GPAT" data-node-id="GLYCEROL_ACYLATION_GPAT" data-loci="AT1G06520,AT3G57650" data-bin="11.2.1">
+<rect x="40.0" y="213.6" width="201.3" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="140.7" y="231.6">GPAT &amp; LPAT Acyltransferases</text>
+<text class="ppa-sub" x="140.7" y="247.0">BIN 11.2.1 Kennedy Pathway</text>
+<g class="ppa-subunit" data-locus="AT1G06520"><rect x="96.2" y="261.3" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="117.4" y="271.8">GPAT9</text></g>
+<g class="ppa-subunit" data-locus="AT3G57650"><rect x="142.7" y="261.3" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="163.9" y="271.8">LPAT2</text></g>
+</g>
+<g class="ppa-node family " id="node-PHOSPHATIDIC_ACID_POOL" data-node-id="PHOSPHATIDIC_ACID_POOL" data-loci="AT3G09560,AT5G42870" data-bin="11.2.2">
+<rect x="273.3" y="215.6" width="208.7" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="377.7" y="233.6">Phosphatidic Acid Phosphatase</text>
+<text class="ppa-sub" x="377.7" y="249.0">BIN 11.2.2 PAH1 / PAH2 (DAG Pool)</text>
+<rect class="ppa-family-tile" x="365.7" y="263.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="377.7" y="263.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node complex " id="node-TRIACYLGLYCEROL_DGAT" data-node-id="TRIACYLGLYCEROL_DGAT" data-loci="AT2G19450,AT3G51520" data-bin="11.2.3">
+<rect x="514.0" y="213.6" width="203.8" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="615.9" y="231.6">Diacylglycerol Acyltransferase</text>
+<text class="ppa-sub" x="615.9" y="247.0">BIN 11.2.3 DGAT1 / DGAT2 (TAG)</text>
+<g class="ppa-subunit" data-locus="AT2G19450"><rect x="571.4" y="261.3" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="592.6" y="271.8">DGAT1</text></g>
+<g class="ppa-subunit" data-locus="AT3G51520"><rect x="617.9" y="261.3" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="639.1" y="271.8">DGAT2</text></g>
+</g>
+<g class="ppa-node simple " id="node-MGDG_SYNTHASE_MGD1" data-node-id="MGDG_SYNTHASE_MGD1" data-loci="AT4G31780" data-bin="11.3.1">
+<rect x="68.3" y="334.3" width="164.7" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="150.7" y="352.3">MGDG Synthase</text>
+<text class="ppa-sub" x="150.7" y="367.7">BIN 11.3.1 MGD1 Galactolipid</text>
+</g>
+<g class="ppa-node family " id="node-DGDG_SYNTHASE_DGD1" data-node-id="DGDG_SYNTHASE_DGD1" data-loci="AT3G11670,AT4G00550" data-bin="11.3.2">
+<rect x="265.0" y="325.3" width="196.7" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="363.3" y="343.3">DGDG Synthase</text>
+<text class="ppa-sub" x="363.3" y="358.7">BIN 11.3.2 DGD1 / DGD2 Biogenesis</text>
+<rect class="ppa-family-tile" x="351.3" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="363.3" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node family " id="node-FATTY_ACID_DESATURASES" data-node-id="FATTY_ACID_DESATURASES" data-loci="AT3G12120,AT2G29980,AT3G11170" data-bin="11.3.3">
+<rect x="493.7" y="325.3" width="195.8" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="591.5" y="343.3">Fatty Acid Desaturases (FAD)</text>
+<text class="ppa-sub" x="591.5" y="358.7">BIN 11.3.3 FAD2 / FAD3 / FAD7</text>
+<rect class="ppa-family-tile" x="573.5" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="585.5" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="597.5" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node family " id="node-ACYL_COA_OXIDASE_ACX" data-node-id="ACYL_COA_OXIDASE_ACX" data-loci="AT4G16760,AT5G65110,AT1G06290" data-bin="11.4.1">
+<rect x="69.8" y="432.9" width="182.6" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="161.1" y="450.9">Acyl-CoA Oxidase (ACX)</text>
+<text class="ppa-sub" x="161.1" y="466.3">BIN 11.4.1 Peroxisomal Oxidation</text>
+<rect class="ppa-family-tile" x="143.1" y="480.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="155.1" y="480.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="167.1" y="480.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node simple " id="node-MULTIFUNCTIONAL_MFP2" data-node-id="MULTIFUNCTIONAL_MFP2" data-loci="AT3G06860" data-bin="11.4.2">
+<rect x="284.4" y="441.9" width="189.3" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="379.1" y="459.9">Multifunctional Protein 2</text>
+<text class="ppa-sub" x="379.1" y="475.3">BIN 11.4.2 Hydratase &amp; DH (MFP2)</text>
+</g>
+<g class="ppa-node simple " id="node-KETOACYL_THIOLASE_PED1" data-node-id="KETOACYL_THIOLASE_PED1" data-loci="AT2G33150" data-bin="11.4.3">
+<rect x="505.7" y="441.9" width="182.2" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="596.8" y="459.9">3-Ketoacyl-CoA Thiolase</text>
+<text class="ppa-sub" x="596.8" y="475.3">BIN 11.4.3 PED1 / KAT2 Cleavage</text>
+</g>
+<text class="ppa-caption" x="40.0" y="654.0">Integrated lipid biosynthesis, membrane remodeling, and turnover. De novo 16:0 and 18:0 fatty acids are synthesized by heteromeric</text>
+<text class="ppa-caption" x="40.0" y="668.9">ACCase and the FAS complex in plastids, followed by thioesterase hydrolysis (FATB/FATA). Free fatty acids export to the</text>
+<text class="ppa-caption" x="40.0" y="683.7">endoplasmic reticulum for incorporation into triacylglycerols (TAG storage) and structural galactolipids (MGDG/DGDG) by MGD1 and</text>
+<text class="ppa-caption" x="40.0" y="698.6">DGD1. Surplus or mobilizing lipids undergo peroxisomal beta-oxidation (ACX, MFP2, PED1/KAT2).</text>
+</svg>

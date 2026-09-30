@@ -75,7 +75,16 @@
       <select id="map-select">
         <option value="PPA-01">PPA-01 — Central Metabolism Overview</option>
         <option value="PPA-02">PPA-02 — Photosynthesis & Bioenergetics</option>
+        <option value="PPA-03">PPA-03 — Calvin-Benson Cycle & Photorespiration</option>
+        <option value="PPA-04">PPA-04 — Cellular Respiration & Mitochondrial ETC</option>
         <option value="PPA-05" selected>PPA-05 — ROS & Redox Homeostasis</option>
+        <option value="PPA-06">PPA-06 — Lipid Metabolism & Membrane Dynamics</option>
+        <option value="PPA-07">PPA-07 — Nitrogen & Sulfur Primary Assimilation</option>
+        <option value="PPA-08">PPA-08 — Specialized & Secondary Metabolism</option>
+        <option value="PPA-09">PPA-09 — Phytohormone Networks & Crosstalk</option>
+        <option value="PPA-10">PPA-10 — Biotic & Abiotic Stress Pathways</option>
+        <option value="PPA-11">PPA-11 — Protein Quality Control & Turnover</option>
+        <option value="PPA-12">PPA-12 — Plant Transportome & Solute Allocation</option>
       </select>
     </div>
 
@@ -297,6 +306,13 @@ Os02g0115700,2.9,0.00005`;
     currentParsedTable = parseTable(csv);
     renderSelectedMap();
   });
+
+  // Check URL query parameters (e.g. ?map=PPA-03)
+  const urlParams = new URLSearchParams(window.location.search);
+  const mapParam = urlParams.get('map');
+  if (mapParam && mapSelect.querySelector(`option[value="${mapParam}"]`)) {
+    mapSelect.value = mapParam;
+  }
 
   // Initial render
   renderSelectedMap();

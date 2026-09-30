@@ -1,0 +1,383 @@
+{
+  "id": "PPA-06",
+  "title": "Lipid Metabolism & Membrane Dynamics",
+  "subtitle": "Plastid de novo fatty acid synthesis, ER eukaryotic Kennedy pathway, and peroxisomal beta-oxidation",
+  "caption": "Integrated lipid biosynthesis, membrane remodeling, and turnover. De novo 16:0 and 18:0 fatty acids are synthesized by heteromeric ACCase and the FAS complex in plastids, followed by thioesterase hydrolysis (FATB/FATA). Free fatty acids export to the endoplasmic reticulum for incorporation into triacylglycerols (TAG storage) and structural galactolipids (MGDG/DGDG) by MGD1 and DGD1. Surplus or mobilizing lipids undergo peroxisomal beta-oxidation (ACX, MFP2, PED1/KAT2).",
+  "species_anchor": "arabidopsis_thaliana",
+  "nodes": [
+    {
+      "id": "PLASTID_ACCASE",
+      "label": "Plastidial ACCase Complex",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "11.1.1",
+      "loci": [
+        "AT2G05990",
+        "AT5G16390",
+        "AT1G36160"
+      ],
+      "subunits": [
+        {
+          "symbol": "alpha-CT",
+          "locus": "AT2G05990"
+        },
+        {
+          "symbol": "BCCP1",
+          "locus": "AT5G16390"
+        },
+        {
+          "symbol": "BC",
+          "locus": "AT1G36160"
+        }
+      ]
+    },
+    {
+      "id": "FAS_ELONGATION",
+      "label": "Fatty Acid Synthase (FAS)",
+      "kind": "complex",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "11.1.2",
+      "loci": [
+        "AT5G46290",
+        "AT1G74960",
+        "AT2G04540"
+      ],
+      "subunits": [
+        {
+          "symbol": "KAS1",
+          "locus": "AT5G46290"
+        },
+        {
+          "symbol": "KAS2",
+          "locus": "AT1G74960"
+        },
+        {
+          "symbol": "KAS3",
+          "locus": "AT2G04540"
+        }
+      ]
+    },
+    {
+      "id": "THIOESTERASE_EXPORT",
+      "label": "Acyl-ACP Thioesterases",
+      "kind": "family",
+      "compartment": "chloroplast_stroma",
+      "mapman_bin": "11.1.3",
+      "loci": [
+        "AT1G08510",
+        "AT3G25110"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "GLYCEROL_ACYLATION_GPAT",
+      "label": "GPAT & LPAT Acyltransferases",
+      "kind": "complex",
+      "compartment": "endoplasmic_reticulum",
+      "mapman_bin": "11.2.1",
+      "loci": [
+        "AT1G06520",
+        "AT3G57650"
+      ],
+      "subunits": [
+        {
+          "symbol": "GPAT9",
+          "locus": "AT1G06520"
+        },
+        {
+          "symbol": "LPAT2",
+          "locus": "AT3G57650"
+        }
+      ]
+    },
+    {
+      "id": "PHOSPHATIDIC_ACID_POOL",
+      "label": "Phosphatidic Acid Phosphatase",
+      "kind": "family",
+      "compartment": "endoplasmic_reticulum",
+      "mapman_bin": "11.2.2",
+      "loci": [
+        "AT3G09560",
+        "AT5G42870"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "TRIACYLGLYCEROL_DGAT",
+      "label": "Diacylglycerol Acyltransferase",
+      "kind": "complex",
+      "compartment": "endoplasmic_reticulum",
+      "mapman_bin": "11.2.3",
+      "loci": [
+        "AT2G19450",
+        "AT3G51520"
+      ],
+      "subunits": [
+        {
+          "symbol": "DGAT1",
+          "locus": "AT2G19450"
+        },
+        {
+          "symbol": "DGAT2",
+          "locus": "AT3G51520"
+        }
+      ]
+    },
+    {
+      "id": "MGDG_SYNTHASE_MGD1",
+      "label": "MGDG Synthase",
+      "kind": "simple",
+      "compartment": "chloroplast_envelope",
+      "mapman_bin": "11.3.1",
+      "loci": [
+        "AT4G31780"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "DGDG_SYNTHASE_DGD1",
+      "label": "DGDG Synthase",
+      "kind": "family",
+      "compartment": "chloroplast_envelope",
+      "mapman_bin": "11.3.2",
+      "loci": [
+        "AT3G11670",
+        "AT4G00550"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "FATTY_ACID_DESATURASES",
+      "label": "Fatty Acid Desaturases (FAD)",
+      "kind": "family",
+      "compartment": "chloroplast_envelope",
+      "mapman_bin": "11.3.3",
+      "loci": [
+        "AT3G12120",
+        "AT2G29980",
+        "AT3G11170"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "ACYL_COA_OXIDASE_ACX",
+      "label": "Acyl-CoA Oxidase (ACX)",
+      "kind": "family",
+      "compartment": "peroxisome",
+      "mapman_bin": "11.4.1",
+      "loci": [
+        "AT4G16760",
+        "AT5G65110",
+        "AT1G06290"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "MULTIFUNCTIONAL_MFP2",
+      "label": "Multifunctional Protein 2",
+      "kind": "simple",
+      "compartment": "peroxisome",
+      "mapman_bin": "11.4.2",
+      "loci": [
+        "AT3G06860"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "KETOACYL_THIOLASE_PED1",
+      "label": "3-Ketoacyl-CoA Thiolase",
+      "kind": "simple",
+      "compartment": "peroxisome",
+      "mapman_bin": "11.4.3",
+      "loci": [
+        "AT2G33150"
+      ],
+      "subunits": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "PLASTID_ACCASE",
+      "to": "FAS_ELONGATION",
+      "start": [
+        251.6486875,
+        135.824
+      ],
+      "end": [
+        283.6486875,
+        135.824
+      ],
+      "class": "flux",
+      "label": "Malonyl-CoA"
+    },
+    {
+      "from": "FAS_ELONGATION",
+      "to": "THIOESTERASE_EXPORT",
+      "start": [
+        473.4991875,
+        135.824
+      ],
+      "end": [
+        505.4991875,
+        135.824
+      ],
+      "class": "flux",
+      "label": "16:0 / 18:1 ACP"
+    },
+    {
+      "from": "THIOESTERASE_EXPORT",
+      "to": "GLYCEROL_ACYLATION_GPAT",
+      "start": [
+        505.4991875,
+        158.20070637640728
+      ],
+      "end": [
+        241.3375,
+        222.8391058764935
+      ],
+      "class": "flux",
+      "label": "Free Fatty Acids"
+    },
+    {
+      "from": "GLYCEROL_ACYLATION_GPAT",
+      "to": "PHOSPHATIDIC_ACID_POOL",
+      "start": [
+        241.3375,
+        247.47199999999998
+      ],
+      "end": [
+        273.3375,
+        247.472
+      ],
+      "class": "flux",
+      "label": "LPA -> PA"
+    },
+    {
+      "from": "PHOSPHATIDIC_ACID_POOL",
+      "to": "TRIACYLGLYCEROL_DGAT",
+      "start": [
+        482.00062499999996,
+        247.472
+      ],
+      "end": [
+        514.0006249999999,
+        247.47199999999998
+      ],
+      "class": "flux",
+      "label": "DAG -> TAG"
+    },
+    {
+      "from": "PHOSPHATIDIC_ACID_POOL",
+      "to": "MGDG_SYNTHASE_MGD1",
+      "start": [
+        311.78175049248506,
+        279.296
+      ],
+      "end": [
+        197.91164741262952,
+        334.296
+      ],
+      "class": "flux",
+      "label": "DAG -> MGDG"
+    },
+    {
+      "from": "MGDG_SYNTHASE_MGD1",
+      "to": "DGDG_SYNTHASE_DGD1",
+      "start": [
+        232.993375,
+        357.12
+      ],
+      "end": [
+        264.993375,
+        357.12
+      ],
+      "class": "flux",
+      "label": "MGDG -> DGDG"
+    },
+    {
+      "from": "DGDG_SYNTHASE_DGD1",
+      "to": "FATTY_ACID_DESATURASES",
+      "start": [
+        461.656875,
+        357.12
+      ],
+      "end": [
+        493.656875,
+        357.12
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "TRIACYLGLYCEROL_DGAT",
+      "to": "ACYL_COA_OXIDASE_ACX",
+      "start": [
+        545.0928849173476,
+        281.296
+      ],
+      "end": [
+        227.74105313949633,
+        432.944
+      ],
+      "class": "flux",
+      "label": "Acyl-CoA"
+    },
+    {
+      "from": "ACYL_COA_OXIDASE_ACX",
+      "to": "MULTIFUNCTIONAL_MFP2",
+      "start": [
+        252.440875,
+        464.76800000000003
+      ],
+      "end": [
+        284.440875,
+        464.76800000000003
+      ],
+      "class": "flux",
+      "label": "Enoyl-CoA"
+    },
+    {
+      "from": "MULTIFUNCTIONAL_MFP2",
+      "to": "KETOACYL_THIOLASE_PED1",
+      "start": [
+        473.733375,
+        464.76800000000003
+      ],
+      "end": [
+        505.733375,
+        464.76800000000003
+      ],
+      "class": "flux",
+      "label": "Acetyl-CoA Export"
+    }
+  ],
+  "total_nodes": 12,
+  "distinct_loci": 25,
+  "loci_list": [
+    "AT1G06290",
+    "AT1G06520",
+    "AT1G08510",
+    "AT1G36160",
+    "AT1G74960",
+    "AT2G04540",
+    "AT2G05990",
+    "AT2G19450",
+    "AT2G29980",
+    "AT2G33150",
+    "AT3G06860",
+    "AT3G09560",
+    "AT3G11170",
+    "AT3G11670",
+    "AT3G12120",
+    "AT3G25110",
+    "AT3G51520",
+    "AT3G57650",
+    "AT4G00550",
+    "AT4G16760",
+    "AT4G31780",
+    "AT5G16390",
+    "AT5G42870",
+    "AT5G46290",
+    "AT5G65110"
+  ]
+}

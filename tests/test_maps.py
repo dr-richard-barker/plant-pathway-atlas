@@ -31,3 +31,14 @@ def test_load_and_compile_ppa05():
     laid_out = compile_map(spec)
     assert len(laid_out.nodes) == 15
     assert any(n.id == "ASCORBATE_PEROXIDASE" for n in laid_out.nodes)
+
+
+def test_load_and_compile_all_12_maps():
+    yaml_files = sorted(MAPS_DIR.glob("*.yaml"))
+    assert len(yaml_files) == 12
+    for yf in yaml_files:
+        spec = load_map(yf)
+        laid_out = compile_map(spec)
+        assert len(laid_out.nodes) >= 10
+        assert laid_out.canvas_box.w > 400
+        assert laid_out.canvas_box.h > 300

@@ -1,0 +1,192 @@
+# PPA-11 — Protein Quality Control & Ubiquitin-Proteasome System
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-11
+title: Protein Quality Control & Turnover
+subtitle: Endoplasmic reticulum folding, ubiquitin E1-E2-E3 conjugation, 26S proteasome, and autophagy
+derived_from: MapMan4 BIN 29 Protein Turnover & BIN 28 Protein Synthesis, PlantCyc PROTEIN-TURNOVER-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Cellular protein homeostasis, refolding, and degradation machinery. Nascent polypeptide chains
+  are folded in the ER lumen by BiP chaperones, calreticulin, and protein disulfide isomerases (PDI).
+  Misfolded or regulatory proteins undergo targeted ubiquitination via sequential E1-E2-E3 cascades
+  (including cullin-RING E3 ligases) and are degraded by the ATP-dependent 26S proteasome. Large protein
+  aggregates and damaged organelles are sequestered into autophagosomes via the ATG8 core conjugation
+  machinery for vacuolar lytic turnover.
+
+lanes:
+  - id: er_folding_chaperones
+    compartment: endoplasmic_reticulum
+    node_width: 220
+    nodes: [RIBOSOME_TRANSLATION, BIP_ER_CHAPERONES, PDI_DISULFIDE_ISOMERASE]
+
+  - id: ubiquitin_cascade
+    compartment: cytosol
+    node_width: 220
+    nodes: [UBIQUITIN_E1_ACTIVATING, UBIQUITIN_E2_CONJUGATING, CULLIN_RING_E3_LIGASES]
+
+  - id: proteasome_26s_core
+    compartment: cytosol
+    node_width: 220
+    nodes: [PROTEASOME_19S_LID, PROTEASOME_20S_BARREL, DEUBIQUITINATING_ENZYMES]
+
+  - id: autophagy_vacuole_turnover
+    compartment: vacuole
+    node_width: 220
+    nodes: [ATG1_KINASE_INITIATION, ATG8_AUTOPHAGOSOME, VACUOLAR_VPE_PROTEASES]
+
+nodes:
+  - id: RIBOSOME_TRANSLATION
+    label: "Cytosolic Ribosome Core"
+    sublabel: "BIN 28.1 80S Translation"
+    kind: "complex"
+    mapman_bin: "28.1"
+    subunits:
+      - symbol: "RPS6A"
+        locus: "AT4G31700"
+      - symbol: "RPL13A"
+        locus: "AT3G49010"
+    loci: ["AT4G31700", "AT3G49010"]
+
+  - id: BIP_ER_CHAPERONES
+    label: "ER Luminal BiP Chaperones"
+    sublabel: "BIN 29.1.1 BiP1 / BiP2 Hsp70"
+    kind: "family"
+    mapman_bin: "29.1.1"
+    family_loci: ["AT5G28540", "AT5G42020"]
+    loci: ["AT5G28540", "AT5G42020"]
+
+  - id: PDI_DISULFIDE_ISOMERASE
+    label: "Protein Disulfide Isomerase"
+    sublabel: "BIN 29.1.2 PDI1 / PDI2 Oxidative Folding"
+    kind: "simple"
+    mapman_bin: "29.1.2"
+    loci: ["AT1G21750"]
+
+  - id: UBIQUITIN_E1_ACTIVATING
+    label: "Ubiquitin-Activating E1"
+    sublabel: "BIN 29.2.1 UBA1 / UBA2 Adenylation"
+    kind: "simple"
+    mapman_bin: "29.2.1"
+    loci: ["AT2G30110"]
+
+  - id: UBIQUITIN_E2_CONJUGATING
+    label: "Ubiquitin-Conjugating E2"
+    sublabel: "BIN 29.2.2 UBC1 / UBC2 Thioester"
+    kind: "family"
+    mapman_bin: "29.2.2"
+    family_loci: ["AT1G14400", "AT2G36060"]
+    loci: ["AT1G14400", "AT2G36060"]
+
+  - id: CULLIN_RING_E3_LIGASES
+    label: "Cullin-RING E3 Ligases"
+    sublabel: "BIN 29.2.3 CUL1 / RBX1 Specificity"
+    kind: "complex"
+    mapman_bin: "29.2.3"
+    subunits:
+      - symbol: "CUL1"
+        locus: "AT4G02570"
+      - symbol: "COP1"
+        locus: "AT2G32950"
+    loci: ["AT4G02570", "AT2G32950"]
+
+  - id: PROTEASOME_19S_LID
+    label: "19S Regulatory Particle"
+    sublabel: "BIN 29.3.1 RPN1 / RPT1 Substrate Unfolding"
+    kind: "complex"
+    mapman_bin: "29.3.1"
+    subunits:
+      - symbol: "RPN1A"
+        locus: "AT2G20580"
+      - symbol: "RPT1A"
+        locus: "AT1G53750"
+    loci: ["AT2G20580", "AT1G53750"]
+
+  - id: PROTEASOME_20S_BARREL
+    label: "20S Proteolytic Barrel"
+    sublabel: "BIN 29.3.2 PAG1 / PBA1 Threonine Peptidases"
+    kind: "complex"
+    mapman_bin: "29.3.2"
+    subunits:
+      - symbol: "PAG1"
+        locus: "AT2G27020"
+      - symbol: "PBA1"
+        locus: "AT4G31300"
+    loci: ["AT2G27020", "AT4G31300"]
+
+  - id: DEUBIQUITINATING_ENZYMES
+    label: "Deubiquitinating Enzymes"
+    sublabel: "BIN 29.3.3 UBP12 / UBP13 Recycling"
+    kind: "family"
+    mapman_bin: "29.3.3"
+    family_loci: ["AT5G06600", "AT3G11910"]
+    loci: ["AT5G06600", "AT3G11910"]
+
+  - id: ATG1_KINASE_INITIATION
+    label: "ATG1 Kinase Complex"
+    sublabel: "BIN 29.4.1 Nutrient Sensing Trigger"
+    kind: "simple"
+    mapman_bin: "29.4.1"
+    loci: ["AT3G61960"]
+
+  - id: ATG8_AUTOPHAGOSOME
+    label: "ATG8 / ATG7 Core Lipidation"
+    sublabel: "BIN 29.4.2 PE Conjugation & Sequestration"
+    kind: "complex"
+    mapman_bin: "29.4.2"
+    subunits:
+      - symbol: "ATG8A"
+        locus: "AT4G21980"
+      - symbol: "ATG7"
+        locus: "AT5G45900"
+    loci: ["AT4G21980", "AT5G45900"]
+
+  - id: VACUOLAR_VPE_PROTEASES
+    label: "Vacuolar Processing Enzymes"
+    sublabel: "BIN 29.4.3 gamma-VPE Lytic Clearance"
+    kind: "simple"
+    mapman_bin: "29.4.3"
+    loci: ["AT4G32940"]
+
+edges:
+  - from: RIBOSOME_TRANSLATION
+    to: BIP_ER_CHAPERONES
+    class: flux
+    label: "Nascent Polypeptide"
+  - from: BIP_ER_CHAPERONES
+    to: PDI_DISULFIDE_ISOMERASE
+    class: flux
+    label: "Assisted Folding"
+  - from: PDI_DISULFIDE_ISOMERASE
+    to: UBIQUITIN_E1_ACTIVATING
+    class: flux
+    label: "Terminally Misfolded (ERAD)"
+  - from: UBIQUITIN_E1_ACTIVATING
+    to: UBIQUITIN_E2_CONJUGATING
+    class: flux
+    label: "Ub-AMP"
+  - from: UBIQUITIN_E2_CONJUGATING
+    to: CULLIN_RING_E3_LIGASES
+    class: flux
+    label: "Ub-Thioester"
+  - from: CULLIN_RING_E3_LIGASES
+    to: PROTEASOME_19S_LID
+    class: flux
+    label: "Polyubiquitin-Tagged Target"
+  - from: PROTEASOME_19S_LID
+    to: PROTEASOME_20S_BARREL
+    class: flux
+    label: "Unfolded Peptide"
+  - from: PROTEASOME_19S_LID
+    to: DEUBIQUITINATING_ENZYMES
+    class: flux
+    label: "Free Ubiquitin Recycling"
+  - from: ATG1_KINASE_INITIATION
+    to: ATG8_AUTOPHAGOSOME
+    class: flux
+    label: "Autophagosome Nucleation"
+  - from: ATG8_AUTOPHAGOSOME
+    to: VACUOLAR_VPE_PROTEASES
+    class: flux
+    label: "Vacuolar Fusion"

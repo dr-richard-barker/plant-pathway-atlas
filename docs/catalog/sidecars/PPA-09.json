@@ -1,0 +1,368 @@
+{
+  "id": "PPA-09",
+  "title": "Phytohormone Networks & Crosstalk",
+  "subtitle": "Core biosynthetic modules and derepression signaling circuits for Auxin, ABA, JA, GA, and Ethylene",
+  "caption": "Integrated plant hormone networks. Compares the parallel derepression logic of the major phytohormones: (1) Auxin perception by SCFTIR1 triggering Aux/IAA degradation and ARF release; (2) Abscisic acid (ABA) binding to PYR/PYL/RCARs relieving PP2C inhibition of SnRK2 kinases; (3) Jasmonate-isoleucine (JA-Ile) mediated SCFCOI1 destruction of JAZ repressors freeing MYC2; and (4) Gibberellin (GA) and Ethylene circuits regulating DELLA degradation and EIN2/EIN3 transcriptional activation.",
+  "species_anchor": "arabidopsis_thaliana",
+  "nodes": [
+    {
+      "id": "AUXIN_BIOSYNTHESIS",
+      "label": "Auxin Biosynthesis (IPyA)",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "17.1.1",
+      "loci": [
+        "AT1G70560",
+        "AT4G32540"
+      ],
+      "subunits": [
+        {
+          "symbol": "TAA1",
+          "locus": "AT1G70560"
+        },
+        {
+          "symbol": "YUC1",
+          "locus": "AT4G32540"
+        }
+      ]
+    },
+    {
+      "id": "PIN_POLAR_TRANSPORTERS",
+      "label": "PIN Auxin Efflux Carriers",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "34.6",
+      "loci": [
+        "AT1G73590",
+        "AT5G57090"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "AUXIN_RECEPTOR_TIR1",
+      "label": "TIR1 / AFB Core & Aux/IAA",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "30.1.1",
+      "loci": [
+        "AT3G62980",
+        "AT1G59750"
+      ],
+      "subunits": [
+        {
+          "symbol": "TIR1",
+          "locus": "AT3G62980"
+        },
+        {
+          "symbol": "ARF5",
+          "locus": "AT1G59750"
+        }
+      ]
+    },
+    {
+      "id": "ABA_BIOSYNTHESIS_NCED3",
+      "label": "ABA Biosynthesis (NCED3)",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "17.2.1",
+      "loci": [
+        "AT3G14440"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "PYR_PYL_RECEPTORS",
+      "label": "PYR/PYL/RCAR Receptors",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "30.2.1",
+      "loci": [
+        "AT5G05440",
+        "AT4G26080"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "SNRK2_KINASE_OST1",
+      "label": "SnRK2 Kinases & ABF",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "30.2.2",
+      "loci": [
+        "AT4G33950",
+        "AT1G45249"
+      ],
+      "subunits": [
+        {
+          "symbol": "OST1",
+          "locus": "AT4G33950"
+        },
+        {
+          "symbol": "ABF2",
+          "locus": "AT1G45249"
+        }
+      ]
+    },
+    {
+      "id": "JA_BIOSYNTHESIS_LOX_AOS",
+      "label": "Jasmonate Biosynthesis",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "17.3.1",
+      "loci": [
+        "AT3G45140",
+        "AT5G42650",
+        "AT3G25760"
+      ],
+      "subunits": [
+        {
+          "symbol": "LOX2",
+          "locus": "AT3G45140"
+        },
+        {
+          "symbol": "AOS",
+          "locus": "AT5G42650"
+        },
+        {
+          "symbol": "AOC1",
+          "locus": "AT3G25760"
+        }
+      ]
+    },
+    {
+      "id": "COI1_JAZ_DEREPRESSION",
+      "label": "COI1 Receptor & JAZ Repressors",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "30.3.1",
+      "loci": [
+        "AT2G39940",
+        "AT1G19180"
+      ],
+      "subunits": [
+        {
+          "symbol": "COI1",
+          "locus": "AT2G39940"
+        },
+        {
+          "symbol": "JAZ1",
+          "locus": "AT1G19180"
+        }
+      ]
+    },
+    {
+      "id": "MYC2_TRANSCRIPTION",
+      "label": "MYC2 / MYC3 / MYC4 Regulon",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "30.3.2",
+      "loci": [
+        "AT1G32640",
+        "AT5G46760"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "GA_GID1_DELLA_CASCADE",
+      "label": "Gibberellin GID1 & DELLA",
+      "kind": "complex",
+      "compartment": "nucleus",
+      "mapman_bin": "30.4.1",
+      "loci": [
+        "AT3G05120",
+        "AT1G14920",
+        "AT2G43790"
+      ],
+      "subunits": [
+        {
+          "symbol": "GID1A",
+          "locus": "AT3G05120"
+        },
+        {
+          "symbol": "GAI",
+          "locus": "AT1G14920"
+        },
+        {
+          "symbol": "RGA",
+          "locus": "AT2G43790"
+        }
+      ]
+    },
+    {
+      "id": "ETHYLENE_ETR1_EIN2",
+      "label": "Ethylene ETR1 & EIN2",
+      "kind": "complex",
+      "compartment": "nucleus",
+      "mapman_bin": "30.5.1",
+      "loci": [
+        "AT1G66340",
+        "AT5G03280"
+      ],
+      "subunits": [
+        {
+          "symbol": "ETR1",
+          "locus": "AT1G66340"
+        },
+        {
+          "symbol": "EIN2",
+          "locus": "AT5G03280"
+        }
+      ]
+    },
+    {
+      "id": "NUCLEAR_TRANSCRIPTION_FACTORS",
+      "label": "EIN3 / EIL1 & PIF TFs",
+      "kind": "family",
+      "compartment": "nucleus",
+      "mapman_bin": "30.5.2",
+      "loci": [
+        "AT3G20770",
+        "AT2G20180"
+      ],
+      "subunits": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "AUXIN_BIOSYNTHESIS",
+      "to": "PIN_POLAR_TRANSPORTERS",
+      "start": [
+        259.9855,
+        135.824
+      ],
+      "end": [
+        291.9855,
+        135.824
+      ],
+      "class": "flux",
+      "label": "IAA"
+    },
+    {
+      "from": "PIN_POLAR_TRANSPORTERS",
+      "to": "AUXIN_RECEPTOR_TIR1",
+      "start": [
+        477.84000000000003,
+        135.824
+      ],
+      "end": [
+        509.84000000000003,
+        135.824
+      ],
+      "class": "flux",
+      "label": "Auxin Gradient"
+    },
+    {
+      "from": "ABA_BIOSYNTHESIS_NCED3",
+      "to": "PYR_PYL_RECEPTORS",
+      "start": [
+        244.4575,
+        247.472
+      ],
+      "end": [
+        276.4575,
+        247.472
+      ],
+      "class": "flux",
+      "label": "(+)-Abscisic Acid"
+    },
+    {
+      "from": "PYR_PYL_RECEPTORS",
+      "to": "SNRK2_KINASE_OST1",
+      "start": [
+        461.394,
+        247.472
+      ],
+      "end": [
+        493.394,
+        247.47199999999998
+      ],
+      "class": "flux",
+      "label": "Inhibits PP2C -> Activates Kinase"
+    },
+    {
+      "from": "JA_BIOSYNTHESIS_LOX_AOS",
+      "to": "COI1_JAZ_DEREPRESSION",
+      "start": [
+        244.32906250000002,
+        359.12
+      ],
+      "end": [
+        276.3290625,
+        359.12
+      ],
+      "class": "flux",
+      "label": "(+)-7-iso-JA-Ile"
+    },
+    {
+      "from": "COI1_JAZ_DEREPRESSION",
+      "to": "MYC2_TRANSCRIPTION",
+      "start": [
+        492.0909375,
+        359.12
+      ],
+      "end": [
+        524.0909375,
+        359.12
+      ],
+      "class": "flux",
+      "label": "26S JAZ Degradation"
+    },
+    {
+      "from": "GA_GID1_DELLA_CASCADE",
+      "to": "NUCLEAR_TRANSCRIPTION_FACTORS",
+      "start": [
+        234.50424999999998,
+        470.768
+      ],
+      "end": [
+        522.91025,
+        470.768
+      ],
+      "class": "flux",
+      "label": "DELLA Destruction"
+    },
+    {
+      "from": "ETHYLENE_ETR1_EIN2",
+      "to": "NUCLEAR_TRANSCRIPTION_FACTORS",
+      "start": [
+        490.91025,
+        470.768
+      ],
+      "end": [
+        522.91025,
+        470.768
+      ],
+      "class": "flux",
+      "label": "EIN2 C-term Cleavage"
+    }
+  ],
+  "total_nodes": 12,
+  "distinct_loci": 25,
+  "loci_list": [
+    "AT1G14920",
+    "AT1G19180",
+    "AT1G32640",
+    "AT1G45249",
+    "AT1G59750",
+    "AT1G66340",
+    "AT1G70560",
+    "AT1G73590",
+    "AT2G20180",
+    "AT2G39940",
+    "AT2G43790",
+    "AT3G05120",
+    "AT3G14440",
+    "AT3G20770",
+    "AT3G25760",
+    "AT3G45140",
+    "AT3G62980",
+    "AT4G26080",
+    "AT4G32540",
+    "AT4G33950",
+    "AT5G03280",
+    "AT5G05440",
+    "AT5G42650",
+    "AT5G46760",
+    "AT5G57090"
+  ]
+}

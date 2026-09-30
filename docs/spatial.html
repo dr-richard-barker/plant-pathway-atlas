@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ggPlant Spatial Anatomy — Plant Pathway Atlas</title>
-<meta name="description" content="Audited plant anatomical cell and organ polygons bridging spatial transcriptomics to subcellular metabolic pathways.">
+<meta name="description" content="Audited plant anatomical cell, organ, and subcellular polygons bridging spatial transcriptomics to metabolic pathways.">
 <meta name="author" content="Richard Barker">
 <meta name="color-scheme" content="light dark">
 <script>
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="assets/ppa-core.css">
 <style>
   .spatial-canvas-container {
-    background: #ffffff;
+    background: var(--ppa-card);
     border: 1px solid var(--ppa-rule);
     border-radius: 12px;
     padding: 24px;
@@ -26,30 +26,50 @@
     justify-content: center;
     align-items: center;
     min-height: 480px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    transition: background 0.2s ease, border-color 0.2s ease;
   }
   .spatial-canvas-container svg {
     max-width: 100%;
     height: auto;
-    max-height: 440px;
+    max-height: 480px;
   }
   .cell-inspector {
     background: var(--ppa-card);
     border: 1px solid var(--ppa-rule);
     border-radius: 10px;
-    padding: 12px 18px;
-    font-size: 0.9rem;
+    padding: 14px 18px;
+    font-size: 0.92rem;
     font-weight: 600;
-    min-height: 46px;
+    min-height: 52px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .pathway-bridge-box {
+    background: var(--ppa-card2);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .pathway-bridge-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
   }
   .cell-type-controls {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
     background: var(--ppa-card);
     border: 1px solid var(--ppa-rule);
     border-radius: 12px;
@@ -59,20 +79,45 @@
   .control-group {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
+    background: var(--ppa-bg);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 8px;
+    padding: 10px 12px;
   }
   .control-group label {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: var(--ppa-soft);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  .control-group input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+  }
+  .legend-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.82rem;
+    color: var(--ppa-soft);
+    margin-bottom: 16px;
+  }
+  .legend-gradient {
+    width: 160px;
+    height: 12px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #0072B2, #e2e8f0, #D55E00);
+    border: 1px solid var(--ppa-rule);
   }
 </style>
 </head>
 <body data-site-id="plant-pathway-atlas">
 <div class="wrap">
-  <!-- CoSE Topbar: Brand + Theme Toggle (NO side navigation rail) -->
+  <!-- CoSE Topbar: Brand + Theme Toggle (Strictly NO side navigation rail) -->
   <div class="cose-topbar">
     <a href="index.html" class="cose-brand">
       <img src="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/cose-logo.png" alt="CoSE logo" width="28" height="28">
@@ -98,31 +143,44 @@
   </nav>
 
   <header class="hero">
-    <div class="eyebrow">Spatial Transcriptomics & Histology</div>
+    <div class="eyebrow">Spatial Transcriptomics & Cellular Anatomy</div>
     <h1>ggPlant Anatomical Integration</h1>
     <p class="lede">
-      Audited anatomical cell and organ polygons bridging tissue/cell-type expression directly to
-      subcellular metabolic and redox pathways.
+      Audited anatomical cell, histological organ, and subcellular polygons bridging spatial
+      expression patterns directly to subcellular metabolic, redox, and signaling pathways.
     </p>
   </header>
 
   <div class="toolbar" style="margin-bottom:16px;">
-    <div>
-      <label for="organ-select">Select Anatomical Organ / View</label>
-      <select id="organ-select">
-        <option value="rosette" selected>Rosette (Whole-Plant Blade, Petiole, Veins)</option>
-        <option value="root">Root Radial Cross-Section (90 Histological Cells)</option>
-        <option value="inflorescence">Inflorescence & Floral Organs</option>
+    <div style="flex: 1; max-width: 440px;">
+      <label for="organ-select" style="font-weight:700; font-size:0.85rem; color:var(--ppa-soft); display:block; margin-bottom:4px;">
+        Select Anatomical Organ / Cellular View
+      </label>
+      <select id="organ-select" style="width:100%; padding:8px 12px; border-radius:8px; border:1px solid var(--ppa-rule); background:var(--ppa-card); color:var(--ppa-ink); font-weight:600;">
+        <option value="subcellular" selected>Plant Subcellular Compartment Map (Chloroplast, Mitochondria, Vacuole, etc.)</option>
+        <option value="leaf_cross_section">Leaf Cross-Section (138 Cells: Guard Cells, Palisade, Spongy Mesophyll)</option>
+        <option value="root_radial">Root Radial Cross-Section (90 Cells: Stele, Endodermis, Cortex, Epidermis)</option>
+        <option value="root_tip">Root Tip Longitudinal & Growth Zones (93 Cells: Meristem, Cap, Stele)</option>
+        <option value="rosette">Rosette Morphology (Whole Plant: Blade, Petiole, Veins)</option>
+        <option value="flower">Floral Inflorescence & Reproductive Organs (97 Polygons)</option>
       </select>
     </div>
     <div style="flex:1;"></div>
     <div>
-      <a href="explore.html?map=PPA-01" class="btn primary">Bridge to PPA-01 Pathway Map →</a>
+      <a href="explore.html?map=PPA-01" class="btn primary" id="bridge-btn">Bridge to PPA-01 Pathway Map →</a>
     </div>
   </div>
 
+  <!-- Legend -->
+  <div class="legend-bar">
+    <span>Down-regulated (-3.0)</span>
+    <div class="legend-gradient"></div>
+    <span>Up-regulated (+3.0 log2FC)</span>
+  </div>
+
+  <!-- Inspector Bar -->
   <div class="cell-inspector" id="cell-inspector">
-    <span>Hover over any anatomical cell or polygon to inspect histological layer</span>
+    <span id="inspector-text">Hover over any anatomical cell, organelle, or tissue to inspect histological layer</span>
     <span id="inspector-badge" class="ppa-badge" style="display:none;"></span>
   </div>
 
@@ -131,27 +189,25 @@
     <div style="color:var(--ppa-soft);">Loading spatial geometry...</div>
   </div>
 
-  <h3>Tissue-Level Expression Controls</h3>
+  <!-- Dynamic Pathway Bridge Box -->
+  <div class="pathway-bridge-box" id="pathway-bridge-box">
+    <div>
+      <strong id="bridge-title">Linked Metabolic & Signaling Pathways:</strong>
+      <div style="font-size:0.85rem; color:var(--ppa-soft);" id="bridge-desc">
+        Click any linked pathway to project expression directly into metabolic flow.
+      </div>
+    </div>
+    <div class="pathway-bridge-pills" id="bridge-pills">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+
+  <h3>Tissue & Compartment Expression Controls</h3>
   <p style="color:var(--ppa-soft); font-size:0.9rem;">
-    Adjust cell-type log2FoldChange values below to simulate differential expression across anatomical layers:
+    Adjust simulated <span style="font-family:monospace;">log2FoldChange</span> values below to project differential expression across anatomical layers:
   </p>
   <div class="cell-type-controls" id="cell-type-controls">
-    <div class="control-group">
-      <label for="slider-meso">Mesophyll <span id="val-meso">+1.8</span></label>
-      <input type="range" id="slider-meso" min="-3" max="3" step="0.1" value="1.8">
-    </div>
-    <div class="control-group">
-      <label for="slider-epi">Epidermis <span id="val-epi">-0.8</span></label>
-      <input type="range" id="slider-epi" min="-3" max="3" step="0.1" value="-0.8">
-    </div>
-    <div class="control-group">
-      <label for="slider-vasc">Vascular / Stele <span id="val-vasc">+0.5</span></label>
-      <input type="range" id="slider-vasc" min="-3" max="3" step="0.1" value="0.5">
-    </div>
-    <div class="control-group">
-      <label for="slider-cortex">Cortex / Parenchyma <span id="val-cortex">0.0</span></label>
-      <input type="range" id="slider-cortex" min="-3" max="3" step="0.1" value="0.0">
-    </div>
+    <!-- Populated dynamically based on selected organ/view -->
   </div>
 
   <!-- CoSE Footer -->
@@ -174,45 +230,151 @@
 <script>
   const organSelect = document.getElementById('organ-select');
   const canvasContainer = document.getElementById('spatial-canvas-container');
-  const inspector = document.getElementById('cell-inspector');
-  const badge = document.getElementById('inspector-badge');
+  const inspectorText = document.getElementById('inspector-text');
+  const inspectorBadge = document.getElementById('inspector-badge');
+  const controlsGrid = document.getElementById('cell-type-controls');
+  const bridgePills = document.getElementById('bridge-pills');
+  const bridgeBtn = document.getElementById('bridge-btn');
 
   let rawOrganData = null;
+  const organExpressionState = {}; // Persists sliders per organ: { [organKey]: { [cellType]: val } }
 
+  // Organ to recommended metabolic pathway bridges
+  const ORGAN_BRIDGES = {
+    'subcellular': [
+      { id: 'PPA-02', name: 'PPA-02 Photosynthesis (Chloroplast)' },
+      { id: 'PPA-03', name: 'PPA-03 Calvin Cycle & Photorespiration' },
+      { id: 'PPA-04', name: 'PPA-04 Respiration (Mitochondria)' },
+      { id: 'PPA-05', name: 'PPA-05 ROS & Redox (Peroxisome/PM)' },
+    ],
+    'leaf_cross_section': [
+      { id: 'PPA-01', name: 'PPA-01 Central Metabolism (Mesophyll)' },
+      { id: 'PPA-02', name: 'PPA-02 Photosynthesis' },
+      { id: 'PPA-12', name: 'PPA-12 Transportome (Guard Cells)' },
+      { id: 'PPA-09', name: 'PPA-09 Phytohormones (ABA Stomatal)' },
+    ],
+    'root_radial': [
+      { id: 'PPA-07', name: 'PPA-07 Nitrogen & Sulfur Assimilation' },
+      { id: 'PPA-12', name: 'PPA-12 Transportome (Root Stele/Endodermis)' },
+      { id: 'PPA-09', name: 'PPA-09 Auxin Transport (PINs in Stele)' },
+    ],
+    'root_tip': [
+      { id: 'PPA-09', name: 'PPA-09 Auxin Maxima (Root Columella)' },
+      { id: 'PPA-10', name: 'PPA-10 Abiotic Stress & Osmoprotectants' },
+      { id: 'PPA-11', name: 'PPA-11 Protein Turnover & Cell Cycle' },
+    ],
+    'rosette': [
+      { id: 'PPA-01', name: 'PPA-01 Central Metabolism Overview' },
+      { id: 'PPA-05', name: 'PPA-05 ROS & Redox Homeostasis' },
+      { id: 'PPA-08', name: 'PPA-08 Secondary Metabolism' },
+    ],
+    'flower': [
+      { id: 'PPA-08', name: 'PPA-08 Anthocyanin & Flavonoid Pigments' },
+      { id: 'PPA-09', name: 'PPA-09 Gibberellin & Jasmonate Signaling' },
+      { id: 'PPA-06', name: 'PPA-06 Lipid & Cuticle Biosynthesis' },
+    ],
+  };
+
+  // Color calculation matching Okabe-Ito diverging palette
   function colorForVal(val, maxFc = 3.0) {
     if (val === null || val === undefined || isNaN(val)) return '#e2e8f0';
     const clamped = Math.max(-maxFc, Math.min(maxFc, val));
     const ratio = Math.abs(clamped) / maxFc;
     let r, g, b;
     if (clamped > 0) {
-      r = Math.round(255 - ratio * (255 - 213));
-      g = Math.round(255 - ratio * (255 - 94));
-      b = Math.round(255 - ratio * (255 - 0));
+      // Vermillion #D55E00
+      r = Math.round(240 - ratio * (240 - 213));
+      g = Math.round(240 - ratio * (240 - 94));
+      b = Math.round(240 - ratio * (240 - 0));
     } else if (clamped < 0) {
-      r = Math.round(255 - ratio * (255 - 0));
-      g = Math.round(255 - ratio * (255 - 114));
-      b = Math.round(255 - ratio * (255 - 178));
+      // Blue #0072B2
+      r = Math.round(240 - ratio * (240 - 0));
+      g = Math.round(240 - ratio * (240 - 114));
+      b = Math.round(240 - ratio * (240 - 178));
     } else {
       return '#e2e8f0';
     }
     return `rgb(${r}, ${g}, ${b})`;
   }
 
-  function getExpressionMap() {
-    return {
-      'Mesophyll': parseFloat(document.getElementById('slider-meso').value),
-      'Epidermis': parseFloat(document.getElementById('slider-epi').value),
-      'Vascular': parseFloat(document.getElementById('slider-vasc').value),
-      'Stele': parseFloat(document.getElementById('slider-vasc').value),
-      'Cortex': parseFloat(document.getElementById('slider-cortex').value),
-      'Endodermis': parseFloat(document.getElementById('slider-cortex').value),
-    };
+  function formatCellTypeName(ctype) {
+    return ctype.replace(/_/g, ' ');
+  }
+
+  function updatePathwayBridges(organKey) {
+    const bridges = ORGAN_BRIDGES[organKey] || ORGAN_BRIDGES['subcellular'];
+    bridgePills.innerHTML = bridges.map(b => 
+      `<a href="explore.html?map=${b.id}" class="btn" style="font-size:0.8rem; padding:4px 10px;">${b.name} →</a>`
+    ).join('');
+    if (bridges.length > 0) {
+      bridgeBtn.href = `explore.html?map=${bridges[0].id}`;
+      bridgeBtn.textContent = `Bridge to ${bridges[0].id} →`;
+    }
+  }
+
+  function renderSliders(organKey, polys) {
+    const cellTypes = Array.from(new Set(polys.map(p => p.cellType).filter(Boolean))).sort();
+    if (!organExpressionState[organKey]) {
+      organExpressionState[organKey] = {};
+      cellTypes.forEach((ct, idx) => {
+        // Sensible initial mock values for educational demonstration
+        if (/mesophyll|stroma|thylakoid/i.test(ct)) organExpressionState[organKey][ct] = 1.8;
+        else if (/epidermis|membrane/i.test(ct)) organExpressionState[organKey][ct] = -0.8;
+        else if (/stele|vascular/i.test(ct)) organExpressionState[organKey][ct] = 0.6;
+        else if (/mitochondri/i.test(ct)) organExpressionState[organKey][ct] = 1.2;
+        else if (/peroxisome/i.test(ct)) organExpressionState[organKey][ct] = -1.4;
+        else organExpressionState[organKey][ct] = 0.0;
+      });
+    }
+
+    const state = organExpressionState[organKey];
+    controlsGrid.innerHTML = cellTypes.map(ct => {
+      const val = state[ct] !== undefined ? state[ct] : 0.0;
+      const id = `slider-${ct.replace(/[^a-zA-Z0-9]/g, '_')}`;
+      const sign = val > 0 ? '+' : '';
+      return `
+        <div class="control-group">
+          <label for="${id}">
+            <span>${formatCellTypeName(ct)}</span>
+            <span id="val-${id}" style="color:var(--ppa-accent); font-family:monospace;">${sign}${val.toFixed(1)}</span>
+          </label>
+          <input type="range" id="${id}" min="-3" max="3" step="0.1" value="${val}" data-cell-type="${ct}">
+        </div>
+      `;
+    }).join('');
+
+    // Attach listeners
+    controlsGrid.querySelectorAll('input[type="range"]').forEach(slider => {
+      slider.addEventListener('input', (e) => {
+        const ct = e.target.getAttribute('data-cell-type');
+        const v = parseFloat(e.target.value);
+        state[ct] = v;
+        const valSpan = document.getElementById(`val-${e.target.id}`);
+        if (valSpan) valSpan.textContent = (v > 0 ? '+' : '') + v.toFixed(1);
+        updatePolygonFills(organKey);
+      });
+    });
+  }
+
+  function updatePolygonFills(organKey) {
+    const state = organExpressionState[organKey] || {};
+    canvasContainer.querySelectorAll('.plant-poly').forEach(poly => {
+      const ctype = poly.getAttribute('data-cell-type');
+      const val = state[ctype] !== undefined ? state[ctype] : null;
+      poly.setAttribute('fill', colorForVal(val));
+      poly.setAttribute('data-val', val !== null ? val.toFixed(2) : '');
+    });
   }
 
   async function loadAndRenderOrgan() {
     if (!rawOrganData) {
-      const resp = await fetch('spatial/data/ggplant_organs.json');
-      rawOrganData = await resp.json();
+      try {
+        const resp = await fetch('spatial/data/ggplant_organs.json');
+        rawOrganData = await resp.json();
+      } catch (err) {
+        canvasContainer.innerHTML = `<div style="color:var(--ppa-err);">Failed to load spatial geometry: ${err}</div>`;
+        return;
+      }
     }
 
     const organKey = organSelect.value;
@@ -221,6 +383,9 @@
       canvasContainer.innerHTML = '<div>No polygons found for selected organ.</div>';
       return;
     }
+
+    updatePathwayBridges(organKey);
+    renderSliders(organKey, polys);
 
     const allPts = [];
     polys.forEach(p => {
@@ -234,87 +399,67 @@
       });
     });
 
-    const minX = Math.min(...allPts.map(p => p.x)) - 10;
-    const minY = Math.min(...allPts.map(p => p.y)) - 10;
-    const maxX = Math.max(...allPts.map(p => p.x)) + 10;
-    const maxY = Math.max(...allPts.map(p => p.y)) + 10;
+    const minX = Math.min(...allPts.map(p => p.x)) - 14;
+    const minY = Math.min(...allPts.map(p => p.y)) - 14;
+    const maxX = Math.max(...allPts.map(p => p.x)) + 14;
+    const maxY = Math.max(...allPts.map(p => p.y)) + 14;
     const w = maxX - minX;
     const h = maxY - minY;
 
-    const expr = getExpressionMap();
+    const state = organExpressionState[organKey] || {};
 
     const svgParts = [
       `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${minX} ${minY} ${w} ${h}">`,
-      `<style>
+      `<defs><style>
         .plant-poly {
-          stroke: #0f172a;
+          stroke: #1e293b;
           stroke-width: 1.2px;
           stroke-linejoin: round;
-          transition: fill 0.2s ease, stroke-width 0.15s ease;
+          transition: fill 0.2s ease, stroke 0.15s ease, stroke-width 0.15s ease;
           cursor: pointer;
         }
         .plant-poly:hover {
           stroke: #D55E00 !important;
-          stroke-width: 2.8px !important;
-          filter: drop-shadow(0 0 4px rgba(213,94,0,0.6));
+          stroke-width: 3px !important;
+          filter: drop-shadow(0 0 5px rgba(213,94,0,0.6));
         }
-      </style>`
+      </style></defs>`
     ];
 
     polys.forEach(p => {
       const ctype = p.cellType || 'Cell';
       const cname = p.name || p.id;
-      const val = expr[ctype] !== undefined ? expr[ctype] : null;
+      const val = state[ctype] !== undefined ? state[ctype] : null;
       const fill = colorForVal(val);
 
       svgParts.push(
         `<polygon class="plant-poly" id="${p.id}" points="${p.points}" fill="${fill}" ` +
         `data-cell-type="${ctype}" data-name="${cname}" data-val="${val !== null ? val.toFixed(2) : ''}">` +
-        `<title>${cname} (${ctype})</title></polygon>`
+        `<title>${cname} (${formatCellTypeName(ctype)})</title></polygon>`
       );
     });
 
     svgParts.push('</svg>');
     canvasContainer.innerHTML = svgParts.join('\n');
 
+    // Polygon hover inspector
     canvasContainer.querySelectorAll('.plant-poly').forEach(poly => {
       poly.addEventListener('mouseenter', () => {
         const name = poly.getAttribute('data-name');
         const ctype = poly.getAttribute('data-cell-type');
         const val = poly.getAttribute('data-val');
-        inspector.innerHTML = `<span><strong>${name}</strong> — Cell Type: <em>${ctype}</em></span>`;
-        badge.style.display = 'inline-block';
-        badge.textContent = val ? `${val > 0 ? '+' : ''}${val} log2FC` : 'No data';
-        inspector.appendChild(badge);
+        inspectorText.innerHTML = `<strong>${name}</strong> &nbsp;·&nbsp; Histological Type: <em>${formatCellTypeName(ctype)}</em>`;
+        inspectorBadge.style.display = 'inline-block';
+        inspectorBadge.textContent = val ? `${parseFloat(val) > 0 ? '+' : ''}${val} log2FC` : 'No data';
       });
     });
   }
 
   organSelect.addEventListener('change', loadAndRenderOrgan);
-
-  ['slider-meso', 'slider-epi', 'slider-vasc', 'slider-cortex'].forEach(id => {
-    const slider = document.getElementById(id);
-    const labelSpan = document.getElementById(id.replace('slider-', 'val-'));
-    slider.addEventListener('input', () => {
-      labelSpan.textContent = (slider.value > 0 ? '+' : '') + slider.value;
-      loadAndRenderOrgan();
-    });
-  });
-
   loadAndRenderOrgan();
 
   // CoSE Theme toggle
   (function() {
-    var path = (window.location.pathname.split('/').pop() || 'spatial.html');
-    var links = document.querySelectorAll('.cose-tab-bar a.btn');
-    for (var i = 0; i < links.length; i++) {
-      var href = links[i].getAttribute('href');
-      if (href === path) {
-        links[i].classList.add('active');
-        links[i].setAttribute('aria-current', 'page');
-      }
-    }
-
     var btn = document.getElementById('cose-theme-toggle');
     if (!btn) return;
     function update(theme) {

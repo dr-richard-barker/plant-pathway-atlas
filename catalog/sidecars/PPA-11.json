@@ -1,0 +1,360 @@
+{
+  "id": "PPA-11",
+  "title": "Protein Quality Control & Turnover",
+  "subtitle": "Endoplasmic reticulum folding, ubiquitin E1-E2-E3 conjugation, 26S proteasome, and autophagy",
+  "caption": "Cellular protein homeostasis, refolding, and degradation machinery. Nascent polypeptide chains are folded in the ER lumen by BiP chaperones, calreticulin, and protein disulfide isomerases (PDI). Misfolded or regulatory proteins undergo targeted ubiquitination via sequential E1-E2-E3 cascades (including cullin-RING E3 ligases) and are degraded by the ATP-dependent 26S proteasome. Large protein aggregates and damaged organelles are sequestered into autophagosomes via the ATG8 core conjugation machinery for vacuolar lytic turnover.",
+  "species_anchor": "arabidopsis_thaliana",
+  "nodes": [
+    {
+      "id": "RIBOSOME_TRANSLATION",
+      "label": "Cytosolic Ribosome Core",
+      "kind": "complex",
+      "compartment": "endoplasmic_reticulum",
+      "mapman_bin": "28.1",
+      "loci": [
+        "AT4G31700",
+        "AT3G49010"
+      ],
+      "subunits": [
+        {
+          "symbol": "RPS6A",
+          "locus": "AT4G31700"
+        },
+        {
+          "symbol": "RPL13A",
+          "locus": "AT3G49010"
+        }
+      ]
+    },
+    {
+      "id": "BIP_ER_CHAPERONES",
+      "label": "ER Luminal BiP Chaperones",
+      "kind": "family",
+      "compartment": "endoplasmic_reticulum",
+      "mapman_bin": "29.1.1",
+      "loci": [
+        "AT5G28540",
+        "AT5G42020"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "PDI_DISULFIDE_ISOMERASE",
+      "label": "Protein Disulfide Isomerase",
+      "kind": "simple",
+      "compartment": "endoplasmic_reticulum",
+      "mapman_bin": "29.1.2",
+      "loci": [
+        "AT1G21750"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "UBIQUITIN_E1_ACTIVATING",
+      "label": "Ubiquitin-Activating E1",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "29.2.1",
+      "loci": [
+        "AT2G30110"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "UBIQUITIN_E2_CONJUGATING",
+      "label": "Ubiquitin-Conjugating E2",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "29.2.2",
+      "loci": [
+        "AT1G14400",
+        "AT2G36060"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "CULLIN_RING_E3_LIGASES",
+      "label": "Cullin-RING E3 Ligases",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "29.2.3",
+      "loci": [
+        "AT4G02570",
+        "AT2G32950"
+      ],
+      "subunits": [
+        {
+          "symbol": "CUL1",
+          "locus": "AT4G02570"
+        },
+        {
+          "symbol": "COP1",
+          "locus": "AT2G32950"
+        }
+      ]
+    },
+    {
+      "id": "PROTEASOME_19S_LID",
+      "label": "19S Regulatory Particle",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "29.3.1",
+      "loci": [
+        "AT2G20580",
+        "AT1G53750"
+      ],
+      "subunits": [
+        {
+          "symbol": "RPN1A",
+          "locus": "AT2G20580"
+        },
+        {
+          "symbol": "RPT1A",
+          "locus": "AT1G53750"
+        }
+      ]
+    },
+    {
+      "id": "PROTEASOME_20S_BARREL",
+      "label": "20S Proteolytic Barrel",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "29.3.2",
+      "loci": [
+        "AT2G27020",
+        "AT4G31300"
+      ],
+      "subunits": [
+        {
+          "symbol": "PAG1",
+          "locus": "AT2G27020"
+        },
+        {
+          "symbol": "PBA1",
+          "locus": "AT4G31300"
+        }
+      ]
+    },
+    {
+      "id": "DEUBIQUITINATING_ENZYMES",
+      "label": "Deubiquitinating Enzymes",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "29.3.3",
+      "loci": [
+        "AT5G06600",
+        "AT3G11910"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "ATG1_KINASE_INITIATION",
+      "label": "ATG1 Kinase Complex",
+      "kind": "simple",
+      "compartment": "vacuole",
+      "mapman_bin": "29.4.1",
+      "loci": [
+        "AT3G61960"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "ATG8_AUTOPHAGOSOME",
+      "label": "ATG8 / ATG7 Core Lipidation",
+      "kind": "complex",
+      "compartment": "vacuole",
+      "mapman_bin": "29.4.2",
+      "loci": [
+        "AT4G21980",
+        "AT5G45900"
+      ],
+      "subunits": [
+        {
+          "symbol": "ATG8A",
+          "locus": "AT4G21980"
+        },
+        {
+          "symbol": "ATG7",
+          "locus": "AT5G45900"
+        }
+      ]
+    },
+    {
+      "id": "VACUOLAR_VPE_PROTEASES",
+      "label": "Vacuolar Processing Enzymes",
+      "kind": "simple",
+      "compartment": "vacuole",
+      "mapman_bin": "29.4.3",
+      "loci": [
+        "AT4G32940"
+      ],
+      "subunits": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "RIBOSOME_TRANSLATION",
+      "to": "BIP_ER_CHAPERONES",
+      "start": [
+        260.3081875000001,
+        135.824
+      ],
+      "end": [
+        292.3081875000001,
+        135.824
+      ],
+      "class": "flux",
+      "label": "Nascent Polypeptide"
+    },
+    {
+      "from": "BIP_ER_CHAPERONES",
+      "to": "PDI_DISULFIDE_ISOMERASE",
+      "start": [
+        479.69756250000006,
+        135.824
+      ],
+      "end": [
+        511.69756250000006,
+        135.824
+      ],
+      "class": "flux",
+      "label": "Assisted Folding"
+    },
+    {
+      "from": "PDI_DISULFIDE_ISOMERASE",
+      "to": "UBIQUITIN_E1_ACTIVATING",
+      "start": [
+        531.3827661892735,
+        158.648
+      ],
+      "end": [
+        276.4892963107267,
+        224.648
+      ],
+      "class": "flux",
+      "label": "Terminally Misfolded (ERAD)"
+    },
+    {
+      "from": "UBIQUITIN_E1_ACTIVATING",
+      "to": "UBIQUITIN_E2_CONJUGATING",
+      "start": [
+        287.11600000000004,
+        247.472
+      ],
+      "end": [
+        319.11600000000004,
+        247.472
+      ],
+      "class": "flux",
+      "label": "Ub-AMP"
+    },
+    {
+      "from": "UBIQUITIN_E2_CONJUGATING",
+      "to": "CULLIN_RING_E3_LIGASES",
+      "start": [
+        505.3230000000001,
+        247.472
+      ],
+      "end": [
+        537.3230000000001,
+        247.47199999999998
+      ],
+      "class": "flux",
+      "label": "Ub-Thioester"
+    },
+    {
+      "from": "CULLIN_RING_E3_LIGASES",
+      "to": "PROTEASOME_19S_LID",
+      "start": [
+        537.3230000000001,
+        269.6819025018932
+      ],
+      "end": [
+        273.547,
+        331.67547654590226
+      ],
+      "class": "flux",
+      "label": "Polyubiquitin-Tagged Target"
+    },
+    {
+      "from": "PROTEASOME_19S_LID",
+      "to": "PROTEASOME_20S_BARREL",
+      "start": [
+        273.547,
+        359.12
+      ],
+      "end": [
+        305.547,
+        359.12
+      ],
+      "class": "flux",
+      "label": "Unfolded Peptide"
+    },
+    {
+      "from": "PROTEASOME_19S_LID",
+      "to": "DEUBIQUITINATING_ENZYMES",
+      "start": [
+        273.547,
+        359.12
+      ],
+      "end": [
+        578.9525000000001,
+        359.12
+      ],
+      "class": "flux",
+      "label": "Free Ubiquitin Recycling"
+    },
+    {
+      "from": "ATG1_KINASE_INITIATION",
+      "to": "ATG8_AUTOPHAGOSOME",
+      "start": [
+        253.00825000000006,
+        470.768
+      ],
+      "end": [
+        285.0082500000001,
+        470.768
+      ],
+      "class": "flux",
+      "label": "Autophagosome Nucleation"
+    },
+    {
+      "from": "ATG8_AUTOPHAGOSOME",
+      "to": "VACUOLAR_VPE_PROTEASES",
+      "start": [
+        513.8302500000001,
+        470.768
+      ],
+      "end": [
+        545.8302500000001,
+        470.768
+      ],
+      "class": "flux",
+      "label": "Vacuolar Fusion"
+    }
+  ],
+  "total_nodes": 12,
+  "distinct_loci": 20,
+  "loci_list": [
+    "AT1G14400",
+    "AT1G21750",
+    "AT1G53750",
+    "AT2G20580",
+    "AT2G27020",
+    "AT2G30110",
+    "AT2G32950",
+    "AT2G36060",
+    "AT3G11910",
+    "AT3G49010",
+    "AT3G61960",
+    "AT4G02570",
+    "AT4G21980",
+    "AT4G31300",
+    "AT4G31700",
+    "AT4G32940",
+    "AT5G06600",
+    "AT5G28540",
+    "AT5G42020",
+    "AT5G45900"
+  ]
+}

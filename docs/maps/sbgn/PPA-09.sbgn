@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
+  <map id="PPA-09" language="process description">
+    <bbox x="-18.00" y="0.00" w="920.00" h="680.00" />
+    <glyph id="comp_cytosol" class="compartment">
+      <label text="Cytosol" />
+      <bbox x="14.00" y="62.00" w="736.66" h="356.94" />
+    </glyph>
+    <glyph id="comp_nucleus" class="compartment">
+      <label text="Nucleus" />
+      <bbox x="19.82" y="396.94" w="725.02" h="133.65" />
+    </glyph>
+    <glyph id="AUXIN_BIOSYNTHESIS" class="complex" compartmentRef="comp_cytosol">
+      <label text="Auxin Biosynthesis (IPyA)" />
+      <bbox x="62.71" y="102.00" w="197.28" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AUXIN_BIOSYNTHESIS" compartment="cytosol" mapmanBin="17.1.1">
+          <ns0:locus>AT1G70560</ns0:locus>
+          <ns0:locus>AT4G32540</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PIN_POLAR_TRANSPORTERS" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="PIN Auxin Efflux Carriers" />
+      <bbox x="291.99" y="104.00" w="185.85" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PIN_POLAR_TRANSPORTERS" compartment="cytosol" mapmanBin="34.6">
+          <ns0:locus>AT1G73590</ns0:locus>
+          <ns0:locus>AT5G57090</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="AUXIN_RECEPTOR_TIR1" class="complex" compartmentRef="comp_cytosol">
+      <label text="TIR1 / AFB Core &amp; Aux/IAA" />
+      <bbox x="509.84" y="102.00" w="192.12" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AUXIN_RECEPTOR_TIR1" compartment="cytosol" mapmanBin="30.1.1">
+          <ns0:locus>AT3G62980</ns0:locus>
+          <ns0:locus>AT1G59750</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="ABA_BIOSYNTHESIS_NCED3" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="ABA Biosynthesis (NCED3)" />
+      <bbox x="40.00" y="224.65" w="204.46" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ABA_BIOSYNTHESIS_NCED3" compartment="cytosol" mapmanBin="17.2.1">
+          <ns0:locus>AT3G14440</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PYR_PYL_RECEPTORS" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="PYR/PYL/RCAR Receptors" />
+      <bbox x="276.46" y="215.65" w="184.94" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PYR_PYL_RECEPTORS" compartment="cytosol" mapmanBin="30.2.1">
+          <ns0:locus>AT5G05440</ns0:locus>
+          <ns0:locus>AT4G26080</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="SNRK2_KINASE_OST1" class="complex" compartmentRef="comp_cytosol">
+      <label text="SnRK2 Kinases &amp; ABF" />
+      <bbox x="493.39" y="213.65" w="231.27" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SNRK2_KINASE_OST1" compartment="cytosol" mapmanBin="30.2.2">
+          <ns0:locus>AT4G33950</ns0:locus>
+          <ns0:locus>AT1G45249</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="JA_BIOSYNTHESIS_LOX_AOS" class="complex" compartmentRef="comp_cytosol">
+      <label text="Jasmonate Biosynthesis" />
+      <bbox x="43.80" y="325.30" w="200.53" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="JA_BIOSYNTHESIS_LOX_AOS" compartment="cytosol" mapmanBin="17.3.1">
+          <ns0:locus>AT3G45140</ns0:locus>
+          <ns0:locus>AT5G42650</ns0:locus>
+          <ns0:locus>AT3G25760</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="COI1_JAZ_DEREPRESSION" class="complex" compartmentRef="comp_cytosol">
+      <label text="COI1 Receptor &amp; JAZ Repressors" />
+      <bbox x="276.33" y="325.30" w="215.76" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="COI1_JAZ_DEREPRESSION" compartment="cytosol" mapmanBin="30.3.1">
+          <ns0:locus>AT2G39940</ns0:locus>
+          <ns0:locus>AT1G19180</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="MYC2_TRANSCRIPTION" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="MYC2 / MYC3 / MYC4 Regulon" />
+      <bbox x="524.09" y="327.30" w="196.77" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="MYC2_TRANSCRIPTION" compartment="cytosol" mapmanBin="30.3.2">
+          <ns0:locus>AT1G32640</ns0:locus>
+          <ns0:locus>AT5G46760</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="GA_GID1_DELLA_CASCADE" class="complex" compartmentRef="comp_nucleus">
+      <label text="Gibberellin GID1 &amp; DELLA" />
+      <bbox x="45.82" y="436.94" w="188.69" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GA_GID1_DELLA_CASCADE" compartment="nucleus" mapmanBin="30.4.1">
+          <ns0:locus>AT3G05120</ns0:locus>
+          <ns0:locus>AT1G14920</ns0:locus>
+          <ns0:locus>AT2G43790</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="ETHYLENE_ETR1_EIN2" class="complex" compartmentRef="comp_nucleus">
+      <label text="Ethylene ETR1 &amp; EIN2" />
+      <bbox x="266.50" y="436.94" w="224.41" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ETHYLENE_ETR1_EIN2" compartment="nucleus" mapmanBin="30.5.1">
+          <ns0:locus>AT1G66340</ns0:locus>
+          <ns0:locus>AT5G03280</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="NUCLEAR_TRANSCRIPTION_FACTORS" class="macromolecule" compartmentRef="comp_nucleus">
+      <label text="EIN3 / EIL1 &amp; PIF TFs" />
+      <bbox x="522.91" y="438.94" w="195.93" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="NUCLEAR_TRANSCRIPTION_FACTORS" compartment="nucleus" mapmanBin="30.5.2">
+          <ns0:locus>AT3G20770</ns0:locus>
+          <ns0:locus>AT2G20180</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <arc id="arc_0" class="consumption" source="AUXIN_BIOSYNTHESIS" target="PIN_POLAR_TRANSPORTERS">
+      <start x="259.99" y="135.82" />
+      <end x="291.99" y="135.82" />
+    </arc>
+    <arc id="arc_1" class="consumption" source="PIN_POLAR_TRANSPORTERS" target="AUXIN_RECEPTOR_TIR1">
+      <start x="477.84" y="135.82" />
+      <end x="509.84" y="135.82" />
+    </arc>
+    <arc id="arc_2" class="consumption" source="ABA_BIOSYNTHESIS_NCED3" target="PYR_PYL_RECEPTORS">
+      <start x="244.46" y="247.47" />
+      <end x="276.46" y="247.47" />
+    </arc>
+    <arc id="arc_3" class="consumption" source="PYR_PYL_RECEPTORS" target="SNRK2_KINASE_OST1">
+      <start x="461.39" y="247.47" />
+      <end x="493.39" y="247.47" />
+    </arc>
+    <arc id="arc_4" class="consumption" source="JA_BIOSYNTHESIS_LOX_AOS" target="COI1_JAZ_DEREPRESSION">
+      <start x="244.33" y="359.12" />
+      <end x="276.33" y="359.12" />
+    </arc>
+    <arc id="arc_5" class="consumption" source="COI1_JAZ_DEREPRESSION" target="MYC2_TRANSCRIPTION">
+      <start x="492.09" y="359.12" />
+      <end x="524.09" y="359.12" />
+    </arc>
+    <arc id="arc_6" class="consumption" source="GA_GID1_DELLA_CASCADE" target="NUCLEAR_TRANSCRIPTION_FACTORS">
+      <start x="234.50" y="470.77" />
+      <end x="522.91" y="470.77" />
+    </arc>
+    <arc id="arc_7" class="consumption" source="ETHYLENE_ETR1_EIN2" target="NUCLEAR_TRANSCRIPTION_FACTORS">
+      <start x="490.91" y="470.77" />
+      <end x="522.91" y="470.77" />
+    </arc>
+  </map>
+</sbgn>

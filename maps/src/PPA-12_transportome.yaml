@@ -1,0 +1,167 @@
+# PPA-12 — Plant Transportome & Solute Allocation
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-12
+title: Plant Transportome & Solute Allocation
+subtitle: Membrane aquaporins, potassium channels, proton energization, and vacuolar compartmentalization
+derived_from: MapMan4 BIN 34 Transport & PlantCyc TRANSPORT-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Membrane transportome mediating water flow, nutrient partitioning, and stomatal turgor dynamics.
+  Electrochemical gradients are generated across the plasma membrane by P-type H+-ATPases (AHA1/2) and
+  across the tonoplast by V-type ATPases and pyrophosphatase AVP1. These gradients drive secondary active
+  solute transport: inward/outward potassium rectification (AKT1, KAT1, GORK), aquaporin-mediated water
+  permeation (PIP/TIP), and regulated anion efflux (SLAC1, ALMT12) controlling guard cell movement.
+
+lanes:
+  - id: water_aquaporin_channels
+    compartment: plasma_membrane
+    node_width: 220
+    nodes: [PLASMA_MEMBRANE_PIPS, TONOPLAST_TIPS, AQUAPORIN_GATING]
+
+  - id: potassium_homeostasis
+    compartment: plasma_membrane
+    node_width: 220
+    nodes: [INWARD_K_CHANNELS, OUTWARD_K_CHANNELS, CALCIUM_PERMEABLE_CNGC]
+
+  - id: proton_electrochemical_driving
+    compartment: plasma_membrane
+    node_width: 220
+    nodes: [PM_H_ATPASE_AHA, VACUOLAR_V_ATPASE, TONOPLAST_PYROPHOSPHATASE]
+
+  - id: anion_efflux_abc_carriers
+    compartment: vacuolar_membrane
+    node_width: 220
+    nodes: [SLAC1_ANION_CHANNEL, ALMT_MALATE_TRANSPORTER, ABC_TRANSPORTERS_EXPORTERS]
+
+nodes:
+  - id: PLASMA_MEMBRANE_PIPS
+    label: "Plasma Membrane Aquaporins"
+    sublabel: "BIN 34.1.1 PIP1;1 / PIP2;1 Channels"
+    kind: "family"
+    mapman_bin: "34.1.1"
+    family_loci: ["AT3G61430", "AT3G53420"]
+    loci: ["AT3G61430", "AT3G53420"]
+
+  - id: TONOPLAST_TIPS
+    label: "Tonoplast Aquaporins (TIPs)"
+    sublabel: "BIN 34.1.2 TIP1;1 / TIP2;1 Water Flux"
+    kind: "family"
+    mapman_bin: "34.1.2"
+    family_loci: ["AT2G36830", "AT3G26520"]
+    loci: ["AT2G36830", "AT3G26520"]
+
+  - id: AQUAPORIN_GATING
+    label: "Phosphorylation Gating"
+    sublabel: "BIN 34.1.3 Ser280/Ser283 Regulation"
+    kind: "simple"
+    mapman_bin: "34.1.3"
+    loci: ["AT2G38080"]
+
+  - id: INWARD_K_CHANNELS
+    label: "Inward-Rectifying K+ (KAT/AKT)"
+    sublabel: "BIN 34.2.1 KAT1 & AKT1 Uptake"
+    kind: "complex"
+    mapman_bin: "34.2.1"
+    subunits:
+      - symbol: "KAT1"
+        locus: "AT5G46240"
+      - symbol: "AKT1"
+        locus: "AT2G26650"
+    loci: ["AT5G46240", "AT2G26650"]
+
+  - id: OUTWARD_K_CHANNELS
+    label: "Outward-Rectifying K+ (GORK)"
+    sublabel: "BIN 34.2.2 GORK Depolarization Efflux"
+    kind: "simple"
+    mapman_bin: "34.2.2"
+    loci: ["AT5G37500"]
+
+  - id: CALCIUM_PERMEABLE_CNGC
+    label: "Cyclic Nucleotide Channels"
+    sublabel: "BIN 34.2.3 CNGC2 / CNGC4 Ca2+ Flux"
+    kind: "family"
+    mapman_bin: "34.2.3"
+    family_loci: ["AT5G15410", "AT5G48870"]
+    loci: ["AT5G15410", "AT5G48870"]
+
+  - id: PM_H_ATPASE_AHA
+    label: "PM H+-ATPase (AHA)"
+    sublabel: "BIN 34.3.1 AHA1 / AHA2 Proton Pump"
+    kind: "complex"
+    mapman_bin: "34.3.1"
+    subunits:
+      - symbol: "AHA1"
+        locus: "AT2G18960"
+      - symbol: "AHA2"
+        locus: "AT4G30190"
+    loci: ["AT2G18960", "AT4G30190"]
+
+  - id: VACUOLAR_V_ATPASE
+    label: "Vacuolar V-ATPase Complex"
+    sublabel: "BIN 34.3.2 VHA-A / VHA-c Tonoplast Core"
+    kind: "complex"
+    mapman_bin: "34.3.2"
+    subunits:
+      - symbol: "VHA-A"
+        locus: "AT1G78900"
+      - symbol: "VHA-c"
+        locus: "AT4G34720"
+    loci: ["AT1G78900", "AT4G34720"]
+
+  - id: TONOPLAST_PYROPHOSPHATASE
+    label: "H+-PPase (AVP1)"
+    sublabel: "BIN 34.3.3 Pyrophosphate Proton Motor"
+    kind: "simple"
+    mapman_bin: "34.3.3"
+    loci: ["AT1G15690"]
+
+  - id: SLAC1_ANION_CHANNEL
+    label: "Slow Anion Channel (SLAC1)"
+    sublabel: "BIN 34.4.1 Guard Cell Turgor Collapse"
+    kind: "simple"
+    mapman_bin: "34.4.1"
+    loci: ["AT1G12480"]
+
+  - id: ALMT_MALATE_TRANSPORTER
+    label: "ALMT Malate Channels"
+    sublabel: "BIN 34.4.2 ALMT12 / ALMT9 Vacuolar Flux"
+    kind: "family"
+    mapman_bin: "34.4.2"
+    family_loci: ["AT1G25580", "AT3G18440"]
+    loci: ["AT1G25580", "AT3G18440"]
+
+  - id: ABC_TRANSPORTERS_EXPORTERS
+    label: "ABC Transporter Exporters"
+    sublabel: "BIN 34.5.1 ABCB1 & ABCG25 Hormone Export"
+    kind: "family"
+    mapman_bin: "34.5.1"
+    family_loci: ["AT2G36910", "AT1G71960"]
+    loci: ["AT2G36910", "AT1G71960"]
+
+edges:
+  - from: PM_H_ATPASE_AHA
+    to: INWARD_K_CHANNELS
+    class: flux
+    label: "Hyperpolarization (-120mV)"
+  - from: INWARD_K_CHANNELS
+    to: PLASMA_MEMBRANE_PIPS
+    class: flux
+    label: "K+ Osmotic Influx -> H2O Influx"
+  - from: CALCIUM_PERMEABLE_CNGC
+    to: SLAC1_ANION_CHANNEL
+    class: flux
+    label: "Ca2+ Elevation Activation"
+  - from: SLAC1_ANION_CHANNEL
+    to: OUTWARD_K_CHANNELS
+    class: flux
+    label: "Depolarization -> K+ Efflux"
+  - from: VACUOLAR_V_ATPASE
+    to: ALMT_MALATE_TRANSPORTER
+    class: flux
+    label: "Tonoplast pH Gradient"
+  - from: TONOPLAST_PYROPHOSPHATASE
+    to: TONOPLAST_TIPS
+    class: flux
+    label: "Vacuolar Osmolyte Packing"

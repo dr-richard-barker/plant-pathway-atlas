@@ -1,0 +1,214 @@
+# PPA-03 — Calvin-Benson Cycle & Photorespiratory Salvage
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-03
+title: Calvin-Benson Cycle & Photorespiration
+subtitle: Chloroplast carbon assimilation and peroxisome-mitochondria photorespiratory salvage flux
+derived_from: MapMan4 BIN 1.2 & BIN 1.3 Photorespiration, PlantCyc CALVIN-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  The Calvin-Benson-Bassham (CBB) cycle and photorespiratory salvage pathway. RuBisCO catalyzes
+  both the carboxylation of RuBP yielding 3-PGA and the oxygenation yielding 2-phosphoglycolate.
+  The salvage pathway channels 2-PG through the chloroplast envelope to the peroxisome (GOX, GGAT)
+  and mitochondrion (GDC complex, SHMT), recovering 75% of carbon as 3-PGA while releasing CO2 and NH3.
+
+lanes:
+  - id: carboxylation_reduction
+    compartment: chloroplast_stroma
+    node_width: 210
+    nodes: [RUBISCO_CARBOXYLATION, PGA_REDUCTION, TRIOSE_ISOMERIZATION]
+
+  - id: rubp_regeneration
+    compartment: chloroplast_stroma
+    node_width: 210
+    nodes: [ALDOLASE_FBPASE, TRANSKETOLASE_SBPASE, PRK_REGENERATION]
+
+  - id: photorespiration_peroxisome
+    compartment: peroxisome
+    node_width: 220
+    nodes: [PGLP_DEPHOSPHO, GLYCOLATE_OXIDASE, GLUTAMATE_GLYOXYLATE_AT]
+
+  - id: photorespiration_mitochondria
+    compartment: mitochondrial_matrix
+    node_width: 220
+    nodes: [GLYCINE_DECARBOXYLASE, SERINE_HYDROXYMETHYL_TF, HYDROXYPYRUVATE_RED]
+
+nodes:
+  - id: RUBISCO_CARBOXYLATION
+    label: "RuBisCO Complex"
+    sublabel: "BIN 1.2.1 CO2 Fixation"
+    kind: "complex"
+    mapman_bin: "1.2.1"
+    subunits:
+      - symbol: "RbcL"
+        locus: "ATCG00490"
+      - symbol: "RbcS1A"
+        locus: "AT1G67090"
+      - symbol: "RbcS1B"
+        locus: "AT5G38430"
+    loci: ["ATCG00490", "AT1G67090", "AT5G38430"]
+
+  - id: PGA_REDUCTION
+    label: "3-PGA Reduction"
+    sublabel: "PGK & GAPDH Enzymes"
+    kind: "complex"
+    mapman_bin: "1.2.2"
+    subunits:
+      - symbol: "PGK1"
+        locus: "AT1G79550"
+      - symbol: "GAPA1"
+        locus: "AT3G26650"
+      - symbol: "GAPB"
+        locus: "AT1G12900"
+    loci: ["AT1G79550", "AT3G26650", "AT1G12900"]
+
+  - id: TRIOSE_ISOMERIZATION
+    label: "Triose-P Isomerase"
+    sublabel: "BIN 1.2.3 TPI Flux"
+    kind: "simple"
+    mapman_bin: "1.2.3"
+    loci: ["AT3G55440"]
+
+  - id: ALDOLASE_FBPASE
+    label: "FBP Aldolase & FBPase"
+    sublabel: "BIN 1.2.4 Condensation"
+    kind: "complex"
+    mapman_bin: "1.2.4"
+    subunits:
+      - symbol: "FBA1"
+        locus: "AT2G21330"
+      - symbol: "cFBPase"
+        locus: "AT3G54050"
+    loci: ["AT2G21330", "AT3G54050"]
+
+  - id: TRANSKETOLASE_SBPASE
+    label: "Transketolase & SBPase"
+    sublabel: "BIN 1.2.5 Carbon Shuffling"
+    kind: "complex"
+    mapman_bin: "1.2.5"
+    subunits:
+      - symbol: "TKL1"
+        locus: "AT3G60750"
+      - symbol: "SBPase"
+        locus: "AT3G55800"
+    loci: ["AT3G60750", "AT3G55800"]
+
+  - id: PRK_REGENERATION
+    label: "Phosphoribulokinase"
+    sublabel: "BIN 1.2.6 RuBP Synthesis"
+    kind: "simple"
+    mapman_bin: "1.2.6"
+    loci: ["AT1G32060"]
+
+  - id: PGLP_DEPHOSPHO
+    label: "2-PG Phosphatase"
+    sublabel: "BIN 1.3.1 PGLP1 Export"
+    kind: "simple"
+    mapman_bin: "1.3.1"
+    loci: ["AT5G36700"]
+
+  - id: GLYCOLATE_OXIDASE
+    label: "Glycolate Oxidase"
+    sublabel: "BIN 1.3.2 GOX1 / GOX2"
+    kind: "family"
+    mapman_bin: "1.3.2"
+    family_loci: ["AT3G14420", "AT3G14415"]
+    loci: ["AT3G14420", "AT3G14415"]
+
+  - id: GLUTAMATE_GLYOXYLATE_AT
+    label: "Peroxisomal Aminotransferase"
+    sublabel: "BIN 1.3.3 GGAT1 / GGT2"
+    kind: "complex"
+    mapman_bin: "1.3.3"
+    subunits:
+      - symbol: "GGAT1"
+        locus: "AT1G23310"
+      - symbol: "GGT2"
+        locus: "AT1G70580"
+    loci: ["AT1G23310", "AT1G70580"]
+
+  - id: GLYCINE_DECARBOXYLASE
+    label: "Glycine Decarboxylase (GDC)"
+    sublabel: "BIN 1.3.4 Multienzyme Core"
+    kind: "complex"
+    mapman_bin: "1.3.4"
+    subunits:
+      - symbol: "GLDP1"
+        locus: "AT2G35370"
+      - symbol: "GLDT"
+        locus: "AT2G35120"
+      - symbol: "GLDL1"
+        locus: "AT1G11860"
+    loci: ["AT2G35370", "AT2G35120", "AT1G11860"]
+
+  - id: SERINE_HYDROXYMETHYL_TF
+    label: "Serine Hydroxymethyl-TF"
+    sublabel: "BIN 1.3.5 SHMT1 (Mitochondrial)"
+    kind: "simple"
+    mapman_bin: "1.3.5"
+    loci: ["AT4G37930"]
+
+  - id: HYDROXYPYRUVATE_RED
+    label: "Hydroxypyruvate Reductase & GLYK"
+    sublabel: "BIN 1.3.6 Glycerate Return"
+    kind: "complex"
+    mapman_bin: "1.3.6"
+    subunits:
+      - symbol: "HPR1"
+        locus: "AT1G68010"
+      - symbol: "GLYK"
+        locus: "AT1G80380"
+    loci: ["AT1G68010", "AT1G80380"]
+
+edges:
+  - from: RUBISCO_CARBOXYLATION
+    to: PGA_REDUCTION
+    class: flux
+    label: "3-PGA"
+  - from: RUBISCO_CARBOXYLATION
+    to: PGLP_DEPHOSPHO
+    class: flux
+    label: "2-PG"
+  - from: PGA_REDUCTION
+    to: TRIOSE_ISOMERIZATION
+    class: flux
+    label: "GAP / DHAP"
+  - from: TRIOSE_ISOMERIZATION
+    to: ALDOLASE_FBPASE
+    class: flux
+  - from: ALDOLASE_FBPASE
+    to: TRANSKETOLASE_SBPASE
+    class: flux
+  - from: TRANSKETOLASE_SBPASE
+    to: PRK_REGENERATION
+    class: flux
+    label: "Ribulose-5P"
+  - from: PRK_REGENERATION
+    to: RUBISCO_CARBOXYLATION
+    class: flux
+    label: "RuBP"
+  - from: PGLP_DEPHOSPHO
+    to: GLYCOLATE_OXIDASE
+    class: flux
+    label: "Glycolate"
+  - from: GLYCOLATE_OXIDASE
+    to: GLUTAMATE_GLYOXYLATE_AT
+    class: flux
+    label: "Glyoxylate"
+  - from: GLUTAMATE_GLYOXYLATE_AT
+    to: GLYCINE_DECARBOXYLASE
+    class: flux
+    label: "Glycine"
+  - from: GLYCINE_DECARBOXYLASE
+    to: SERINE_HYDROXYMETHYL_TF
+    class: flux
+    label: "Methylene-THF"
+  - from: SERINE_HYDROXYMETHYL_TF
+    to: HYDROXYPYRUVATE_RED
+    class: flux
+    label: "Serine"
+  - from: HYDROXYPYRUVATE_RED
+    to: PGA_REDUCTION
+    class: flux
+    label: "Glycerate -> 3-PGA"

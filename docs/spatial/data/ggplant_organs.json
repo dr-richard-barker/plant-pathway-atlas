@@ -3054,5 +3054,133 @@
       "layer": "Flower",
       "name": "Developing Floral Ovule 10"
     }
+  ],
+  "subcellular": [
+    {
+      "id": "sub_cell_wall",
+      "name": "Plant Cell Wall (Apoplast)",
+      "cellType": "Cell_Wall",
+      "layer": "Subcellular",
+      "points": "770.0,300.0 585.0,533.8 215.0,533.8 30.0,300.0 215.0,66.2 585.0,66.2"
+    },
+    {
+      "id": "sub_plasma_membrane",
+      "name": "Plasma Membrane (Symplast)",
+      "cellType": "Plasma_Membrane",
+      "layer": "Subcellular",
+      "points": "750.0,300.0 575.0,516.5 225.0,516.5 50.0,300.0 225.0,83.5 575.0,83.5"
+    },
+    {
+      "id": "sub_cytosol",
+      "name": "Cytosol (Ground Cytoplasm)",
+      "cellType": "Cytosol",
+      "layer": "Subcellular",
+      "points": "735.0,300.0 567.5,503.5 232.5,503.5 65.0,300.0 232.5,96.5 567.5,96.5"
+    },
+    {
+      "id": "sub_vacuole",
+      "name": "Central Vacuole (Lumen & Tonoplast)",
+      "cellType": "Vacuole",
+      "layer": "Subcellular",
+      "points": "690.0,320.0 685.5,353.4 672.2,385.1 650.7,413.5 622.2,437.3 588.1,455.1 550.1,466.2 510.0,470.0 469.9,466.2 431.9,455.1 397.8,437.3 369.3,413.5 347.8,385.1 334.5,353.4 330.0,320.0 334.5,286.6 347.8,254.9 369.3,226.5 397.8,202.7 431.9,184.9 469.9,173.8 510.0,170.0 550.1,173.8 588.1,184.9 622.2,202.7 650.7,226.5 672.2,254.9 685.5,286.6"
+    },
+    {
+      "id": "sub_nucleus",
+      "name": "Nucleus (Chromatin & Envelope)",
+      "cellType": "Nucleus",
+      "layer": "Subcellular",
+      "points": "320.0,190.0 317.3,208.1 309.3,225.0 296.6,239.5 280.0,250.6 260.7,257.6 240.0,260.0 219.3,257.6 200.0,250.6 183.4,239.5 170.7,225.0 162.7,208.1 160.0,190.0 162.7,171.9 170.7,155.0 183.4,140.5 200.0,129.4 219.3,122.4 240.0,120.0 260.7,122.4 280.0,129.4 296.6,140.5 309.3,155.0 317.3,171.9"
+    },
+    {
+      "id": "sub_nucleolus",
+      "name": "Nucleolus (Ribosome Assembly)",
+      "cellType": "Nucleolus",
+      "layer": "Subcellular",
+      "points": "260.0,185.0 257.7,194.6 251.2,202.7 241.5,208.1 230.0,210.0 218.5,208.1 208.8,202.7 202.3,194.6 200.0,185.0 202.3,175.4 208.8,167.3 218.5,161.9 230.0,160.0 241.5,161.9 251.2,167.3 257.7,175.4"
+    },
+    {
+      "id": "sub_chloroplast_1",
+      "name": "Chloroplast 1 (Stroma)",
+      "cellType": "Chloroplast_Stroma",
+      "layer": "Subcellular",
+      "points": "265.0,340.0 261.3,353.9 250.7,366.5 234.1,376.4 213.2,382.8 190.0,385.0 166.8,382.8 145.9,376.4 129.3,366.5 118.7,353.9 115.0,340.0 118.7,326.1 129.3,313.5 145.9,303.6 166.8,297.2 190.0,295.0 213.2,297.2 234.1,303.6 250.7,313.5 261.3,326.1"
+    },
+    {
+      "id": "sub_thylakoid_1a",
+      "name": "Thylakoid Grana Stack 1A",
+      "cellType": "Thylakoid_Membrane",
+      "layer": "Subcellular",
+      "points": "150,330 180,330 180,348 150,348"
+    },
+    {
+      "id": "sub_thylakoid_1b",
+      "name": "Thylakoid Grana Stack 1B",
+      "cellType": "Thylakoid_Membrane",
+      "layer": "Subcellular",
+      "points": "195,330 227,330 227,348 195,348"
+    },
+    {
+      "id": "sub_chloroplast_2",
+      "name": "Chloroplast 2 (Stroma)",
+      "cellType": "Chloroplast_Stroma",
+      "layer": "Subcellular",
+      "points": "330.0,440.0 326.1,454.8 314.7,468.2 297.0,478.8 274.7,485.7 250.0,488.0 225.3,485.7 203.0,478.8 185.3,468.2 173.9,454.8 170.0,440.0 173.9,425.2 185.3,411.8 203.0,401.2 225.3,394.3 250.0,392.0 274.7,394.3 297.0,401.2 314.7,411.8 326.1,425.2"
+    },
+    {
+      "id": "sub_thylakoid_2a",
+      "name": "Thylakoid Grana Stack 2A",
+      "cellType": "Thylakoid_Membrane",
+      "layer": "Subcellular",
+      "points": "210,430 242,430 242,450 210,450"
+    },
+    {
+      "id": "sub_thylakoid_2b",
+      "name": "Thylakoid Grana Stack 2B",
+      "cellType": "Thylakoid_Membrane",
+      "layer": "Subcellular",
+      "points": "255,430 290,430 290,450 255,450"
+    },
+    {
+      "id": "sub_mito_1",
+      "name": "Mitochondrion 1 (Matrix & Cristae)",
+      "cellType": "Mitochondrion",
+      "layer": "Subcellular",
+      "points": "420.0,150.0 417.0,159.6 408.3,168.0 395.0,174.2 378.7,177.6 361.3,177.6 345.0,174.2 331.7,168.0 323.0,159.6 320.0,150.0 323.0,140.4 331.7,132.0 345.0,125.8 361.3,122.4 378.7,122.4 395.0,125.8 408.3,132.0 417.0,140.4"
+    },
+    {
+      "id": "sub_mito_2",
+      "name": "Mitochondrion 2 (Matrix & Cristae)",
+      "cellType": "Mitochondrion",
+      "layer": "Subcellular",
+      "points": "542.0,130.0 538.9,140.3 529.8,149.3 516.0,156.0 499.0,159.5 481.0,159.5 464.0,156.0 450.2,149.3 441.1,140.3 438.0,130.0 441.1,119.7 450.2,110.7 464.0,104.0 481.0,100.5 499.0,100.5 516.0,104.0 529.8,110.7 538.9,119.7"
+    },
+    {
+      "id": "sub_peroxisome",
+      "name": "Peroxisome (Catalase Core)",
+      "cellType": "Peroxisome",
+      "layer": "Subcellular",
+      "points": "355.0,260.0 352.3,273.4 344.7,284.7 333.4,292.3 320.0,295.0 306.6,292.3 295.3,284.7 287.7,273.4 285.0,260.0 287.7,246.6 295.3,235.3 306.6,227.7 320.0,225.0 333.4,227.7 344.7,235.3 352.3,246.6"
+    },
+    {
+      "id": "sub_er_1",
+      "name": "Rough Endoplasmic Reticulum",
+      "cellType": "Endoplasmic_Reticulum",
+      "layer": "Subcellular",
+      "points": "140,265 220,265 220,285 140,285"
+    },
+    {
+      "id": "sub_er_2",
+      "name": "Smooth Endoplasmic Reticulum",
+      "cellType": "Endoplasmic_Reticulum",
+      "layer": "Subcellular",
+      "points": "310,195 355,195 355,213 310,213"
+    },
+    {
+      "id": "sub_golgi",
+      "name": "Golgi Dictyosome Stacks",
+      "cellType": "Golgi_Apparatus",
+      "layer": "Subcellular",
+      "points": "600,140 650,140 650,165 600,165"
+    }
   ]
 }

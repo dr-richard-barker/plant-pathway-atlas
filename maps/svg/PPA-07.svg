@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 680" width="920" height="680" data-theme="light" data-map-id="PPA-07"><defs><style>
+:root {
+  --ppa-bg: #ffffff;
+  --ppa-ink: #0f172a;
+  --ppa-ink-soft: #475569;
+  --ppa-node-fill: #f8fafc;
+  --ppa-node-stroke: #1e293b;
+  --ppa-hairline: #cbd5e1;
+  --ppa-edge: #475569;
+  --ppa-compartment-fill: rgba(15, 23, 42, 0.035);
+  --ppa-compartment-stroke: rgba(15, 23, 42, 0.22);
+  --ppa-accent: #0284c7;
+  --ppa-up: #D55E00;
+  --ppa-down: #0072B2;
+}
+:root[data-theme="dark"] {
+  --ppa-bg: #0b0f17;
+  --ppa-ink: #f1f5f9;
+  --ppa-ink-soft: #94a3b8;
+  --ppa-node-fill: #151c28;
+  --ppa-node-stroke: #cbd5e1;
+  --ppa-hairline: #334155;
+  --ppa-edge: #94a3b8;
+  --ppa-compartment-fill: rgba(255, 255, 255, 0.04);
+  --ppa-compartment-stroke: rgba(255, 255, 255, 0.25);
+  --ppa-accent: #38bdf8;
+  --ppa-up: #ea580c;
+  --ppa-down: #38bdf8;
+}
+
+.ppa-canvas { fill: var(--ppa-bg, #ffffff); }
+text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: var(--ppa-ink); }
+.ppa-title { font-size: 20.0px; font-weight: 700; fill: var(--ppa-ink); }
+.ppa-subtitle { font-size: 12.0px; fill: var(--ppa-ink-soft); }
+.ppa-caption { font-size: 11.0px; fill: var(--ppa-ink-soft); line-height: 1.4; }
+.ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
+.ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
+.ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
+.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+
+.ppa-compartment-band {
+  fill: var(--ppa-compartment-fill);
+  stroke: var(--ppa-compartment-stroke);
+  stroke-width: 1.5px;
+  stroke-dasharray: 6 3;
+  rx: 10px;
+}
+.ppa-compartment-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  fill: var(--ppa-ink-soft);
+}
+
+.ppa-node {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ppa-node:hover {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.ppa-node rect, .ppa-node circle, .ppa-node path {
+  stroke: var(--ppa-node-stroke);
+  stroke-width: 1.5px;
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+.ppa-node.significant rect {
+  stroke-width: 2.5px;
+  stroke: var(--ppa-ink);
+}
+.ppa-node.non-significant rect {
+  stroke-width: 1.0px;
+  stroke-dasharray: 3 2;
+  stroke: var(--ppa-hairline);
+}
+</style>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ppa-edge)" /></marker>
+<marker id="inhibit" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><line x1="5" y1="1" x2="5" y2="9" stroke="var(--ppa-edge)" stroke-width="2" /></marker>
+</defs>
+<rect class="ppa-canvas" width="920" height="680" />
+<text class="ppa-title" x="40.0" y="36.0">Nitrogen &amp; Sulfur Primary Assimilation</text>
+<text class="ppa-subtitle" x="40.0" y="56.0">Nitrate and sulfate reduction, GS-GOGAT ammonium incorporation, and cysteine/methionine biosynthesis</text>
+<rect class="ppa-compartment-band" x="14.0" y="62.0" width="718.0" height="133.6" />
+<text class="ppa-compartment-title" x="28.0" y="80.0">Cytosol</text>
+<rect class="ppa-compartment-band" x="18.1" y="173.6" width="709.9" height="352.9" />
+<text class="ppa-compartment-title" x="32.1" y="191.6">Chloroplast Stroma</text>
+<path d="M 247.1 135.8 L 279.1 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="263.1" y="131.8">NO3-</text>
+<path d="M 306.1 167.6 L 181.5 224.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="243.8" y="192.1">NO2-</text>
+<path d="M 219.1 247.5 L 251.1 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="235.1" y="243.5">NH4+</text>
+<path d="M 437.4 247.5 L 469.4 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="453.4" y="243.5">Glutamine</text>
+<path d="M 469.4 247.5 L 437.4 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="453.4" y="243.5">Glutamate recycled</text>
+<path d="M 591.6 213.6 L 599.3 169.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="595.4" y="187.6">Aspartate Pool</text>
+<path d="M 272.1 357.1 L 304.1 357.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="288.1" y="353.1">SO4(2-)</text>
+<path d="M 480.0 357.1 L 512.0 357.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="496.0" y="353.1">APS</text>
+<path d="M 512.0 377.1 L 236.6 445.7" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="374.3" y="407.4">Sulfite (SO3(2-))</text>
+<path d="M 236.6 466.8 L 268.6 466.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="252.6" y="462.8">Sulfide (S(2-))</text>
+<path d="M 443.7 466.8 L 475.7 466.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="459.7" y="462.8">Cysteine</text>
+<g class="ppa-node family " id="node-NITRATE_TRANSPORTERS" data-node-id="NITRATE_TRANSPORTERS" data-loci="AT1G12110,AT1G08090" data-bin="34.4">
+<rect x="40.0" y="104.0" width="207.1" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="143.6" y="122.0">Nitrate Transporters (NRT)</text>
+<text class="ppa-sub" x="143.6" y="137.4">BIN 34.4 NRT1.1 / NRT2.1 Dual-Affinity</text>
+<rect class="ppa-family-tile" x="131.6" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="143.6" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node family " id="node-NITRATE_REDUCTASE_NIA" data-node-id="NITRATE_REDUCTASE_NIA" data-loci="AT1G77760,AT1G37130" data-bin="12.1">
+<rect x="279.1" y="104.0" width="193.2" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="375.7" y="122.0">Nitrate Reductase (NR)</text>
+<text class="ppa-sub" x="375.7" y="137.4">BIN 12.1 NIA1 / NIA2 Cytosolic Core</text>
+<rect class="ppa-family-tile" x="363.7" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="375.7" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node complex " id="node-AMINO_ACID_EXPORT" data-node-id="AMINO_ACID_EXPORT" data-loci="AT2G30970,AT3G47340" data-bin="12.5">
+<rect x="504.3" y="102.0" width="201.7" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="605.2" y="120.0">Aspartate &amp; Asparagine Core</text>
+<text class="ppa-sub" x="605.2" y="135.4">BIN 12.5 Aspartate Aminotransferase</text>
+<g class="ppa-subunit" data-locus="AT2G30970"><rect x="567.2" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="585.2" y="160.1">ASP1</text></g>
+<g class="ppa-subunit" data-locus="AT3G47340"><rect x="607.2" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="625.2" y="160.1">ASN1</text></g>
+</g>
+<g class="ppa-node simple " id="node-NITRITE_REDUCTASE_NIR" data-node-id="NITRITE_REDUCTASE_NIR" data-loci="AT2G15620" data-bin="12.2">
+<rect x="44.1" y="224.6" width="175.1" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="131.6" y="242.6">Nitrite Reductase (NIR)</text>
+<text class="ppa-sub" x="131.6" y="258.0">BIN 12.2 NIR1 Plastid Reduction</text>
+</g>
+<g class="ppa-node complex " id="node-GS_GLUTAMINE_SYNTH" data-node-id="GS_GLUTAMINE_SYNTH" data-loci="AT5G37600,AT5G35630" data-bin="12.3">
+<rect x="251.1" y="213.6" width="186.2" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="344.3" y="231.6">Glutamine Synthetase (GS)</text>
+<text class="ppa-sub" x="344.3" y="247.0">BIN 12.3 GLN1 (Cyt) &amp; GLN2 (Chl)</text>
+<g class="ppa-subunit" data-locus="AT5G37600"><rect x="299.8" y="261.3" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="324.3" y="271.8">GLN1;1</text></g>
+<g class="ppa-subunit" data-locus="AT5G35630"><rect x="352.8" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="370.8" y="271.8">GLN2</text></g>
+</g>
+<g class="ppa-node complex " id="node-GOGAT_GLUTAMATE_SYNTH" data-node-id="GOGAT_GLUTAMATE_SYNTH" data-loci="AT5G04140,AT5G53460" data-bin="12.4">
+<rect x="469.4" y="213.6" width="232.6" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="585.7" y="231.6">Glutamate Synthase (GOGAT)</text>
+<text class="ppa-sub" x="585.7" y="247.0">BIN 12.4 Fd-GOGAT (GLU1) &amp; NADH-GOGAT</text>
+<g class="ppa-subunit" data-locus="AT5G04140"><rect x="547.7" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="565.7" y="271.8">GLU1</text></g>
+<g class="ppa-subunit" data-locus="AT5G53460"><rect x="587.7" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="605.7" y="271.8">GLT1</text></g>
+</g>
+<g class="ppa-node family " id="node-SULFATE_TRANSPORTERS" data-node-id="SULFATE_TRANSPORTERS" data-loci="AT4G08620,AT1G78000" data-bin="34.5">
+<rect x="73.6" y="325.3" width="198.5" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="172.9" y="343.3">Sulfate Transporters (SULTR)</text>
+<text class="ppa-sub" x="172.9" y="358.7">BIN 34.5 High-Affinity SULTR1;1 / 1;2</text>
+<rect class="ppa-family-tile" x="160.9" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="172.9" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node family " id="node-ATP_SULFURYLASE_APS" data-node-id="ATP_SULFURYLASE_APS" data-loci="AT3G22890,AT1G19920" data-bin="14.1">
+<rect x="304.1" y="325.3" width="175.9" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="392.0" y="343.3">ATP Sulfurylase (APS)</text>
+<text class="ppa-sub" x="392.0" y="358.7">BIN 14.1 APS1 / APS2 Activation</text>
+<rect class="ppa-family-tile" x="380.0" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="392.0" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node family " id="node-APS_REDUCTASE_APR" data-node-id="APS_REDUCTASE_APR" data-loci="AT4G04610,AT1G62180,AT4G21990" data-bin="14.2">
+<rect x="512.0" y="325.3" width="160.4" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="592.2" y="343.3">APS Reductase (APR)</text>
+<text class="ppa-sub" x="592.2" y="358.7">BIN 14.2 APR1 / APR2 / APR3</text>
+<rect class="ppa-family-tile" x="574.2" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="586.2" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="598.2" y="372.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node simple " id="node-SULFITE_REDUCTASE_SIR" data-node-id="SULFITE_REDUCTASE_SIR" data-loci="AT5G04590" data-bin="14.3">
+<rect x="67.4" y="443.9" width="169.2" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="152.0" y="461.9">Sulfite Reductase (SiR)</text>
+<text class="ppa-sub" x="152.0" y="477.3">BIN 14.3 SiR Sulfide Formation</text>
+</g>
+<g class="ppa-node complex " id="node-OASTL_CYSTEINE_SYNTH" data-node-id="OASTL_CYSTEINE_SYNTH" data-loci="AT4G14880,AT2G43750" data-bin="14.4">
+<rect x="268.6" y="432.9" width="175.2" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="356.2" y="450.9">OAS Thiol-Lyase (OAS-TL)</text>
+<text class="ppa-sub" x="356.2" y="466.3">BIN 14.4 Cysteine Synthase A/B</text>
+<g class="ppa-subunit" data-locus="AT4G14880"><rect x="308.4" y="480.6" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="332.9" y="491.1">OAS-A1</text></g>
+<g class="ppa-subunit" data-locus="AT2G43750"><rect x="361.4" y="480.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="382.7" y="491.1">OAS-B</text></g>
+</g>
+<g class="ppa-node simple " id="node-CGS_METHIONINE_SYNTH" data-node-id="CGS_METHIONINE_SYNTH" data-loci="AT3G01120" data-bin="14.5">
+<rect x="475.7" y="443.9" width="202.9" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="577.2" y="461.9">Cystathionine Synthase (CGS)</text>
+<text class="ppa-sub" x="577.2" y="477.3">BIN 14.5 CGS1 Methionine Precursor</text>
+</g>
+<text class="ppa-caption" x="40.0" y="654.0">Primary inorganic nitrogen and sulfur assimilation in plants. Soil nitrate is reduced to nitrite in the cytosol by Nitrate</text>
+<text class="ppa-caption" x="40.0" y="668.9">Reductase (NIA1/2), transported into the chloroplast, and reduced to ammonium by Nitrite Reductase (NIR1). Ammonium is assimilated</text>
+<text class="ppa-caption" x="40.0" y="683.7">into glutamate and glutamine via the coupled GS-GOGAT cycle. Concurrently, imported sulfate is activated by ATP Sulfurylase (APS)</text>
+<text class="ppa-caption" x="40.0" y="698.6">and reduced by APR and SiR to sulfide, which is condensed with O-acetylserine by OAS-TL to form cysteine.</text>
+</svg>

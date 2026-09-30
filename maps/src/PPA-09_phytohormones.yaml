@@ -1,0 +1,198 @@
+# PPA-09 — Phytohormone Networks & Crosstalk
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-09
+title: Phytohormone Networks & Crosstalk
+subtitle: Core biosynthetic modules and derepression signaling circuits for Auxin, ABA, JA, GA, and Ethylene
+derived_from: MapMan4 BIN 17 Hormone Metabolism & BIN 30 Signaling, PlantCyc HORMONE-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Integrated plant hormone networks. Compares the parallel derepression logic of the major phytohormones:
+  (1) Auxin perception by SCFTIR1 triggering Aux/IAA degradation and ARF release; (2) Abscisic acid (ABA)
+  binding to PYR/PYL/RCARs relieving PP2C inhibition of SnRK2 kinases; (3) Jasmonate-isoleucine (JA-Ile)
+  mediated SCFCOI1 destruction of JAZ repressors freeing MYC2; and (4) Gibberellin (GA) and Ethylene
+  circuits regulating DELLA degradation and EIN2/EIN3 transcriptional activation.
+
+lanes:
+  - id: auxin_signaling_axis
+    compartment: cytosol
+    node_width: 220
+    nodes: [AUXIN_BIOSYNTHESIS, PIN_POLAR_TRANSPORTERS, AUXIN_RECEPTOR_TIR1]
+
+  - id: aba_stress_axis
+    compartment: cytosol
+    node_width: 220
+    nodes: [ABA_BIOSYNTHESIS_NCED3, PYR_PYL_RECEPTORS, SNRK2_KINASE_OST1]
+
+  - id: jasmonate_defense_axis
+    compartment: cytosol
+    node_width: 220
+    nodes: [JA_BIOSYNTHESIS_LOX_AOS, COI1_JAZ_DEREPRESSION, MYC2_TRANSCRIPTION]
+
+  - id: ga_ethylene_growth_axis
+    compartment: nucleus
+    node_width: 220
+    nodes: [GA_GID1_DELLA_CASCADE, ETHYLENE_ETR1_EIN2, NUCLEAR_TRANSCRIPTION_FACTORS]
+
+nodes:
+  - id: AUXIN_BIOSYNTHESIS
+    label: "Auxin Biosynthesis (IPyA)"
+    sublabel: "BIN 17.1.1 TAA1 & YUCCA Flavin MO"
+    kind: "complex"
+    mapman_bin: "17.1.1"
+    subunits:
+      - symbol: "TAA1"
+        locus: "AT1G70560"
+      - symbol: "YUC1"
+        locus: "AT4G32540"
+    loci: ["AT1G70560", "AT4G32540"]
+
+  - id: PIN_POLAR_TRANSPORTERS
+    label: "PIN Auxin Efflux Carriers"
+    sublabel: "BIN 34.6 PIN1 / PIN2 Polar Polarity"
+    kind: "family"
+    mapman_bin: "34.6"
+    family_loci: ["AT1G73590", "AT5G57090"]
+    loci: ["AT1G73590", "AT5G57090"]
+
+  - id: AUXIN_RECEPTOR_TIR1
+    label: "TIR1 / AFB Core & Aux/IAA"
+    sublabel: "BIN 30.1.1 SCFTIR1 Auxin Receptor"
+    kind: "complex"
+    mapman_bin: "30.1.1"
+    subunits:
+      - symbol: "TIR1"
+        locus: "AT3G62980"
+      - symbol: "ARF5"
+        locus: "AT1G59750"
+    loci: ["AT3G62980", "AT1G59750"]
+
+  - id: ABA_BIOSYNTHESIS_NCED3
+    label: "ABA Biosynthesis (NCED3)"
+    sublabel: "BIN 17.2.1 9-cis-Neoxanthin Cleavage"
+    kind: "simple"
+    mapman_bin: "17.2.1"
+    loci: ["AT3G14440"]
+
+  - id: PYR_PYL_RECEPTORS
+    label: "PYR/PYL/RCAR Receptors"
+    sublabel: "BIN 30.2.1 START-domain Sensors"
+    kind: "family"
+    mapman_bin: "30.2.1"
+    family_loci: ["AT5G05440", "AT4G26080"]
+    loci: ["AT5G05440", "AT4G26080"]
+
+  - id: SNRK2_KINASE_OST1
+    label: "SnRK2 Kinases & ABF"
+    sublabel: "BIN 30.2.2 OST1 / SnRK2.6 Phosphorylation"
+    kind: "complex"
+    mapman_bin: "30.2.2"
+    subunits:
+      - symbol: "OST1"
+        locus: "AT4G33950"
+      - symbol: "ABF2"
+        locus: "AT1G45249"
+    loci: ["AT4G33950", "AT1G45249"]
+
+  - id: JA_BIOSYNTHESIS_LOX_AOS
+    label: "Jasmonate Biosynthesis"
+    sublabel: "BIN 17.3.1 LOX2, AOS, AOC Oxylipins"
+    kind: "complex"
+    mapman_bin: "17.3.1"
+    subunits:
+      - symbol: "LOX2"
+        locus: "AT3G45140"
+      - symbol: "AOS"
+        locus: "AT5G42650"
+      - symbol: "AOC1"
+        locus: "AT3G25760"
+    loci: ["AT3G45140", "AT5G42650", "AT3G25760"]
+
+  - id: COI1_JAZ_DEREPRESSION
+    label: "COI1 Receptor & JAZ Repressors"
+    sublabel: "BIN 30.3.1 SCFCOI1 JA-Ile Core"
+    kind: "complex"
+    mapman_bin: "30.3.1"
+    subunits:
+      - symbol: "COI1"
+        locus: "AT2G39940"
+      - symbol: "JAZ1"
+        locus: "AT1G19180"
+    loci: ["AT2G39940", "AT1G19180"]
+
+  - id: MYC2_TRANSCRIPTION
+    label: "MYC2 / MYC3 / MYC4 Regulon"
+    sublabel: "BIN 30.3.2 bHLH Master Regulators"
+    kind: "family"
+    mapman_bin: "30.3.2"
+    family_loci: ["AT1G32640", "AT5G46760"]
+    loci: ["AT1G32640", "AT5G46760"]
+
+  - id: GA_GID1_DELLA_CASCADE
+    label: "Gibberellin GID1 & DELLA"
+    sublabel: "BIN 30.4.1 GAI / RGA Derepression"
+    kind: "complex"
+    mapman_bin: "30.4.1"
+    subunits:
+      - symbol: "GID1A"
+        locus: "AT3G05120"
+      - symbol: "GAI"
+        locus: "AT1G14920"
+      - symbol: "RGA"
+        locus: "AT2G43790"
+    loci: ["AT3G05120", "AT1G14920", "AT2G43790"]
+
+  - id: ETHYLENE_ETR1_EIN2
+    label: "Ethylene ETR1 & EIN2"
+    sublabel: "BIN 30.5.1 Endoplasmic Reticulum Sensor"
+    kind: "complex"
+    mapman_bin: "30.5.1"
+    subunits:
+      - symbol: "ETR1"
+        locus: "AT1G66340"
+      - symbol: "EIN2"
+        locus: "AT5G03280"
+    loci: ["AT1G66340", "AT5G03280"]
+
+  - id: NUCLEAR_TRANSCRIPTION_FACTORS
+    label: "EIN3 / EIL1 & PIF TFs"
+    sublabel: "BIN 30.5.2 Transcriptional Execution"
+    kind: "family"
+    mapman_bin: "30.5.2"
+    family_loci: ["AT3G20770", "AT2G20180"]
+    loci: ["AT3G20770", "AT2G20180"]
+
+edges:
+  - from: AUXIN_BIOSYNTHESIS
+    to: PIN_POLAR_TRANSPORTERS
+    class: flux
+    label: "IAA"
+  - from: PIN_POLAR_TRANSPORTERS
+    to: AUXIN_RECEPTOR_TIR1
+    class: flux
+    label: "Auxin Gradient"
+  - from: ABA_BIOSYNTHESIS_NCED3
+    to: PYR_PYL_RECEPTORS
+    class: flux
+    label: "(+)-Abscisic Acid"
+  - from: PYR_PYL_RECEPTORS
+    to: SNRK2_KINASE_OST1
+    class: flux
+    label: "Inhibits PP2C -> Activates Kinase"
+  - from: JA_BIOSYNTHESIS_LOX_AOS
+    to: COI1_JAZ_DEREPRESSION
+    class: flux
+    label: "(+)-7-iso-JA-Ile"
+  - from: COI1_JAZ_DEREPRESSION
+    to: MYC2_TRANSCRIPTION
+    class: flux
+    label: "26S JAZ Degradation"
+  - from: GA_GID1_DELLA_CASCADE
+    to: NUCLEAR_TRANSCRIPTION_FACTORS
+    class: flux
+    label: "DELLA Destruction"
+  - from: ETHYLENE_ETR1_EIN2
+    to: NUCLEAR_TRANSCRIPTION_FACTORS
+    class: flux
+    label: "EIN2 C-term Cleavage"

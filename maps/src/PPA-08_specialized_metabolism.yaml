@@ -1,0 +1,179 @@
+# PPA-08 — Specialized / Secondary Metabolism
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-08
+title: Specialized & Secondary Metabolism
+subtitle: Phenylpropanoid entry, monolignol lignin polymerization, and anthocyanin flavonoid branching
+derived_from: MapMan4 BIN 16 Secondary Metabolism, PlantCyc PHENYLPROPANOID-PWY & FLAVONOID-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Specialized plant secondary metabolism. Phenylalanine is channeled into core phenylpropanoids
+  by PAL, C4H, and 4CL, generating activated 4-coumaroyl-CoA. From this central branchpoint, flux
+  bifurcates into: (1) monolignols via CCR and CAD for cell-wall lignification; and (2) flavonoids
+  via Chalcone Synthase (CHS/TT4), CHI, F3H, and DFR, culminating in vacuolar anthocyanin and
+  proanthocyanidin sequestration via GST transporter TT19.
+
+lanes:
+  - id: core_phenylpropanoid
+    compartment: cytosol
+    node_width: 220
+    nodes: [PAL_PHENYLALANINE_LYASE, C4H_HYDROXYLASE, FOUR_CL_LIGASE]
+
+  - id: monolignol_branch
+    compartment: cytosol
+    node_width: 220
+    nodes: [CCR_COA_REDUCTASE, CAD_ALCOHOL_DH, CELL_WALL_LIGNIFICATION]
+
+  - id: flavonoid_biosynthesis
+    compartment: endoplasmic_reticulum
+    node_width: 220
+    nodes: [CHALCONE_SYNTHASE_TT4, CHALCONE_ISOMERASE_TT5, FLAVANONE_3_HYDROXYLASE]
+
+  - id: anthocyanin_vacuole_entry
+    compartment: vacuole
+    node_width: 220
+    nodes: [DFR_REDUCTASE_TT3, ANS_LDOX_SYNTHASE, ANTHOCYANIN_EXPORT_TT19]
+
+nodes:
+  - id: PAL_PHENYLALANINE_LYASE
+    label: "Phenylalanine Ammonia-Lyase"
+    sublabel: "BIN 16.1.1 PAL1 / PAL2 / PAL4"
+    kind: "family"
+    mapman_bin: "16.1.1"
+    family_loci: ["AT2G37040", "AT3G53260", "AT5G04230"]
+    loci: ["AT2G37040", "AT3G53260", "AT5G04230"]
+
+  - id: C4H_HYDROXYLASE
+    label: "Cinnamate 4-Hydroxylase (C4H)"
+    sublabel: "BIN 16.1.2 CYP73A5 P450 Monooxygenase"
+    kind: "simple"
+    mapman_bin: "16.1.2"
+    loci: ["AT2G30490"]
+
+  - id: FOUR_CL_LIGASE
+    label: "4-Coumarate-CoA Ligase (4CL)"
+    sublabel: "BIN 16.1.3 4CL1 / 4CL2 / 4CL3 Core"
+    kind: "family"
+    mapman_bin: "16.1.3"
+    family_loci: ["AT1G51680", "AT3G21240", "AT1G65060"]
+    loci: ["AT1G51680", "AT3G21240", "AT1G65060"]
+
+  - id: CCR_COA_REDUCTASE
+    label: "Cinnamoyl-CoA Reductase (CCR)"
+    sublabel: "BIN 16.2.1 CCR1 Monolignol Entry"
+    kind: "simple"
+    mapman_bin: "16.2.1"
+    loci: ["AT1G15950"]
+
+  - id: CAD_ALCOHOL_DH
+    label: "Cinnamyl Alcohol Dehydrogenase"
+    sublabel: "BIN 16.2.2 CAD4 / CAD5 Monolignols"
+    kind: "complex"
+    mapman_bin: "16.2.2"
+    subunits:
+      - symbol: "CAD4"
+        locus: "AT3G19450"
+      - symbol: "CAD5"
+        locus: "AT4G34230"
+    loci: ["AT3G19450", "AT4G34230"]
+
+  - id: CELL_WALL_LIGNIFICATION
+    label: "Laccases & Class-III Peroxidases"
+    sublabel: "BIN 16.2.3 LAC4 / PRX52 Polymerization"
+    kind: "complex"
+    mapman_bin: "16.2.3"
+    subunits:
+      - symbol: "LAC4"
+        locus: "AT2G38080"
+      - symbol: "PRX52"
+        locus: "AT5G05340"
+    loci: ["AT2G38080", "AT5G05340"]
+
+  - id: CHALCONE_SYNTHASE_TT4
+    label: "Chalcone Synthase (CHS)"
+    sublabel: "BIN 16.3.1 TT4 Flavonoid Gatekeeper"
+    kind: "simple"
+    mapman_bin: "16.3.1"
+    loci: ["AT5G13930"]
+
+  - id: CHALCONE_ISOMERASE_TT5
+    label: "Chalcone Isomerase (CHI)"
+    sublabel: "BIN 16.3.2 TT5 Ring Closure"
+    kind: "simple"
+    mapman_bin: "16.3.2"
+    loci: ["AT3G55120"]
+
+  - id: FLAVANONE_3_HYDROXYLASE
+    label: "Flavanone 3-Hydroxylase (F3H)"
+    sublabel: "BIN 16.3.3 TT6 Dihydroflavonols"
+    kind: "simple"
+    mapman_bin: "16.3.3"
+    loci: ["AT3G51240"]
+
+  - id: DFR_REDUCTASE_TT3
+    label: "Dihydroflavonol Reductase (DFR)"
+    sublabel: "BIN 16.3.4 TT3 Leucoanthocyanidins"
+    kind: "simple"
+    mapman_bin: "16.3.4"
+    loci: ["AT5G42800"]
+
+  - id: ANS_LDOX_SYNTHASE
+    label: "Anthocyanidin Synthase (ANS)"
+    sublabel: "BIN 16.3.5 LDOX / TT18 Pigment"
+    kind: "simple"
+    mapman_bin: "16.3.5"
+    loci: ["AT4G22880"]
+
+  - id: ANTHOCYANIN_EXPORT_TT19
+    label: "Glutathione S-Transferase (TT19)"
+    sublabel: "BIN 16.3.6 Vacuolar Sequestration"
+    kind: "simple"
+    mapman_bin: "16.3.6"
+    loci: ["AT5G17220"]
+
+edges:
+  - from: PAL_PHENYLALANINE_LYASE
+    to: C4H_HYDROXYLASE
+    class: flux
+    label: "trans-Cinnamate"
+  - from: C4H_HYDROXYLASE
+    to: FOUR_CL_LIGASE
+    class: flux
+    label: "4-Coumarate"
+  - from: FOUR_CL_LIGASE
+    to: CCR_COA_REDUCTASE
+    class: flux
+    label: "4-Coumaroyl-CoA"
+  - from: FOUR_CL_LIGASE
+    to: CHALCONE_SYNTHASE_TT4
+    class: flux
+    label: "3x Malonyl-CoA"
+  - from: CCR_COA_REDUCTASE
+    to: CAD_ALCOHOL_DH
+    class: flux
+    label: "Cinnamaldehydes"
+  - from: CAD_ALCOHOL_DH
+    to: CELL_WALL_LIGNIFICATION
+    class: flux
+    label: "Monolignols (Coniferyl/Sinapyl)"
+  - from: CHALCONE_SYNTHASE_TT4
+    to: CHALCONE_ISOMERASE_TT5
+    class: flux
+    label: "Naringenin Chalcone"
+  - from: CHALCONE_ISOMERASE_TT5
+    to: FLAVANONE_3_HYDROXYLASE
+    class: flux
+    label: "Naringenin"
+  - from: FLAVANONE_3_HYDROXYLASE
+    to: DFR_REDUCTASE_TT3
+    class: flux
+    label: "Dihydrokaempferol"
+  - from: DFR_REDUCTASE_TT3
+    to: ANS_LDOX_SYNTHASE
+    class: flux
+    label: "Leucocyanidin"
+  - from: ANS_LDOX_SYNTHASE
+    to: ANTHOCYANIN_EXPORT_TT19
+    class: flux
+    label: "Cyanidin Pigment"

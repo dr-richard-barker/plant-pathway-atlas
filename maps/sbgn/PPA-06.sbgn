@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
+  <map id="PPA-06" language="process description">
+    <bbox x="-18.00" y="0.00" w="920.00" h="680.00" />
+    <glyph id="comp_chloroplast_stroma" class="compartment">
+      <label text="Chloroplast Stroma" />
+      <bbox x="43.36" y="62.00" w="671.04" h="133.65" />
+    </glyph>
+    <glyph id="comp_endoplasmic_reticulum" class="compartment">
+      <label text="Endoplasmic Reticulum" />
+      <bbox x="14.00" y="173.65" w="729.75" h="133.65" />
+    </glyph>
+    <glyph id="comp_chloroplast_envelope" class="compartment">
+      <label text="Chloroplast Envelope" />
+      <bbox x="42.32" y="285.30" w="673.11" h="129.65" />
+    </glyph>
+    <glyph id="comp_peroxisome" class="compartment">
+      <label text="Peroxisome" />
+      <bbox x="43.85" y="392.94" w="670.06" h="129.65" />
+    </glyph>
+    <glyph id="PLASTID_ACCASE" class="complex" compartmentRef="comp_chloroplast_stroma">
+      <label text="Plastidial ACCase Complex" />
+      <bbox x="69.36" y="102.00" w="182.29" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PLASTID_ACCASE" compartment="chloroplast_stroma" mapmanBin="11.1.1">
+          <ns0:locus>AT2G05990</ns0:locus>
+          <ns0:locus>AT5G16390</ns0:locus>
+          <ns0:locus>AT1G36160</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="FAS_ELONGATION" class="complex" compartmentRef="comp_chloroplast_stroma">
+      <label text="Fatty Acid Synthase (FAS)" />
+      <bbox x="283.65" y="102.00" w="189.85" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="FAS_ELONGATION" compartment="chloroplast_stroma" mapmanBin="11.1.2">
+          <ns0:locus>AT5G46290</ns0:locus>
+          <ns0:locus>AT1G74960</ns0:locus>
+          <ns0:locus>AT2G04540</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="THIOESTERASE_EXPORT" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
+      <label text="Acyl-ACP Thioesterases" />
+      <bbox x="505.50" y="104.00" w="182.90" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="THIOESTERASE_EXPORT" compartment="chloroplast_stroma" mapmanBin="11.1.3">
+          <ns0:locus>AT1G08510</ns0:locus>
+          <ns0:locus>AT3G25110</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="GLYCEROL_ACYLATION_GPAT" class="complex" compartmentRef="comp_endoplasmic_reticulum">
+      <label text="GPAT &amp; LPAT Acyltransferases" />
+      <bbox x="40.00" y="213.65" w="201.34" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GLYCEROL_ACYLATION_GPAT" compartment="endoplasmic_reticulum" mapmanBin="11.2.1">
+          <ns0:locus>AT1G06520</ns0:locus>
+          <ns0:locus>AT3G57650</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PHOSPHATIDIC_ACID_POOL" class="macromolecule" compartmentRef="comp_endoplasmic_reticulum">
+      <label text="Phosphatidic Acid Phosphatase" />
+      <bbox x="273.34" y="215.65" w="208.66" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PHOSPHATIDIC_ACID_POOL" compartment="endoplasmic_reticulum" mapmanBin="11.2.2">
+          <ns0:locus>AT3G09560</ns0:locus>
+          <ns0:locus>AT5G42870</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="TRIACYLGLYCEROL_DGAT" class="complex" compartmentRef="comp_endoplasmic_reticulum">
+      <label text="Diacylglycerol Acyltransferase" />
+      <bbox x="514.00" y="213.65" w="203.75" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TRIACYLGLYCEROL_DGAT" compartment="endoplasmic_reticulum" mapmanBin="11.2.3">
+          <ns0:locus>AT2G19450</ns0:locus>
+          <ns0:locus>AT3G51520</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="MGDG_SYNTHASE_MGD1" class="macromolecule" compartmentRef="comp_chloroplast_envelope">
+      <label text="MGDG Synthase" />
+      <bbox x="68.32" y="334.30" w="164.67" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="MGDG_SYNTHASE_MGD1" compartment="chloroplast_envelope" mapmanBin="11.3.1">
+          <ns0:locus>AT4G31780</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="DGDG_SYNTHASE_DGD1" class="macromolecule" compartmentRef="comp_chloroplast_envelope">
+      <label text="DGDG Synthase" />
+      <bbox x="264.99" y="325.30" w="196.66" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="DGDG_SYNTHASE_DGD1" compartment="chloroplast_envelope" mapmanBin="11.3.2">
+          <ns0:locus>AT3G11670</ns0:locus>
+          <ns0:locus>AT4G00550</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="FATTY_ACID_DESATURASES" class="macromolecule" compartmentRef="comp_chloroplast_envelope">
+      <label text="Fatty Acid Desaturases (FAD)" />
+      <bbox x="493.66" y="325.30" w="195.77" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="FATTY_ACID_DESATURASES" compartment="chloroplast_envelope" mapmanBin="11.3.3">
+          <ns0:locus>AT3G12120</ns0:locus>
+          <ns0:locus>AT2G29980</ns0:locus>
+          <ns0:locus>AT3G11170</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="ACYL_COA_OXIDASE_ACX" class="macromolecule" compartmentRef="comp_peroxisome">
+      <label text="Acyl-CoA Oxidase (ACX)" />
+      <bbox x="69.85" y="432.94" w="182.60" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ACYL_COA_OXIDASE_ACX" compartment="peroxisome" mapmanBin="11.4.1">
+          <ns0:locus>AT4G16760</ns0:locus>
+          <ns0:locus>AT5G65110</ns0:locus>
+          <ns0:locus>AT1G06290</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="MULTIFUNCTIONAL_MFP2" class="macromolecule" compartmentRef="comp_peroxisome">
+      <label text="Multifunctional Protein 2" />
+      <bbox x="284.44" y="441.94" w="189.29" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="MULTIFUNCTIONAL_MFP2" compartment="peroxisome" mapmanBin="11.4.2">
+          <ns0:locus>AT3G06860</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="KETOACYL_THIOLASE_PED1" class="macromolecule" compartmentRef="comp_peroxisome">
+      <label text="3-Ketoacyl-CoA Thiolase" />
+      <bbox x="505.73" y="441.94" w="182.17" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="KETOACYL_THIOLASE_PED1" compartment="peroxisome" mapmanBin="11.4.3">
+          <ns0:locus>AT2G33150</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <arc id="arc_0" class="consumption" source="PLASTID_ACCASE" target="FAS_ELONGATION">
+      <start x="251.65" y="135.82" />
+      <end x="283.65" y="135.82" />
+    </arc>
+    <arc id="arc_1" class="consumption" source="FAS_ELONGATION" target="THIOESTERASE_EXPORT">
+      <start x="473.50" y="135.82" />
+      <end x="505.50" y="135.82" />
+    </arc>
+    <arc id="arc_2" class="consumption" source="THIOESTERASE_EXPORT" target="GLYCEROL_ACYLATION_GPAT">
+      <start x="505.50" y="158.20" />
+      <end x="241.34" y="222.84" />
+    </arc>
+    <arc id="arc_3" class="consumption" source="GLYCEROL_ACYLATION_GPAT" target="PHOSPHATIDIC_ACID_POOL">
+      <start x="241.34" y="247.47" />
+      <end x="273.34" y="247.47" />
+    </arc>
+    <arc id="arc_4" class="consumption" source="PHOSPHATIDIC_ACID_POOL" target="TRIACYLGLYCEROL_DGAT">
+      <start x="482.00" y="247.47" />
+      <end x="514.00" y="247.47" />
+    </arc>
+    <arc id="arc_5" class="consumption" source="PHOSPHATIDIC_ACID_POOL" target="MGDG_SYNTHASE_MGD1">
+      <start x="311.78" y="279.30" />
+      <end x="197.91" y="334.30" />
+    </arc>
+    <arc id="arc_6" class="consumption" source="MGDG_SYNTHASE_MGD1" target="DGDG_SYNTHASE_DGD1">
+      <start x="232.99" y="357.12" />
+      <end x="264.99" y="357.12" />
+    </arc>
+    <arc id="arc_7" class="consumption" source="DGDG_SYNTHASE_DGD1" target="FATTY_ACID_DESATURASES">
+      <start x="461.66" y="357.12" />
+      <end x="493.66" y="357.12" />
+    </arc>
+    <arc id="arc_8" class="consumption" source="TRIACYLGLYCEROL_DGAT" target="ACYL_COA_OXIDASE_ACX">
+      <start x="545.09" y="281.30" />
+      <end x="227.74" y="432.94" />
+    </arc>
+    <arc id="arc_9" class="consumption" source="ACYL_COA_OXIDASE_ACX" target="MULTIFUNCTIONAL_MFP2">
+      <start x="252.44" y="464.77" />
+      <end x="284.44" y="464.77" />
+    </arc>
+    <arc id="arc_10" class="consumption" source="MULTIFUNCTIONAL_MFP2" target="KETOACYL_THIOLASE_PED1">
+      <start x="473.73" y="464.77" />
+      <end x="505.73" y="464.77" />
+    </arc>
+  </map>
+</sbgn>

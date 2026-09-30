@@ -1,0 +1,257 @@
+# PPA-04 — Cellular Respiration & Mitochondrial Electron Transport
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-04
+title: Cellular Respiration & Mitochondrial ETC
+subtitle: Tricarboxylic acid cycle, classical respiratory complexes I-V, and plant-specific alternative bypasses
+derived_from: MapMan4 BIN 8 TCA Cycle & BIN 9 Mitochondrial ETC, PlantCyc TCA & RESPIRATION-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Mitochondrial oxidative phosphorylation and respiratory electron transport chain. Substrates
+  derived from the TCA cycle feed electrons into classical Complex I (NADH DH) and Complex II
+  (Succinate DH), as well as plant-specific rotenone-insensitive external/internal NAD(P)H
+  dehydrogenases (NDA, NDB). Electrons funnel through ubiquinone to either classical Complex III/IV
+  (generating a proton gradient for Complex V ATP synthase) or cyanide-resistant Alternative
+  Oxidases (AOX1A/D), dissipating redox pressure as heat without proton translocation.
+
+lanes:
+  - id: tca_cycle_matrix
+    compartment: mitochondrial_matrix
+    node_width: 220
+    nodes: [TCA_SUBSTRATE_CORE, TCA_DEHYDROGENASES, MALATE_FUMARATE_POOL]
+
+  - id: input_dehydrogenases
+    compartment: mitochondrial_inner_membrane
+    node_width: 220
+    nodes: [COMPLEX_I_NADH, COMPLEX_II_SDH, ROTENONE_INSENSITIVE_NDH]
+
+  - id: ubiquinol_partitioning
+    compartment: mitochondrial_inner_membrane
+    node_width: 210
+    nodes: [UBIQUINONE_POOL, AOX_ALTERNATIVE_OXIDASE, UNCOUPLING_PROTEINS]
+
+  - id: classical_terminal_etc
+    compartment: mitochondrial_inner_membrane
+    node_width: 220
+    nodes: [COMPLEX_III_BC1, CYTOCHROME_C_SOLUBLE, COMPLEX_IV_COX]
+
+  - id: phosphorylation_complex
+    compartment: mitochondrial_inner_membrane
+    node_width: 210
+    nodes: [COMPLEX_V_F1F0, ADENINE_NUCLEOTIDE_TR, PHOSPHATE_CARRIER]
+
+nodes:
+  - id: TCA_SUBSTRATE_CORE
+    label: "Citrate Synthase & Aconitase"
+    sublabel: "BIN 8.1 Entry Condensation"
+    kind: "complex"
+    mapman_bin: "8.1"
+    subunits:
+      - symbol: "CSY2"
+        locus: "AT3G58750"
+      - symbol: "ACO1"
+        locus: "AT2G05710"
+    loci: ["AT3G58750", "AT2G05710"]
+
+  - id: TCA_DEHYDROGENASES
+    label: "IDH & 2-OGDH Complexes"
+    sublabel: "BIN 8.2 Decarboxylations"
+    kind: "complex"
+    mapman_bin: "8.2"
+    subunits:
+      - symbol: "IDH1"
+        locus: "AT4G35260"
+      - symbol: "OGDH1"
+        locus: "AT3G55410"
+    loci: ["AT4G35260", "AT3G55410"]
+
+  - id: MALATE_FUMARATE_POOL
+    label: "Fumarase & Malate DH"
+    sublabel: "BIN 8.3 Regeneration"
+    kind: "complex"
+    mapman_bin: "8.3"
+    subunits:
+      - symbol: "FUM1"
+        locus: "AT2G47310"
+      - symbol: "mMDH1"
+        locus: "AT1G53240"
+      - symbol: "mMDH2"
+        locus: "AT3G47520"
+    loci: ["AT2G47310", "AT1G53240", "AT3G47520"]
+
+  - id: COMPLEX_I_NADH
+    label: "Complex I (NADH DH)"
+    sublabel: "BIN 9.1 40+ Subunit Holocore"
+    kind: "complex"
+    mapman_bin: "9.1"
+    subunits:
+      - symbol: "NDUFS1"
+        locus: "AT1G16700"
+      - symbol: "NDUFV1"
+        locus: "AT5G08530"
+      - symbol: "CAL1"
+        locus: "AT5G37510"
+    loci: ["AT1G16700", "AT5G08530", "AT5G37510"]
+
+  - id: COMPLEX_II_SDH
+    label: "Complex II (Succinate DH)"
+    sublabel: "BIN 9.2 Flavoprotein Core"
+    kind: "complex"
+    mapman_bin: "9.2"
+    subunits:
+      - symbol: "SDH1-1"
+        locus: "AT5G66760"
+      - symbol: "SDH2-1"
+        locus: "AT3G27380"
+      - symbol: "SDH3-1"
+        locus: "AT5G40650"
+    loci: ["AT5G66760", "AT3G27380", "AT5G40650"]
+
+  - id: ROTENONE_INSENSITIVE_NDH
+    label: "External/Internal NAD(P)H DH"
+    sublabel: "BIN 9.3 Type-II Bypass"
+    kind: "family"
+    mapman_bin: "9.3"
+    family_loci: ["AT1G07180", "AT2G29990", "AT4G05020", "AT4G28220"]
+    loci: ["AT1G07180", "AT2G29990", "AT4G05020", "AT4G28220"]
+
+  - id: UBIQUINONE_POOL
+    label: "Ubiquinone Pool (Q/QH2)"
+    sublabel: "BIN 9.4 Mobile Lipid Carrier"
+    kind: "simple"
+    mapman_bin: "9.4"
+    loci: ["AT1G78510"]
+
+  - id: AOX_ALTERNATIVE_OXIDASE
+    label: "Alternative Oxidase (AOX)"
+    sublabel: "BIN 9.5 Cyanide-Resistant Bypass"
+    kind: "family"
+    mapman_bin: "9.5"
+    family_loci: ["AT3G22370", "AT1G32350"]
+    loci: ["AT3G22370", "AT1G32350"]
+
+  - id: UNCOUPLING_PROTEINS
+    label: "Plant Uncoupling Proteins"
+    sublabel: "BIN 9.6 UCP1 / UCP2"
+    kind: "family"
+    mapman_bin: "9.6"
+    family_loci: ["AT3G54110", "AT5G58970"]
+    loci: ["AT3G54110", "AT5G58970"]
+
+  - id: COMPLEX_III_BC1
+    label: "Complex III (Cyt bc1)"
+    sublabel: "BIN 9.7 Q-Cycle Core"
+    kind: "complex"
+    mapman_bin: "9.7"
+    subunits:
+      - symbol: "QCR2-1"
+        locus: "AT3G54080"
+      - symbol: "CYC1"
+        locus: "AT2G40610"
+      - symbol: "RISP"
+        locus: "AT1G60950"
+    loci: ["AT3G54080", "AT2G40610", "AT1G60950"]
+
+  - id: CYTOCHROME_C_SOLUBLE
+    label: "Cytochrome c"
+    sublabel: "BIN 9.8 IMS Mobile Shuttle"
+    kind: "family"
+    mapman_bin: "9.8"
+    family_loci: ["AT1G22840", "AT4G10040"]
+    loci: ["AT1G22840", "AT4G10040"]
+
+  - id: COMPLEX_IV_COX
+    label: "Complex IV (Cyt c Oxidase)"
+    sublabel: "BIN 9.9 Terminal O2 Reduction"
+    kind: "complex"
+    mapman_bin: "9.9"
+    subunits:
+      - symbol: "COX5B"
+        locus: "AT4G39740"
+      - symbol: "COX6B"
+        locus: "AT3G15640"
+    loci: ["AT4G39740", "AT3G15640"]
+
+  - id: COMPLEX_V_F1F0
+    label: "ATP Synthase (Complex V)"
+    sublabel: "BIN 9.10 F1-F0 Rotary Engine"
+    kind: "complex"
+    mapman_bin: "9.10"
+    subunits:
+      - symbol: "alpha"
+        locus: "AT2G07698"
+      - symbol: "beta"
+        locus: "AT5G08670"
+      - symbol: "gamma"
+        locus: "AT2G23870"
+    loci: ["AT2G07698", "AT5G08670", "AT2G23870"]
+
+  - id: ADENINE_NUCLEOTIDE_TR
+    label: "ADP/ATP Translocator (ANT)"
+    sublabel: "BIN 34.2 Mitochondrial Carrier"
+    kind: "family"
+    mapman_bin: "34.2"
+    family_loci: ["AT3G08580", "AT5G13490"]
+    loci: ["AT3G08580", "AT5G13490"]
+
+  - id: PHOSPHATE_CARRIER
+    label: "Phosphate Translocator (MPT)"
+    sublabel: "BIN 34.3 Pi/H+ Symport"
+    kind: "family"
+    mapman_bin: "34.3"
+    family_loci: ["AT5G14040", "AT3G48850"]
+    loci: ["AT5G14040", "AT3G48850"]
+
+edges:
+  - from: TCA_SUBSTRATE_CORE
+    to: TCA_DEHYDROGENASES
+    class: flux
+    label: "Isocitrate"
+  - from: TCA_DEHYDROGENASES
+    to: MALATE_FUMARATE_POOL
+    class: flux
+    label: "Succinate"
+  - from: TCA_DEHYDROGENASES
+    to: COMPLEX_I_NADH
+    class: flux
+    label: "NADH"
+  - from: MALATE_FUMARATE_POOL
+    to: COMPLEX_II_SDH
+    class: flux
+    label: "FADH2"
+  - from: COMPLEX_I_NADH
+    to: UBIQUINONE_POOL
+    class: flux
+    label: "2e-"
+  - from: COMPLEX_II_SDH
+    to: UBIQUINONE_POOL
+    class: flux
+    label: "2e-"
+  - from: ROTENONE_INSENSITIVE_NDH
+    to: UBIQUINONE_POOL
+    class: flux
+    label: "e-"
+  - from: UBIQUINONE_POOL
+    to: AOX_ALTERNATIVE_OXIDASE
+    class: flux
+    label: "Heat + H2O"
+  - from: UBIQUINONE_POOL
+    to: COMPLEX_III_BC1
+    class: flux
+    label: "Q-Cycle"
+  - from: COMPLEX_III_BC1
+    to: CYTOCHROME_C_SOLUBLE
+    class: flux
+    label: "1e-"
+  - from: CYTOCHROME_C_SOLUBLE
+    to: COMPLEX_IV_COX
+    class: flux
+  - from: COMPLEX_IV_COX
+    to: COMPLEX_V_F1F0
+    class: flux
+    label: "Proton Motive Force"
+  - from: COMPLEX_V_F1F0
+    to: ADENINE_NUCLEOTIDE_TR
+    class: flux
+    label: "ATP Export"

@@ -1,0 +1,192 @@
+# PPA-07 — Nitrogen & Sulfur Primary Assimilation
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-07
+title: Nitrogen & Sulfur Primary Assimilation
+subtitle: Nitrate and sulfate reduction, GS-GOGAT ammonium incorporation, and cysteine/methionine biosynthesis
+derived_from: MapMan4 BIN 12 Nitrogen Metabolism & BIN 14 Sulfur Metabolism, PlantCyc NITRATE-ASSIMILATION-PWY & SULFATE-ASSIMILATION-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Primary inorganic nitrogen and sulfur assimilation in plants. Soil nitrate is reduced to nitrite
+  in the cytosol by Nitrate Reductase (NIA1/2), transported into the chloroplast, and reduced to
+  ammonium by Nitrite Reductase (NIR1). Ammonium is assimilated into glutamate and glutamine via the
+  coupled GS-GOGAT cycle. Concurrently, imported sulfate is activated by ATP Sulfurylase (APS) and
+  reduced by APR and SiR to sulfide, which is condensed with O-acetylserine by OAS-TL to form cysteine.
+
+lanes:
+  - id: nitrate_reduction_cytosol
+    compartment: cytosol
+    node_width: 220
+    nodes: [NITRATE_TRANSPORTERS, NITRATE_REDUCTASE_NIA, AMINO_ACID_EXPORT]
+
+  - id: nitrite_ammonium_plastid
+    compartment: chloroplast_stroma
+    node_width: 220
+    nodes: [NITRITE_REDUCTASE_NIR, GS_GLUTAMINE_SYNTH, GOGAT_GLUTAMATE_SYNTH]
+
+  - id: sulfate_reduction_core
+    compartment: chloroplast_stroma
+    node_width: 220
+    nodes: [SULFATE_TRANSPORTERS, ATP_SULFURYLASE_APS, APS_REDUCTASE_APR]
+
+  - id: cysteine_methionine_branch
+    compartment: chloroplast_stroma
+    node_width: 220
+    nodes: [SULFITE_REDUCTASE_SIR, OASTL_CYSTEINE_SYNTH, CGS_METHIONINE_SYNTH]
+
+nodes:
+  - id: NITRATE_TRANSPORTERS
+    label: "Nitrate Transporters (NRT)"
+    sublabel: "BIN 34.4 NRT1.1 / NRT2.1 Dual-Affinity"
+    kind: "family"
+    mapman_bin: "34.4"
+    family_loci: ["AT1G12110", "AT1G08090"]
+    loci: ["AT1G12110", "AT1G08090"]
+
+  - id: NITRATE_REDUCTASE_NIA
+    label: "Nitrate Reductase (NR)"
+    sublabel: "BIN 12.1 NIA1 / NIA2 Cytosolic Core"
+    kind: "family"
+    mapman_bin: "12.1"
+    family_loci: ["AT1G77760", "AT1G37130"]
+    loci: ["AT1G77760", "AT1G37130"]
+
+  - id: NITRITE_REDUCTASE_NIR
+    label: "Nitrite Reductase (NIR)"
+    sublabel: "BIN 12.2 NIR1 Plastid Reduction"
+    kind: "simple"
+    mapman_bin: "12.2"
+    loci: ["AT2G15620"]
+
+  - id: GS_GLUTAMINE_SYNTH
+    label: "Glutamine Synthetase (GS)"
+    sublabel: "BIN 12.3 GLN1 (Cyt) & GLN2 (Chl)"
+    kind: "complex"
+    mapman_bin: "12.3"
+    subunits:
+      - symbol: "GLN1;1"
+        locus: "AT5G37600"
+      - symbol: "GLN2"
+        locus: "AT5G35630"
+    loci: ["AT5G37600", "AT5G35630"]
+
+  - id: GOGAT_GLUTAMATE_SYNTH
+    label: "Glutamate Synthase (GOGAT)"
+    sublabel: "BIN 12.4 Fd-GOGAT (GLU1) & NADH-GOGAT"
+    kind: "complex"
+    mapman_bin: "12.4"
+    subunits:
+      - symbol: "GLU1"
+        locus: "AT5G04140"
+      - symbol: "GLT1"
+        locus: "AT5G53460"
+    loci: ["AT5G04140", "AT5G53460"]
+
+  - id: AMINO_ACID_EXPORT
+    label: "Aspartate & Asparagine Core"
+    sublabel: "BIN 12.5 Aspartate Aminotransferase"
+    kind: "complex"
+    mapman_bin: "12.5"
+    subunits:
+      - symbol: "ASP1"
+        locus: "AT2G30970"
+      - symbol: "ASN1"
+        locus: "AT3G47340"
+    loci: ["AT2G30970", "AT3G47340"]
+
+  - id: SULFATE_TRANSPORTERS
+    label: "Sulfate Transporters (SULTR)"
+    sublabel: "BIN 34.5 High-Affinity SULTR1;1 / 1;2"
+    kind: "family"
+    mapman_bin: "34.5"
+    family_loci: ["AT4G08620", "AT1G78000"]
+    loci: ["AT4G08620", "AT1G78000"]
+
+  - id: ATP_SULFURYLASE_APS
+    label: "ATP Sulfurylase (APS)"
+    sublabel: "BIN 14.1 APS1 / APS2 Activation"
+    kind: "family"
+    mapman_bin: "14.1"
+    family_loci: ["AT3G22890", "AT1G19920"]
+    loci: ["AT3G22890", "AT1G19920"]
+
+  - id: APS_REDUCTASE_APR
+    label: "APS Reductase (APR)"
+    sublabel: "BIN 14.2 APR1 / APR2 / APR3"
+    kind: "family"
+    mapman_bin: "14.2"
+    family_loci: ["AT4G04610", "AT1G62180", "AT4G21990"]
+    loci: ["AT4G04610", "AT1G62180", "AT4G21990"]
+
+  - id: SULFITE_REDUCTASE_SIR
+    label: "Sulfite Reductase (SiR)"
+    sublabel: "BIN 14.3 SiR Sulfide Formation"
+    kind: "simple"
+    mapman_bin: "14.3"
+    loci: ["AT5G04590"]
+
+  - id: OASTL_CYSTEINE_SYNTH
+    label: "OAS Thiol-Lyase (OAS-TL)"
+    sublabel: "BIN 14.4 Cysteine Synthase A/B"
+    kind: "complex"
+    mapman_bin: "14.4"
+    subunits:
+      - symbol: "OAS-A1"
+        locus: "AT4G14880"
+      - symbol: "OAS-B"
+        locus: "AT2G43750"
+    loci: ["AT4G14880", "AT2G43750"]
+
+  - id: CGS_METHIONINE_SYNTH
+    label: "Cystathionine Synthase (CGS)"
+    sublabel: "BIN 14.5 CGS1 Methionine Precursor"
+    kind: "simple"
+    mapman_bin: "14.5"
+    loci: ["AT3G01120"]
+
+edges:
+  - from: NITRATE_TRANSPORTERS
+    to: NITRATE_REDUCTASE_NIA
+    class: flux
+    label: "NO3-"
+  - from: NITRATE_REDUCTASE_NIA
+    to: NITRITE_REDUCTASE_NIR
+    class: flux
+    label: "NO2-"
+  - from: NITRITE_REDUCTASE_NIR
+    to: GS_GLUTAMINE_SYNTH
+    class: flux
+    label: "NH4+"
+  - from: GS_GLUTAMINE_SYNTH
+    to: GOGAT_GLUTAMATE_SYNTH
+    class: flux
+    label: "Glutamine"
+  - from: GOGAT_GLUTAMATE_SYNTH
+    to: GS_GLUTAMINE_SYNTH
+    class: flux
+    label: "Glutamate recycled"
+  - from: GOGAT_GLUTAMATE_SYNTH
+    to: AMINO_ACID_EXPORT
+    class: flux
+    label: "Aspartate Pool"
+  - from: SULFATE_TRANSPORTERS
+    to: ATP_SULFURYLASE_APS
+    class: flux
+    label: "SO4(2-)"
+  - from: ATP_SULFURYLASE_APS
+    to: APS_REDUCTASE_APR
+    class: flux
+    label: "APS"
+  - from: APS_REDUCTASE_APR
+    to: SULFITE_REDUCTASE_SIR
+    class: flux
+    label: "Sulfite (SO3(2-))"
+  - from: SULFITE_REDUCTASE_SIR
+    to: OASTL_CYSTEINE_SYNTH
+    class: flux
+    label: "Sulfide (S(2-))"
+  - from: OASTL_CYSTEINE_SYNTH
+    to: CGS_METHIONINE_SYNTH
+    class: flux
+    label: "Cysteine"

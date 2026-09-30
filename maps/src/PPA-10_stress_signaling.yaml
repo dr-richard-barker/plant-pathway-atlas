@@ -1,0 +1,178 @@
+# PPA-10 — Biotic & Abiotic Stress Signaling
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-10
+title: Biotic & Abiotic Stress Pathways
+subtitle: Pattern-triggered immunity (PTI), MAPK cascades, CBF/DREB regulon, and heat shock factors
+derived_from: MapMan4 BIN 20 Stress Pathways, PlantCyc IMMUNE-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Integrated plant defense and acclimation pathways. Plasma membrane pattern recognition receptors
+  (FLS2/BAK1) perceive bacterial flagellin (flg22), activating BIK1 transphosphorylation and triggering
+  the canonical MPK3/MPK6 signaling cascade. Concurrently, environmental temperature and osmotic
+  fluctuations activate the CBF1-3/DREB regulon for cold/freezing tolerance and HSFA1/HSFA2 for heat shock
+  protein (HSP70/90) chaperone induction.
+
+lanes:
+  - id: pattern_recognition_pm
+    compartment: plasma_membrane
+    node_width: 220
+    nodes: [PRR_FLS2_BAK1, BIK1_RECEPTOR_KINASE, RBOHD_BURST]
+
+  - id: mapk_cascade_core
+    compartment: cytosol
+    node_width: 220
+    nodes: [MAPKKK_MAPKK_MODULE, MPK3_MPK6_KINASES, WRKY33_TF_HUB]
+
+  - id: cbf_dreb_cold_drought
+    compartment: nucleus
+    node_width: 220
+    nodes: [CBF_DREB1_REGULON, COR_GENE_EFFECTORS, PROLINE_OSMOPROTECTANTS]
+
+  - id: heat_shock_chaperones
+    compartment: cytosol
+    node_width: 220
+    nodes: [HSFA_MASTER_FACTORS, HSP70_CHAPERONE_CORE, HSP90_PROTEIN_COMPLEX]
+
+nodes:
+  - id: PRR_FLS2_BAK1
+    label: "FLS2 / BAK1 Receptor Core"
+    sublabel: "BIN 20.1.1 PAMP Perception"
+    kind: "complex"
+    mapman_bin: "20.1.1"
+    subunits:
+      - symbol: "FLS2"
+        locus: "AT5G46330"
+      - symbol: "BAK1"
+        locus: "AT4G33430"
+    loci: ["AT5G46330", "AT4G33430"]
+
+  - id: BIK1_RECEPTOR_KINASE
+    label: "BIK1 / PBL Kinase Relay"
+    sublabel: "BIN 20.1.2 RLCK Phosphorylation"
+    kind: "simple"
+    mapman_bin: "20.1.2"
+    loci: ["AT2G39660"]
+
+  - id: RBOHD_BURST
+    label: "RBOHD NADPH Oxidase"
+    sublabel: "BIN 20.1.3 Oxidative Burst"
+    kind: "simple"
+    mapman_bin: "20.1.3"
+    loci: ["AT5G47910"]
+
+  - id: MAPKKK_MAPKK_MODULE
+    label: "MEKK1 & MKK4 / MKK5"
+    sublabel: "BIN 20.2.1 Upstream Kinase Module"
+    kind: "complex"
+    mapman_bin: "20.2.1"
+    subunits:
+      - symbol: "MEKK1"
+        locus: "AT4G08500"
+      - symbol: "MKK4"
+        locus: "AT1G51660"
+      - symbol: "MKK5"
+        locus: "AT3G21220"
+    loci: ["AT4G08500", "AT1G51660", "AT3G21220"]
+
+  - id: MPK3_MPK6_KINASES
+    label: "MPK3 & MPK6 Cascade"
+    sublabel: "BIN 20.2.2 Dual Phosphorylation"
+    kind: "complex"
+    mapman_bin: "20.2.2"
+    subunits:
+      - symbol: "MPK3"
+        locus: "AT3G45640"
+      - symbol: "MPK6"
+        locus: "AT2G43790"
+    loci: ["AT3G45640", "AT2G43790"]
+
+  - id: WRKY33_TF_HUB
+    label: "WRKY33 Immune Hub"
+    sublabel: "BIN 20.2.3 Camalexin & Defense"
+    kind: "simple"
+    mapman_bin: "20.2.3"
+    loci: ["AT2G38470"]
+
+  - id: CBF_DREB1_REGULON
+    label: "CBF1 / CBF2 / CBF3"
+    sublabel: "BIN 20.3.1 AP2/ERF Cold Masters"
+    kind: "family"
+    mapman_bin: "20.3.1"
+    family_loci: ["AT4G25490", "AT4G25470", "AT4G25480"]
+    loci: ["AT4G25490", "AT4G25470", "AT4G25480"]
+
+  - id: COR_GENE_EFFECTORS
+    label: "COR15A & KIN1 Effectors"
+    sublabel: "BIN 20.3.2 Cold-Regulated Polypeptides"
+    kind: "family"
+    mapman_bin: "20.3.2"
+    family_loci: ["AT2G42540", "AT5G15960"]
+    loci: ["AT2G42540", "AT5G15960"]
+
+  - id: PROLINE_OSMOPROTECTANTS
+    label: "Proline Synthase (P5CS1)"
+    sublabel: "BIN 20.3.3 Osmotic Adjustment"
+    kind: "simple"
+    mapman_bin: "20.3.3"
+    loci: ["AT2G39800"]
+
+  - id: HSFA_MASTER_FACTORS
+    label: "Heat Shock Factors (HSFs)"
+    sublabel: "BIN 20.4.1 HSFA1A / HSFA2 Thermotolerance"
+    kind: "family"
+    mapman_bin: "20.4.1"
+    family_loci: ["AT4G17750", "AT2G26150"]
+    loci: ["AT4G17750", "AT2G26150"]
+
+  - id: HSP70_CHAPERONE_CORE
+    label: "Hsp70 Chaperone Family"
+    sublabel: "BIN 20.4.2 Protein Refolding Core"
+    kind: "family"
+    mapman_bin: "20.4.2"
+    family_loci: ["AT3G12580", "AT5G02500"]
+    loci: ["AT3G12580", "AT5G02500"]
+
+  - id: HSP90_PROTEIN_COMPLEX
+    label: "Hsp90 Molecular Machinery"
+    sublabel: "BIN 20.4.3 Client Conformation"
+    kind: "family"
+    mapman_bin: "20.4.3"
+    family_loci: ["AT5G52640", "AT5G56030"]
+    loci: ["AT5G52640", "AT5G56030"]
+
+edges:
+  - from: PRR_FLS2_BAK1
+    to: BIK1_RECEPTOR_KINASE
+    class: flux
+    label: "flg22 Perception"
+  - from: BIK1_RECEPTOR_KINASE
+    to: RBOHD_BURST
+    class: flux
+    label: "Phosphorylation"
+  - from: BIK1_RECEPTOR_KINASE
+    to: MAPKKK_MAPKK_MODULE
+    class: flux
+  - from: MAPKKK_MAPKK_MODULE
+    to: MPK3_MPK6_KINASES
+    class: flux
+    label: "Cascade Activation"
+  - from: MPK3_MPK6_KINASES
+    to: WRKY33_TF_HUB
+    class: flux
+    label: "Transcriptional Activation"
+  - from: CBF_DREB1_REGULON
+    to: COR_GENE_EFFECTORS
+    class: flux
+    label: "CRT/DRE Elements"
+  - from: CBF_DREB1_REGULON
+    to: PROLINE_OSMOPROTECTANTS
+    class: flux
+  - from: HSFA_MASTER_FACTORS
+    to: HSP70_CHAPERONE_CORE
+    class: flux
+    label: "HSE Promoters"
+  - from: HSFA_MASTER_FACTORS
+    to: HSP90_PROTEIN_COMPLEX
+    class: flux

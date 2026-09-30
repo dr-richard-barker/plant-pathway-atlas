@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 680" width="920" height="680" data-theme="dark" data-map-id="PPA-08"><defs><style>
+:root {
+  --ppa-bg: #ffffff;
+  --ppa-ink: #0f172a;
+  --ppa-ink-soft: #475569;
+  --ppa-node-fill: #f8fafc;
+  --ppa-node-stroke: #1e293b;
+  --ppa-hairline: #cbd5e1;
+  --ppa-edge: #475569;
+  --ppa-compartment-fill: rgba(15, 23, 42, 0.035);
+  --ppa-compartment-stroke: rgba(15, 23, 42, 0.22);
+  --ppa-accent: #0284c7;
+  --ppa-up: #D55E00;
+  --ppa-down: #0072B2;
+}
+:root[data-theme="dark"] {
+  --ppa-bg: #0b0f17;
+  --ppa-ink: #f1f5f9;
+  --ppa-ink-soft: #94a3b8;
+  --ppa-node-fill: #151c28;
+  --ppa-node-stroke: #cbd5e1;
+  --ppa-hairline: #334155;
+  --ppa-edge: #94a3b8;
+  --ppa-compartment-fill: rgba(255, 255, 255, 0.04);
+  --ppa-compartment-stroke: rgba(255, 255, 255, 0.25);
+  --ppa-accent: #38bdf8;
+  --ppa-up: #ea580c;
+  --ppa-down: #38bdf8;
+}
+
+.ppa-canvas { fill: var(--ppa-bg, #ffffff); }
+text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: var(--ppa-ink); }
+.ppa-title { font-size: 20.0px; font-weight: 700; fill: var(--ppa-ink); }
+.ppa-subtitle { font-size: 12.0px; fill: var(--ppa-ink-soft); }
+.ppa-caption { font-size: 11.0px; fill: var(--ppa-ink-soft); line-height: 1.4; }
+.ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
+.ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
+.ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
+.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+
+.ppa-compartment-band {
+  fill: var(--ppa-compartment-fill);
+  stroke: var(--ppa-compartment-stroke);
+  stroke-width: 1.5px;
+  stroke-dasharray: 6 3;
+  rx: 10px;
+}
+.ppa-compartment-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  fill: var(--ppa-ink-soft);
+}
+
+.ppa-node {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ppa-node:hover {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.ppa-node rect, .ppa-node circle, .ppa-node path {
+  stroke: var(--ppa-node-stroke);
+  stroke-width: 1.5px;
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+.ppa-node.significant rect {
+  stroke-width: 2.5px;
+  stroke: var(--ppa-ink);
+}
+.ppa-node.non-significant rect {
+  stroke-width: 1.0px;
+  stroke-dasharray: 3 2;
+  stroke: var(--ppa-hairline);
+}
+</style>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ppa-edge)" /></marker>
+<marker id="inhibit" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><line x1="5" y1="1" x2="5" y2="9" stroke="var(--ppa-edge)" stroke-width="2" /></marker>
+</defs>
+<rect class="ppa-canvas" width="920" height="680" />
+<text class="ppa-title" x="40.0" y="36.0">Specialized &amp; Secondary Metabolism</text>
+<text class="ppa-subtitle" x="40.0" y="56.0">Phenylpropanoid entry, monolignol lignin polymerization, and anthocyanin flavonoid branching</text>
+<rect class="ppa-compartment-band" x="14.0" y="62.0" width="775.3" height="241.3" />
+<text class="ppa-compartment-title" x="28.0" y="80.0">Cytosol</text>
+<rect class="ppa-compartment-band" x="48.4" y="281.3" width="706.5" height="111.6" />
+<text class="ppa-compartment-title" x="62.4" y="299.3">Endoplasmic Reticulum</text>
+<rect class="ppa-compartment-band" x="20.6" y="370.9" width="762.2" height="111.6" />
+<text class="ppa-compartment-title" x="34.6" y="388.9">Vacuole</text>
+<path d="M 255.0 133.8 L 287.0 133.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="271.0" y="129.8">trans-Cinnamate</text>
+<path d="M 514.0 133.8 L 546.0 133.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="530.0" y="129.8">4-Coumarate</text>
+<path d="M 546.0 156.6 L 259.1 219.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="402.6" y="184.0">4-Coumaroyl-CoA</text>
+<path d="M 578.1 165.6 L 227.0 321.3" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="402.6" y="239.5">3x Malonyl-CoA</text>
+<path d="M 259.1 243.5 L 291.1 243.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="275.1" y="239.5">Cinnamaldehydes</text>
+<path d="M 516.1 243.5 L 548.1 243.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="532.1" y="239.5">Monolignols (Coniferyl/Sinapyl)</text>
+<path d="M 276.8 344.1 L 308.8 344.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="292.8" y="340.1">Naringenin Chalcone</text>
+<path d="M 486.7 344.1 L 518.7 344.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="502.7" y="340.1">Naringenin</text>
+<path d="M 518.7 364.3 L 267.1 412.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="392.9" y="384.4">Dihydrokaempferol</text>
+<path d="M 267.1 433.8 L 299.1 433.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="283.1" y="429.8">Leucocyanidin</text>
+<path d="M 505.4 433.8 L 537.4 433.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="521.4" y="429.8">Cyanidin Pigment</text>
+<g class="ppa-node family " id="node-PAL_PHENYLALANINE_LYASE" data-node-id="PAL_PHENYLALANINE_LYASE" data-loci="AT2G37040,AT3G53260,AT5G04230" data-bin="16.1.1">
+<rect x="49.6" y="102.0" width="205.5" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="152.3" y="120.0">Phenylalanine Ammonia-Lyase</text>
+<text class="ppa-sub" x="152.3" y="135.4">BIN 16.1.1 PAL1 / PAL2 / PAL4</text>
+<rect class="ppa-family-tile" x="134.3" y="149.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="146.3" y="149.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="158.3" y="149.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node simple " id="node-C4H_HYDROXYLASE" data-node-id="C4H_HYDROXYLASE" data-loci="AT2G30490" data-bin="16.1.2">
+<rect x="287.0" y="111.0" width="227.0" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="400.5" y="129.0">Cinnamate 4-Hydroxylase (C4H)</text>
+<text class="ppa-sub" x="400.5" y="144.4">BIN 16.1.2 CYP73A5 P450 Monooxygenase</text>
+</g>
+<g class="ppa-node family " id="node-FOUR_CL_LIGASE" data-node-id="FOUR_CL_LIGASE" data-loci="AT1G51680,AT3G21240,AT1G65060" data-bin="16.1.3">
+<rect x="546.0" y="102.0" width="207.7" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="649.9" y="120.0">4-Coumarate-CoA Ligase (4CL)</text>
+<text class="ppa-sub" x="649.9" y="135.4">BIN 16.1.3 4CL1 / 4CL2 / 4CL3 Core</text>
+<rect class="ppa-family-tile" x="631.9" y="149.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="643.9" y="149.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="655.9" y="149.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node simple " id="node-CCR_COA_REDUCTASE" data-node-id="CCR_COA_REDUCTASE" data-loci="AT1G15950" data-bin="16.2.1">
+<rect x="40.0" y="220.6" width="219.1" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="149.5" y="238.6">Cinnamoyl-CoA Reductase (CCR)</text>
+<text class="ppa-sub" x="149.5" y="254.0">BIN 16.2.1 CCR1 Monolignol Entry</text>
+</g>
+<g class="ppa-node complex " id="node-CAD_ALCOHOL_DH" data-node-id="CAD_ALCOHOL_DH" data-loci="AT3G19450,AT4G34230" data-bin="16.2.2">
+<rect x="291.1" y="209.6" width="225.0" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="403.6" y="227.6">Cinnamyl Alcohol Dehydrogenase</text>
+<text class="ppa-sub" x="403.6" y="243.0">BIN 16.2.2 CAD4 / CAD5 Monolignols</text>
+<g class="ppa-subunit" data-locus="AT3G19450"><rect x="365.6" y="257.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="383.6" y="267.8">CAD4</text></g>
+<g class="ppa-subunit" data-locus="AT4G34230"><rect x="405.6" y="257.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="423.6" y="267.8">CAD5</text></g>
+</g>
+<g class="ppa-node complex " id="node-CELL_WALL_LIGNIFICATION" data-node-id="CELL_WALL_LIGNIFICATION" data-loci="AT2G38080,AT5G05340" data-bin="16.2.3">
+<rect x="548.1" y="209.6" width="215.2" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="655.7" y="227.6">Laccases &amp; Class-III Peroxidases</text>
+<text class="ppa-sub" x="655.7" y="243.0">BIN 16.2.3 LAC4 / PRX52 Polymerization</text>
+<g class="ppa-subunit" data-locus="AT2G38080"><rect x="614.5" y="257.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="632.5" y="267.8">LAC4</text></g>
+<g class="ppa-subunit" data-locus="AT5G05340"><rect x="654.5" y="257.3" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="675.7" y="267.8">PRX52</text></g>
+</g>
+<g class="ppa-node simple " id="node-CHALCONE_SYNTHASE_TT4" data-node-id="CHALCONE_SYNTHASE_TT4" data-loci="AT5G13930" data-bin="16.3.1">
+<rect x="74.4" y="321.3" width="202.4" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="175.6" y="339.3">Chalcone Synthase (CHS)</text>
+<text class="ppa-sub" x="175.6" y="354.7">BIN 16.3.1 TT4 Flavonoid Gatekeeper</text>
+</g>
+<g class="ppa-node simple " id="node-CHALCONE_ISOMERASE_TT5" data-node-id="CHALCONE_ISOMERASE_TT5" data-loci="AT3G55120" data-bin="16.3.2">
+<rect x="308.8" y="321.3" width="178.0" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="397.7" y="339.3">Chalcone Isomerase (CHI)</text>
+<text class="ppa-sub" x="397.7" y="354.7">BIN 16.3.2 TT5 Ring Closure</text>
+</g>
+<g class="ppa-node simple " id="node-FLAVANONE_3_HYDROXYLASE" data-node-id="FLAVANONE_3_HYDROXYLASE" data-loci="AT3G51240" data-bin="16.3.3">
+<rect x="518.7" y="321.3" width="210.2" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="623.8" y="339.3">Flavanone 3-Hydroxylase (F3H)</text>
+<text class="ppa-sub" x="623.8" y="354.7">BIN 16.3.3 TT6 Dihydroflavonols</text>
+</g>
+<g class="ppa-node simple " id="node-DFR_REDUCTASE_TT3" data-node-id="DFR_REDUCTASE_TT3" data-loci="AT5G42800" data-bin="16.3.4">
+<rect x="46.6" y="410.9" width="220.5" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="156.8" y="428.9">Dihydroflavonol Reductase (DFR)</text>
+<text class="ppa-sub" x="156.8" y="444.3">BIN 16.3.4 TT3 Leucoanthocyanidins</text>
+</g>
+<g class="ppa-node simple " id="node-ANS_LDOX_SYNTHASE" data-node-id="ANS_LDOX_SYNTHASE" data-loci="AT4G22880" data-bin="16.3.5">
+<rect x="299.1" y="410.9" width="206.3" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="402.2" y="428.9">Anthocyanidin Synthase (ANS)</text>
+<text class="ppa-sub" x="402.2" y="444.3">BIN 16.3.5 LDOX / TT18 Pigment</text>
+</g>
+<g class="ppa-node simple " id="node-ANTHOCYANIN_EXPORT_TT19" data-node-id="ANTHOCYANIN_EXPORT_TT19" data-loci="AT5G17220" data-bin="16.3.6">
+<rect x="537.4" y="410.9" width="219.4" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="647.1" y="428.9">Glutathione S-Transferase (TT19)</text>
+<text class="ppa-sub" x="647.1" y="444.3">BIN 16.3.6 Vacuolar Sequestration</text>
+</g>
+<text class="ppa-caption" x="40.0" y="654.0">Specialized plant secondary metabolism. Phenylalanine is channeled into core phenylpropanoids by PAL, C4H, and 4CL, generating</text>
+<text class="ppa-caption" x="40.0" y="668.9">activated 4-coumaroyl-CoA. From this central branchpoint, flux bifurcates into: (1) monolignols via CCR and CAD for cell-wall</text>
+<text class="ppa-caption" x="40.0" y="683.7">lignification; and (2) flavonoids via Chalcone Synthase (CHS/TT4), CHI, F3H, and DFR, culminating in vacuolar anthocyanin and</text>
+<text class="ppa-caption" x="40.0" y="698.6">proanthocyanidin sequestration via GST transporter TT19.</text>
+</svg>

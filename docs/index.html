@@ -16,10 +16,169 @@
 </script>
 <link rel="stylesheet" href="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/cose-map.css">
 <link rel="stylesheet" href="assets/ppa-core.css">
+<style>
+  .search-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 24px 0 20px;
+  }
+  .search-input-wrap {
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+  }
+  .search-input-wrap input {
+    width: 100%;
+    padding: 10px 14px 10px 38px;
+    border-radius: 8px;
+    border: 1px solid var(--ppa-rule);
+    background: var(--ppa-bg);
+    color: var(--ppa-ink);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--ppa-soft);
+    pointer-events: none;
+  }
+  .filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .filter-pill {
+    background: var(--ppa-card);
+    color: var(--ppa-soft);
+    border: 1px solid var(--ppa-rule);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .filter-pill:hover {
+    color: var(--ppa-ink);
+    border-color: var(--ppa-accent);
+  }
+  .filter-pill.active {
+    background: var(--ppa-accent);
+    color: #ffffff;
+    border-color: var(--ppa-accent);
+  }
+  .counter-badge {
+    font-size: 0.85rem;
+    color: var(--ppa-soft);
+    font-weight: 600;
+  }
+
+  /* Modal Dialog */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 20, 27, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    padding: 20px;
+  }
+  .modal-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-card {
+    background: var(--ppa-bg);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 16px;
+    max-width: 960px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.35);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid var(--ppa-rule);
+    padding-bottom: 16px;
+  }
+  .modal-close-btn {
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--ppa-ink);
+  }
+  .modal-svg-wrap {
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 380px;
+  }
+  .modal-svg-wrap svg {
+    max-width: 100%;
+    height: auto;
+    max-height: 480px;
+  }
+  .download-hub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Matrix table */
+  .matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 36px;
+    font-size: 0.9rem;
+  }
+  .matrix-table th, .matrix-table td {
+    border: 1px solid var(--ppa-rule);
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .matrix-table th {
+    background: var(--ppa-card);
+    font-weight: 700;
+  }
+  .matrix-table tr:hover {
+    background: var(--ppa-card);
+  }
+</style>
 </head>
 <body data-site-id="plant-pathway-atlas">
 <div class="wrap">
-  <!-- CoSE Topbar: Brand + Theme Toggle (NO side navigation rail) -->
+  <!-- CoSE Topbar: Brand + Theme Toggle (Strictly NO side navigation rail) -->
   <div class="cose-topbar">
     <a href="index.html" class="cose-brand">
       <img src="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/cose-logo.png" alt="CoSE logo" width="28" height="28">
@@ -59,78 +218,53 @@
     </div>
   </header>
 
-  <h2>Flagship Modernized Pathway Maps</h2>
-  <p style="color:var(--ppa-soft); max-width:72ch;">
-    Every map is authored declaratively in YAML without hardcoded coordinates. Geometry is calculated
-    from real font glyph extents, guaranteeing that labels cannot overflow boxes by construction.
+  <!-- Live Multi-Index Search & Category Filter -->
+  <div class="search-toolbar">
+    <div class="search-input-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="map-search" placeholder="Search by pathway title, gene symbol (e.g. RBOHD, AOX1A, RBCS), AGI locus, or BIN..." autocomplete="off">
+    </div>
+    <div class="counter-badge" id="results-count">Showing 12 of 12 pathways</div>
+  </div>
+
+  <!-- Biological Category Filters -->
+  <div class="filter-pills" id="category-pills">
+    <button class="filter-pill active" data-cat="all">All Pathways (12)</button>
+    <button class="filter-pill" data-cat="bioenergetics">Bioenergetics & Respiration (3)</button>
+    <button class="filter-pill" data-cat="primary">Primary Metabolism & Assimilation (3)</button>
+    <button class="filter-pill" data-cat="stress">Stress, Redox & Immunity (2)</button>
+    <button class="filter-pill" data-cat="signaling">Signaling, Hormones & QC (3)</button>
+    <button class="filter-pill" data-cat="specialized">Specialized Pathways (1)</button>
+  </div>
+
+  <!-- Showcase Cards Grid -->
+  <div class="map-grid" id="map-grid">
+    <!-- Populated dynamically from catalog/manifest.json -->
+    <div style="color:var(--ppa-soft); padding:32px;">Loading pathway catalog...</div>
+  </div>
+
+  <!-- Pathway Cross-Talk Matrix -->
+  <h2>Pathway Interconnectivity & Overview Matrix</h2>
+  <p style="color:var(--ppa-soft); max-width:75ch;">
+    Curated cross-talk between metabolic flux, bioenergetics, signaling cascades, and solute allocation:
   </p>
-
-  <div class="map-grid">
-    <!-- PPA-01 -->
-    <div class="map-card">
-      <div class="map-card-preview">
-        <object data="maps/svg/PPA-01.svg" type="image/svg+xml" style="width:100%; pointer-events:none;"></object>
-      </div>
-      <div class="map-card-body">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-          <span class="ppa-badge">PPA-01</span>
-          <span style="font-size:0.75rem; color:var(--ppa-soft);">15 Nodes · 33 Loci</span>
-        </div>
-        <h3 class="map-card-title">Central Metabolism Overview</h3>
-        <p class="map-card-desc">
-          Modernized MapMan flagship diagram: Calvin-Benson carbon fixation, cytosolic sucrose and glycolysis,
-          mitochondrial TCA cycle, and oxidative phosphorylation.
-        </p>
-        <div style="display:flex; gap:8px;">
-          <a href="maps/svg/PPA-01.svg" target="_blank" class="btn" style="flex:1; justify-content:center;">View Vector SVG</a>
-          <a href="explore.html?map=PPA-01" class="btn primary">Project Data</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- PPA-02 -->
-    <div class="map-card">
-      <div class="map-card-preview">
-        <object data="maps/svg/PPA-02.svg" type="image/svg+xml" style="width:100%; pointer-events:none;"></object>
-      </div>
-      <div class="map-card-body">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-          <span class="ppa-badge">PPA-02</span>
-          <span style="font-size:0.75rem; color:var(--ppa-soft);">12 Nodes · 34 Loci</span>
-        </div>
-        <h3 class="map-card-title">Photosynthesis & Bioenergetics</h3>
-        <p class="map-card-desc">
-          Thylakoid Z-scheme: PSII core with water-splitting OEC, plastoquinone pool, cytochrome b6f complex,
-          PSI, ferredoxin-NADP+ reductase (FNR), and CF0-CF1 ATP synthase.
-        </p>
-        <div style="display:flex; gap:8px;">
-          <a href="maps/svg/PPA-02.svg" target="_blank" class="btn" style="flex:1; justify-content:center;">View Vector SVG</a>
-          <a href="explore.html?map=PPA-02" class="btn primary">Project Data</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- PPA-05 -->
-    <div class="map-card">
-      <div class="map-card-preview">
-        <object data="maps/svg/PPA-05.svg" type="image/svg+xml" style="width:100%; pointer-events:none;"></object>
-      </div>
-      <div class="map-card-body">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-          <span class="ppa-badge">PPA-05</span>
-          <span style="font-size:0.75rem; color:var(--ppa-soft);">15 Nodes · 36 Loci</span>
-        </div>
-        <h3 class="map-card-title">ROS & Redox Homeostasis</h3>
-        <p class="map-card-desc">
-          Plasma membrane RBOH NADPH oxidases, superoxide dismutases (CSD, FSD, MSD), the Foyer-Halliwell-Asada
-          cycle (APX, MDHAR, DHAR, GR), peroxisomal catalases, and thioredoxins.
-        </p>
-        <div style="display:flex; gap:8px;">
-          <a href="maps/svg/PPA-05.svg" target="_blank" class="btn" style="flex:1; justify-content:center;">View Vector SVG</a>
-          <a href="explore.html?map=PPA-05" class="btn primary">Project Data</a>
-        </div>
-      </div>
-    </div>
+  <div style="overflow-x:auto;">
+    <table class="matrix-table" id="matrix-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Pathway Title</th>
+          <th>Primary Compartment</th>
+          <th>Nodes</th>
+          <th>Curated Loci</th>
+          <th>Key Enzymes / Genes</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="matrix-tbody">
+        <!-- Injected dynamically -->
+      </tbody>
+    </table>
   </div>
 
   <h2>FAIR Principles & Standard Compliance</h2>
@@ -158,40 +292,269 @@
   </footer>
 </div>
 
+<!-- Modal Dialog / Map Inspector -->
+<div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-header">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:4px;">
+          <span class="ppa-badge" id="modal-id">PPA-01</span>
+          <span style="font-size:0.85rem; color:var(--ppa-soft);" id="modal-stats"></span>
+        </div>
+        <h2 style="margin:0 0 6px;" id="modal-title">Pathway Title</h2>
+        <div style="color:var(--ppa-soft); font-size:0.92rem;" id="modal-subtitle"></div>
+      </div>
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+    </div>
+
+    <!-- Interactive SVG Container -->
+    <div class="modal-svg-wrap" id="modal-svg-wrap">
+      <div style="color:var(--ppa-soft);">Loading vector diagram...</div>
+    </div>
+
+    <!-- Download Hub -->
+    <div>
+      <h4 style="margin:0 0 10px;">Export & Download Standards:</h4>
+      <div class="download-hub">
+        <a id="btn-dl-svg-light" target="_blank" class="btn" download>Vector SVG (Light)</a>
+        <a id="btn-dl-svg-dark" target="_blank" class="btn" download>Vector SVG (Dark)</a>
+        <a id="btn-dl-sbgn" target="_blank" class="btn" download>SBGN-ML (Process Description)</a>
+        <a id="btn-dl-sidecar" target="_blank" class="btn" download>Locus Sidecar (JSON)</a>
+        <a id="btn-project-cta" class="btn primary">Launch in Omics Explorer →</a>
+      </div>
+    </div>
+
+    <!-- Curated Loci Section -->
+    <div>
+      <h4 style="margin:0 0 10px;">Curated Arabidopsis Loci in This Pathway:</h4>
+      <div id="modal-loci-tags" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
+    </div>
+  </div>
+</div>
+
 <script>
-(function() {
-  var path = (window.location.pathname.split('/').pop() || 'index.html');
-  var links = document.querySelectorAll('.cose-tab-bar a.btn');
-  for (var i = 0; i < links.length; i++) {
-    var href = links[i].getAttribute('href');
-    if (href === path) {
-      links[i].classList.add('active');
-      links[i].setAttribute('aria-current', 'page');
+  // Biological Category Mappings
+  const CATEGORY_MAP = {
+    'PPA-01': 'primary',
+    'PPA-02': 'bioenergetics',
+    'PPA-03': 'bioenergetics',
+    'PPA-04': 'bioenergetics',
+    'PPA-05': 'stress',
+    'PPA-06': 'primary',
+    'PPA-07': 'primary',
+    'PPA-08': 'specialized',
+    'PPA-09': 'signaling',
+    'PPA-10': 'stress',
+    'PPA-11': 'signaling',
+    'PPA-12': 'signaling',
+  };
+
+  const COMPARTMENT_MAP = {
+    'PPA-01': 'Chloroplast / Cytosol / Mitochondria',
+    'PPA-02': 'Chloroplast Thylakoid Membrane',
+    'PPA-03': 'Chloroplast / Peroxisome / Mitochondria',
+    'PPA-04': 'Mitochondrial Inner Membrane & Matrix',
+    'PPA-05': 'Plasma Membrane / Peroxisome / Plastid',
+    'PPA-06': 'Chloroplast / Endoplasmic Reticulum',
+    'PPA-07': 'Cytosol & Chloroplast Stroma',
+    'PPA-08': 'Cytosol, ER & Vacuole',
+    'PPA-09': 'Plasma Membrane, Cytosol & Nucleus',
+    'PPA-10': 'Plasma Membrane, Cytosol & Nucleus',
+    'PPA-11': 'Endoplasmic Reticulum, Cytosol & Vacuole',
+    'PPA-12': 'Plasma Membrane & Tonoplast',
+  };
+
+  let manifestMaps = [];
+  const sidecarCache = new Map();
+  let currentFilter = 'all';
+
+  const mapGrid = document.getElementById('map-grid');
+  const searchInput = document.getElementById('map-search');
+  const resultsCount = document.getElementById('results-count');
+  const categoryPills = document.getElementById('category-pills');
+  const matrixTbody = document.getElementById('matrix-tbody');
+
+  // Modal elements
+  const modal = document.getElementById('modal-backdrop');
+  const modalClose = document.getElementById('modal-close-btn');
+  const modalId = document.getElementById('modal-id');
+  const modalTitle = document.getElementById('modal-title');
+  const modalSubtitle = document.getElementById('modal-subtitle');
+  const modalStats = document.getElementById('modal-stats');
+  const modalSvgWrap = document.getElementById('modal-svg-wrap');
+  const modalLociTags = document.getElementById('modal-loci-tags');
+  const btnDlLight = document.getElementById('btn-dl-svg-light');
+  const btnDlDark = document.getElementById('btn-dl-svg-dark');
+  const btnDlSbgn = document.getElementById('btn-dl-sbgn');
+  const btnDlSidecar = document.getElementById('btn-dl-sidecar');
+  const btnProjectCta = document.getElementById('btn-project-cta');
+
+  async function initCatalog() {
+    try {
+      const resp = await fetch('catalog/manifest.json');
+      const data = await resp.json();
+      manifestMaps = data.maps || [];
+      renderShowcase();
+      renderMatrix();
+    } catch (err) {
+      mapGrid.innerHTML = `<div style="color:var(--ppa-err);">Failed to load manifest: ${err}</div>`;
     }
   }
 
-  var btn = document.getElementById('cose-theme-toggle');
-  if (!btn) return;
-  function update(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('cose-theme', theme);
-    btn.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
-    var label = btn.querySelector('.theme-label');
-    if (label) label.textContent = theme === 'dark' ? 'Light' : 'Dark';
-    var icon = btn.querySelector('.theme-icon');
-    if (icon) {
-      icon.innerHTML = theme === 'dark'
-        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
-        : '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  function renderShowcase() {
+    const query = searchInput.value.toLowerCase().trim();
+    const filtered = manifestMaps.filter(m => {
+      const matchesCat = currentFilter === 'all' || CATEGORY_MAP[m.id] === currentFilter;
+      if (!matchesCat) return false;
+      if (!query) return true;
+      const titleMatch = (m.title || '').toLowerCase().includes(query);
+      const subMatch = (m.subtitle || '').toLowerCase().includes(query);
+      const idMatch = (m.id || '').toLowerCase().includes(query);
+      return titleMatch || subMatch || idMatch;
+    });
+
+    resultsCount.textContent = `Showing ${filtered.length} of ${manifestMaps.length} pathways`;
+
+    if (filtered.length === 0) {
+      mapGrid.innerHTML = `<div style="color:var(--ppa-soft); grid-column:1/-1; padding:32px; text-align:center;">No pathways matching "${query}". Try searching for another term.</div>`;
+      return;
     }
+
+    mapGrid.innerHTML = filtered.map(m => `
+      <div class="map-card" data-id="${m.id}">
+        <div class="map-card-preview" style="cursor:pointer;" onclick="openInspector('${m.id}')">
+          <object data="${m.svg_light}" type="image/svg+xml" style="width:100%; pointer-events:none;"></object>
+        </div>
+        <div class="map-card-body">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <span class="ppa-badge">${m.id}</span>
+            <span style="font-size:0.75rem; color:var(--ppa-soft);">${m.total_nodes} Nodes · ${m.distinct_loci} Loci</span>
+          </div>
+          <h3 class="map-card-title">${m.title}</h3>
+          <p class="map-card-desc">${m.subtitle}</p>
+          <div style="display:flex; gap:8px;">
+            <button class="btn" style="flex:1; justify-content:center;" onclick="openInspector('${m.id}')">Inspect Map</button>
+            <a href="explore.html?map=${m.id}" class="btn primary">Project Data</a>
+          </div>
+        </div>
+      </div>
+    `).join('');
   }
-  var curr = document.documentElement.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  update(curr);
-  btn.addEventListener('click', function() {
-    var now = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    update(now);
+
+  function renderMatrix() {
+    matrixTbody.innerHTML = manifestMaps.map(m => `
+      <tr>
+        <td><strong>${m.id}</strong></td>
+        <td><strong>${m.title}</strong></td>
+        <td style="color:var(--ppa-soft); font-size:0.85rem;">${COMPARTMENT_MAP[m.id] || 'Plastid / Cytosol'}</td>
+        <td>${m.total_nodes}</td>
+        <td>${m.distinct_loci}</td>
+        <td style="color:var(--ppa-soft); font-size:0.82rem;">${m.subtitle.split(',').slice(0, 3).join(',')}</td>
+        <td>
+          <div style="display:flex; gap:6px;">
+            <button class="btn" style="font-size:0.75rem; padding:3px 8px;" onclick="openInspector('${m.id}')">Inspect</button>
+            <a href="explore.html?map=${m.id}" class="btn primary" style="font-size:0.75rem; padding:3px 8px;">Explore</a>
+          </div>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  // Open Inspector Modal
+  window.openInspector = async function(mapId) {
+    const m = manifestMaps.find(item => item.id === mapId);
+    if (!m) return;
+
+    modalId.textContent = m.id;
+    modalTitle.textContent = m.title;
+    modalSubtitle.textContent = m.subtitle;
+    modalStats.textContent = `${m.total_nodes} Nodes · ${m.distinct_loci} Curated Arabidopsis Loci`;
+
+    btnDlLight.href = m.svg_light;
+    btnDlDark.href = m.svg_dark;
+    btnDlSbgn.href = m.sbgn;
+    btnDlSidecar.href = m.sidecar;
+    btnProjectCta.href = `explore.html?map=${m.id}`;
+
+    modalSvgWrap.innerHTML = `<object data="${m.svg_light}" type="image/svg+xml" style="width:100%; max-height:480px;"></object>`;
+
+    // Fetch sidecar for locus pills
+    try {
+      if (!sidecarCache.has(mapId)) {
+        const scResp = await fetch(m.sidecar);
+        sidecarCache.set(mapId, await scResp.json());
+      }
+      const sidecar = sidecarCache.get(mapId);
+      const loci = sidecar.loci_list || [];
+      modalLociTags.innerHTML = loci.map(locus => 
+        `<a href="https://www.arabidopsis.org/servlets/TairObject?type=locus&name=${locus}" target="_blank" rel="noopener" class="ppa-badge" style="text-decoration:none; cursor:pointer;" title="View on TAIR">${locus}</a>`
+      ).join('');
+    } catch (e) {
+      modalLociTags.innerHTML = `<span style="color:var(--ppa-soft);">Sidecar details unavailable.</span>`;
+    }
+
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+  };
+
+  modalClose.addEventListener('click', () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
   });
-})();
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Category Filtering
+  categoryPills.querySelectorAll('.filter-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      categoryPills.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.getAttribute('data-cat');
+      renderShowcase();
+    });
+  });
+
+  // Live search
+  searchInput.addEventListener('input', renderShowcase);
+
+  initCatalog();
+
+  // CoSE Theme toggle
+  (function() {
+    var btn = document.getElementById('cose-theme-toggle');
+    if (!btn) return;
+    function update(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('cose-theme', theme);
+      btn.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
+      var label = btn.querySelector('.theme-label');
+      if (label) label.textContent = theme === 'dark' ? 'Light' : 'Dark';
+      var icon = btn.querySelector('.theme-icon');
+      if (icon) {
+        icon.innerHTML = theme === 'dark'
+          ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
+          : '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      }
+    }
+    var curr = document.documentElement.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    update(curr);
+    btn.addEventListener('click', function() {
+      var now = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      update(now);
+    });
+  })();
 </script>
 </body>
 </html>

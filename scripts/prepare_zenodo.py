@@ -28,7 +28,12 @@ DESCRIPTIONS = {
 
 
 def get_file_list() -> list[pathlib.Path]:
-    res = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True)
+    res = subprocess.run(
+        ["git", "ls-files", "--cached", "--others", "--exclude-standard"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
     if res.returncode == 0 and res.stdout.strip():
         files = [ROOT / f for f in res.stdout.split() if (ROOT / f).is_file()]
     else:

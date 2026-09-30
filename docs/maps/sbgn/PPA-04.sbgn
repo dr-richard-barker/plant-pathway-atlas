@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
+  <map id="PPA-04" language="process description">
+    <bbox x="-18.00" y="0.00" w="920.00" h="708.24" />
+    <glyph id="comp_mitochondrial_matrix" class="compartment">
+      <label text="Mitochondrial Matrix" />
+      <bbox x="29.88" y="62.00" w="654.61" h="133.65" />
+    </glyph>
+    <glyph id="comp_mitochondrial_inner_membrane" class="compartment">
+      <label text="Mitochondrial Inner Membrane" />
+      <bbox x="14.00" y="173.65" w="686.38" h="464.59" />
+    </glyph>
+    <glyph id="TCA_SUBSTRATE_CORE" class="complex" compartmentRef="comp_mitochondrial_matrix">
+      <label text="Citrate Synthase &amp; Aconitase" />
+      <bbox x="55.88" y="102.00" w="198.47" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TCA_SUBSTRATE_CORE" compartment="mitochondrial_matrix" mapmanBin="8.1">
+          <ns0:locus>AT3G58750</ns0:locus>
+          <ns0:locus>AT2G05710</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="TCA_DEHYDROGENASES" class="complex" compartmentRef="comp_mitochondrial_matrix">
+      <label text="IDH &amp; 2-OGDH Complexes" />
+      <bbox x="286.36" y="102.00" w="180.05" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TCA_DEHYDROGENASES" compartment="mitochondrial_matrix" mapmanBin="8.2">
+          <ns0:locus>AT4G35260</ns0:locus>
+          <ns0:locus>AT3G55410</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="MALATE_FUMARATE_POOL" class="complex" compartmentRef="comp_mitochondrial_matrix">
+      <label text="Fumarase &amp; Malate DH" />
+      <bbox x="498.41" y="102.00" w="160.09" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="MALATE_FUMARATE_POOL" compartment="mitochondrial_matrix" mapmanBin="8.3">
+          <ns0:locus>AT2G47310</ns0:locus>
+          <ns0:locus>AT1G53240</ns0:locus>
+          <ns0:locus>AT3G47520</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="COMPLEX_I_NADH" class="complex" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Complex I (NADH DH)" />
+      <bbox x="52.32" y="213.65" w="166.18" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="COMPLEX_I_NADH" compartment="mitochondrial_inner_membrane" mapmanBin="9.1">
+          <ns0:locus>AT1G16700</ns0:locus>
+          <ns0:locus>AT5G08530</ns0:locus>
+          <ns0:locus>AT5G37510</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="COMPLEX_II_SDH" class="complex" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Complex II (Succinate DH)" />
+      <bbox x="250.50" y="213.65" w="179.88" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="COMPLEX_II_SDH" compartment="mitochondrial_inner_membrane" mapmanBin="9.2">
+          <ns0:locus>AT5G66760</ns0:locus>
+          <ns0:locus>AT3G27380</ns0:locus>
+          <ns0:locus>AT5G40650</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="ROTENONE_INSENSITIVE_NDH" class="macromolecule" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="External/Internal NAD(P)H DH" />
+      <bbox x="462.39" y="215.65" w="199.66" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ROTENONE_INSENSITIVE_NDH" compartment="mitochondrial_inner_membrane" mapmanBin="9.3">
+          <ns0:locus>AT1G07180</ns0:locus>
+          <ns0:locus>AT2G29990</ns0:locus>
+          <ns0:locus>AT4G05020</ns0:locus>
+          <ns0:locus>AT4G28220</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="UBIQUINONE_POOL" class="macromolecule" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Ubiquinone Pool (Q/QH2)" />
+      <bbox x="59.15" y="334.30" w="171.57" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="UBIQUINONE_POOL" compartment="mitochondrial_inner_membrane" mapmanBin="9.4">
+          <ns0:locus>AT1G78510</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="AOX_ALTERNATIVE_OXIDASE" class="macromolecule" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Alternative Oxidase (AOX)" />
+      <bbox x="262.72" y="325.30" w="184.65" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AOX_ALTERNATIVE_OXIDASE" compartment="mitochondrial_inner_membrane" mapmanBin="9.5">
+          <ns0:locus>AT3G22370</ns0:locus>
+          <ns0:locus>AT1G32350</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="UNCOUPLING_PROTEINS" class="macromolecule" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Plant Uncoupling Proteins" />
+      <bbox x="479.37" y="325.30" w="175.85" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="UNCOUPLING_PROTEINS" compartment="mitochondrial_inner_membrane" mapmanBin="9.6">
+          <ns0:locus>AT3G54110</ns0:locus>
+          <ns0:locus>AT5G58970</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="COMPLEX_III_BC1" class="complex" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Complex III (Cyt bc1)" />
+      <bbox x="82.86" y="432.94" w="148.40" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="COMPLEX_III_BC1" compartment="mitochondrial_inner_membrane" mapmanBin="9.7">
+          <ns0:locus>AT3G54080</ns0:locus>
+          <ns0:locus>AT2G40610</ns0:locus>
+          <ns0:locus>AT1G60950</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="CYTOCHROME_C_SOLUBLE" class="macromolecule" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Cytochrome c" />
+      <bbox x="263.26" y="434.94" w="149.68" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CYTOCHROME_C_SOLUBLE" compartment="mitochondrial_inner_membrane" mapmanBin="9.8">
+          <ns0:locus>AT1G22840</ns0:locus>
+          <ns0:locus>AT4G10040</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="COMPLEX_IV_COX" class="complex" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Complex IV (Cyt c Oxidase)" />
+      <bbox x="444.94" y="432.94" w="186.58" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="COMPLEX_IV_COX" compartment="mitochondrial_inner_membrane" mapmanBin="9.9">
+          <ns0:locus>AT4G39740</ns0:locus>
+          <ns0:locus>AT3G15640</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="COMPLEX_V_F1F0" class="complex" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="ATP Synthase (Complex V)" />
+      <bbox x="40.00" y="544.59" w="181.99" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="COMPLEX_V_F1F0" compartment="mitochondrial_inner_membrane" mapmanBin="9.10">
+          <ns0:locus>AT2G07698</ns0:locus>
+          <ns0:locus>AT5G08670</ns0:locus>
+          <ns0:locus>AT2G23870</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="ADENINE_NUCLEOTIDE_TR" class="macromolecule" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="ADP/ATP Translocator (ANT)" />
+      <bbox x="253.99" y="546.59" w="188.27" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ADENINE_NUCLEOTIDE_TR" compartment="mitochondrial_inner_membrane" mapmanBin="34.2">
+          <ns0:locus>AT3G08580</ns0:locus>
+          <ns0:locus>AT5G13490</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PHOSPHATE_CARRIER" class="macromolecule" compartmentRef="comp_mitochondrial_inner_membrane">
+      <label text="Phosphate Translocator (MPT)" />
+      <bbox x="474.26" y="546.59" w="200.12" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PHOSPHATE_CARRIER" compartment="mitochondrial_inner_membrane" mapmanBin="34.3">
+          <ns0:locus>AT5G14040</ns0:locus>
+          <ns0:locus>AT3G48850</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <arc id="arc_0" class="consumption" source="TCA_SUBSTRATE_CORE" target="TCA_DEHYDROGENASES">
+      <start x="254.36" y="135.82" />
+      <end x="286.36" y="135.82" />
+    </arc>
+    <arc id="arc_1" class="consumption" source="TCA_DEHYDROGENASES" target="MALATE_FUMARATE_POOL">
+      <start x="466.41" y="135.82" />
+      <end x="498.41" y="135.82" />
+    </arc>
+    <arc id="arc_2" class="consumption" source="TCA_DEHYDROGENASES" target="COMPLEX_I_NADH">
+      <start x="303.38" y="169.65" />
+      <end x="208.42" y="213.65" />
+    </arc>
+    <arc id="arc_3" class="consumption" source="MALATE_FUMARATE_POOL" target="COMPLEX_II_SDH">
+      <start x="506.35" y="169.65" />
+      <end x="412.55" y="213.65" />
+    </arc>
+    <arc id="arc_4" class="consumption" source="COMPLEX_I_NADH" target="UBIQUINONE_POOL">
+      <start x="138.35" y="281.30" />
+      <end x="142.95" y="334.30" />
+    </arc>
+    <arc id="arc_5" class="consumption" source="COMPLEX_II_SDH" target="UBIQUINONE_POOL">
+      <start x="280.13" y="281.30" />
+      <end x="185.63" y="334.30" />
+    </arc>
+    <arc id="arc_6" class="consumption" source="ROTENONE_INSENSITIVE_NDH" target="UBIQUINONE_POOL">
+      <start x="462.39" y="273.70" />
+      <end x="230.72" y="334.58" />
+    </arc>
+    <arc id="arc_7" class="consumption" source="UBIQUINONE_POOL" target="AOX_ALTERNATIVE_OXIDASE">
+      <start x="230.72" y="357.12" />
+      <end x="262.72" y="357.12" />
+    </arc>
+    <arc id="arc_8" class="consumption" source="UBIQUINONE_POOL" target="COMPLEX_III_BC1">
+      <start x="147.46" y="379.94" />
+      <end x="153.32" y="432.94" />
+    </arc>
+    <arc id="arc_9" class="consumption" source="COMPLEX_III_BC1" target="CYTOCHROME_C_SOLUBLE">
+      <start x="231.26" y="466.77" />
+      <end x="263.26" y="466.77" />
+    </arc>
+    <arc id="arc_10" class="consumption" source="CYTOCHROME_C_SOLUBLE" target="COMPLEX_IV_COX">
+      <start x="412.94" y="466.77" />
+      <end x="444.94" y="466.77" />
+    </arc>
+    <arc id="arc_11" class="consumption" source="COMPLEX_IV_COX" target="COMPLEX_V_F1F0">
+      <start x="444.94" y="492.34" />
+      <end x="221.99" y="553.47" />
+    </arc>
+    <arc id="arc_12" class="consumption" source="COMPLEX_V_F1F0" target="ADENINE_NUCLEOTIDE_TR">
+      <start x="221.99" y="578.42" />
+      <end x="253.99" y="578.42" />
+    </arc>
+  </map>
+</sbgn>
