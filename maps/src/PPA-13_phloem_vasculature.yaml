@@ -1,0 +1,206 @@
+# PPA-13 (PMM-11) — Phloem Vasculature Sucrose & Nutrient Loading, Transport & Unloading
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-13
+title: Phloem Vasculature Sucrose & Nutrient Transport
+subtitle: Source minor vein apoplastic/symplastic loading, sieve tube Münch pressure flow, and sink unloading
+derived_from: MapMan4 BIN 34 Transport & BIN 2 Carbohydrate Metabolism, PlantCyc SUCROSE-UTILIZATION-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Long-distance vasculature sucrose and nutrient partitioning (PMM-11). Connects chloroplast
+  photosynthetic carbon fixation in mature source leaves to heterotrophic sink respiration in roots.
+  In source minor veins, sucrose is exported into the apoplast by SWEET11/12/15 uniporters and actively
+  concentrated into companion cells by the SUC2/SUT1 H+-symporter energized by AHA3 (or symplastically
+  trapped via GOLS/RFS raffinose polymers). Hydrostatic pressure drives sap flow through sieve tubes
+  guarded by CalS7 callose collars and SEOR1/2 filaments. In sink roots, sucrose is unloaded apoplastically
+  via CWINV1/2/4 and STP1/4/13 hexose symporters, or cleaved symplastically by SUS1/4 to fuel mitochondrial respiration.
+
+lanes:
+  - id: source_minor_vein_loading
+    compartment: source_companion_cell
+    node_width: 220
+    nodes: [SWEET_EFFLUX_UNIPORTERS, SUC2_PROTON_SYMPORTER, AHA3_PHLOEM_PROTON_PUMP, POLYMER_TRAPPING_GOLS]
+
+  - id: sieve_tube_translocation
+    compartment: sieve_element_conduit
+    node_width: 220
+    nodes: [CALS7_SIEVE_PLATE_CALLOSE, SEOR_PROTECTIVE_FILAMENTS, PHLOEM_SAP_TRANSLOCATION]
+
+  - id: sink_root_apoplastic_unloading
+    compartment: sink_apoplast_root
+    node_width: 220
+    nodes: [CWINV_CELL_WALL_INVERTASE, STP_HEXOSE_TRANSPORTERS, AHA2_SINK_PROTON_PUMP]
+
+  - id: sink_metabolic_utilization
+    compartment: sink_cytosol_root
+    node_width: 220
+    nodes: [SUS_SUCROSE_SYNTHASE, SINK_GLYCOLYSIS_ENTRY, ROOT_MITOCHONDRIAL_RESP]
+
+nodes:
+  - id: SWEET_EFFLUX_UNIPORTERS
+    label: "SWEET Sucrose Efflux"
+    sublabel: "BIN 34.1.1 SWEET11 / 12 / 15"
+    kind: "family"
+    mapman_bin: "34.1.1"
+    family_loci: ["AT3G48740", "AT5G23660", "AT5G13170"]
+    loci: ["AT3G48740", "AT5G23660", "AT5G13170"]
+
+  - id: SUC2_PROTON_SYMPORTER
+    label: "SUC2 / SUT1 Symporter"
+    sublabel: "BIN 34.1.2 Companion Cell Active Loading"
+    kind: "simple"
+    mapman_bin: "34.1.2"
+    loci: ["AT1G22710"]
+
+  - id: AHA3_PHLOEM_PROTON_PUMP
+    label: "AHA3 H+-ATPase"
+    sublabel: "BIN 34.1.3 Phloem PM Energization"
+    kind: "simple"
+    mapman_bin: "34.1.3"
+    loci: ["AT5G57350"]
+
+  - id: POLYMER_TRAPPING_GOLS
+    label: "Galactinol & Raffinose Synthase"
+    sublabel: "BIN 2.1.3 GOLS1 / RFS Symplastic Trap"
+    kind: "complex"
+    mapman_bin: "2.1.3"
+    subunits:
+      - symbol: "GOLS1"
+        locus: "AT2G47180"
+      - symbol: "RFS"
+        locus: "AT5G40390"
+    loci: ["AT2G47180", "AT5G40390"]
+
+  - id: CALS7_SIEVE_PLATE_CALLOSE
+    label: "Callose Synthase 7 (CalS7)"
+    sublabel: "BIN 29.1.4 Sieve Pore Collar Gating"
+    kind: "simple"
+    mapman_bin: "29.1.4"
+    loci: ["AT1G06490"]
+
+  - id: SEOR_PROTECTIVE_FILAMENTS
+    label: "SEOR Protective Filaments"
+    sublabel: "BIN 33.1.1 SEOR1 / SEOR2 Phloem Wound"
+    kind: "complex"
+    mapman_bin: "33.1.1"
+    subunits:
+      - symbol: "SEOR1"
+        locus: "AT3G01680"
+      - symbol: "SEOR2"
+        locus: "AT3G01670"
+    loci: ["AT3G01680", "AT3G01670"]
+
+  - id: PHLOEM_SAP_TRANSLOCATION
+    label: "Münch Pressure Bulk Flow"
+    sublabel: "BIN 34.1.4 Hydrostatic Sap Stream"
+    kind: "simple"
+    mapman_bin: "34.1.4"
+    loci: ["AT1G22710"]
+
+  - id: CWINV_CELL_WALL_INVERTASE
+    label: "Cell Wall Invertases (CWINV)"
+    sublabel: "BIN 2.1.4 CWINV1 / CWINV2 / CWINV4"
+    kind: "family"
+    mapman_bin: "2.1.4"
+    family_loci: ["AT3G13790", "AT3G52600", "AT2G36190"]
+    loci: ["AT3G13790", "AT3G52600", "AT2G36190"]
+
+  - id: STP_HEXOSE_TRANSPORTERS
+    label: "STP Hexose-H+ Symporters"
+    sublabel: "BIN 34.1.5 STP1 / STP4 / STP13 Uptake"
+    kind: "family"
+    mapman_bin: "34.1.5"
+    family_loci: ["AT1G11260", "AT3G05400", "AT5G26340"]
+    loci: ["AT1G11260", "AT3G05400", "AT5G26340"]
+
+  - id: AHA2_SINK_PROTON_PUMP
+    label: "AHA2 Root PM H+-ATPase"
+    sublabel: "BIN 34.3.1 Sink Transport Energization"
+    kind: "simple"
+    mapman_bin: "34.3.1"
+    loci: ["AT4G30190"]
+
+  - id: SUS_SUCROSE_SYNTHASE
+    label: "Sucrose Synthase (SUS)"
+    sublabel: "BIN 2.1.5 SUS1 / SUS4 Sink Cleavage"
+    kind: "complex"
+    mapman_bin: "2.1.5"
+    subunits:
+      - symbol: "SUS1"
+        locus: "AT5G20830"
+      - symbol: "SUS4"
+        locus: "AT3G43190"
+    loci: ["AT5G20830", "AT3G43190"]
+
+  - id: SINK_GLYCOLYSIS_ENTRY
+    label: "Sink Hexose Phosphorylation"
+    sublabel: "BIN 4.1 Hexokinase & Fructokinase"
+    kind: "complex"
+    mapman_bin: "4.1"
+    subunits:
+      - symbol: "HXK1"
+        locus: "AT4G29130"
+      - symbol: "FRK1"
+        locus: "AT2G31390"
+    loci: ["AT4G29130", "AT2G31390"]
+
+  - id: ROOT_MITOCHONDRIAL_RESP
+    label: "Root Respiration & ATP"
+    sublabel: "BIN 8.1 Mitochondrial Substrate Flux"
+    kind: "simple"
+    mapman_bin: "8.1"
+    loci: ["AT3G58750"]
+
+edges:
+  - from: SWEET_EFFLUX_UNIPORTERS
+    to: SUC2_PROTON_SYMPORTER
+    class: flux
+    label: "Apoplastic Sucrose"
+  - from: AHA3_PHLOEM_PROTON_PUMP
+    to: SUC2_PROTON_SYMPORTER
+    class: flux
+    label: "Proton Motive Force"
+  - from: POLYMER_TRAPPING_GOLS
+    to: SUC2_PROTON_SYMPORTER
+    class: flux
+    label: "Raffinose Oligosaccharides"
+  - from: SUC2_PROTON_SYMPORTER
+    to: CALS7_SIEVE_PLATE_CALLOSE
+    class: flux
+    label: "Plasmodesmatal Sieve Loading"
+  - from: CALS7_SIEVE_PLATE_CALLOSE
+    to: SEOR_PROTECTIVE_FILAMENTS
+    class: flux
+  - from: SEOR_PROTECTIVE_FILAMENTS
+    to: PHLOEM_SAP_TRANSLOCATION
+    class: flux
+    label: "Bulk Flow Translocation"
+  - from: PHLOEM_SAP_TRANSLOCATION
+    to: CWINV_CELL_WALL_INVERTASE
+    class: flux
+    label: "Apoplastic Sink Unloading"
+  - from: PHLOEM_SAP_TRANSLOCATION
+    to: SUS_SUCROSE_SYNTHASE
+    class: flux
+    label: "Symplastic Sink Unloading"
+  - from: CWINV_CELL_WALL_INVERTASE
+    to: STP_HEXOSE_TRANSPORTERS
+    class: flux
+    label: "Glucose + Fructose"
+  - from: AHA2_SINK_PROTON_PUMP
+    to: STP_HEXOSE_TRANSPORTERS
+    class: flux
+    label: "H+ Gradient"
+  - from: STP_HEXOSE_TRANSPORTERS
+    to: SINK_GLYCOLYSIS_ENTRY
+    class: flux
+    label: "Hexose Uptake"
+  - from: SUS_SUCROSE_SYNTHASE
+    to: SINK_GLYCOLYSIS_ENTRY
+    class: flux
+    label: "UDP-Glucose + Fructose"
+  - from: SINK_GLYCOLYSIS_ENTRY
+    to: ROOT_MITOCHONDRIAL_RESP
+    class: flux
+    label: "Pyruvate -> Root ATP"

@@ -1,0 +1,327 @@
+{
+  "id": "PPA-16",
+  "title": "Plasmodesmata Gating & Intercellular Signaling",
+  "subtitle": "Callose neck constriction, symplastic mobile factors, peptide receptors, and electrical waves",
+  "caption": "Spatial regulation of symplastic connectivity and short-to-long distance cell-to-cell communication. Transport through plasmodesmata (PD) cytoplasmic sleeves is governed by dynamic callose deposition: callose synthases (CalS1/8/10) constrict the pore to restrict the size exclusion limit (SEL), while beta-1,3-glucanases (PDCB1/2) degrade callose to permit passage of mobile transcription factors (SHR, WUS) and non-cell-autonomous small RNAs. Apoplastic peptide hormones (CLV3, RALF1) signal via LRR receptor-like kinases (CLV1, FERONIA) to coordinate stem-cell niches and cell expansion, while systemic electrical and calcium waves propagate through glutamate receptor-like channels (GLR3.3/3.6) and vacuolar TPC1.",
+  "species_anchor": "arabidopsis_thaliana",
+  "nodes": [
+    {
+      "id": "CALLOSE_SYNTHASES_CALS",
+      "label": "Callose Synthases (CalS)",
+      "kind": "family",
+      "compartment": "plasmodesmata_neck",
+      "mapman_bin": "29.1.5",
+      "loci": [
+        "AT1G05570",
+        "AT2G36850",
+        "AT2G13680"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "GLUCANASES_PDCB",
+      "label": "beta-1,3-Glucanases (PDCB)",
+      "kind": "complex",
+      "compartment": "plasmodesmata_neck",
+      "mapman_bin": "29.1.6",
+      "loci": [
+        "AT5G61130",
+        "AT1G19430"
+      ],
+      "subunits": [
+        {
+          "symbol": "PDCB1",
+          "locus": "AT5G61130"
+        },
+        {
+          "symbol": "PDCB2",
+          "locus": "AT1G19430"
+        }
+      ]
+    },
+    {
+      "id": "PDLP_IMMUNE_SENSORS",
+      "label": "PDLP Receptors (PDLP1/5)",
+      "kind": "family",
+      "compartment": "plasmodesmata_neck",
+      "mapman_bin": "30.1.7",
+      "loci": [
+        "AT5G43980",
+        "AT1G70690"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "MOBILE_SHR_SCR_AXIS",
+      "label": "SHORT-ROOT / SCR Axis",
+      "kind": "complex",
+      "compartment": "symplastic_cytoplasmic_sleeve",
+      "mapman_bin": "33.1.2",
+      "loci": [
+        "AT4G37650",
+        "AT3G54220"
+      ],
+      "subunits": [
+        {
+          "symbol": "SHR",
+          "locus": "AT4G37650"
+        },
+        {
+          "symbol": "SCR",
+          "locus": "AT3G54220"
+        }
+      ]
+    },
+    {
+      "id": "WUS_APICAL_ORGANIZER",
+      "label": "WUSCHEL Stem Cell Factor",
+      "kind": "simple",
+      "compartment": "symplastic_cytoplasmic_sleeve",
+      "mapman_bin": "33.1.3",
+      "loci": [
+        "AT2G17950"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "MOBILE_SMALL_RNAS",
+      "label": "Non-Cell-Autonomous sRNAs",
+      "kind": "family",
+      "compartment": "symplastic_cytoplasmic_sleeve",
+      "mapman_bin": "30.7.1",
+      "loci": [
+        "AT1G31280",
+        "AT4G00885"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "CLV3_CLV1_STEM_NICHE",
+      "label": "CLV3 Peptide & CLV1/BAM1",
+      "kind": "complex",
+      "compartment": "apoplast_plasma_membrane",
+      "mapman_bin": "30.1.8",
+      "loci": [
+        "AT2G27250",
+        "AT1G75820",
+        "AT5G65700"
+      ],
+      "subunits": [
+        {
+          "symbol": "CLV3",
+          "locus": "AT2G27250"
+        },
+        {
+          "symbol": "CLV1",
+          "locus": "AT1G75820"
+        },
+        {
+          "symbol": "BAM1",
+          "locus": "AT5G65700"
+        }
+      ]
+    },
+    {
+      "id": "RALF_FERONIA_EXPANSION",
+      "label": "RALF1 & FERONIA RLK",
+      "kind": "complex",
+      "compartment": "apoplast_plasma_membrane",
+      "mapman_bin": "30.1.9",
+      "loci": [
+        "AT1G02900",
+        "AT3G51550"
+      ],
+      "subunits": [
+        {
+          "symbol": "RALF1",
+          "locus": "AT1G02900"
+        },
+        {
+          "symbol": "FERONIA",
+          "locus": "AT3G51550"
+        }
+      ]
+    },
+    {
+      "id": "IDA_HAE_ABSCISSION",
+      "label": "IDA Peptide & HAESA",
+      "kind": "complex",
+      "compartment": "apoplast_plasma_membrane",
+      "mapman_bin": "30.1.10",
+      "loci": [
+        "AT1G68765",
+        "AT4G28490"
+      ],
+      "subunits": [
+        {
+          "symbol": "IDA",
+          "locus": "AT1G68765"
+        },
+        {
+          "symbol": "HAESA",
+          "locus": "AT4G28490"
+        }
+      ]
+    },
+    {
+      "id": "GLR_GLUTAMATE_CHANNELS",
+      "label": "Glutamate Channels (GLR3.3/6)",
+      "kind": "family",
+      "compartment": "plasma_membrane_calcium",
+      "mapman_bin": "34.2.4",
+      "loci": [
+        "AT1G42540",
+        "AT3G51480"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "TPC1_VACUOLAR_CALCIUM",
+      "label": "Two-Pore Channel 1 (TPC1)",
+      "kind": "simple",
+      "compartment": "plasma_membrane_calcium",
+      "mapman_bin": "34.2.5",
+      "loci": [
+        "AT4G03560"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "SYSTEMIC_WAVE_PROPAGATION",
+      "label": "Organ-to-Organ Relay",
+      "kind": "simple",
+      "compartment": "plasma_membrane_calcium",
+      "mapman_bin": "30.6.1",
+      "loci": [
+        "AT1G42540"
+      ],
+      "subunits": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "CALLOSE_SYNTHASES_CALS",
+      "to": "MOBILE_SHR_SCR_AXIS",
+      "start": [
+        148.98000200359266,
+        177.936
+      ],
+      "end": [
+        150.06354836258117,
+        221.936
+      ],
+      "class": "flux",
+      "label": "Pore Constriction (Restricts SEL)"
+    },
+    {
+      "from": "GLUCANASES_PDCB",
+      "to": "MOBILE_SHR_SCR_AXIS",
+      "start": [
+        320.5340231104049,
+        173.792
+      ],
+      "end": [
+        220.89722688959512,
+        221.936
+      ],
+      "class": "flux",
+      "label": "Pore Dilation (Increases SEL)"
+    },
+    {
+      "from": "MOBILE_SHR_SCR_AXIS",
+      "to": "WUS_APICAL_ORGANIZER",
+      "start": [
+        261.793,
+        255.76
+      ],
+      "end": [
+        293.793,
+        255.76
+      ],
+      "class": "flux",
+      "label": "Target Gene Activation"
+    },
+    {
+      "from": "CLV3_CLV1_STEM_NICHE",
+      "to": "WUS_APICAL_ORGANIZER",
+      "start": [
+        238.67805796789915,
+        333.584
+      ],
+      "end": [
+        341.87568078245914,
+        284.728
+      ],
+      "class": "flux",
+      "label": "Negative Feedback Loop"
+    },
+    {
+      "from": "RALF_FERONIA_EXPANSION",
+      "to": "CALLOSE_SYNTHASES_CALS",
+      "start": [
+        361.28628517411187,
+        333.584
+      ],
+      "end": [
+        189.86150852972213,
+        177.936
+      ],
+      "class": "flux",
+      "label": "Wall Strain Sensing"
+    },
+    {
+      "from": "GLR_GLUTAMATE_CHANNELS",
+      "to": "TPC1_VACUOLAR_CALCIUM",
+      "start": [
+        260.62131250000004,
+        477.056
+      ],
+      "end": [
+        292.62131250000004,
+        477.056
+      ],
+      "class": "flux",
+      "label": "Depolarization -> Ca2+ Wave"
+    },
+    {
+      "from": "TPC1_VACUOLAR_CALCIUM",
+      "to": "SYSTEMIC_WAVE_PROPAGATION",
+      "start": [
+        494.5708125000001,
+        477.056
+      ],
+      "end": [
+        526.5708125000001,
+        477.056
+      ],
+      "class": "flux",
+      "label": "Intercellular Wavefront"
+    }
+  ],
+  "total_nodes": 12,
+  "distinct_loci": 22,
+  "loci_list": [
+    "AT1G02900",
+    "AT1G05570",
+    "AT1G19430",
+    "AT1G31280",
+    "AT1G42540",
+    "AT1G68765",
+    "AT1G70690",
+    "AT1G75820",
+    "AT2G13680",
+    "AT2G17950",
+    "AT2G27250",
+    "AT2G36850",
+    "AT3G51480",
+    "AT3G51550",
+    "AT3G54220",
+    "AT4G00885",
+    "AT4G03560",
+    "AT4G28490",
+    "AT4G37650",
+    "AT5G43980",
+    "AT5G61130",
+    "AT5G65700"
+  ]
+}

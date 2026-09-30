@@ -1,0 +1,184 @@
+# PPA-16 — Plasmodesmata Gating & Intercellular Communication
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-16
+title: Plasmodesmata Gating & Intercellular Signaling
+subtitle: Callose neck constriction, symplastic mobile factors, peptide receptors, and electrical waves
+derived_from: MapMan4 BIN 30 Signaling & BIN 33 Development, PlantCyc INTERCELLULAR-SIGNALING-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Spatial regulation of symplastic connectivity and short-to-long distance cell-to-cell communication.
+  Transport through plasmodesmata (PD) cytoplasmic sleeves is governed by dynamic callose deposition:
+  callose synthases (CalS1/8/10) constrict the pore to restrict the size exclusion limit (SEL), while
+  beta-1,3-glucanases (PDCB1/2) degrade callose to permit passage of mobile transcription factors (SHR, WUS)
+  and non-cell-autonomous small RNAs. Apoplastic peptide hormones (CLV3, RALF1) signal via LRR receptor-like
+  kinases (CLV1, FERONIA) to coordinate stem-cell niches and cell expansion, while systemic electrical and
+  calcium waves propagate through glutamate receptor-like channels (GLR3.3/3.6) and vacuolar TPC1.
+
+lanes:
+  - id: callose_neck_gating
+    compartment: plasmodesmata_neck
+    node_width: 220
+    nodes: [CALLOSE_SYNTHASES_CALS, GLUCANASES_PDCB, PDLP_IMMUNE_SENSORS]
+
+  - id: symplastic_mobile_factors
+    compartment: symplastic_cytoplasmic_sleeve
+    node_width: 220
+    nodes: [MOBILE_SHR_SCR_AXIS, WUS_APICAL_ORGANIZER, MOBILE_SMALL_RNAS]
+
+  - id: apoplastic_peptide_receptors
+    compartment: apoplast_plasma_membrane
+    node_width: 220
+    nodes: [CLV3_CLV1_STEM_NICHE, RALF_FERONIA_EXPANSION, IDA_HAE_ABSCISSION]
+
+  - id: rapid_electrical_waves
+    compartment: plasma_membrane_calcium
+    node_width: 220
+    nodes: [GLR_GLUTAMATE_CHANNELS, TPC1_VACUOLAR_CALCIUM, SYSTEMIC_WAVE_PROPAGATION]
+
+nodes:
+  - id: CALLOSE_SYNTHASES_CALS
+    label: "Callose Synthases (CalS)"
+    sublabel: "BIN 29.1.5 CalS1 / CalS8 / CalS10 Pore Closure"
+    kind: "family"
+    mapman_bin: "29.1.5"
+    family_loci: ["AT1G05570", "AT2G36850", "AT2G13680"]
+    loci: ["AT1G05570", "AT2G36850", "AT2G13680"]
+
+  - id: GLUCANASES_PDCB
+    label: "beta-1,3-Glucanases (PDCB)"
+    sublabel: "BIN 29.1.6 PDCB1 / PDCB2 Pore Dilation"
+    kind: "complex"
+    mapman_bin: "29.1.6"
+    subunits:
+      - symbol: "PDCB1"
+        locus: "AT5G61130"
+      - symbol: "PDCB2"
+        locus: "AT1G19430"
+    loci: ["AT5G61130", "AT1G19430"]
+
+  - id: PDLP_IMMUNE_SENSORS
+    label: "PDLP Receptors (PDLP1/5)"
+    sublabel: "BIN 30.1.7 Immune Symplastic Lockdown"
+    kind: "family"
+    mapman_bin: "30.1.7"
+    family_loci: ["AT5G43980", "AT1G70690"]
+    loci: ["AT5G43980", "AT1G70690"]
+
+  - id: MOBILE_SHR_SCR_AXIS
+    label: "SHORT-ROOT / SCR Axis"
+    sublabel: "BIN 33.1.2 Stele-to-Endodermis Migration"
+    kind: "complex"
+    mapman_bin: "33.1.2"
+    subunits:
+      - symbol: "SHR"
+        locus: "AT4G37650"
+      - symbol: "SCR"
+        locus: "AT3G54220"
+    loci: ["AT4G37650", "AT3G54220"]
+
+  - id: WUS_APICAL_ORGANIZER
+    label: "WUSCHEL Stem Cell Factor"
+    sublabel: "BIN 33.1.3 Organizing Center Symplastic Movement"
+    kind: "simple"
+    mapman_bin: "33.1.3"
+    loci: ["AT2G17950"]
+
+  - id: MOBILE_SMALL_RNAS
+    label: "Non-Cell-Autonomous sRNAs"
+    sublabel: "BIN 30.7.1 miR165 / miR166 / tasiRNAs"
+    kind: "family"
+    mapman_bin: "30.7.1"
+    family_loci: ["AT1G31280", "AT4G00885"]
+    loci: ["AT1G31280", "AT4G00885"]
+
+  - id: CLV3_CLV1_STEM_NICHE
+    label: "CLV3 Peptide & CLV1/BAM1"
+    sublabel: "BIN 30.1.8 Apical LRR-RLK Feedback"
+    kind: "complex"
+    mapman_bin: "30.1.8"
+    subunits:
+      - symbol: "CLV3"
+        locus: "AT2G27250"
+      - symbol: "CLV1"
+        locus: "AT1G75820"
+      - symbol: "BAM1"
+        locus: "AT5G65700"
+    loci: ["AT2G27250", "AT1G75820", "AT5G65700"]
+
+  - id: RALF_FERONIA_EXPANSION
+    label: "RALF1 & FERONIA RLK"
+    sublabel: "BIN 30.1.9 Cell Wall Integrity Sensing"
+    kind: "complex"
+    mapman_bin: "30.1.9"
+    subunits:
+      - symbol: "RALF1"
+        locus: "AT1G02900"
+      - symbol: "FERONIA"
+        locus: "AT3G51550"
+    loci: ["AT1G02900", "AT3G51550"]
+
+  - id: IDA_HAE_ABSCISSION
+    label: "IDA Peptide & HAESA"
+    sublabel: "BIN 30.1.10 Floral Organ Separation"
+    kind: "complex"
+    mapman_bin: "30.1.10"
+    subunits:
+      - symbol: "IDA"
+        locus: "AT1G68765"
+      - symbol: "HAESA"
+        locus: "AT4G28490"
+    loci: ["AT1G68765", "AT4G28490"]
+
+  - id: GLR_GLUTAMATE_CHANNELS
+    label: "Glutamate Channels (GLR3.3/6)"
+    sublabel: "BIN 34.2.4 Systemic Action Potentials"
+    kind: "family"
+    mapman_bin: "34.2.4"
+    family_loci: ["AT1G42540", "AT3G51480"]
+    loci: ["AT1G42540", "AT3G51480"]
+
+  - id: TPC1_VACUOLAR_CALCIUM
+    label: "Two-Pore Channel 1 (TPC1)"
+    sublabel: "BIN 34.2.5 Slow Vacuolar Ca2+ Wave"
+    kind: "simple"
+    mapman_bin: "34.2.5"
+    loci: ["AT4G03560"]
+
+  - id: SYSTEMIC_WAVE_PROPAGATION
+    label: "Organ-to-Organ Relay"
+    sublabel: "BIN 30.6.1 Wound & Touch Long-Distance Signal"
+    kind: "simple"
+    mapman_bin: "30.6.1"
+    loci: ["AT1G42540"]
+
+edges:
+  - from: CALLOSE_SYNTHASES_CALS
+    to: MOBILE_SHR_SCR_AXIS
+    class: flux
+    label: "Pore Constriction (Restricts SEL)"
+  - from: GLUCANASES_PDCB
+    to: MOBILE_SHR_SCR_AXIS
+    class: flux
+    label: "Pore Dilation (Increases SEL)"
+  - from: MOBILE_SHR_SCR_AXIS
+    to: WUS_APICAL_ORGANIZER
+    class: flux
+    label: "Target Gene Activation"
+  - from: CLV3_CLV1_STEM_NICHE
+    to: WUS_APICAL_ORGANIZER
+    class: flux
+    label: "Negative Feedback Loop"
+  - from: RALF_FERONIA_EXPANSION
+    to: CALLOSE_SYNTHASES_CALS
+    class: flux
+    label: "Wall Strain Sensing"
+  - from: GLR_GLUTAMATE_CHANNELS
+    to: TPC1_VACUOLAR_CALCIUM
+    class: flux
+    label: "Depolarization -> Ca2+ Wave"
+  - from: TPC1_VACUOLAR_CALCIUM
+    to: SYSTEMIC_WAVE_PROPAGATION
+    class: flux
+    label: "Intercellular Wavefront"

@@ -133,6 +133,50 @@
       "sidecar": "catalog/sidecars/PPA-12.json",
       "total_nodes": 12,
       "distinct_loci": 20
+    },
+    {
+      "id": "PPA-13",
+      "title": "Phloem Vasculature Sucrose & Nutrient Transport",
+      "subtitle": "Source minor vein apoplastic/symplastic loading, sieve tube M\u00fcnch pressure flow, and sink unloading",
+      "svg_light": "maps/svg/PPA-13.svg",
+      "svg_dark": "maps/svg/PPA-13_dark.svg",
+      "sbgn": "maps/sbgn/PPA-13.sbgn",
+      "sidecar": "catalog/sidecars/PPA-13.json",
+      "total_nodes": 13,
+      "distinct_loci": 22
+    },
+    {
+      "id": "PPA-14",
+      "title": "Root Radial Transport & Casparian Strip Barrier",
+      "subtitle": "Radial nutrient uptake from soil through cortex and endodermis into ascending xylem stream",
+      "svg_light": "maps/svg/PPA-14.svg",
+      "svg_dark": "maps/svg/PPA-14_dark.svg",
+      "sbgn": "maps/sbgn/PPA-14.sbgn",
+      "sidecar": "catalog/sidecars/PPA-14.json",
+      "total_nodes": 14,
+      "distinct_loci": 24
+    },
+    {
+      "id": "PPA-15",
+      "title": "Stomata Guard Cell Osmoregulation & Aperture Engine",
+      "subtitle": "Blue light hyperpolarization vs ABA-triggered depolarization driving turgor aperture dynamics",
+      "svg_light": "maps/svg/PPA-15.svg",
+      "svg_dark": "maps/svg/PPA-15_dark.svg",
+      "sbgn": "maps/sbgn/PPA-15.sbgn",
+      "sidecar": "catalog/sidecars/PPA-15.json",
+      "total_nodes": 13,
+      "distinct_loci": 19
+    },
+    {
+      "id": "PPA-16",
+      "title": "Plasmodesmata Gating & Intercellular Signaling",
+      "subtitle": "Callose neck constriction, symplastic mobile factors, peptide receptors, and electrical waves",
+      "svg_light": "maps/svg/PPA-16.svg",
+      "svg_dark": "maps/svg/PPA-16_dark.svg",
+      "sbgn": "maps/sbgn/PPA-16.sbgn",
+      "sidecar": "catalog/sidecars/PPA-16.json",
+      "total_nodes": 12,
+      "distinct_loci": 22
     }
   ]
 }

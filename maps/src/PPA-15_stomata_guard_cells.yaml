@@ -1,0 +1,201 @@
+# PPA-15 — Stomata Guard Cell Osmoregulation & Aperture Engine
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-15
+title: Stomata Guard Cell Osmoregulation & Aperture Engine
+subtitle: Blue light hyperpolarization vs ABA-triggered depolarization driving turgor aperture dynamics
+derived_from: MapMan4 BIN 34 Transport & BIN 30 Signaling, PlantCyc STOMATAL-REGULATION-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Biophysical and biochemical control of stomatal pore aperture in paired guard cells. In response to
+  morning blue light, photoreceptors PHOT1/2 activate BLUS1, stimulating the plasma membrane H+-ATPases
+  (AHA1/2). Resulting hyperpolarization (-150 mV) drives massive K+ influx through KAT1/2 channels,
+  balanced by PEPC-derived malate and chloride uptake, drawing in water via PIP2;1 aquaporins and swelling
+  guard cells to open the pore. Under drought, stress-induced ABA triggers PYR/RCAR-mediated activation of
+  SnRK2.6/OST1 kinase, which phosphorylates SLAC1/SLAH3 anion channels and stimulates RBOHD ROS generation.
+  Membrane depolarization (-40 mV) opens GORK potassium release channels, causing turgor collapse and pore closure.
+
+lanes:
+  - id: blue_light_opening_signal
+    compartment: guard_cell_cytosol
+    node_width: 220
+    nodes: [PHOT1_PHOT2_SENSORS, BLUS1_KINASE_RELAY, PM_PROTON_PUMP_AHA]
+
+  - id: osmotic_swelling_opening
+    compartment: guard_cell_plasma_membrane
+    node_width: 220
+    nodes: [INWARD_POTASSIUM_KAT, MALATE_SYNTHESIS_PEPC, TONOPLAST_MALATE_ALMT9, AQUAPORIN_WATER_INFLUX]
+
+  - id: aba_drought_closing_signal
+    compartment: guard_cell_cytosol
+    node_width: 220
+    nodes: [PYR_ABA_RECEPTOR_HUB, OST1_SNRK2_KINASE, RBOHD_OXIDATIVE_BURST]
+
+  - id: depolarization_turgor_collapse
+    compartment: guard_cell_plasma_membrane
+    node_width: 220
+    nodes: [SLAC1_ANION_CHANNELS, OUTWARD_POTASSIUM_GORK, TURGOR_COLLAPSE_CLOSURE]
+
+nodes:
+  - id: PHOT1_PHOT2_SENSORS
+    label: "Phototropins (PHOT1/2)"
+    sublabel: "BIN 30.1.5 Blue Light Ser/Thr Kinase"
+    kind: "complex"
+    mapman_bin: "30.1.5"
+    subunits:
+      - symbol: "PHOT1"
+        locus: "AT3G45780"
+      - symbol: "PHOT2"
+        locus: "AT5G58140"
+    loci: ["AT3G45780", "AT5G58140"]
+
+  - id: BLUS1_KINASE_RELAY
+    label: "BLUS1 Kinase & 14-3-3"
+    sublabel: "BIN 30.1.6 Blue Light Signaling Signal"
+    kind: "complex"
+    mapman_bin: "30.1.6"
+    subunits:
+      - symbol: "BLUS1"
+        locus: "AT4G14480"
+      - symbol: "14-3-3"
+        locus: "AT1G22300"
+    loci: ["AT4G14480", "AT1G22300"]
+
+  - id: PM_PROTON_PUMP_AHA
+    label: "PM H+-ATPase (AHA1/2)"
+    sublabel: "BIN 34.3.1 Guard Cell Hyperpolarization"
+    kind: "complex"
+    mapman_bin: "34.3.1"
+    subunits:
+      - symbol: "AHA1"
+        locus: "AT2G18960"
+      - symbol: "AHA2"
+        locus: "AT4G30190"
+    loci: ["AT2G18960", "AT4G30190"]
+
+  - id: INWARD_POTASSIUM_KAT
+    label: "Inward K+ (KAT1 / KAT2)"
+    sublabel: "BIN 34.2.1 Voltage-Gated K+ Accumulation"
+    kind: "family"
+    mapman_bin: "34.2.1"
+    family_loci: ["AT5G46240", "AT4G18290"]
+    loci: ["AT5G46240", "AT4G18290"]
+
+  - id: MALATE_SYNTHESIS_PEPC
+    label: "PEP Carboxylase (PEPC)"
+    sublabel: "BIN 1.2.7 Organic Anion Osmolyte"
+    kind: "simple"
+    mapman_bin: "1.2.7"
+    loci: ["AT1G53310"]
+
+  - id: TONOPLAST_MALATE_ALMT9
+    label: "Vacuolar ALMT9 Channel"
+    sublabel: "BIN 34.4.2 Malate2- Sequestration"
+    kind: "simple"
+    mapman_bin: "34.4.2"
+    loci: ["AT3G18440"]
+
+  - id: AQUAPORIN_WATER_INFLUX
+    label: "Aquaporins (PIP2;1)"
+    sublabel: "BIN 34.1.1 Osmotic Water Swelling"
+    kind: "simple"
+    mapman_bin: "34.1.1"
+    loci: ["AT3G53420"]
+
+  - id: PYR_ABA_RECEPTOR_HUB
+    label: "PYR/PYL & PP2C (ABI1)"
+    sublabel: "BIN 30.2.1 Drought Hormone Sensor"
+    kind: "complex"
+    mapman_bin: "30.2.1"
+    subunits:
+      - symbol: "PYL1"
+        locus: "AT5G05440"
+      - symbol: "ABI1"
+        locus: "AT4G26080"
+    loci: ["AT5G05440", "AT4G26080"]
+
+  - id: OST1_SNRK2_KINASE
+    label: "OST1 / SnRK2.6 Kinase"
+    sublabel: "BIN 30.2.2 Stomatal Closure Master Switch"
+    kind: "simple"
+    mapman_bin: "30.2.2"
+    loci: ["AT4G33950"]
+
+  - id: RBOHD_OXIDATIVE_BURST
+    label: "RBOHD / RBOHF ROS Hub"
+    sublabel: "BIN 21.1.1 Apoplastic H2O2 Signaling"
+    kind: "family"
+    mapman_bin: "21.1.1"
+    family_loci: ["AT5G47910", "AT1G64060"]
+    loci: ["AT5G47910", "AT1G64060"]
+
+  - id: SLAC1_ANION_CHANNELS
+    label: "SLAC1 / SLAH3 Anion Vent"
+    sublabel: "BIN 34.4.1 Chloride & Malate Efflux"
+    kind: "complex"
+    mapman_bin: "34.4.1"
+    subunits:
+      - symbol: "SLAC1"
+        locus: "AT1G12480"
+      - symbol: "SLAH3"
+        locus: "AT5G24030"
+    loci: ["AT1G12480", "AT5G24030"]
+
+  - id: OUTWARD_POTASSIUM_GORK
+    label: "Outward K+ Channel (GORK)"
+    sublabel: "BIN 34.2.2 Depolarization K+ Release"
+    kind: "simple"
+    mapman_bin: "34.2.2"
+    loci: ["AT5G37500"]
+
+  - id: TURGOR_COLLAPSE_CLOSURE
+    label: "Stomatal Pore Closure"
+    sublabel: "BIN 33.3.1 Turgor Collapse & Gas Seal"
+    kind: "simple"
+    mapman_bin: "33.3.1"
+    loci: ["AT4G33950"]
+
+edges:
+  - from: PHOT1_PHOT2_SENSORS
+    to: BLUS1_KINASE_RELAY
+    class: flux
+    label: "Blue Light Activation"
+  - from: BLUS1_KINASE_RELAY
+    to: PM_PROTON_PUMP_AHA
+    class: flux
+    label: "Thr947 Phosphorylation"
+  - from: PM_PROTON_PUMP_AHA
+    to: INWARD_POTASSIUM_KAT
+    class: flux
+    label: "Hyperpolarization (-150 mV)"
+  - from: PM_PROTON_PUMP_AHA
+    to: MALATE_SYNTHESIS_PEPC
+    class: flux
+  - from: MALATE_SYNTHESIS_PEPC
+    to: TONOPLAST_MALATE_ALMT9
+    class: flux
+    label: "Malate2- Storage"
+  - from: INWARD_POTASSIUM_KAT
+    to: AQUAPORIN_WATER_INFLUX
+    class: flux
+    label: "Osmotic Potential Drop"
+  - from: PYR_ABA_RECEPTOR_HUB
+    to: OST1_SNRK2_KINASE
+    class: flux
+    label: "ABA Relieves PP2C Block"
+  - from: OST1_SNRK2_KINASE
+    to: SLAC1_ANION_CHANNELS
+    class: flux
+    label: "Ser120 Phosphorylation"
+  - from: OST1_SNRK2_KINASE
+    to: RBOHD_OXIDATIVE_BURST
+    class: flux
+  - from: SLAC1_ANION_CHANNELS
+    to: OUTWARD_POTASSIUM_GORK
+    class: flux
+    label: "Membrane Depolarization (-40 mV)"
+  - from: OUTWARD_POTASSIUM_GORK
+    to: TURGOR_COLLAPSE_CLOSURE
+    class: flux
+    label: "K+ / H2O Loss"

@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
+  <map id="PPA-14" language="process description">
+    <bbox x="-18.00" y="0.00" w="1050.84" h="680.00" />
+    <glyph id="comp_root_epidermis_cortex" class="compartment">
+      <label text="Root Epidermis Cortex" />
+      <bbox x="14.00" y="62.00" w="986.84" h="245.30" />
+    </glyph>
+    <glyph id="comp_root_endodermis_casparian" class="compartment">
+      <label text="Root Endodermis Casparian" />
+      <bbox x="125.45" y="285.30" w="763.94" h="129.65" />
+    </glyph>
+    <glyph id="comp_root_stele_xylem" class="compartment">
+      <label text="Root Stele Xylem" />
+      <bbox x="24.59" y="392.94" w="965.65" h="111.65" />
+    </glyph>
+    <glyph id="ROOT_PM_PROTON_PUMPS" class="complex" compartmentRef="comp_root_epidermis_cortex">
+      <label text="Root H+-ATPase (AHA1/2)" />
+      <bbox x="40.00" y="102.00" w="212.71" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ROOT_PM_PROTON_PUMPS" compartment="root_epidermis_cortex" mapmanBin="34.3.1">
+          <ns0:locus>AT2G18960</ns0:locus>
+          <ns0:locus>AT4G30190</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="NITRATE_UPTAKE_NRT" class="complex" compartmentRef="comp_root_epidermis_cortex">
+      <label text="Nitrate Influx Systems" />
+      <bbox x="284.71" y="102.00" w="196.49" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="NITRATE_UPTAKE_NRT" compartment="root_epidermis_cortex" mapmanBin="34.4.1">
+          <ns0:locus>AT1G12110</ns0:locus>
+          <ns0:locus>AT1G08090</ns0:locus>
+          <ns0:locus>AT5G50200</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PHOSPHATE_UPTAKE_PHT" class="macromolecule" compartmentRef="comp_root_epidermis_cortex">
+      <label text="Phosphate-H+ Symporters" />
+      <bbox x="513.20" y="104.00" w="234.34" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PHOSPHATE_UPTAKE_PHT" compartment="root_epidermis_cortex" mapmanBin="34.4.2">
+          <ns0:locus>AT5G43350</ns0:locus>
+          <ns0:locus>AT2G38940</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="POTASSIUM_UPTAKE_AKT" class="macromolecule" compartmentRef="comp_root_epidermis_cortex">
+      <label text="Inward K+ Channel (AKT1)" />
+      <bbox x="779.54" y="113.00" w="195.30" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="POTASSIUM_UPTAKE_AKT" compartment="root_epidermis_cortex" mapmanBin="34.2.1">
+          <ns0:locus>AT2G26650</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="IRON_REDUCTION_IRT1" class="complex" compartmentRef="comp_root_epidermis_cortex">
+      <label text="Iron Uptake (FRO2 / IRT1)" />
+      <bbox x="144.22" y="213.65" w="209.37" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="IRON_REDUCTION_IRT1" compartment="root_epidermis_cortex" mapmanBin="34.4.3">
+          <ns0:locus>AT1G01580</ns0:locus>
+          <ns0:locus>AT4G19690</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="HIGH_AFFINITY_K_HAK5" class="macromolecule" compartmentRef="comp_root_epidermis_cortex">
+      <label text="High-Affinity K+ (HAK5)" />
+      <bbox x="385.59" y="224.65" w="236.98" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="HIGH_AFFINITY_K_HAK5" compartment="root_epidermis_cortex" mapmanBin="34.2.2">
+          <ns0:locus>AT4G13420</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="TRANSCELLULAR_AQUAPORINS" class="macromolecule" compartmentRef="comp_root_epidermis_cortex">
+      <label text="Aquaporins (PIP1;2 / PIP2;1)" />
+      <bbox x="654.56" y="215.65" w="216.06" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TRANSCELLULAR_AQUAPORINS" compartment="root_epidermis_cortex" mapmanBin="34.1.1">
+          <ns0:locus>AT2G45960</ns0:locus>
+          <ns0:locus>AT3G53420</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="CASP_MEMBRANE_SCAFFOLDS" class="macromolecule" compartmentRef="comp_root_endodermis_casparian">
+      <label text="Casparian Strip Scaffolds" />
+      <bbox x="151.45" y="325.30" w="215.10" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CASP_MEMBRANE_SCAFFOLDS" compartment="root_endodermis_casparian" mapmanBin="33.2.1">
+          <ns0:locus>AT2G36100</ns0:locus>
+          <ns0:locus>AT2G36110</ns0:locus>
+          <ns0:locus>AT2G36120</ns0:locus>
+          <ns0:locus>AT2G36130</ns0:locus>
+          <ns0:locus>AT3G53380</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="SGN3_RECEPTOR_INTEGRITY" class="macromolecule" compartmentRef="comp_root_endodermis_casparian">
+      <label text="SGN3 / GSO1 Receptor Kinase" />
+      <bbox x="398.55" y="334.30" w="202.95" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SGN3_RECEPTOR_INTEGRITY" compartment="root_endodermis_casparian" mapmanBin="30.1.4">
+          <ns0:locus>AT4G20140</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="PRX64_LIGNIN_PEROXIDASE" class="macromolecule" compartmentRef="comp_root_endodermis_casparian">
+      <label text="Peroxidase 64 (PRX64)" />
+      <bbox x="633.50" y="334.30" w="229.89" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PRX64_LIGNIN_PEROXIDASE" compartment="root_endodermis_casparian" mapmanBin="16.2.4">
+          <ns0:locus>AT5G42180</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="XYLEM_POTASSIUM_SKOR" class="macromolecule" compartmentRef="comp_root_stele_xylem">
+      <label text="Stelar K+ Outward Channel" />
+      <bbox x="50.59" y="432.94" w="187.31" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="XYLEM_POTASSIUM_SKOR" compartment="root_stele_xylem" mapmanBin="34.2.3">
+          <ns0:locus>AT3G02850</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="XYLEM_PHOSPHATE_PHO1" class="macromolecule" compartmentRef="comp_root_stele_xylem">
+      <label text="SPX-EXS Pi Loader (PHO1)" />
+      <bbox x="269.90" y="432.94" w="205.63" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="XYLEM_PHOSPHATE_PHO1" compartment="root_stele_xylem" mapmanBin="34.4.4">
+          <ns0:locus>AT3G23430</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="XYLEM_NITRATE_NRT15" class="macromolecule" compartmentRef="comp_root_stele_xylem">
+      <label text="Nitrate Exporter (NRT1.5)" />
+      <bbox x="507.53" y="432.94" w="201.98" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="XYLEM_NITRATE_NRT15" compartment="root_stele_xylem" mapmanBin="34.4.5">
+          <ns0:locus>AT1G32450</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="XYLEM_BORON_BOR1" class="macromolecule" compartmentRef="comp_root_stele_xylem">
+      <label text="Polar Boric Acid Exporter" />
+      <bbox x="741.51" y="432.94" w="222.73" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="XYLEM_BORON_BOR1" compartment="root_stele_xylem" mapmanBin="34.4.6">
+          <ns0:locus>AT2G47160</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <arc id="arc_0" class="consumption" source="ROOT_PM_PROTON_PUMPS" target="NITRATE_UPTAKE_NRT">
+      <start x="252.71" y="135.82" />
+      <end x="284.71" y="135.82" />
+    </arc>
+    <arc id="arc_1" class="consumption" source="ROOT_PM_PROTON_PUMPS" target="PHOSPHATE_UPTAKE_PHT">
+      <start x="252.71" y="135.82" />
+      <end x="513.20" y="135.82" />
+    </arc>
+    <arc id="arc_2" class="consumption" source="ROOT_PM_PROTON_PUMPS" target="POTASSIUM_UPTAKE_AKT">
+      <start x="252.71" y="135.82" />
+      <end x="779.54" y="135.82" />
+    </arc>
+    <arc id="arc_3" class="consumption" source="ROOT_PM_PROTON_PUMPS" target="HIGH_AFFINITY_K_HAK5">
+      <start x="252.71" y="169.02" />
+      <end x="385.59" y="210.49" />
+    </arc>
+    <arc id="arc_4" class="consumption" source="ROOT_PM_PROTON_PUMPS" target="IRON_REDUCTION_IRT1">
+      <start x="177.42" y="169.65" />
+      <end x="217.84" y="213.65" />
+    </arc>
+    <arc id="arc_5" class="consumption" source="NITRATE_UPTAKE_NRT" target="CASP_MEMBRANE_SCAFFOLDS">
+      <start x="364.01" y="169.65" />
+      <end x="276.82" y="325.30" />
+    </arc>
+    <arc id="arc_6" class="consumption" source="POTASSIUM_UPTAKE_AKT" target="CASP_MEMBRANE_SCAFFOLDS">
+      <start x="813.43" y="158.65" />
+      <end x="347.90" y="325.30" />
+    </arc>
+    <arc id="arc_7" class="consumption" source="TRANSCELLULAR_AQUAPORINS" target="CASP_MEMBRANE_SCAFFOLDS">
+      <start x="654.56" y="270.99" />
+      <end x="366.55" y="333.70" />
+    </arc>
+    <arc id="arc_8" class="consumption" source="SGN3_RECEPTOR_INTEGRITY" target="CASP_MEMBRANE_SCAFFOLDS">
+      <start x="398.55" y="357.12" />
+      <end x="366.55" y="357.12" />
+    </arc>
+    <arc id="arc_9" class="consumption" source="PRX64_LIGNIN_PEROXIDASE" target="CASP_MEMBRANE_SCAFFOLDS">
+      <start x="633.50" y="357.12" />
+      <end x="366.55" y="357.12" />
+    </arc>
+    <arc id="arc_10" class="consumption" source="CASP_MEMBRANE_SCAFFOLDS" target="XYLEM_POTASSIUM_SKOR">
+      <start x="221.98" y="388.94" />
+      <end x="170.80" y="432.94" />
+    </arc>
+    <arc id="arc_11" class="consumption" source="CASP_MEMBRANE_SCAFFOLDS" target="XYLEM_PHOSPHATE_PHO1">
+      <start x="295.68" y="388.94" />
+      <end x="346.41" y="432.94" />
+    </arc>
+    <arc id="arc_12" class="consumption" source="CASP_MEMBRANE_SCAFFOLDS" target="XYLEM_NITRATE_NRT15">
+      <start x="366.55" y="387.47" />
+      <end x="507.53" y="427.27" />
+    </arc>
+    <arc id="arc_13" class="consumption" source="CASP_MEMBRANE_SCAFFOLDS" target="XYLEM_BORON_BOR1">
+      <start x="366.55" y="374.98" />
+      <end x="741.51" y="437.27" />
+    </arc>
+  </map>
+</sbgn>

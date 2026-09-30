@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1005 680" width="1005" height="680" data-theme="dark" data-map-id="PPA-15"><defs><style>
+:root {
+  --ppa-bg: #ffffff;
+  --ppa-ink: #0f172a;
+  --ppa-ink-soft: #475569;
+  --ppa-node-fill: #f8fafc;
+  --ppa-node-stroke: #1e293b;
+  --ppa-hairline: #cbd5e1;
+  --ppa-edge: #475569;
+  --ppa-compartment-fill: rgba(15, 23, 42, 0.035);
+  --ppa-compartment-stroke: rgba(15, 23, 42, 0.22);
+  --ppa-accent: #0284c7;
+  --ppa-up: #D55E00;
+  --ppa-down: #0072B2;
+}
+:root[data-theme="dark"] {
+  --ppa-bg: #0b0f17;
+  --ppa-ink: #f1f5f9;
+  --ppa-ink-soft: #94a3b8;
+  --ppa-node-fill: #151c28;
+  --ppa-node-stroke: #cbd5e1;
+  --ppa-hairline: #334155;
+  --ppa-edge: #94a3b8;
+  --ppa-compartment-fill: rgba(255, 255, 255, 0.04);
+  --ppa-compartment-stroke: rgba(255, 255, 255, 0.25);
+  --ppa-accent: #38bdf8;
+  --ppa-up: #ea580c;
+  --ppa-down: #38bdf8;
+}
+
+.ppa-canvas { fill: var(--ppa-bg, #ffffff); }
+text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: var(--ppa-ink); }
+.ppa-title { font-size: 20.0px; font-weight: 700; fill: var(--ppa-ink); }
+.ppa-subtitle { font-size: 12.0px; fill: var(--ppa-ink-soft); }
+.ppa-caption { font-size: 11.0px; fill: var(--ppa-ink-soft); line-height: 1.4; }
+.ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
+.ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
+.ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
+.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+
+.ppa-compartment-band {
+  fill: var(--ppa-compartment-fill);
+  stroke: var(--ppa-compartment-stroke);
+  stroke-width: 1.5px;
+  stroke-dasharray: 6 3;
+  rx: 10px;
+}
+.ppa-compartment-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  fill: var(--ppa-ink-soft);
+}
+
+.ppa-node {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ppa-node:hover {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.ppa-node rect, .ppa-node circle, .ppa-node path {
+  stroke: var(--ppa-node-stroke);
+  stroke-width: 1.5px;
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+.ppa-node.significant rect {
+  stroke-width: 2.5px;
+  stroke: var(--ppa-ink);
+}
+.ppa-node.non-significant rect {
+  stroke-width: 1.0px;
+  stroke-dasharray: 3 2;
+  stroke: var(--ppa-hairline);
+}
+</style>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ppa-edge)" /></marker>
+<marker id="inhibit" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><line x1="5" y1="1" x2="5" y2="9" stroke="var(--ppa-edge)" stroke-width="2" /></marker>
+</defs>
+<rect class="ppa-canvas" width="1005" height="680" />
+<text class="ppa-title" x="40.0" y="36.0">Stomata Guard Cell Osmoregulation &amp; Aperture Engine</text>
+<text class="ppa-subtitle" x="40.0" y="56.0">Blue light hyperpolarization vs ABA-triggered depolarization driving turgor aperture dynamics</text>
+<rect class="ppa-compartment-band" x="111.9" y="62.0" width="745.6" height="352.9" />
+<text class="ppa-compartment-title" x="125.9" y="80.0">Guard Cell Cytosol</text>
+<rect class="ppa-compartment-band" x="14.0" y="173.6" width="941.4" height="352.9" />
+<text class="ppa-compartment-title" x="28.0" y="191.6">Guard Cell Plasma Membrane</text>
+<path d="M 342.4 135.8 L 374.4 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="358.4" y="131.8">Blue Light Activation</text>
+<path d="M 578.0 135.8 L 610.0 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="594.0" y="131.8">Thr947 Phosphorylation</text>
+<path d="M 610.0 156.7 L 270.2 223.0" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="440.1" y="185.9">Hyperpolarization (-150 mV)</text>
+<path d="M 617.8 169.6 L 462.3 222.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 488.4 245.5 L 520.4 245.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="504.4" y="241.5">Malate2- Storage</text>
+<path d="M 270.2 245.5 L 740.0 245.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="505.1" y="241.5">Osmotic Potential Drop</text>
+<path d="M 336.4 355.1 L 368.4 355.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="352.4" y="351.1">ABA Relieves PP2C Block</text>
+<path d="M 434.7 377.9 L 319.4 432.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="377.1" y="401.4">Ser120 Phosphorylation</text>
+<path d="M 596.8 355.1 L 628.8 355.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 344.5 466.8 L 376.5 466.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="360.5" y="462.8">Membrane Depolarization (-40 mV)</text>
+<path d="M 580.0 466.8 L 612.0 466.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="596.0" y="462.8">K+ / H2O Loss</text>
+<g class="ppa-node complex " id="node-PHOT1_PHOT2_SENSORS" data-node-id="PHOT1_PHOT2_SENSORS" data-loci="AT3G45780,AT5G58140" data-bin="30.1.5">
+<rect x="145.4" y="102.0" width="197.1" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="243.9" y="120.0">Phototropins (PHOT1/2)</text>
+<text class="ppa-sub" x="243.9" y="135.4">BIN 30.1.5 Blue Light Ser/Thr Kinase</text>
+<g class="ppa-subunit" data-locus="AT3G45780"><rect x="199.4" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="220.6" y="160.1">PHOT1</text></g>
+<g class="ppa-subunit" data-locus="AT5G58140"><rect x="245.9" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="267.1" y="160.1">PHOT2</text></g>
+</g>
+<g class="ppa-node complex " id="node-BLUS1_KINASE_RELAY" data-node-id="BLUS1_KINASE_RELAY" data-loci="AT4G14480,AT1G22300" data-bin="30.1.6">
+<rect x="374.4" y="102.0" width="203.6" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="476.2" y="120.0">BLUS1 Kinase &amp; 14-3-3</text>
+<text class="ppa-sub" x="476.2" y="135.4">BIN 30.1.6 Blue Light Signaling Signal</text>
+<g class="ppa-subunit" data-locus="AT4G14480"><rect x="428.4" y="149.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="449.7" y="160.1">BLUS1</text></g>
+<g class="ppa-subunit" data-locus="AT1G22300"><rect x="474.9" y="149.6" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="499.4" y="160.1">14-3-3</text></g>
+</g>
+<g class="ppa-node complex " id="node-PM_PROTON_PUMP_AHA" data-node-id="PM_PROTON_PUMP_AHA" data-loci="AT2G18960,AT4G30190" data-bin="34.3.1">
+<rect x="610.0" y="102.0" width="214.1" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="717.0" y="120.0">PM H+-ATPase (AHA1/2)</text>
+<text class="ppa-sub" x="717.0" y="135.4">BIN 34.3.1 Guard Cell Hyperpolarization</text>
+<g class="ppa-subunit" data-locus="AT2G18960"><rect x="679.0" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="697.0" y="160.1">AHA1</text></g>
+<g class="ppa-subunit" data-locus="AT4G30190"><rect x="719.0" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="737.0" y="160.1">AHA2</text></g>
+</g>
+<g class="ppa-node family " id="node-INWARD_POTASSIUM_KAT" data-node-id="INWARD_POTASSIUM_KAT" data-loci="AT5G46240,AT4G18290" data-bin="34.2.1">
+<rect x="40.0" y="213.6" width="230.2" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="155.1" y="231.6">Inward K+ (KAT1 / KAT2)</text>
+<text class="ppa-sub" x="155.1" y="247.0">BIN 34.2.1 Voltage-Gated K+ Accumulation</text>
+<rect class="ppa-family-tile" x="143.1" y="261.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="155.1" y="261.3" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node simple " id="node-MALATE_SYNTHESIS_PEPC" data-node-id="MALATE_SYNTHESIS_PEPC" data-loci="AT1G53310" data-bin="1.2.7">
+<rect x="302.2" y="222.6" width="186.2" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="395.3" y="240.6">PEP Carboxylase (PEPC)</text>
+<text class="ppa-sub" x="395.3" y="256.0">BIN 1.2.7 Organic Anion Osmolyte</text>
+</g>
+<g class="ppa-node simple " id="node-TONOPLAST_MALATE_ALMT9" data-node-id="TONOPLAST_MALATE_ALMT9" data-loci="AT3G18440" data-bin="34.4.2">
+<rect x="520.4" y="222.6" width="187.6" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="614.2" y="240.6">Vacuolar ALMT9 Channel</text>
+<text class="ppa-sub" x="614.2" y="256.0">BIN 34.4.2 Malate2- Sequestration</text>
+</g>
+<g class="ppa-node simple " id="node-AQUAPORIN_WATER_INFLUX" data-node-id="AQUAPORIN_WATER_INFLUX" data-loci="AT3G53420" data-bin="34.1.1">
+<rect x="740.0" y="222.6" width="189.4" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="834.7" y="240.6">Aquaporins (PIP2;1)</text>
+<text class="ppa-sub" x="834.7" y="256.0">BIN 34.1.1 Osmotic Water Swelling</text>
+</g>
+<g class="ppa-node complex " id="node-PYR_ABA_RECEPTOR_HUB" data-node-id="PYR_ABA_RECEPTOR_HUB" data-loci="AT5G05440,AT4G26080" data-bin="30.2.1">
+<rect x="137.9" y="321.3" width="198.4" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="237.1" y="339.3">PYR/PYL &amp; PP2C (ABI1)</text>
+<text class="ppa-sub" x="237.1" y="354.7">BIN 30.2.1 Drought Hormone Sensor</text>
+<g class="ppa-subunit" data-locus="AT5G05440"><rect x="199.1" y="368.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="217.1" y="379.4">PYL1</text></g>
+<g class="ppa-subunit" data-locus="AT4G26080"><rect x="239.1" y="368.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="257.1" y="379.4">ABI1</text></g>
+</g>
+<g class="ppa-node simple " id="node-OST1_SNRK2_KINASE" data-node-id="OST1_SNRK2_KINASE" data-loci="AT4G33950" data-bin="30.2.2">
+<rect x="368.4" y="332.3" width="228.4" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="482.6" y="350.3">OST1 / SnRK2.6 Kinase</text>
+<text class="ppa-sub" x="482.6" y="365.7">BIN 30.2.2 Stomatal Closure Master Switch</text>
+</g>
+<g class="ppa-node family " id="node-RBOHD_OXIDATIVE_BURST" data-node-id="RBOHD_OXIDATIVE_BURST" data-loci="AT5G47910,AT1G64060" data-bin="21.1.1">
+<rect x="628.8" y="323.3" width="202.7" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="730.1" y="341.3">RBOHD / RBOHF ROS Hub</text>
+<text class="ppa-sub" x="730.1" y="356.7">BIN 21.1.1 Apoplastic H2O2 Signaling</text>
+<rect class="ppa-family-tile" x="718.1" y="370.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="730.1" y="370.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+</g>
+<g class="ppa-node complex " id="node-SLAC1_ANION_CHANNELS" data-node-id="SLAC1_ANION_CHANNELS" data-loci="AT1G12480,AT5G24030" data-bin="34.4.1">
+<rect x="152.5" y="432.9" width="192.1" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="248.5" y="450.9">SLAC1 / SLAH3 Anion Vent</text>
+<text class="ppa-sub" x="248.5" y="466.3">BIN 34.4.1 Chloride &amp; Malate Efflux</text>
+<g class="ppa-subunit" data-locus="AT1G12480"><rect x="204.0" y="480.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="225.3" y="491.1">SLAC1</text></g>
+<g class="ppa-subunit" data-locus="AT5G24030"><rect x="250.5" y="480.6" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="271.8" y="491.1">SLAH3</text></g>
+</g>
+<g class="ppa-node simple " id="node-OUTWARD_POTASSIUM_GORK" data-node-id="OUTWARD_POTASSIUM_GORK" data-loci="AT5G37500" data-bin="34.2.2">
+<rect x="376.5" y="443.9" width="203.5" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="478.3" y="461.9">Outward K+ Channel (GORK)</text>
+<text class="ppa-sub" x="478.3" y="477.3">BIN 34.2.2 Depolarization K+ Release</text>
+</g>
+<g class="ppa-node simple " id="node-TURGOR_COLLAPSE_CLOSURE" data-node-id="TURGOR_COLLAPSE_CLOSURE" data-loci="AT4G33950" data-bin="33.3.1">
+<rect x="612.0" y="443.9" width="204.9" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="714.5" y="461.9">Stomatal Pore Closure</text>
+<text class="ppa-sub" x="714.5" y="477.3">BIN 33.3.1 Turgor Collapse &amp; Gas Seal</text>
+</g>
+<text class="ppa-caption" x="40.0" y="654.0">Biophysical and biochemical control of stomatal pore aperture in paired guard cells. In response to morning blue light,</text>
+<text class="ppa-caption" x="40.0" y="668.9">photoreceptors PHOT1/2 activate BLUS1, stimulating the plasma membrane H+-ATPases (AHA1/2). Resulting hyperpolarization (-150 mV)</text>
+<text class="ppa-caption" x="40.0" y="683.7">drives massive K+ influx through KAT1/2 channels, balanced by PEPC-derived malate and chloride uptake, drawing in water via PIP2;1</text>
+<text class="ppa-caption" x="40.0" y="698.6">aquaporins and swelling guard cells to open the pore. Under drought, stress-induced ABA triggers PYR/RCAR-mediated activation of</text>
+<text class="ppa-caption" x="40.0" y="713.4">SnRK2.6/OST1 kinase, which phosphorylates SLAC1/SLAH3 anion channels and stimulates RBOHD ROS generation. Membrane depolarization</text>
+<text class="ppa-caption" x="40.0" y="728.3">(-40 mV) opens GORK potassium release channels, causing turgor collapse and pore closure.</text>
+</svg>

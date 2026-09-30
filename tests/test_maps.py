@@ -33,9 +33,9 @@ def test_load_and_compile_ppa05():
     assert any(n.id == "ASCORBATE_PEROXIDASE" for n in laid_out.nodes)
 
 
-def test_load_and_compile_all_12_maps():
+def test_load_and_compile_all_maps():
     yaml_files = sorted(MAPS_DIR.glob("*.yaml"))
-    assert len(yaml_files) == 12
+    assert len(yaml_files) == 16
     for yf in yaml_files:
         spec = load_map(yf)
         laid_out = compile_map(spec)

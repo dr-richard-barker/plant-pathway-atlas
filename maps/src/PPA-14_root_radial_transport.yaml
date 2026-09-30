@@ -1,0 +1,209 @@
+# PPA-14 (PMM-12) — Root Radial Transport: Symplastic & Apoplastic Pathways & Casparian Barrier
+# Declarative pathway source without hardcoded coordinates.
+
+id: PPA-14
+title: Root Radial Transport & Casparian Strip Barrier
+subtitle: Radial nutrient uptake from soil through cortex and endodermis into ascending xylem stream
+derived_from: MapMan4 BIN 34 Transport & PlantCyc ROOT-RADIAL-TRANSPORT-PWY
+species_anchor: arabidopsis_thaliana
+
+caption: >-
+  Radial passage of water and essential mineral ions from the root rhizosphere through epidermis,
+  cortex, the endodermal Casparian strip barrier, and into the ascending xylem transpirational stream (PMM-12).
+  In outer root tissues, the plasma membrane H+-ATPases (AHA1/AHA2) generate a -160 mV potential that powers
+  influx of nitrate (NRT1.1, NRT2.1/NAR2.1), phosphate (PHT1;1/PHT1;4), potassium (AKT1, HAK5), and iron (FRO2/IRT1).
+  Apoplastic solutes are halted at the endodermis by the Casparian strip, an impermeable ring of lignin organized
+  by CASP1-5 scaffolds, SGN3/GSO1 receptor kinase, and PRX64 peroxidase. Water flows transcellularly via PIP1;2/PIP2;1.
+  In the central stele, minerals are loaded into xylem vessels by specialized efflux transporters (SKOR, PHO1, NRT1.5, BOR1).
+
+lanes:
+  - id: rhizosphere_epidermis_influx
+    compartment: root_epidermis_cortex
+    node_width: 220
+    nodes: [ROOT_PM_PROTON_PUMPS, NITRATE_UPTAKE_NRT, PHOSPHATE_UPTAKE_PHT, POTASSIUM_UPTAKE_AKT]
+
+  - id: micronutrients_water_flux
+    compartment: root_epidermis_cortex
+    node_width: 220
+    nodes: [IRON_REDUCTION_IRT1, HIGH_AFFINITY_K_HAK5, TRANSCELLULAR_AQUAPORINS]
+
+  - id: endodermal_casparian_checkpoint
+    compartment: root_endodermis_casparian
+    node_width: 220
+    nodes: [CASP_MEMBRANE_SCAFFOLDS, SGN3_RECEPTOR_INTEGRITY, PRX64_LIGNIN_PEROXIDASE]
+
+  - id: stelar_xylem_loading
+    compartment: root_stele_xylem
+    node_width: 220
+    nodes: [XYLEM_POTASSIUM_SKOR, XYLEM_PHOSPHATE_PHO1, XYLEM_NITRATE_NRT15, XYLEM_BORON_BOR1]
+
+nodes:
+  - id: ROOT_PM_PROTON_PUMPS
+    label: "Root H+-ATPase (AHA1/2)"
+    sublabel: "BIN 34.3.1 -160mV Membrane Potential"
+    kind: "complex"
+    mapman_bin: "34.3.1"
+    subunits:
+      - symbol: "AHA1"
+        locus: "AT2G18960"
+      - symbol: "AHA2"
+        locus: "AT4G30190"
+    loci: ["AT2G18960", "AT4G30190"]
+
+  - id: NITRATE_UPTAKE_NRT
+    label: "Nitrate Influx Systems"
+    sublabel: "BIN 34.4.1 NRT1.1 & NRT2.1/NAR2.1"
+    kind: "complex"
+    mapman_bin: "34.4.1"
+    subunits:
+      - symbol: "NRT1.1"
+        locus: "AT1G12110"
+      - symbol: "NRT2.1"
+        locus: "AT1G08090"
+      - symbol: "NAR2.1"
+        locus: "AT5G50200"
+    loci: ["AT1G12110", "AT1G08090", "AT5G50200"]
+
+  - id: PHOSPHATE_UPTAKE_PHT
+    label: "Phosphate-H+ Symporters"
+    sublabel: "BIN 34.4.2 PHT1;1 / PHT1;4 PHR1-Regulated"
+    kind: "family"
+    mapman_bin: "34.4.2"
+    family_loci: ["AT5G43350", "AT2G38940"]
+    loci: ["AT5G43350", "AT2G38940"]
+
+  - id: POTASSIUM_UPTAKE_AKT
+    label: "Inward K+ Channel (AKT1)"
+    sublabel: "BIN 34.2.1 CBL1/9-CIPK23 Activated"
+    kind: "simple"
+    mapman_bin: "34.2.1"
+    loci: ["AT2G26650"]
+
+  - id: IRON_REDUCTION_IRT1
+    label: "Iron Uptake (FRO2 / IRT1)"
+    sublabel: "BIN 34.4.3 Strategy I Fe2+ Transporter"
+    kind: "complex"
+    mapman_bin: "34.4.3"
+    subunits:
+      - symbol: "FRO2"
+        locus: "AT1G01580"
+      - symbol: "IRT1"
+        locus: "AT4G19690"
+    loci: ["AT1G01580", "AT4G19690"]
+
+  - id: HIGH_AFFINITY_K_HAK5
+    label: "High-Affinity K+ (HAK5)"
+    sublabel: "BIN 34.2.2 K+/H+ Symport Under Starvation"
+    kind: "simple"
+    mapman_bin: "34.2.2"
+    loci: ["AT4G13420"]
+
+  - id: TRANSCELLULAR_AQUAPORINS
+    label: "Aquaporins (PIP1;2 / PIP2;1)"
+    sublabel: "BIN 34.1.1 Transcellular Water Transport"
+    kind: "family"
+    mapman_bin: "34.1.1"
+    family_loci: ["AT2G45960", "AT3G53420"]
+    loci: ["AT2G45960", "AT3G53420"]
+
+  - id: CASP_MEMBRANE_SCAFFOLDS
+    label: "Casparian Strip Scaffolds"
+    sublabel: "BIN 33.2.1 CASP1–CASP5 Lignin Domain"
+    kind: "family"
+    mapman_bin: "33.2.1"
+    family_loci: ["AT2G36100", "AT2G36110", "AT2G36120", "AT2G36130", "AT3G53380"]
+    loci: ["AT2G36100", "AT2G36110", "AT2G36120", "AT2G36130", "AT3G53380"]
+
+  - id: SGN3_RECEPTOR_INTEGRITY
+    label: "SGN3 / GSO1 Receptor Kinase"
+    sublabel: "BIN 30.1.4 CIF1/2 Peptide Sensing"
+    kind: "simple"
+    mapman_bin: "30.1.4"
+    loci: ["AT4G20140"]
+
+  - id: PRX64_LIGNIN_PEROXIDASE
+    label: "Peroxidase 64 (PRX64)"
+    sublabel: "BIN 16.2.4 Targeted Casparian Lignification"
+    kind: "simple"
+    mapman_bin: "16.2.4"
+    loci: ["AT5G42180"]
+
+  - id: XYLEM_POTASSIUM_SKOR
+    label: "Stelar K+ Outward Channel"
+    sublabel: "BIN 34.2.3 SKOR Xylem Loading"
+    kind: "simple"
+    mapman_bin: "34.2.3"
+    loci: ["AT3G02850"]
+
+  - id: XYLEM_PHOSPHATE_PHO1
+    label: "SPX-EXS Pi Loader (PHO1)"
+    sublabel: "BIN 34.4.4 Stelar Phosphate Secretion"
+    kind: "simple"
+    mapman_bin: "34.4.4"
+    loci: ["AT3G23430"]
+
+  - id: XYLEM_NITRATE_NRT15
+    label: "Nitrate Exporter (NRT1.5)"
+    sublabel: "BIN 34.4.5 NPF7.3 Root-to-Shoot Flux"
+    kind: "simple"
+    mapman_bin: "34.4.5"
+    loci: ["AT1G32450"]
+
+  - id: XYLEM_BORON_BOR1
+    label: "Polar Boric Acid Exporter"
+    sublabel: "BIN 34.4.6 BOR1 Inward Stele Polar Efflux"
+    kind: "simple"
+    mapman_bin: "34.4.6"
+    loci: ["AT2G47160"]
+
+edges:
+  - from: ROOT_PM_PROTON_PUMPS
+    to: NITRATE_UPTAKE_NRT
+    class: flux
+    label: "Proton Motive Force"
+  - from: ROOT_PM_PROTON_PUMPS
+    to: PHOSPHATE_UPTAKE_PHT
+    class: flux
+  - from: ROOT_PM_PROTON_PUMPS
+    to: POTASSIUM_UPTAKE_AKT
+    class: flux
+    label: "Membrane Hyperpolarization"
+  - from: ROOT_PM_PROTON_PUMPS
+    to: HIGH_AFFINITY_K_HAK5
+    class: flux
+  - from: ROOT_PM_PROTON_PUMPS
+    to: IRON_REDUCTION_IRT1
+    class: flux
+  - from: NITRATE_UPTAKE_NRT
+    to: CASP_MEMBRANE_SCAFFOLDS
+    class: flux
+    label: "Radial Symplastic Flow"
+  - from: POTASSIUM_UPTAKE_AKT
+    to: CASP_MEMBRANE_SCAFFOLDS
+    class: flux
+  - from: TRANSCELLULAR_AQUAPORINS
+    to: CASP_MEMBRANE_SCAFFOLDS
+    class: flux
+    label: "Transcellular Water"
+  - from: SGN3_RECEPTOR_INTEGRITY
+    to: CASP_MEMBRANE_SCAFFOLDS
+    class: flux
+    label: "Endodermal Seal Check"
+  - from: PRX64_LIGNIN_PEROXIDASE
+    to: CASP_MEMBRANE_SCAFFOLDS
+    class: flux
+    label: "Lignin Barrier"
+  - from: CASP_MEMBRANE_SCAFFOLDS
+    to: XYLEM_POTASSIUM_SKOR
+    class: flux
+    label: "Endodermis to Stele"
+  - from: CASP_MEMBRANE_SCAFFOLDS
+    to: XYLEM_PHOSPHATE_PHO1
+    class: flux
+  - from: CASP_MEMBRANE_SCAFFOLDS
+    to: XYLEM_NITRATE_NRT15
+    class: flux
+    label: "Root-to-Shoot Xylem Stream"
+  - from: CASP_MEMBRANE_SCAFFOLDS
+    to: XYLEM_BORON_BOR1
+    class: flux

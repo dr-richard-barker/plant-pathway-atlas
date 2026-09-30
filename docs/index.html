@@ -229,11 +229,12 @@
 
   <!-- Biological Category Filters -->
   <div class="filter-pills" id="category-pills">
-    <button class="filter-pill active" data-cat="all">All Pathways (12)</button>
+    <button class="filter-pill active" data-cat="all">All Pathways (16)</button>
+    <button class="filter-pill" data-cat="transport">Vasculature & Transport (3)</button>
     <button class="filter-pill" data-cat="bioenergetics">Bioenergetics & Respiration (3)</button>
     <button class="filter-pill" data-cat="primary">Primary Metabolism & Assimilation (3)</button>
     <button class="filter-pill" data-cat="stress">Stress, Redox & Immunity (2)</button>
-    <button class="filter-pill" data-cat="signaling">Signaling, Hormones & QC (3)</button>
+    <button class="filter-pill" data-cat="signaling">Signaling, Hormones & Cell-to-Cell (4)</button>
     <button class="filter-pill" data-cat="specialized">Specialized Pathways (1)</button>
   </div>
 
@@ -346,7 +347,11 @@
     'PPA-09': 'signaling',
     'PPA-10': 'stress',
     'PPA-11': 'signaling',
-    'PPA-12': 'signaling',
+    'PPA-12': 'transport',
+    'PPA-13': 'transport',
+    'PPA-14': 'transport',
+    'PPA-15': 'signaling',
+    'PPA-16': 'signaling',
   };
 
   const COMPARTMENT_MAP = {
@@ -362,6 +367,10 @@
     'PPA-10': 'Plasma Membrane, Cytosol & Nucleus',
     'PPA-11': 'Endoplasmic Reticulum, Cytosol & Vacuole',
     'PPA-12': 'Plasma Membrane & Tonoplast',
+    'PPA-13': 'Source Minor Vein, Sieve Tube & Root Sink',
+    'PPA-14': 'Root Epidermis, Endodermis (Casparian) & Stele',
+    'PPA-15': 'Guard Cell Cytosol, Plasma Membrane & Vacuole',
+    'PPA-16': 'Plasmodesmatal Neck & Symplastic Sleeve',
   };
 
   let manifestMaps = [];

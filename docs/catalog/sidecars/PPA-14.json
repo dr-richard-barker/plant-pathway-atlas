@@ -1,0 +1,430 @@
+{
+  "id": "PPA-14",
+  "title": "Root Radial Transport & Casparian Strip Barrier",
+  "subtitle": "Radial nutrient uptake from soil through cortex and endodermis into ascending xylem stream",
+  "caption": "Radial passage of water and essential mineral ions from the root rhizosphere through epidermis, cortex, the endodermal Casparian strip barrier, and into the ascending xylem transpirational stream (PMM-12). In outer root tissues, the plasma membrane H+-ATPases (AHA1/AHA2) generate a -160 mV potential that powers influx of nitrate (NRT1.1, NRT2.1/NAR2.1), phosphate (PHT1;1/PHT1;4), potassium (AKT1, HAK5), and iron (FRO2/IRT1). Apoplastic solutes are halted at the endodermis by the Casparian strip, an impermeable ring of lignin organized by CASP1-5 scaffolds, SGN3/GSO1 receptor kinase, and PRX64 peroxidase. Water flows transcellularly via PIP1;2/PIP2;1. In the central stele, minerals are loaded into xylem vessels by specialized efflux transporters (SKOR, PHO1, NRT1.5, BOR1).",
+  "species_anchor": "arabidopsis_thaliana",
+  "nodes": [
+    {
+      "id": "ROOT_PM_PROTON_PUMPS",
+      "label": "Root H+-ATPase (AHA1/2)",
+      "kind": "complex",
+      "compartment": "root_epidermis_cortex",
+      "mapman_bin": "34.3.1",
+      "loci": [
+        "AT2G18960",
+        "AT4G30190"
+      ],
+      "subunits": [
+        {
+          "symbol": "AHA1",
+          "locus": "AT2G18960"
+        },
+        {
+          "symbol": "AHA2",
+          "locus": "AT4G30190"
+        }
+      ]
+    },
+    {
+      "id": "NITRATE_UPTAKE_NRT",
+      "label": "Nitrate Influx Systems",
+      "kind": "complex",
+      "compartment": "root_epidermis_cortex",
+      "mapman_bin": "34.4.1",
+      "loci": [
+        "AT1G12110",
+        "AT1G08090",
+        "AT5G50200"
+      ],
+      "subunits": [
+        {
+          "symbol": "NRT1.1",
+          "locus": "AT1G12110"
+        },
+        {
+          "symbol": "NRT2.1",
+          "locus": "AT1G08090"
+        },
+        {
+          "symbol": "NAR2.1",
+          "locus": "AT5G50200"
+        }
+      ]
+    },
+    {
+      "id": "PHOSPHATE_UPTAKE_PHT",
+      "label": "Phosphate-H+ Symporters",
+      "kind": "family",
+      "compartment": "root_epidermis_cortex",
+      "mapman_bin": "34.4.2",
+      "loci": [
+        "AT5G43350",
+        "AT2G38940"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "POTASSIUM_UPTAKE_AKT",
+      "label": "Inward K+ Channel (AKT1)",
+      "kind": "simple",
+      "compartment": "root_epidermis_cortex",
+      "mapman_bin": "34.2.1",
+      "loci": [
+        "AT2G26650"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "IRON_REDUCTION_IRT1",
+      "label": "Iron Uptake (FRO2 / IRT1)",
+      "kind": "complex",
+      "compartment": "root_epidermis_cortex",
+      "mapman_bin": "34.4.3",
+      "loci": [
+        "AT1G01580",
+        "AT4G19690"
+      ],
+      "subunits": [
+        {
+          "symbol": "FRO2",
+          "locus": "AT1G01580"
+        },
+        {
+          "symbol": "IRT1",
+          "locus": "AT4G19690"
+        }
+      ]
+    },
+    {
+      "id": "HIGH_AFFINITY_K_HAK5",
+      "label": "High-Affinity K+ (HAK5)",
+      "kind": "simple",
+      "compartment": "root_epidermis_cortex",
+      "mapman_bin": "34.2.2",
+      "loci": [
+        "AT4G13420"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "TRANSCELLULAR_AQUAPORINS",
+      "label": "Aquaporins (PIP1;2 / PIP2;1)",
+      "kind": "family",
+      "compartment": "root_epidermis_cortex",
+      "mapman_bin": "34.1.1",
+      "loci": [
+        "AT2G45960",
+        "AT3G53420"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "CASP_MEMBRANE_SCAFFOLDS",
+      "label": "Casparian Strip Scaffolds",
+      "kind": "family",
+      "compartment": "root_endodermis_casparian",
+      "mapman_bin": "33.2.1",
+      "loci": [
+        "AT2G36100",
+        "AT2G36110",
+        "AT2G36120",
+        "AT2G36130",
+        "AT3G53380"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "SGN3_RECEPTOR_INTEGRITY",
+      "label": "SGN3 / GSO1 Receptor Kinase",
+      "kind": "simple",
+      "compartment": "root_endodermis_casparian",
+      "mapman_bin": "30.1.4",
+      "loci": [
+        "AT4G20140"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "PRX64_LIGNIN_PEROXIDASE",
+      "label": "Peroxidase 64 (PRX64)",
+      "kind": "simple",
+      "compartment": "root_endodermis_casparian",
+      "mapman_bin": "16.2.4",
+      "loci": [
+        "AT5G42180"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "XYLEM_POTASSIUM_SKOR",
+      "label": "Stelar K+ Outward Channel",
+      "kind": "simple",
+      "compartment": "root_stele_xylem",
+      "mapman_bin": "34.2.3",
+      "loci": [
+        "AT3G02850"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "XYLEM_PHOSPHATE_PHO1",
+      "label": "SPX-EXS Pi Loader (PHO1)",
+      "kind": "simple",
+      "compartment": "root_stele_xylem",
+      "mapman_bin": "34.4.4",
+      "loci": [
+        "AT3G23430"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "XYLEM_NITRATE_NRT15",
+      "label": "Nitrate Exporter (NRT1.5)",
+      "kind": "simple",
+      "compartment": "root_stele_xylem",
+      "mapman_bin": "34.4.5",
+      "loci": [
+        "AT1G32450"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "XYLEM_BORON_BOR1",
+      "label": "Polar Boric Acid Exporter",
+      "kind": "simple",
+      "compartment": "root_stele_xylem",
+      "mapman_bin": "34.4.6",
+      "loci": [
+        "AT2G47160"
+      ],
+      "subunits": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "ROOT_PM_PROTON_PUMPS",
+      "to": "NITRATE_UPTAKE_NRT",
+      "start": [
+        252.7135,
+        135.824
+      ],
+      "end": [
+        284.7135,
+        135.824
+      ],
+      "class": "flux",
+      "label": "Proton Motive Force"
+    },
+    {
+      "from": "ROOT_PM_PROTON_PUMPS",
+      "to": "PHOSPHATE_UPTAKE_PHT",
+      "start": [
+        252.7135,
+        135.824
+      ],
+      "end": [
+        513.1985,
+        135.824
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "ROOT_PM_PROTON_PUMPS",
+      "to": "POTASSIUM_UPTAKE_AKT",
+      "start": [
+        252.7135,
+        135.824
+      ],
+      "end": [
+        779.5405000000001,
+        135.824
+      ],
+      "class": "flux",
+      "label": "Membrane Hyperpolarization"
+    },
+    {
+      "from": "ROOT_PM_PROTON_PUMPS",
+      "to": "HIGH_AFFINITY_K_HAK5",
+      "start": [
+        252.7135,
+        169.0191476482206
+      ],
+      "end": [
+        385.58725000000004,
+        210.49055167121634
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "ROOT_PM_PROTON_PUMPS",
+      "to": "IRON_REDUCTION_IRT1",
+      "start": [
+        177.4233554026942,
+        169.648
+      ],
+      "end": [
+        217.83639459730585,
+        213.648
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "NITRATE_UPTAKE_NRT",
+      "to": "CASP_MEMBRANE_SCAFFOLDS",
+      "start": [
+        364.0096895922204,
+        169.648
+      ],
+      "end": [
+        276.8243974224568,
+        325.296
+      ],
+      "class": "flux",
+      "label": "Radial Symplastic Flow"
+    },
+    {
+      "from": "POTASSIUM_UPTAKE_AKT",
+      "to": "CASP_MEMBRANE_SCAFFOLDS",
+      "start": [
+        813.4308029652593,
+        158.648
+      ],
+      "end": [
+        347.8988626635819,
+        325.296
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "TRANSCELLULAR_AQUAPORINS",
+      "to": "CASP_MEMBRANE_SCAFFOLDS",
+      "start": [
+        654.56325,
+        270.993177116359
+      ],
+      "end": [
+        366.549125,
+        333.70284397406937
+      ],
+      "class": "flux",
+      "label": "Transcellular Water"
+    },
+    {
+      "from": "SGN3_RECEPTOR_INTEGRITY",
+      "to": "CASP_MEMBRANE_SCAFFOLDS",
+      "start": [
+        398.549125,
+        357.12
+      ],
+      "end": [
+        366.549125,
+        357.12
+      ],
+      "class": "flux",
+      "label": "Endodermal Seal Check"
+    },
+    {
+      "from": "PRX64_LIGNIN_PEROXIDASE",
+      "to": "CASP_MEMBRANE_SCAFFOLDS",
+      "start": [
+        633.502875,
+        357.12
+      ],
+      "end": [
+        366.549125,
+        357.12
+      ],
+      "class": "flux",
+      "label": "Lignin Barrier"
+    },
+    {
+      "from": "CASP_MEMBRANE_SCAFFOLDS",
+      "to": "XYLEM_POTASSIUM_SKOR",
+      "start": [
+        221.9796428412132,
+        388.944
+      ],
+      "end": [
+        170.79738369759144,
+        432.944
+      ],
+      "class": "flux",
+      "label": "Endodermis to Stele"
+    },
+    {
+      "from": "CASP_MEMBRANE_SCAFFOLDS",
+      "to": "XYLEM_PHOSPHATE_PHO1",
+      "start": [
+        295.6844847741465,
+        388.944
+      ],
+      "end": [
+        346.4068587705782,
+        432.944
+      ],
+      "class": "flux",
+      "label": ""
+    },
+    {
+      "from": "CASP_MEMBRANE_SCAFFOLDS",
+      "to": "XYLEM_NITRATE_NRT15",
+      "start": [
+        366.549125,
+        387.4744356896133
+      ],
+      "end": [
+        507.5346875,
+        427.26529898038723
+      ],
+      "class": "flux",
+      "label": "Root-to-Shoot Xylem Stream"
+    },
+    {
+      "from": "CASP_MEMBRANE_SCAFFOLDS",
+      "to": "XYLEM_BORON_BOR1",
+      "start": [
+        366.549125,
+        374.9849683513018
+      ],
+      "end": [
+        741.5141875,
+        437.2694152231871
+      ],
+      "class": "flux",
+      "label": ""
+    }
+  ],
+  "total_nodes": 14,
+  "distinct_loci": 24,
+  "loci_list": [
+    "AT1G01580",
+    "AT1G08090",
+    "AT1G12110",
+    "AT1G32450",
+    "AT2G18960",
+    "AT2G26650",
+    "AT2G36100",
+    "AT2G36110",
+    "AT2G36120",
+    "AT2G36130",
+    "AT2G38940",
+    "AT2G45960",
+    "AT2G47160",
+    "AT3G02850",
+    "AT3G23430",
+    "AT3G53380",
+    "AT3G53420",
+    "AT4G13420",
+    "AT4G19690",
+    "AT4G20140",
+    "AT4G30190",
+    "AT5G42180",
+    "AT5G43350",
+    "AT5G50200"
+  ]
+}
