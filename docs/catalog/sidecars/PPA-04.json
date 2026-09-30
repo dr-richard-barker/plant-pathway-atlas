@@ -100,6 +100,20 @@
       ]
     },
     {
+      "id": "ROTENONE_INSENSITIVE_NDH",
+      "label": "External/Internal NAD(P)H DH",
+      "kind": "family",
+      "compartment": "mitochondrial_inner_membrane",
+      "mapman_bin": "9.3",
+      "loci": [
+        "AT1G07180",
+        "AT2G29990",
+        "AT4G05020",
+        "AT4G28220"
+      ],
+      "subunits": []
+    },
+    {
       "id": "COMPLEX_II_SDH",
       "label": "Complex II (Succinate DH)",
       "kind": "complex",
@@ -126,16 +140,14 @@
       ]
     },
     {
-      "id": "ROTENONE_INSENSITIVE_NDH",
-      "label": "External/Internal NAD(P)H DH",
+      "id": "AOX_ALTERNATIVE_OXIDASE",
+      "label": "Alternative Oxidase (AOX)",
       "kind": "family",
       "compartment": "mitochondrial_inner_membrane",
-      "mapman_bin": "9.3",
+      "mapman_bin": "9.5",
       "loci": [
-        "AT1G07180",
-        "AT2G29990",
-        "AT4G05020",
-        "AT4G28220"
+        "AT3G22370",
+        "AT1G32350"
       ],
       "subunits": []
     },
@@ -147,18 +159,6 @@
       "mapman_bin": "9.4",
       "loci": [
         "AT1G78510"
-      ],
-      "subunits": []
-    },
-    {
-      "id": "AOX_ALTERNATIVE_OXIDASE",
-      "label": "Alternative Oxidase (AOX)",
-      "kind": "family",
-      "compartment": "mitochondrial_inner_membrane",
-      "mapman_bin": "9.5",
-      "loci": [
-        "AT3G22370",
-        "AT1G32350"
       ],
       "subunits": []
     },
@@ -234,6 +234,30 @@
       ]
     },
     {
+      "id": "PHOSPHATE_CARRIER",
+      "label": "Phosphate Translocator (MPT)",
+      "kind": "family",
+      "compartment": "mitochondrial_inner_membrane",
+      "mapman_bin": "34.3",
+      "loci": [
+        "AT5G14040",
+        "AT3G48850"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "ADENINE_NUCLEOTIDE_TR",
+      "label": "ADP/ATP Translocator (ANT)",
+      "kind": "family",
+      "compartment": "mitochondrial_inner_membrane",
+      "mapman_bin": "34.2",
+      "loci": [
+        "AT3G08580",
+        "AT5G13490"
+      ],
+      "subunits": []
+    },
+    {
       "id": "COMPLEX_V_F1F0",
       "label": "ATP Synthase (Complex V)",
       "kind": "complex",
@@ -258,30 +282,6 @@
           "locus": "AT2G23870"
         }
       ]
-    },
-    {
-      "id": "ADENINE_NUCLEOTIDE_TR",
-      "label": "ADP/ATP Translocator (ANT)",
-      "kind": "family",
-      "compartment": "mitochondrial_inner_membrane",
-      "mapman_bin": "34.2",
-      "loci": [
-        "AT3G08580",
-        "AT5G13490"
-      ],
-      "subunits": []
-    },
-    {
-      "id": "PHOSPHATE_CARRIER",
-      "label": "Phosphate Translocator (MPT)",
-      "kind": "family",
-      "compartment": "mitochondrial_inner_membrane",
-      "mapman_bin": "34.3",
-      "loci": [
-        "AT5G14040",
-        "AT3G48850"
-      ],
-      "subunits": []
     }
   ],
   "edges": [
@@ -289,11 +289,11 @@
       "from": "TCA_SUBSTRATE_CORE",
       "to": "TCA_DEHYDROGENASES",
       "start": [
-        254.35593749999995,
+        287.62343749999997,
         135.824
       ],
       "end": [
-        286.3559375,
+        319.62343749999997,
         135.824
       ],
       "class": "flux",
@@ -303,11 +303,11 @@
       "from": "TCA_DEHYDROGENASES",
       "to": "MALATE_FUMARATE_POOL",
       "start": [
-        466.4084375,
+        520.2228124999999,
         135.824
       ],
       "end": [
-        498.4084375,
+        552.2228124999999,
         135.824
       ],
       "class": "flux",
@@ -317,12 +317,12 @@
       "from": "TCA_DEHYDROGENASES",
       "to": "COMPLEX_I_NADH",
       "start": [
-        303.38037949627403,
+        359.79753738921715,
         169.648
       ],
       "end": [
-        208.41587050372596,
-        213.648
+        210.47902511078283,
+        253.648
       ],
       "class": "flux",
       "label": "NADH"
@@ -331,12 +331,12 @@
       "from": "MALATE_FUMARATE_POOL",
       "to": "COMPLEX_II_SDH",
       "start": [
-        506.3473165484379,
+        642.7059374999999,
         169.648
       ],
       "end": [
-        412.549995951562,
-        213.648
+        629.4281249999999,
+        253.648
       ],
       "class": "flux",
       "label": "FADH2"
@@ -345,12 +345,12 @@
       "from": "COMPLEX_I_NADH",
       "to": "UBIQUINONE_POOL",
       "start": [
-        138.35098550817156,
-        281.296
+        229.77490955815537,
+        321.296
       ],
       "end": [
-        142.9529521423099,
-        334.296
+        344.83085003975464,
+        370.296
       ],
       "class": "flux",
       "label": "2e-"
@@ -359,12 +359,12 @@
       "from": "COMPLEX_II_SDH",
       "to": "UBIQUINONE_POOL",
       "start": [
-        280.13468405260465,
-        281.296
+        555.4702407996365,
+        321.296
       ],
       "end": [
-        185.6316704317452,
-        334.296
+        448.3292661716265,
+        370.296
       ],
       "class": "flux",
       "label": "2e-"
@@ -373,12 +373,12 @@
       "from": "ROTENONE_INSENSITIVE_NDH",
       "to": "UBIQUINONE_POOL",
       "start": [
-        462.3873125,
-        273.7045085264704
+        387.01552689118574,
+        319.296
       ],
       "end": [
-        230.71787499999996,
-        334.5791785441637
+        394.8964794411631,
+        370.296
       ],
       "class": "flux",
       "label": "e-"
@@ -387,12 +387,12 @@
       "from": "UBIQUINONE_POOL",
       "to": "AOX_ALTERNATIVE_OXIDASE",
       "start": [
-        230.71787499999996,
-        357.12
+        300.95875,
+        393.12
       ],
       "end": [
-        262.71787499999994,
-        357.12
+        268.95875,
+        393.12
       ],
       "class": "flux",
       "label": "Heat + H2O"
@@ -401,12 +401,12 @@
       "from": "UBIQUINONE_POOL",
       "to": "COMPLEX_III_BC1",
       "start": [
-        147.45847162738943,
-        379.944
+        352.1259457632894,
+        415.944
       ],
       "end": [
-        153.31884869765065,
-        432.944
+        252.73157601658338,
+        464.944
       ],
       "class": "flux",
       "label": "Q-Cycle"
@@ -415,12 +415,12 @@
       "from": "COMPLEX_III_BC1",
       "to": "CYTOCHROME_C_SOLUBLE",
       "start": [
-        231.25731249999998,
-        466.76800000000003
+        268.031375,
+        498.76800000000003
       ],
       "end": [
-        263.2573125,
-        466.76800000000003
+        300.031375,
+        498.76800000000003
       ],
       "class": "flux",
       "label": "1e-"
@@ -429,12 +429,12 @@
       "from": "CYTOCHROME_C_SOLUBLE",
       "to": "COMPLEX_IV_COX",
       "start": [
-        412.9408125,
-        466.76800000000003
+        453.714875,
+        498.76800000000003
       ],
       "end": [
-        444.9408125,
-        466.76800000000003
+        485.714875,
+        498.76800000000003
       ],
       "class": "flux",
       "label": ""
@@ -443,12 +443,12 @@
       "from": "COMPLEX_IV_COX",
       "to": "COMPLEX_V_F1F0",
       "start": [
-        444.9408125,
-        492.3440747964191
+        609.9207544218192,
+        532.592
       ],
       "end": [
-        221.993125,
-        553.4681013801559
+        632.9634955781808,
+        572.592
       ],
       "class": "flux",
       "label": "Proton Motive Force"
@@ -457,12 +457,12 @@
       "from": "COMPLEX_V_F1F0",
       "to": "ADENINE_NUCLEOTIDE_TR",
       "start": [
-        221.993125,
-        578.4159999999999
+        549.529375,
+        606.4159999999999
       ],
       "end": [
-        253.993125,
-        578.4159999999999
+        517.529375,
+        606.4159999999999
       ],
       "class": "flux",
       "label": "ATP Export"

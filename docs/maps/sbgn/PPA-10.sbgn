@@ -4,19 +4,19 @@
     <bbox x="-18.00" y="0.00" w="920.00" h="680.00" />
     <glyph id="comp_plasma_membrane" class="compartment">
       <label text="Plasma Membrane" />
-      <bbox x="53.95" y="62.00" w="645.78" h="133.65" />
+      <bbox x="38.70" y="62.00" w="696.97" h="133.65" />
     </glyph>
     <glyph id="comp_cytosol" class="compartment">
       <label text="Cytosol" />
-      <bbox x="14.00" y="173.65" w="725.69" h="348.94" />
+      <bbox x="14.00" y="213.65" w="746.37" h="237.30" />
     </glyph>
     <glyph id="comp_nucleus" class="compartment">
       <label text="Nucleus" />
-      <bbox x="34.72" y="285.30" w="684.25" h="129.65" />
+      <bbox x="23.79" y="468.94" w="726.78" h="129.65" />
     </glyph>
     <glyph id="PRR_FLS2_BAK1" class="complex" compartmentRef="comp_plasma_membrane">
       <label text="FLS2 / BAK1 Receptor Core" />
-      <bbox x="79.95" y="102.00" w="183.81" h="67.65" />
+      <bbox x="64.70" y="102.00" w="208.55" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PRR_FLS2_BAK1" compartment="plasma_membrane" mapmanBin="20.1.1">
           <ns0:locus>AT5G46330</ns0:locus>
@@ -26,7 +26,7 @@
     </glyph>
     <glyph id="BIK1_RECEPTOR_KINASE" class="macromolecule" compartmentRef="comp_plasma_membrane">
       <label text="BIK1 / PBL Kinase Relay" />
-      <bbox x="295.76" y="113.00" w="180.92" h="45.65" />
+      <bbox x="305.25" y="113.00" w="187.00" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="BIK1_RECEPTOR_KINASE" compartment="plasma_membrane" mapmanBin="20.1.2">
           <ns0:locus>AT2G39660</ns0:locus>
@@ -35,7 +35,7 @@
     </glyph>
     <glyph id="RBOHD_BURST" class="macromolecule" compartmentRef="comp_plasma_membrane">
       <label text="RBOHD NADPH Oxidase" />
-      <bbox x="508.68" y="113.00" w="165.06" h="45.65" />
+      <bbox x="524.25" y="113.00" w="185.42" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="RBOHD_BURST" compartment="plasma_membrane" mapmanBin="20.1.3">
           <ns0:locus>AT5G47910</ns0:locus>
@@ -44,7 +44,7 @@
     </glyph>
     <glyph id="MAPKKK_MAPKK_MODULE" class="complex" compartmentRef="comp_cytosol">
       <label text="MEKK1 &amp; MKK4 / MKK5" />
-      <bbox x="68.38" y="213.65" w="195.39" h="67.65" />
+      <bbox x="67.12" y="253.65" w="199.39" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="MAPKKK_MAPKK_MODULE" compartment="cytosol" mapmanBin="20.2.1">
           <ns0:locus>AT4G08500</ns0:locus>
@@ -55,7 +55,7 @@
     </glyph>
     <glyph id="MPK3_MPK6_KINASES" class="complex" compartmentRef="comp_cytosol">
       <label text="MPK3 &amp; MPK6 Cascade" />
-      <bbox x="295.78" y="213.65" w="177.92" h="67.65" />
+      <bbox x="298.51" y="253.65" w="182.07" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="MPK3_MPK6_KINASES" compartment="cytosol" mapmanBin="20.2.2">
           <ns0:locus>AT3G45640</ns0:locus>
@@ -63,58 +63,9 @@
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="WRKY33_TF_HUB" class="macromolecule" compartmentRef="comp_cytosol">
-      <label text="WRKY33 Immune Hub" />
-      <bbox x="505.70" y="224.65" w="179.61" h="45.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="WRKY33_TF_HUB" compartment="cytosol" mapmanBin="20.2.3">
-          <ns0:locus>AT2G38470</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
-    <glyph id="CBF_DREB1_REGULON" class="macromolecule" compartmentRef="comp_nucleus">
-      <label text="CBF1 / CBF2 / CBF3" />
-      <bbox x="60.72" y="325.30" w="181.01" h="63.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CBF_DREB1_REGULON" compartment="nucleus" mapmanBin="20.3.1">
-          <ns0:locus>AT4G25490</ns0:locus>
-          <ns0:locus>AT4G25470</ns0:locus>
-          <ns0:locus>AT4G25480</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
-    <glyph id="COR_GENE_EFFECTORS" class="macromolecule" compartmentRef="comp_nucleus">
-      <label text="COR15A &amp; KIN1 Effectors" />
-      <bbox x="273.73" y="325.30" w="213.52" h="63.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="COR_GENE_EFFECTORS" compartment="nucleus" mapmanBin="20.3.2">
-          <ns0:locus>AT2G42540</ns0:locus>
-          <ns0:locus>AT5G15960</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
-    <glyph id="PROLINE_OSMOPROTECTANTS" class="macromolecule" compartmentRef="comp_nucleus">
-      <label text="Proline Synthase (P5CS1)" />
-      <bbox x="519.25" y="334.30" w="173.72" h="45.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PROLINE_OSMOPROTECTANTS" compartment="nucleus" mapmanBin="20.3.3">
-          <ns0:locus>AT2G39800</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
-    <glyph id="HSFA_MASTER_FACTORS" class="macromolecule" compartmentRef="comp_cytosol">
-      <label text="Heat Shock Factors (HSFs)" />
-      <bbox x="40.00" y="432.94" w="238.17" h="63.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="HSFA_MASTER_FACTORS" compartment="cytosol" mapmanBin="20.4.1">
-          <ns0:locus>AT4G17750</ns0:locus>
-          <ns0:locus>AT2G26150</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
     <glyph id="HSP70_CHAPERONE_CORE" class="macromolecule" compartmentRef="comp_cytosol">
       <label text="Hsp70 Chaperone Family" />
-      <bbox x="310.17" y="432.94" w="182.76" h="63.65" />
+      <bbox x="512.58" y="255.65" w="194.67" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="HSP70_CHAPERONE_CORE" compartment="cytosol" mapmanBin="20.4.2">
           <ns0:locus>AT3G12580</ns0:locus>
@@ -124,7 +75,7 @@
     </glyph>
     <glyph id="HSP90_PROTEIN_COMPLEX" class="macromolecule" compartmentRef="comp_cytosol">
       <label text="Hsp90 Molecular Machinery" />
-      <bbox x="524.93" y="432.94" w="188.76" h="63.65" />
+      <bbox x="40.00" y="361.30" w="213.96" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="HSP90_PROTEIN_COMPLEX" compartment="cytosol" mapmanBin="20.4.3">
           <ns0:locus>AT5G52640</ns0:locus>
@@ -132,41 +83,90 @@
         </ns0:annotation>
       </extension>
     </glyph>
+    <glyph id="PROLINE_OSMOPROTECTANTS" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="Proline Synthase (P5CS1)" />
+      <bbox x="285.96" y="370.30" w="198.89" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PROLINE_OSMOPROTECTANTS" compartment="cytosol" mapmanBin="20.3.3">
+          <ns0:locus>AT2G39800</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="COR_GENE_EFFECTORS" class="macromolecule" compartmentRef="comp_cytosol">
+      <label text="COR15A &amp; KIN1 Effectors" />
+      <bbox x="516.85" y="361.30" w="217.52" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="COR_GENE_EFFECTORS" compartment="cytosol" mapmanBin="20.3.2">
+          <ns0:locus>AT2G42540</ns0:locus>
+          <ns0:locus>AT5G15960</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="WRKY33_TF_HUB" class="macromolecule" compartmentRef="comp_nucleus">
+      <label text="WRKY33 Immune Hub" />
+      <bbox x="49.79" y="517.94" w="183.61" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="WRKY33_TF_HUB" compartment="nucleus" mapmanBin="20.2.3">
+          <ns0:locus>AT2G38470</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="CBF_DREB1_REGULON" class="macromolecule" compartmentRef="comp_nucleus">
+      <label text="CBF1 / CBF2 / CBF3" />
+      <bbox x="265.40" y="508.94" w="185.01" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CBF_DREB1_REGULON" compartment="nucleus" mapmanBin="20.3.1">
+          <ns0:locus>AT4G25490</ns0:locus>
+          <ns0:locus>AT4G25470</ns0:locus>
+          <ns0:locus>AT4G25480</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="HSFA_MASTER_FACTORS" class="macromolecule" compartmentRef="comp_nucleus">
+      <label text="Heat Shock Factors (HSFs)" />
+      <bbox x="482.41" y="508.94" w="242.17" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="HSFA_MASTER_FACTORS" compartment="nucleus" mapmanBin="20.4.1">
+          <ns0:locus>AT4G17750</ns0:locus>
+          <ns0:locus>AT2G26150</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
     <arc id="arc_0" class="consumption" source="PRR_FLS2_BAK1" target="BIK1_RECEPTOR_KINASE">
-      <start x="263.76" y="135.82" />
-      <end x="295.76" y="135.82" />
+      <start x="273.25" y="135.82" />
+      <end x="305.25" y="135.82" />
     </arc>
     <arc id="arc_1" class="consumption" source="BIK1_RECEPTOR_KINASE" target="RBOHD_BURST">
-      <start x="476.68" y="135.82" />
-      <end x="508.68" y="135.82" />
+      <start x="492.25" y="135.82" />
+      <end x="524.25" y="135.82" />
     </arc>
     <arc id="arc_2" class="consumption" source="BIK1_RECEPTOR_KINASE" target="MAPKKK_MAPKK_MODULE">
-      <start x="341.22" y="158.65" />
-      <end x="232.77" y="213.65" />
+      <start x="363.84" y="158.65" />
+      <end x="218.55" y="253.65" />
     </arc>
     <arc id="arc_3" class="consumption" source="MAPKKK_MAPKK_MODULE" target="MPK3_MPK6_KINASES">
-      <start x="263.78" y="247.47" />
-      <end x="295.78" y="247.47" />
+      <start x="266.51" y="287.47" />
+      <end x="298.51" y="287.47" />
     </arc>
     <arc id="arc_4" class="consumption" source="MPK3_MPK6_KINASES" target="WRKY33_TF_HUB">
-      <start x="473.70" y="247.47" />
-      <end x="505.70" y="247.47" />
+      <start x="356.44" y="321.30" />
+      <end x="163.94" y="517.94" />
     </arc>
     <arc id="arc_5" class="consumption" source="CBF_DREB1_REGULON" target="COR_GENE_EFFECTORS">
-      <start x="241.73" y="357.12" />
-      <end x="273.73" y="357.12" />
+      <start x="415.61" y="508.94" />
+      <end x="567.91" y="424.94" />
     </arc>
     <arc id="arc_6" class="consumption" source="CBF_DREB1_REGULON" target="PROLINE_OSMOPROTECTANTS">
-      <start x="241.73" y="357.12" />
-      <end x="519.25" y="357.12" />
+      <start x="363.83" y="508.94" />
+      <end x="381.16" y="415.94" />
     </arc>
     <arc id="arc_7" class="consumption" source="HSFA_MASTER_FACTORS" target="HSP70_CHAPERONE_CORE">
-      <start x="278.17" y="464.77" />
-      <end x="310.17" y="464.77" />
+      <start x="603.49" y="508.94" />
+      <end x="609.92" y="319.30" />
     </arc>
     <arc id="arc_8" class="consumption" source="HSFA_MASTER_FACTORS" target="HSP90_PROTEIN_COMPLEX">
-      <start x="278.17" y="464.77" />
-      <end x="524.93" y="464.77" />
+      <start x="505.10" y="508.94" />
+      <end x="245.38" y="424.94" />
     </arc>
   </map>
 </sbgn>

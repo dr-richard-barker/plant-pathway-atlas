@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalog Manifest & Pathway Registry — Plant Pathway Atlas</title>
+<meta name="description" content="FAIR data registry, biological metadata, SBGN-ML process specifications, and publication vectors for all 16 plant pathway maps.">
+<meta name="author" content="Richard Barker">
+<meta name="color-scheme" content="light dark">
+<script>
+  (function() {
+    var saved = localStorage.getItem('cose-theme');
+    var pref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', saved || pref);
+  })();
+</script>
+<link rel="stylesheet" href="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/cose-map.css">
+<link rel="stylesheet" href="assets/ppa-core.css">
+<style>
+  /* Explainer Hero Card */
+  .explainer-card {
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+    line-height: 1.65;
+  }
+  .explainer-card h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.35rem;
+    color: var(--ppa-ink);
+  }
+  .explainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+  }
+  .explainer-col {
+    background: var(--ppa-bg);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .explainer-col h4 {
+    margin: 0 0 8px;
+    color: var(--ppa-accent);
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .explainer-col p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ppa-soft);
+  }
+
+  /* Metric summary banner */
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .metric-card {
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-align: center;
+  }
+  .metric-value {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--ppa-ink);
+    line-height: 1.1;
+  }
+  .metric-label {
+    font-size: 0.85rem;
+    color: var(--ppa-soft);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 6px;
+  }
+
+  /* Search & Filter toolbar */
+  .search-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+  }
+  .search-input-wrap {
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+  }
+  .search-input-wrap input {
+    width: 100%;
+    padding: 10px 14px 10px 38px;
+    border-radius: 8px;
+    border: 1px solid var(--ppa-rule);
+    background: var(--ppa-bg);
+    color: var(--ppa-ink);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--ppa-soft);
+    pointer-events: none;
+  }
+  .filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .filter-pill {
+    background: var(--ppa-card);
+    color: var(--ppa-soft);
+    border: 1px solid var(--ppa-rule);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .filter-pill:hover {
+    color: var(--ppa-ink);
+    border-color: var(--ppa-accent);
+  }
+  .filter-pill.active {
+    background: var(--ppa-accent);
+    color: #ffffff;
+    border-color: var(--ppa-accent);
+  }
+
+  /* Registry Table */
+  .registry-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--ppa-bg);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    font-size: 0.92rem;
+  }
+  .registry-table th, .registry-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--ppa-rule);
+    text-align: left;
+    vertical-align: middle;
+  }
+  .registry-table th {
+    background: var(--ppa-card);
+    font-weight: 700;
+    color: var(--ppa-ink);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .registry-table tr:hover td {
+    background: rgba(15, 23, 42, 0.02);
+  }
+  :root[data-theme="dark"] .registry-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--ppa-rule);
+    background: var(--ppa-card);
+    color: var(--ppa-ink);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .action-btn:hover {
+    border-color: var(--ppa-accent);
+    color: var(--ppa-accent);
+    background: var(--ppa-bg);
+  }
+  .action-btn.primary {
+    background: var(--ppa-accent);
+    color: #ffffff;
+    border-color: var(--ppa-accent);
+  }
+
+  /* Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 20, 27, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    padding: 20px;
+  }
+  .modal-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-card {
+    background: var(--ppa-bg);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 16px;
+    max-width: 980px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.35);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid var(--ppa-rule);
+    padding-bottom: 16px;
+  }
+  .modal-close-btn {
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--ppa-ink);
+  }
+  .modal-svg-wrap {
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 380px;
+  }
+  .modal-svg-wrap svg {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+  }
+  .batch-export-box {
+    background: var(--ppa-card);
+    border: 1px solid var(--ppa-rule);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+</style>
+</head>
+<body data-site-id="plant-pathway-atlas">
+<div class="wrap">
+  <!-- CoSE Topbar: Brand + Theme Toggle (Strictly NO side navigation rail) -->
+  <div class="cose-topbar">
+    <a href="index.html" class="cose-brand">
+      <img src="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/cose-logo.png" alt="CoSE logo" width="28" height="28">
+      <span>Plant Pathway Atlas</span>
+    </a>
+    <button id="cose-theme-toggle" class="cose-theme-btn" type="button" aria-label="Toggle theme">
+      <span class="theme-icon"></span>
+      <span class="theme-label">Theme</span>
+    </button>
+  </div>
+
+  <!-- CoSE Tab Bar: Horizontal Navigation Only -->
+  <nav class="cose-tab-bar" aria-label="Atlas Navigation">
+    <a href="index.html" class="btn">Atlas Maps</a>
+    <a href="explore.html" class="btn">Explore Your Data</a>
+    <a href="spatial.html" class="btn">ggPlant Spatial Anatomy</a>
+    <span class="tab-label">Data & Specs:</span>
+    <a href="catalog.html" class="btn active">Catalog Manifest</a>
+    <a href="orthology.html" class="btn">Orthology Matrix</a>
+    <a href="CITATION.cff" class="btn">Citation (CFF)</a>
+    <span class="tab-label">Links:</span>
+    <a href="https://github.com/dr-richard-barker/plant-pathway-atlas" class="btn primary">GitHub Code</a>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="hero">
+    <div class="eyebrow">FAIR Data Registry & Specifications</div>
+    <h1>Pathway Catalog Manifest</h1>
+    <p class="lede">
+      The authoritative, machine-readable inventory and standards registry for the <strong>Plant Pathway Atlas</strong>.
+      Documents versioning, node/locus curation, SBGN-ML Process Description compliance, and vector assets.
+    </p>
+  </header>
+
+  <!-- Explainer Hero Card -->
+  <div class="explainer-card">
+    <h2>Why is this Manifest Included & How is it Used?</h2>
+    <p style="color:var(--ppa-soft); margin-top:0;">
+      Rather than burying pathway definitions in flat image files, the Plant Pathway Atlas implements strict 
+      <strong>FAIR (Findable, Accessible, Interoperable, Reusable)</strong> principles. The Catalog Manifest serves as the 
+      central registry that guarantees reproducibility, open standards, and computational interoperability.
+    </p>
+    <div class="explainer-grid">
+      <div class="explainer-col">
+        <h4>📋 What Does It Contain?</h4>
+        <p>
+          Every curated pathway is assigned a persistent identifier (<code>PPA-01</code> to <code>PPA-16</code>), 
+          exact node counts, curated AGI genetic loci, MapMan4 functional BIN mappings, 
+          and references to verified vector SVGs and libsbgn-compliant SBGN-ML files.
+        </p>
+      </div>
+      <div class="explainer-col">
+        <h4>🔬 Why Do Scientists Need It?</h4>
+        <p>
+          Enables bioinformaticians to batch-download gene sets for Gene Set Enrichment Analysis (GSEA), 
+          import biological networks into Cytoscape, and programmatically verify diagram provenance 
+          without manual data scraping.
+        </p>
+      </div>
+      <div class="explainer-col">
+        <h4>⚖️ Standard Adherence</h4>
+        <p>
+          Every specification is validated against our rigorous JSON Schema (<code>ontology/schema/map.schema.json</code>) 
+          and audited by the automated <strong>ABAI Quality Control</strong> screen with cryptographic SHA-256 checksums.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Metrics Row -->
+  <div class="metrics-row">
+    <div class="metric-card">
+      <div class="metric-value" id="metric-pathways">16</div>
+      <div class="metric-label">Curated Pathways</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value" id="metric-nodes">208</div>
+      <div class="metric-label">Molecular Nodes</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value" id="metric-loci">358</div>
+      <div class="metric-label">Distinct AGI Loci</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value" style="color:var(--ppa-green, #10b981);">100%</div>
+      <div class="metric-label">SBGN-ML & ABAI QC Valid</div>
+    </div>
+  </div>
+
+  <!-- Live Filter Toolbar -->
+  <div class="search-toolbar">
+    <div class="search-input-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="registry-search" placeholder="Search by map ID (e.g. PPA-13), title, compartment, or key genes..." autocomplete="off">
+    </div>
+    <div style="font-size:0.88rem; color:var(--ppa-soft); font-weight:600;" id="results-count">
+      Showing 16 of 16 pathways
+    </div>
+  </div>
+
+  <!-- Category Pills -->
+  <div class="filter-pills" id="category-pills">
+    <button class="filter-pill active" data-cat="all">All Pathways (16)</button>
+    <button class="filter-pill" data-cat="transport">Vasculature & Transport (3)</button>
+    <button class="filter-pill" data-cat="bioenergetics">Bioenergetics & Respiration (3)</button>
+    <button class="filter-pill" data-cat="primary">Primary Metabolism (3)</button>
+    <button class="filter-pill" data-cat="stress">Stress & Redox (2)</button>
+    <button class="filter-pill" data-cat="signaling">Signaling & Hormones (4)</button>
+    <button class="filter-pill" data-cat="specialized">Specialized Metabolism (1)</button>
+  </div>
+
+  <!-- Interactive Registry Table -->
+  <div style="overflow-x:auto;">
+    <table class="registry-table" id="registry-table">
+      <thead>
+        <tr>
+          <th style="width:90px;">ID</th>
+          <th>Pathway Title & Subtitle</th>
+          <th style="width:140px;">Subsystem</th>
+          <th style="width:75px; text-align:center;">Nodes</th>
+          <th style="width:75px; text-align:center;">Loci</th>
+          <th style="width:160px;">Primary Compartment</th>
+          <th style="width:260px;">Export Assets</th>
+        </tr>
+      </thead>
+      <tbody id="registry-tbody">
+        <tr>
+          <td colspan="7" style="text-align:center; color:var(--ppa-soft); padding:32px;">
+            Loading pathway catalog registry...
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Batch Export & Developer Access Box -->
+  <div class="batch-export-box">
+    <div>
+      <h3 style="margin:0 0 6px;">Programmatic & Batch Access</h3>
+      <p style="margin:0; color:var(--ppa-soft); font-size:0.9rem;">
+        Download the full raw machine-readable manifest or citation archives for computational pipelines:
+      </p>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+      <a href="catalog/manifest.json" target="_blank" class="action-btn" download="manifest.json">
+        <span>📄 Raw manifest.json</span>
+      </a>
+      <a href="MANIFEST.tsv" target="_blank" class="action-btn" download="MANIFEST.tsv">
+        <span>📊 MANIFEST.tsv</span>
+      </a>
+      <a href="CHECKSUMS.sha256" target="_blank" class="action-btn" download="CHECKSUMS.sha256">
+        <span>🔒 SHA-256 Hashes</span>
+      </a>
+      <a href="CITATION.cff" target="_blank" class="action-btn" download="CITATION.cff">
+        <span>📑 CITATION.cff</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CoSE Footer -->
+  <footer style="margin-top:40px; padding:24px 0; border-top:1px solid var(--ppa-rule); font-size:0.88rem; color:var(--ppa-soft);">
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center; gap:12px;">
+      <div>
+        <a href="https://astrobotany.com" class="cose-foot" style="color:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+          <img src="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/cose-logo.png" alt="CoSE logo" width="20" height="20">
+          <span>Council of Space Entomologists (CoSE)</span>
+        </a>
+        <span>· Plant Pathway Atlas v0.1.0 · FAIR Data Registry</span>
+      </div>
+      <div>
+        <span>Licence: MIT (code) / CC-BY-4.0 (data & maps)</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Modal Dialog / Map Viewer -->
+<div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-header">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:4px;">
+          <span class="ppa-badge" id="modal-id">PPA-01</span>
+          <span style="font-size:0.85rem; color:var(--ppa-soft);" id="modal-stats"></span>
+        </div>
+        <h2 style="margin:0 0 6px;" id="modal-title">Pathway Title</h2>
+        <div style="color:var(--ppa-soft); font-size:0.92rem;" id="modal-subtitle"></div>
+      </div>
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+    </div>
+
+    <!-- SVG Display Container -->
+    <div class="modal-svg-wrap" id="modal-svg-wrap">
+      <div style="color:var(--ppa-soft);">Loading vector diagram...</div>
+    </div>
+
+    <!-- Direct Downloads -->
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px; border-top:1px solid var(--ppa-rule); padding-top:14px;">
+      <div style="font-size:0.88rem; color:var(--ppa-soft); font-weight:600;">Download Formats:</div>
+      <div style="display:flex; flex-wrap:wrap; gap:8px;">
+        <a id="btn-dl-svg-light" target="_blank" class="action-btn" download>Vector SVG (Light)</a>
+        <a id="btn-dl-svg-dark" target="_blank" class="action-btn" download>Vector SVG (Dark)</a>
+        <a id="btn-dl-sbgn" target="_blank" class="action-btn" download>SBGN-ML Standard</a>
+        <a id="btn-dl-sidecar" target="_blank" class="action-btn" download>Sidecar JSON</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Category mapping helper
+const CATEGORIES = {
+  'PPA-01': 'primary',
+  'PPA-02': 'bioenergetics',
+  'PPA-03': 'primary',
+  'PPA-04': 'bioenergetics',
+  'PPA-05': 'stress',
+  'PPA-06': 'primary',
+  'PPA-07': 'primary',
+  'PPA-08': 'specialized',
+  'PPA-09': 'signaling',
+  'PPA-10': 'stress',
+  'PPA-11': 'signaling',
+  'PPA-12': 'transport',
+  'PPA-13': 'transport',
+  'PPA-14': 'transport',
+  'PPA-15': 'signaling',
+  'PPA-16': 'signaling'
+};
+
+const COMPARTMENTS = {
+  'PPA-01': 'Plastid / Cytosol / Mitochondria',
+  'PPA-02': 'Thylakoid Membrane',
+  'PPA-03': 'Chloroplast Stroma / Peroxisome',
+  'PPA-04': 'Mitochondrial Matrix / Inner Membrane',
+  'PPA-05': 'Chloroplast / Cytosol / Peroxisome',
+  'PPA-06': 'Chloroplast / ER / Peroxisome',
+  'PPA-07': 'Cytosol / Chloroplast Stroma',
+  'PPA-08': 'Cytosol / ER / Vacuole',
+  'PPA-09': 'Plasma Membrane / Cytosol / Nucleus',
+  'PPA-10': 'Plasma Membrane / Cytosol / Nucleus',
+  'PPA-11': 'ER / Cytosol / Vacuole',
+  'PPA-12': 'Plasma Membrane / Vacuolar Tonoplast',
+  'PPA-13': 'Source Leaf CC / Sieve Tube / Root Sink',
+  'PPA-14': 'Rhizosphere / Endodermis / Stele Xylem',
+  'PPA-15': 'Guard Cell PM / Cytosol / Vacuole',
+  'PPA-16': 'Plasmodesmata Neck / Sleeve / Apoplast'
+};
+
+let allMaps = [];
+let activeCategory = 'all';
+
+async function initRegistry() {
+  try {
+    const res = await fetch('catalog/manifest.json');
+    if (!res.ok) throw new Error('Failed to load catalog manifest');
+    const data = await res.json();
+    allMaps = data.maps || [];
+
+    // Calculate totals
+    const totalNodes = allMaps.reduce((sum, m) => sum + (m.total_nodes || 0), 0);
+    const totalLoci = allMaps.reduce((sum, m) => sum + (m.distinct_loci || 0), 0);
+    document.getElementById('metric-pathways').textContent = allMaps.length;
+    document.getElementById('metric-nodes').textContent = totalNodes;
+    document.getElementById('metric-loci').textContent = totalLoci;
+
+    renderTable();
+  } catch (err) {
+    document.getElementById('registry-tbody').innerHTML = `
+      <tr><td colspan="7" style="color:var(--ppa-up); text-align:center; padding:32px;">
+        Error loading manifest: ${err.message}
+      </td></tr>
+    `;
+  }
+}
+
+function renderTable() {
+  const query = document.getElementById('registry-search').value.toLowerCase().trim();
+  const tbody = document.getElementById('registry-tbody');
+
+  const filtered = allMaps.filter(m => {
+    const cat = CATEGORIES[m.id] || 'primary';
+    if (activeCategory !== 'all' && cat !== activeCategory) return false;
+    if (!query) return true;
+    return m.id.toLowerCase().includes(query) ||
+           m.title.toLowerCase().includes(query) ||
+           (m.subtitle && m.subtitle.toLowerCase().includes(query)) ||
+           (COMPARTMENTS[m.id] && COMPARTMENTS[m.id].toLowerCase().includes(query));
+  });
+
+  document.getElementById('results-count').textContent = `Showing ${filtered.length} of ${allMaps.length} pathways`;
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; color:var(--ppa-soft); padding:32px;">No pathways matched your search filter.</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = filtered.map(m => {
+    const comp = COMPARTMENTS[m.id] || 'Cellular';
+    const cat = (CATEGORIES[m.id] || 'General').toUpperCase();
+    return `
+      <tr>
+        <td><strong class="ppa-badge">${m.id}</strong></td>
+        <td>
+          <div style="font-weight:700; color:var(--ppa-ink);">${m.title}</div>
+          <div style="font-size:0.83rem; color:var(--ppa-soft); margin-top:2px;">${m.subtitle || ''}</div>
+        </td>
+        <td><span style="font-size:0.8rem; font-weight:600; color:var(--ppa-soft);">${cat}</span></td>
+        <td style="text-align:center; font-weight:600;">${m.total_nodes}</td>
+        <td style="text-align:center; font-weight:600;">${m.distinct_loci}</td>
+        <td><span style="font-size:0.85rem; color:var(--ppa-soft);">${comp}</span></td>
+        <td>
+          <div class="action-buttons">
+            <button class="action-btn primary" onclick="openModal('${m.id}')">Inspect</button>
+            <a href="${m.svg_light}" target="_blank" class="action-btn" download>SVG</a>
+            <a href="${m.sbgn}" target="_blank" class="action-btn" download>SBGN</a>
+            <a href="${m.sidecar}" target="_blank" class="action-btn" download>JSON</a>
+          </div>
+        </td>
+      </tr>
+    `;
+  }).join('');
+}
+
+// Category filter button listeners
+document.getElementById('category-pills').addEventListener('click', (e) => {
+  if (!e.target.classList.contains('filter-pill')) return;
+  document.querySelectorAll('.filter-pill').forEach(btn => btn.classList.remove('active'));
+  e.target.classList.add('active');
+  activeCategory = e.target.dataset.cat;
+  renderTable();
+});
+
+document.getElementById('registry-search').addEventListener('input', renderTable);
+
+// Modal Handling
+const backdrop = document.getElementById('modal-backdrop');
+const closeBtn = document.getElementById('modal-close-btn');
+
+closeBtn.addEventListener('click', () => backdrop.classList.remove('open'));
+backdrop.addEventListener('click', (e) => {
+  if (e.target === backdrop) backdrop.classList.remove('open');
+});
+
+async function openModal(mapId) {
+  const mapData = allMaps.find(m => m.id === mapId);
+  if (!mapData) return;
+
+  document.getElementById('modal-id').textContent = mapData.id;
+  document.getElementById('modal-title').textContent = mapData.title;
+  document.getElementById('modal-subtitle').textContent = mapData.subtitle || '';
+  document.getElementById('modal-stats').textContent = `${mapData.total_nodes} nodes · ${mapData.distinct_loci} AGI loci · ${COMPARTMENTS[mapData.id] || ''}`;
+
+  document.getElementById('btn-dl-svg-light').href = mapData.svg_light;
+  document.getElementById('btn-dl-svg-dark').href = mapData.svg_dark;
+  document.getElementById('btn-dl-sbgn').href = mapData.sbgn;
+  document.getElementById('btn-dl-sidecar').href = mapData.sidecar;
+
+  const svgWrap = document.getElementById('modal-svg-wrap');
+  svgWrap.innerHTML = '<div style="color:var(--ppa-soft);">Loading vector diagram...</div>';
+  backdrop.classList.add('open');
+
+  try {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const svgUrl = isDark && mapData.svg_dark ? mapData.svg_dark : mapData.svg_light;
+    const res = await fetch(svgUrl);
+    if (!res.ok) throw new Error('Failed to load diagram SVG');
+    const svgText = await res.text();
+    svgWrap.innerHTML = svgText;
+  } catch (err) {
+    svgWrap.innerHTML = `<div style="color:var(--ppa-up); padding:20px;">Could not display preview: ${err.message}</div>`;
+  }
+}
+
+// Theme toggle
+const themeBtn = document.getElementById('cose-theme-toggle');
+if (themeBtn) {
+  themeBtn.addEventListener('click', () => {
+    const cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', cur);
+    localStorage.setItem('cose-theme', cur);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initRegistry);
+</script>
+</body>
+</html>

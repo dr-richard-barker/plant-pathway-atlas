@@ -96,65 +96,6 @@
       ]
     },
     {
-      "id": "WRKY33_TF_HUB",
-      "label": "WRKY33 Immune Hub",
-      "kind": "simple",
-      "compartment": "cytosol",
-      "mapman_bin": "20.2.3",
-      "loci": [
-        "AT2G38470"
-      ],
-      "subunits": []
-    },
-    {
-      "id": "CBF_DREB1_REGULON",
-      "label": "CBF1 / CBF2 / CBF3",
-      "kind": "family",
-      "compartment": "nucleus",
-      "mapman_bin": "20.3.1",
-      "loci": [
-        "AT4G25490",
-        "AT4G25470",
-        "AT4G25480"
-      ],
-      "subunits": []
-    },
-    {
-      "id": "COR_GENE_EFFECTORS",
-      "label": "COR15A & KIN1 Effectors",
-      "kind": "family",
-      "compartment": "nucleus",
-      "mapman_bin": "20.3.2",
-      "loci": [
-        "AT2G42540",
-        "AT5G15960"
-      ],
-      "subunits": []
-    },
-    {
-      "id": "PROLINE_OSMOPROTECTANTS",
-      "label": "Proline Synthase (P5CS1)",
-      "kind": "simple",
-      "compartment": "nucleus",
-      "mapman_bin": "20.3.3",
-      "loci": [
-        "AT2G39800"
-      ],
-      "subunits": []
-    },
-    {
-      "id": "HSFA_MASTER_FACTORS",
-      "label": "Heat Shock Factors (HSFs)",
-      "kind": "family",
-      "compartment": "cytosol",
-      "mapman_bin": "20.4.1",
-      "loci": [
-        "AT4G17750",
-        "AT2G26150"
-      ],
-      "subunits": []
-    },
-    {
       "id": "HSP70_CHAPERONE_CORE",
       "label": "Hsp70 Chaperone Family",
       "kind": "family",
@@ -177,6 +118,65 @@
         "AT5G56030"
       ],
       "subunits": []
+    },
+    {
+      "id": "PROLINE_OSMOPROTECTANTS",
+      "label": "Proline Synthase (P5CS1)",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "20.3.3",
+      "loci": [
+        "AT2G39800"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "COR_GENE_EFFECTORS",
+      "label": "COR15A & KIN1 Effectors",
+      "kind": "family",
+      "compartment": "cytosol",
+      "mapman_bin": "20.3.2",
+      "loci": [
+        "AT2G42540",
+        "AT5G15960"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "WRKY33_TF_HUB",
+      "label": "WRKY33 Immune Hub",
+      "kind": "simple",
+      "compartment": "nucleus",
+      "mapman_bin": "20.2.3",
+      "loci": [
+        "AT2G38470"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "CBF_DREB1_REGULON",
+      "label": "CBF1 / CBF2 / CBF3",
+      "kind": "family",
+      "compartment": "nucleus",
+      "mapman_bin": "20.3.1",
+      "loci": [
+        "AT4G25490",
+        "AT4G25470",
+        "AT4G25480"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "HSFA_MASTER_FACTORS",
+      "label": "Heat Shock Factors (HSFs)",
+      "kind": "family",
+      "compartment": "nucleus",
+      "mapman_bin": "20.4.1",
+      "loci": [
+        "AT4G17750",
+        "AT2G26150"
+      ],
+      "subunits": []
     }
   ],
   "edges": [
@@ -184,11 +184,11 @@
       "from": "PRR_FLS2_BAK1",
       "to": "BIK1_RECEPTOR_KINASE",
       "start": [
-        263.761,
+        273.25418750000006,
         135.824
       ],
       "end": [
-        295.761,
+        305.25418750000006,
         135.824
       ],
       "class": "flux",
@@ -198,11 +198,11 @@
       "from": "BIK1_RECEPTOR_KINASE",
       "to": "RBOHD_BURST",
       "start": [
-        476.6775,
+        492.2523125000001,
         135.824
       ],
       "end": [
-        508.6775,
+        524.2523125,
         135.824
       ],
       "class": "flux",
@@ -212,12 +212,12 @@
       "from": "BIK1_RECEPTOR_KINASE",
       "to": "MAPKKK_MAPKK_MODULE",
       "start": [
-        341.21636152461315,
+        363.8447402108832,
         158.648
       ],
       "end": [
-        232.77091523359127,
-        213.648
+        218.54556259231907,
+        253.648
       ],
       "class": "flux",
       "label": ""
@@ -226,12 +226,12 @@
       "from": "MAPKKK_MAPKK_MODULE",
       "to": "MPK3_MPK6_KINASES",
       "start": [
-        263.7754375,
-        247.47199999999998
+        266.50943750000005,
+        287.472
       ],
       "end": [
-        295.7754375,
-        247.47199999999998
+        298.50943750000005,
+        287.472
       ],
       "class": "flux",
       "label": "Cascade Activation"
@@ -240,12 +240,12 @@
       "from": "MPK3_MPK6_KINASES",
       "to": "WRKY33_TF_HUB",
       "start": [
-        473.69943750000004,
-        247.47199999999998
+        356.435156409892,
+        321.296
       ],
       "end": [
-        505.69943750000004,
-        247.472
+        163.94061524658898,
+        517.944
       ],
       "class": "flux",
       "label": "Transcriptional Activation"
@@ -254,12 +254,12 @@
       "from": "CBF_DREB1_REGULON",
       "to": "COR_GENE_EFFECTORS",
       "start": [
-        241.72843749999996,
-        357.12
+        415.6078614474968,
+        508.944
       ],
       "end": [
-        273.7284374999999,
-        357.12
+        567.9104510525033,
+        424.944
       ],
       "class": "flux",
       "label": "CRT/DRE Elements"
@@ -268,12 +268,12 @@
       "from": "CBF_DREB1_REGULON",
       "to": "PROLINE_OSMOPROTECTANTS",
       "start": [
-        241.72843749999996,
-        357.12
+        363.8345341555592,
+        508.944
       ],
       "end": [
-        519.2474374999999,
-        357.12
+        381.1568848646782,
+        415.944
       ],
       "class": "flux",
       "label": ""
@@ -282,12 +282,12 @@
       "from": "HSFA_MASTER_FACTORS",
       "to": "HSP70_CHAPERONE_CORE",
       "start": [
-        278.16550000000007,
-        464.76800000000003
+        603.4936875000001,
+        508.944
       ],
       "end": [
-        310.16550000000007,
-        464.76800000000003
+        609.9172500000001,
+        319.296
       ],
       "class": "flux",
       "label": "HSE Promoters"
@@ -296,12 +296,12 @@
       "from": "HSFA_MASTER_FACTORS",
       "to": "HSP90_PROTEIN_COMPLEX",
       "start": [
-        278.16550000000007,
-        464.76800000000003
+        505.0973531371912,
+        508.944
       ],
       "end": [
-        524.9285000000001,
-        464.76800000000003
+        245.3785218628089,
+        424.944
       ],
       "class": "flux",
       "label": ""

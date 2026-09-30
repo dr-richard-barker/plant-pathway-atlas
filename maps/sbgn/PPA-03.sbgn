@@ -1,22 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
 <sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
   <map id="PPA-03" language="process description">
-    <bbox x="-18.00" y="0.00" w="920.00" h="680.00" />
+    <bbox x="-18.00" y="0.00" w="920.00" h="691.95" />
     <glyph id="comp_chloroplast_stroma" class="compartment">
       <label text="Chloroplast Stroma" />
-      <bbox x="87.28" y="62.00" w="587.13" h="245.30" />
+      <bbox x="70.19" y="62.00" w="655.99" h="241.30" />
     </glyph>
     <glyph id="comp_peroxisome" class="compartment">
       <label text="Peroxisome" />
-      <bbox x="80.99" y="285.30" w="599.70" h="133.65" />
+      <bbox x="74.05" y="321.30" w="648.28" h="133.65" />
     </glyph>
     <glyph id="comp_mitochondrial_matrix" class="compartment">
       <label text="Mitochondrial Matrix" />
-      <bbox x="14.00" y="396.94" w="733.68" h="133.65" />
+      <bbox x="14.00" y="472.94" w="768.37" h="149.01" />
     </glyph>
     <glyph id="RUBISCO_CARBOXYLATION" class="complex" compartmentRef="comp_chloroplast_stroma">
       <label text="RuBisCO Complex" />
-      <bbox x="131.99" y="102.00" w="155.56" h="67.65" />
+      <bbox x="135.42" y="102.00" w="159.56" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="RUBISCO_CARBOXYLATION" compartment="chloroplast_stroma" mapmanBin="1.2.1">
           <ns0:locus>ATCG00490</ns0:locus>
@@ -27,7 +27,7 @@
     </glyph>
     <glyph id="PGA_REDUCTION" class="complex" compartmentRef="comp_chloroplast_stroma">
       <label text="3-PGA Reduction" />
-      <bbox x="319.55" y="102.00" w="142.43" h="67.65" />
+      <bbox x="326.98" y="102.00" w="146.43" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PGA_REDUCTION" compartment="chloroplast_stroma" mapmanBin="1.2.2">
           <ns0:locus>AT1G79550</ns0:locus>
@@ -38,26 +38,25 @@
     </glyph>
     <glyph id="TRIOSE_ISOMERIZATION" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
       <label text="Triose-P Isomerase" />
-      <bbox x="493.98" y="113.00" w="135.71" h="45.65" />
+      <bbox x="505.42" y="113.00" w="155.53" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TRIOSE_ISOMERIZATION" compartment="chloroplast_stroma" mapmanBin="1.2.3">
           <ns0:locus>AT3G55440</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="ALDOLASE_FBPASE" class="complex" compartmentRef="comp_chloroplast_stroma">
-      <label text="FBP Aldolase &amp; FBPase" />
-      <bbox x="113.28" y="213.65" w="159.00" h="67.65" />
+    <glyph id="PRK_REGENERATION" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
+      <label text="Phosphoribulokinase" />
+      <bbox x="96.19" y="220.65" w="167.95" h="45.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ALDOLASE_FBPASE" compartment="chloroplast_stroma" mapmanBin="1.2.4">
-          <ns0:locus>AT2G21330</ns0:locus>
-          <ns0:locus>AT3G54050</ns0:locus>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PRK_REGENERATION" compartment="chloroplast_stroma" mapmanBin="1.2.6">
+          <ns0:locus>AT1G32060</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
     <glyph id="TRANSKETOLASE_SBPASE" class="complex" compartmentRef="comp_chloroplast_stroma">
       <label text="Transketolase &amp; SBPase" />
-      <bbox x="304.28" y="213.65" w="165.90" h="67.65" />
+      <bbox x="296.14" y="209.65" w="189.66" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TRANSKETOLASE_SBPASE" compartment="chloroplast_stroma" mapmanBin="1.2.5">
           <ns0:locus>AT3G60750</ns0:locus>
@@ -65,18 +64,19 @@
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="PRK_REGENERATION" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
-      <label text="Phosphoribulokinase" />
-      <bbox x="502.18" y="224.65" w="146.23" h="45.65" />
+    <glyph id="ALDOLASE_FBPASE" class="complex" compartmentRef="comp_chloroplast_stroma">
+      <label text="FBP Aldolase &amp; FBPase" />
+      <bbox x="517.80" y="209.65" w="182.38" h="67.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PRK_REGENERATION" compartment="chloroplast_stroma" mapmanBin="1.2.6">
-          <ns0:locus>AT1G32060</ns0:locus>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ALDOLASE_FBPASE" compartment="chloroplast_stroma" mapmanBin="1.2.4">
+          <ns0:locus>AT2G21330</ns0:locus>
+          <ns0:locus>AT3G54050</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
     <glyph id="PGLP_DEPHOSPHO" class="macromolecule" compartmentRef="comp_peroxisome">
       <label text="2-PG Phosphatase" />
-      <bbox x="106.99" y="336.30" w="134.91" h="45.65" />
+      <bbox x="100.05" y="372.30" w="149.69" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PGLP_DEPHOSPHO" compartment="peroxisome" mapmanBin="1.3.1">
           <ns0:locus>AT5G36700</ns0:locus>
@@ -85,7 +85,7 @@
     </glyph>
     <glyph id="GLYCOLATE_OXIDASE" class="macromolecule" compartmentRef="comp_peroxisome">
       <label text="Glycolate Oxidase" />
-      <bbox x="273.90" y="327.30" w="144.00" h="63.65" />
+      <bbox x="281.74" y="363.30" w="148.25" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GLYCOLATE_OXIDASE" compartment="peroxisome" mapmanBin="1.3.2">
           <ns0:locus>AT3G14420</ns0:locus>
@@ -95,7 +95,7 @@
     </glyph>
     <glyph id="GLUTAMATE_GLYOXYLATE_AT" class="complex" compartmentRef="comp_peroxisome">
       <label text="Peroxisomal Aminotransferase" />
-      <bbox x="449.90" y="325.30" w="204.79" h="67.65" />
+      <bbox x="461.99" y="361.30" w="234.33" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GLUTAMATE_GLYOXYLATE_AT" compartment="peroxisome" mapmanBin="1.3.3">
           <ns0:locus>AT1G23310</ns0:locus>
@@ -103,9 +103,28 @@
         </ns0:annotation>
       </extension>
     </glyph>
+    <glyph id="HYDROXYPYRUVATE_RED" class="complex" compartmentRef="comp_mitochondrial_matrix">
+      <label text="Hydroxypyruvate Reductase &amp; GLYK" />
+      <bbox x="40.00" y="512.94" w="232.80" h="83.01" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="HYDROXYPYRUVATE_RED" compartment="mitochondrial_matrix" mapmanBin="1.3.6">
+          <ns0:locus>AT1G68010</ns0:locus>
+          <ns0:locus>AT1G80380</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="SERINE_HYDROXYMETHYL_TF" class="macromolecule" compartmentRef="comp_mitochondrial_matrix">
+      <label text="Serine Hydroxymethyl-TF" />
+      <bbox x="304.80" y="531.62" w="196.44" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SERINE_HYDROXYMETHYL_TF" compartment="mitochondrial_matrix" mapmanBin="1.3.5">
+          <ns0:locus>AT4G37930</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
     <glyph id="GLYCINE_DECARBOXYLASE" class="complex" compartmentRef="comp_mitochondrial_matrix">
       <label text="Glycine Decarboxylase (GDC)" />
-      <bbox x="40.00" y="436.94" w="199.49" h="67.65" />
+      <bbox x="533.24" y="520.62" w="223.13" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GLYCINE_DECARBOXYLASE" compartment="mitochondrial_matrix" mapmanBin="1.3.4">
           <ns0:locus>AT2G35370</ns0:locus>
@@ -114,76 +133,57 @@
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="SERINE_HYDROXYMETHYL_TF" class="macromolecule" compartmentRef="comp_mitochondrial_matrix">
-      <label text="Serine Hydroxymethyl-TF" />
-      <bbox x="271.49" y="447.94" w="178.64" h="45.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SERINE_HYDROXYMETHYL_TF" compartment="mitochondrial_matrix" mapmanBin="1.3.5">
-          <ns0:locus>AT4G37930</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
-    <glyph id="HYDROXYPYRUVATE_RED" class="complex" compartmentRef="comp_mitochondrial_matrix">
-      <label text="Hydroxypyruvate Reductase &amp; GLYK" />
-      <bbox x="482.12" y="436.94" w="239.56" h="67.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="HYDROXYPYRUVATE_RED" compartment="mitochondrial_matrix" mapmanBin="1.3.6">
-          <ns0:locus>AT1G68010</ns0:locus>
-          <ns0:locus>AT1G80380</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
     <arc id="arc_0" class="consumption" source="RUBISCO_CARBOXYLATION" target="PGA_REDUCTION">
-      <start x="287.55" y="135.82" />
-      <end x="319.55" y="135.82" />
+      <start x="294.98" y="135.82" />
+      <end x="326.98" y="135.82" />
     </arc>
     <arc id="arc_1" class="consumption" source="RUBISCO_CARBOXYLATION" target="PGLP_DEPHOSPHO">
-      <start x="204.42" y="169.65" />
-      <end x="178.05" y="336.30" />
+      <start x="209.94" y="169.65" />
+      <end x="178.44" y="372.30" />
     </arc>
     <arc id="arc_2" class="consumption" source="PGA_REDUCTION" target="TRIOSE_ISOMERIZATION">
-      <start x="461.98" y="135.82" />
-      <end x="493.98" y="135.82" />
+      <start x="473.42" y="135.82" />
+      <end x="505.42" y="135.82" />
     </arc>
     <arc id="arc_3" class="consumption" source="TRIOSE_ISOMERIZATION" target="ALDOLASE_FBPASE">
-      <start x="493.98" y="156.35" />
-      <end x="272.28" y="223.42" />
+      <start x="588.65" y="158.65" />
+      <end x="600.88" y="209.65" />
     </arc>
     <arc id="arc_4" class="consumption" source="ALDOLASE_FBPASE" target="TRANSKETOLASE_SBPASE">
-      <start x="272.28" y="247.47" />
-      <end x="304.28" y="247.47" />
+      <start x="517.80" y="243.47" />
+      <end x="485.80" y="243.47" />
     </arc>
     <arc id="arc_5" class="consumption" source="TRANSKETOLASE_SBPASE" target="PRK_REGENERATION">
-      <start x="470.18" y="247.47" />
-      <end x="502.18" y="247.47" />
+      <start x="296.14" y="243.47" />
+      <end x="264.14" y="243.47" />
     </arc>
     <arc id="arc_6" class="consumption" source="PRK_REGENERATION" target="RUBISCO_CARBOXYLATION">
-      <start x="502.18" y="225.14" />
-      <end x="287.55" y="159.58" />
+      <start x="187.59" y="220.65" />
+      <end x="204.19" y="169.65" />
     </arc>
     <arc id="arc_7" class="consumption" source="PGLP_DEPHOSPHO" target="GLYCOLATE_OXIDASE">
-      <start x="241.90" y="359.12" />
-      <end x="273.90" y="359.12" />
+      <start x="249.74" y="395.12" />
+      <end x="281.74" y="395.12" />
     </arc>
     <arc id="arc_8" class="consumption" source="GLYCOLATE_OXIDASE" target="GLUTAMATE_GLYOXYLATE_AT">
-      <start x="417.90" y="359.12" />
-      <end x="449.90" y="359.12" />
+      <start x="429.99" y="395.12" />
+      <end x="461.99" y="395.12" />
     </arc>
     <arc id="arc_9" class="consumption" source="GLUTAMATE_GLYOXYLATE_AT" target="GLYCINE_DECARBOXYLASE">
-      <start x="449.90" y="386.83" />
-      <end x="239.49" y="443.77" />
+      <start x="593.09" y="428.94" />
+      <end x="630.87" y="520.62" />
     </arc>
     <arc id="arc_10" class="consumption" source="GLYCINE_DECARBOXYLASE" target="SERINE_HYDROXYMETHYL_TF">
-      <start x="239.49" y="470.77" />
-      <end x="271.49" y="470.77" />
+      <start x="533.24" y="554.45" />
+      <end x="501.24" y="554.45" />
     </arc>
     <arc id="arc_11" class="consumption" source="SERINE_HYDROXYMETHYL_TF" target="HYDROXYPYRUVATE_RED">
-      <start x="450.12" y="470.77" />
-      <end x="482.12" y="470.77" />
+      <start x="304.80" y="554.45" />
+      <end x="272.80" y="554.45" />
     </arc>
     <arc id="arc_12" class="consumption" source="HYDROXYPYRUVATE_RED" target="PGA_REDUCTION">
-      <start x="580.58" y="436.94" />
-      <end x="412.09" y="169.65" />
+      <start x="180.57" y="512.94" />
+      <end x="380.50" y="169.65" />
     </arc>
   </map>
 </sbgn>

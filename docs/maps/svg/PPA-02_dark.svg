@@ -36,7 +36,16 @@ text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-seri
 .ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
 .ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
 .ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
-.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+.ppa-edge-label {
+  font-size: 9.5px;
+  fill: var(--ppa-ink-soft);
+  font-weight: 500;
+  text-anchor: middle;
+  paint-order: stroke fill;
+  stroke: var(--ppa-bg, #ffffff);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
 
 .ppa-compartment-band {
   fill: var(--ppa-compartment-fill);
@@ -81,118 +90,118 @@ text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-seri
 <rect class="ppa-canvas" width="920" height="680" />
 <text class="ppa-title" x="40.0" y="36.0">Photosynthesis &amp; Chloroplast Bioenergetics</text>
 <text class="ppa-subtitle" x="40.0" y="56.0">Z-scheme photochemistry, thylakoid electron transport, cyclic electron flow, and photophosphorylation</text>
-<rect class="ppa-compartment-band" x="14.0" y="62.0" width="627.8" height="468.6" />
+<rect class="ppa-compartment-band" x="14.0" y="62.0" width="674.7" height="456.6" />
 <text class="ppa-compartment-title" x="28.0" y="80.0">Thylakoid Membrane</text>
-<path d="M 204.3 135.8 L 236.3 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="220.3" y="131.8">Exciton</text>
-<path d="M 435.3 135.8 L 403.3 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="419.3" y="131.8">e- (H2O)</text>
-<path d="M 263.2 169.6 L 171.0 224.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="217.1" y="193.1">2 e- / 2 H+</text>
-<path d="M 215.3 247.5 L 247.3 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="231.3" y="243.5">PQH2</text>
-<path d="M 422.8 247.5 L 454.8 247.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="438.8" y="243.5">1 e-</text>
-<path d="M 454.8 268.3 L 208.5 336.2" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<path d="M 208.5 359.1 L 240.5 359.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="224.5" y="355.1">Fd (red)</text>
-<path d="M 381.6 359.1 L 413.6 359.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<path d="M 518.1 381.9 L 531.5 447.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="524.8" y="410.9">NADPH</text>
-<path d="M 274.3 381.9 L 185.7 436.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="230.0" y="405.4">CEF</text>
-<path d="M 131.4 436.9 L 132.6 270.3" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="132.0" y="349.6">PQ reduction</text>
-<path d="M 335.7 281.3 L 338.7 436.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="337.2" y="355.1">ΔpH Gradient</text>
-<path d="M 426.6 470.8 L 458.6 470.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="442.6" y="466.8">ATP</text>
-<g class="ppa-node family " id="node-LHCII_ANTENNA" data-node-id="LHCII_ANTENNA" data-loci="AT1G29920,AT1G29910,AT2G34430,AT5G54270,AT4G10340,AT2G40100" data-bin="1.1.1.1">
-<rect x="40.0" y="104.0" width="164.3" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="122.2" y="122.0">LHCII Antenna Complex</text>
-<text class="ppa-sub" x="122.2" y="137.4">BIN 1.1.1.1 Light Harvesting</text>
-<rect class="ppa-family-tile" x="86.2" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-<rect class="ppa-family-tile" x="98.2" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-<rect class="ppa-family-tile" x="110.2" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-<rect class="ppa-family-tile" x="122.2" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-<rect class="ppa-family-tile" x="134.2" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-<rect class="ppa-family-tile" x="146.2" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<path d="M 477.2 135.8 L 445.2 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="461.2" y="131.8">Exciton</text>
+<path d="M 242.2 135.8 L 274.2 135.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="258.2" y="131.8">e- (H2O)</text>
+<path d="M 291.8 169.6 L 189.4 220.6" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="240.6" y="191.1">2 e- / 2 H+</text>
+<path d="M 238.8 243.5 L 270.8 243.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="254.8" y="239.5">PQH2</text>
+<path d="M 467.7 243.5 L 499.7 243.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="483.7" y="239.5">1 e-</text>
+<path d="M 499.7 262.2 L 218.2 330.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 218.2 351.1 L 250.2 351.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="234.2" y="347.1">Fd (red)</text>
+<path d="M 322.7 328.3 C 322.7 304.3, 541.0 304.3, 541.0 328.3" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<path d="M 547.9 373.9 L 566.7 435.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="557.3" y="400.9">NADPH</text>
+<path d="M 286.2 373.9 L 204.6 424.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="245.4" y="395.4">CEF</text>
+<path d="M 49.5 458.8 C 8.3 458.8, 8.3 243.5, 48.3 243.5" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="4.3" y="351.1">PQ reduction</text>
+<path d="M 369.2 277.3 L 372.8 424.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="371.0" y="347.1">ΔpH Gradient</text>
+<path d="M 462.2 458.8 L 494.2 458.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="478.2" y="454.8">ATP</text>
+<g class="ppa-node complex " id="node-OEC_WATER_SPLITTING" data-node-id="OEC_WATER_SPLITTING" data-loci="AT5G66570,AT1G06680,AT4G21280" data-bin="1.1.1.3">
+<rect x="40.0" y="102.0" width="202.2" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="141.1" y="120.0">Oxygen Evolving Complex</text>
+<text class="ppa-sub" x="141.1" y="135.4">Lumenal Mn4CaO5 Cluster</text>
+<g class="ppa-subunit" data-locus="AT5G66570"><rect x="83.1" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="101.1" y="160.1">PsbO</text></g>
+<g class="ppa-subunit" data-locus="AT1G06680"><rect x="123.1" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="141.1" y="160.1">PsbP</text></g>
+<g class="ppa-subunit" data-locus="AT4G21280"><rect x="163.1" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="181.1" y="160.1">PsbQ</text></g>
 </g>
 <g class="ppa-node complex " id="node-PSII_CORE" data-node-id="PSII_CORE" data-loci="ATCG00020,ATCG00270,ATCG00680,ATCG00280" data-bin="1.1.1.2">
-<rect x="236.3" y="102.0" width="167.0" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="319.8" y="120.0">Photosystem II Core</text>
-<text class="ppa-sub" x="319.8" y="135.4">BIN 1.1.1.2 Reaction Center</text>
-<g class="ppa-subunit" data-locus="ATCG00020"><rect x="241.8" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="259.8" y="160.1">PsbA</text></g>
-<g class="ppa-subunit" data-locus="ATCG00270"><rect x="281.8" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="299.8" y="160.1">PsbD</text></g>
-<g class="ppa-subunit" data-locus="ATCG00680"><rect x="321.8" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="339.8" y="160.1">PsbB</text></g>
-<g class="ppa-subunit" data-locus="ATCG00280"><rect x="361.8" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="379.8" y="160.1">PsbC</text></g>
+<rect x="274.2" y="102.0" width="171.0" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="359.7" y="120.0">Photosystem II Core</text>
+<text class="ppa-sub" x="359.7" y="135.4">BIN 1.1.1.2 Reaction Center</text>
+<g class="ppa-subunit" data-locus="ATCG00020"><rect x="281.7" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="299.7" y="160.1">PsbA</text></g>
+<g class="ppa-subunit" data-locus="ATCG00270"><rect x="321.7" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="339.7" y="160.1">PsbD</text></g>
+<g class="ppa-subunit" data-locus="ATCG00680"><rect x="361.7" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="379.7" y="160.1">PsbB</text></g>
+<g class="ppa-subunit" data-locus="ATCG00280"><rect x="401.7" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="419.7" y="160.1">PsbC</text></g>
 </g>
-<g class="ppa-node complex " id="node-OEC_WATER_SPLITTING" data-node-id="OEC_WATER_SPLITTING" data-loci="AT5G66570,AT1G06680,AT4G21280" data-bin="1.1.1.3">
-<rect x="435.3" y="102.0" width="180.5" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="525.5" y="120.0">Oxygen Evolving Complex</text>
-<text class="ppa-sub" x="525.5" y="135.4">Lumenal Mn4CaO5 Cluster</text>
-<g class="ppa-subunit" data-locus="AT5G66570"><rect x="467.5" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="485.5" y="160.1">PsbO</text></g>
-<g class="ppa-subunit" data-locus="AT1G06680"><rect x="507.5" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="525.5" y="160.1">PsbP</text></g>
-<g class="ppa-subunit" data-locus="AT4G21280"><rect x="547.5" y="149.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="565.5" y="160.1">PsbQ</text></g>
+<g class="ppa-node family " id="node-LHCII_ANTENNA" data-node-id="LHCII_ANTENNA" data-loci="AT1G29920,AT1G29910,AT2G34430,AT5G54270,AT4G10340,AT2G40100" data-bin="1.1.1.1">
+<rect x="477.2" y="104.0" width="185.5" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="569.9" y="122.0">LHCII Antenna Complex</text>
+<text class="ppa-sub" x="569.9" y="137.4">BIN 1.1.1.1 Light Harvesting</text>
+<rect class="ppa-family-tile" x="533.9" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="545.9" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="557.9" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="569.9" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="581.9" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="593.9" y="151.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
 </g>
 <g class="ppa-node metabolite " id="node-PLASTOQUINONE_POOL" data-node-id="PLASTOQUINONE_POOL" data-loci="" data-bin="">
-<rect x="50.4" y="224.6" width="164.9" height="45.6" rx="16" ry="16" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="132.8" y="242.6">Plastoquinone (PQ) Pool</text>
-<text class="ppa-sub" x="132.8" y="258.0">Mobile Lipophilic Carrier</text>
+<rect x="48.3" y="220.6" width="190.5" height="45.6" rx="16" ry="16" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="143.5" y="238.6">Plastoquinone (PQ) Pool</text>
+<text class="ppa-sub" x="143.5" y="254.0">Mobile Lipophilic Carrier</text>
 </g>
 <g class="ppa-node complex " id="node-CYTOCHROME_B6F" data-node-id="CYTOCHROME_B6F" data-loci="ATCG00540,ATCG00550,AT4G03280,ATCG00710" data-bin="1.1.3">
-<rect x="247.3" y="213.6" width="175.5" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="335.0" y="231.6">Cytochrome b6f Complex</text>
-<text class="ppa-sub" x="335.0" y="247.0">BIN 1.1.3 Plastoquinol Oxidase</text>
-<g class="ppa-subunit" data-locus="ATCG00540"><rect x="257.0" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="275.0" y="271.8">PetA</text></g>
-<g class="ppa-subunit" data-locus="ATCG00550"><rect x="297.0" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="315.0" y="271.8">PetB</text></g>
-<g class="ppa-subunit" data-locus="AT4G03280"><rect x="337.0" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="355.0" y="271.8">PetC</text></g>
-<g class="ppa-subunit" data-locus="ATCG00710"><rect x="377.0" y="261.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="395.0" y="271.8">PetD</text></g>
+<rect x="270.8" y="209.6" width="196.9" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="369.2" y="227.6">Cytochrome b6f Complex</text>
+<text class="ppa-sub" x="369.2" y="243.0">BIN 1.1.3 Plastoquinol Oxidase</text>
+<g class="ppa-subunit" data-locus="ATCG00540"><rect x="291.2" y="257.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="309.2" y="267.8">PetA</text></g>
+<g class="ppa-subunit" data-locus="ATCG00550"><rect x="331.2" y="257.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="349.2" y="267.8">PetB</text></g>
+<g class="ppa-subunit" data-locus="AT4G03280"><rect x="371.2" y="257.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="389.2" y="267.8">PetC</text></g>
+<g class="ppa-subunit" data-locus="ATCG00710"><rect x="411.2" y="257.3" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="429.2" y="267.8">PetD</text></g>
 </g>
 <g class="ppa-node simple " id="node-PLASTOCYANIN_POOL" data-node-id="PLASTOCYANIN_POOL" data-loci="AT1G20340,AT1G76100" data-bin="1.1.5">
-<rect x="454.8" y="224.6" width="150.7" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="530.1" y="242.6">Plastocyanin (PC)</text>
-<text class="ppa-sub" x="530.1" y="258.0">Lumenal Cu-Protein (PETE)</text>
+<rect x="499.7" y="220.6" width="154.7" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="577.0" y="238.6">Plastocyanin (PC)</text>
+<text class="ppa-sub" x="577.0" y="254.0">Lumenal Cu-Protein (PETE)</text>
 </g>
 <g class="ppa-node complex " id="node-PSI_CORE" data-node-id="PSI_CORE" data-loci="ATCG00350,ATCG00340,ATCG01060,AT1G03130" data-bin="1.1.2">
-<rect x="42.4" y="325.3" width="166.2" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="125.5" y="343.3">Photosystem I Core</text>
-<text class="ppa-sub" x="125.5" y="358.7">BIN 1.1.2 Reaction Center</text>
-<g class="ppa-subunit" data-locus="ATCG00350"><rect x="47.5" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="65.5" y="383.4">PsaA</text></g>
-<g class="ppa-subunit" data-locus="ATCG00340"><rect x="87.5" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="105.5" y="383.4">PsaB</text></g>
-<g class="ppa-subunit" data-locus="ATCG01060"><rect x="127.5" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="145.5" y="383.4">PsaC</text></g>
-<g class="ppa-subunit" data-locus="AT1G03130"><rect x="167.5" y="372.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="185.5" y="383.4">PsaD</text></g>
+<rect x="48.0" y="317.3" width="170.2" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="133.1" y="335.3">Photosystem I Core</text>
+<text class="ppa-sub" x="133.1" y="350.7">BIN 1.1.2 Reaction Center</text>
+<g class="ppa-subunit" data-locus="ATCG00350"><rect x="55.1" y="364.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="73.1" y="375.4">PsaA</text></g>
+<g class="ppa-subunit" data-locus="ATCG00340"><rect x="95.1" y="364.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="113.1" y="375.4">PsaB</text></g>
+<g class="ppa-subunit" data-locus="ATCG01060"><rect x="135.1" y="364.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="153.1" y="375.4">PsaC</text></g>
+<g class="ppa-subunit" data-locus="AT1G03130"><rect x="175.1" y="364.9" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="193.1" y="375.4">PsaD</text></g>
 </g>
 <g class="ppa-node simple " id="node-FERREDOXIN_POOL" data-node-id="FERREDOXIN_POOL" data-loci="AT1G10960,AT1G60950,AT2G27510" data-bin="1.1.6">
-<rect x="240.5" y="336.3" width="141.1" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="311.1" y="354.3">Ferredoxin (FD)</text>
-<text class="ppa-sub" x="311.1" y="369.7">Stromal [2Fe-2S] Cluster</text>
+<rect x="250.2" y="328.3" width="145.1" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="322.7" y="346.3">Ferredoxin (FD)</text>
+<text class="ppa-sub" x="322.7" y="361.7">Stromal [2Fe-2S] Cluster</text>
 </g>
 <g class="ppa-node simple " id="node-FNR_REDUCTASE" data-node-id="FNR_REDUCTASE" data-loci="AT5G66190,AT1G20020" data-bin="1.1.7">
-<rect x="413.6" y="336.3" width="199.8" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="513.5" y="354.3">Ferredoxin-NADP+ Reductase</text>
-<text class="ppa-sub" x="513.5" y="369.7">FNR1 / FNR2</text>
+<rect x="427.3" y="328.3" width="227.4" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="541.0" y="346.3">Ferredoxin-NADP+ Reductase</text>
+<text class="ppa-sub" x="541.0" y="361.7">FNR1 / FNR2</text>
 </g>
 <g class="ppa-node complex " id="node-CYCLIC_FLOW_PGR5" data-node-id="CYCLIC_FLOW_PGR5" data-loci="AT2G05620,AT4G22890,AT4G37925" data-bin="1.1.8">
-<rect x="42.2" y="436.9" width="177.9" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="131.2" y="454.9">Cyclic Electron Flow (CEF)</text>
-<text class="ppa-sub" x="131.2" y="470.3">PGR5 / PGRL1 / NDH Complex</text>
-<g class="ppa-subunit" data-locus="AT2G05620"><rect x="66.7" y="484.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="84.7" y="495.1">PGR5</text></g>
-<g class="ppa-subunit" data-locus="AT4G22890"><rect x="106.7" y="484.6" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="131.2" y="495.1">PGRL1A</text></g>
-<g class="ppa-subunit" data-locus="AT4G37925"><rect x="159.7" y="484.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="177.7" y="495.1">NDHM</text></g>
+<rect x="49.5" y="424.9" width="201.8" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="150.4" y="442.9">Cyclic Electron Flow (CEF)</text>
+<text class="ppa-sub" x="150.4" y="458.3">PGR5 / PGRL1 / NDH Complex</text>
+<g class="ppa-subunit" data-locus="AT2G05620"><rect x="85.9" y="472.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="103.9" y="483.1">PGR5</text></g>
+<g class="ppa-subunit" data-locus="AT4G22890"><rect x="125.9" y="472.6" width="49.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="150.4" y="483.1">PGRL1A</text></g>
+<g class="ppa-subunit" data-locus="AT4G37925"><rect x="178.9" y="472.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="196.9" y="483.1">NDHM</text></g>
 </g>
 <g class="ppa-node complex " id="node-CHLORO_ATP_SYNTHASE" data-node-id="CHLORO_ATP_SYNTHASE" data-loci="ATCG00120,ATCG00480,AT4G04640" data-bin="1.1.4">
-<rect x="252.2" y="436.9" width="174.4" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="339.4" y="454.9">CF0-CF1 ATP Synthase</text>
-<text class="ppa-sub" x="339.4" y="470.3">BIN 1.1.4 Photophosphorylation</text>
-<g class="ppa-subunit" data-locus="ATCG00120"><rect x="281.4" y="484.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="299.4" y="495.1">AtpA</text></g>
-<g class="ppa-subunit" data-locus="ATCG00480"><rect x="321.4" y="484.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="339.4" y="495.1">AtpB</text></g>
-<g class="ppa-subunit" data-locus="AT4G04640"><rect x="361.4" y="484.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="379.4" y="495.1">AtpC</text></g>
+<rect x="283.3" y="424.9" width="178.9" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="372.8" y="442.9">CF0-CF1 ATP Synthase</text>
+<text class="ppa-sub" x="372.8" y="458.3">BIN 1.1.4 Photophosphorylation</text>
+<g class="ppa-subunit" data-locus="ATCG00120"><rect x="314.8" y="472.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="332.8" y="483.1">AtpA</text></g>
+<g class="ppa-subunit" data-locus="ATCG00480"><rect x="354.8" y="472.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="372.8" y="483.1">AtpB</text></g>
+<g class="ppa-subunit" data-locus="AT4G04640"><rect x="394.8" y="472.6" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="412.8" y="483.1">AtpC</text></g>
 </g>
 <g class="ppa-node metabolite " id="node-NADPH_ATP_OUTPUT" data-node-id="NADPH_ATP_OUTPUT" data-loci="" data-bin="">
-<rect x="458.6" y="447.9" width="154.9" height="45.6" rx="16" ry="16" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="536.1" y="465.9">NADPH &amp; ATP Pool</text>
-<text class="ppa-sub" x="536.1" y="481.3">Stromal Assimilatory Power</text>
+<rect x="494.2" y="435.9" width="158.9" height="45.6" rx="16" ry="16" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="573.7" y="453.9">NADPH &amp; ATP Pool</text>
+<text class="ppa-sub" x="573.7" y="469.3">Stromal Assimilatory Power</text>
 </g>
 <text class="ppa-caption" x="40.0" y="654.0">Photosynthetic light reactions and thylakoid bioenergetics redrawn with deterministic geometry. Captures linear electron flow from</text>
 <text class="ppa-caption" x="40.0" y="668.9">water splitting at photosystem II (PSII) through the plastoquinone pool, cytochrome b6f complex, and plastocyanin to photosystem I</text>

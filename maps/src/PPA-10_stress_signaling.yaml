@@ -23,17 +23,17 @@ lanes:
   - id: mapk_cascade_core
     compartment: cytosol
     node_width: 220
-    nodes: [MAPKKK_MAPKK_MODULE, MPK3_MPK6_KINASES, WRKY33_TF_HUB]
+    nodes: [MAPKKK_MAPKK_MODULE, MPK3_MPK6_KINASES, HSP70_CHAPERONE_CORE]
 
-  - id: cbf_dreb_cold_drought
-    compartment: nucleus
-    node_width: 220
-    nodes: [CBF_DREB1_REGULON, COR_GENE_EFFECTORS, PROLINE_OSMOPROTECTANTS]
-
-  - id: heat_shock_chaperones
+  - id: stress_protection_chaperones
     compartment: cytosol
     node_width: 220
-    nodes: [HSFA_MASTER_FACTORS, HSP70_CHAPERONE_CORE, HSP90_PROTEIN_COMPLEX]
+    nodes: [HSP90_PROTEIN_COMPLEX, PROLINE_OSMOPROTECTANTS, COR_GENE_EFFECTORS]
+
+  - id: stress_regulon_transcription
+    compartment: nucleus
+    node_width: 220
+    nodes: [WRKY33_TF_HUB, CBF_DREB1_REGULON, HSFA_MASTER_FACTORS]
 
 nodes:
   - id: PRR_FLS2_BAK1

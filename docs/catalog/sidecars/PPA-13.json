@@ -134,7 +134,7 @@
       "id": "AHA2_SINK_PROTON_PUMP",
       "label": "AHA2 Root PM H+-ATPase",
       "kind": "simple",
-      "compartment": "sink_apoplast_root",
+      "compartment": "sink_cytosol_root",
       "mapman_bin": "34.3.1",
       "loci": [
         "AT4G30190"
@@ -142,25 +142,15 @@
       "subunits": []
     },
     {
-      "id": "SUS_SUCROSE_SYNTHASE",
-      "label": "Sucrose Synthase (SUS)",
-      "kind": "complex",
+      "id": "ROOT_MITOCHONDRIAL_RESP",
+      "label": "Root Respiration & ATP",
+      "kind": "simple",
       "compartment": "sink_cytosol_root",
-      "mapman_bin": "2.1.5",
+      "mapman_bin": "8.1",
       "loci": [
-        "AT5G20830",
-        "AT3G43190"
+        "AT3G58750"
       ],
-      "subunits": [
-        {
-          "symbol": "SUS1",
-          "locus": "AT5G20830"
-        },
-        {
-          "symbol": "SUS4",
-          "locus": "AT3G43190"
-        }
-      ]
+      "subunits": []
     },
     {
       "id": "SINK_GLYCOLYSIS_ENTRY",
@@ -184,15 +174,25 @@
       ]
     },
     {
-      "id": "ROOT_MITOCHONDRIAL_RESP",
-      "label": "Root Respiration & ATP",
-      "kind": "simple",
+      "id": "SUS_SUCROSE_SYNTHASE",
+      "label": "Sucrose Synthase (SUS)",
+      "kind": "complex",
       "compartment": "sink_cytosol_root",
-      "mapman_bin": "8.1",
+      "mapman_bin": "2.1.5",
       "loci": [
-        "AT3G58750"
+        "AT5G20830",
+        "AT3G43190"
       ],
-      "subunits": []
+      "subunits": [
+        {
+          "symbol": "SUS1",
+          "locus": "AT5G20830"
+        },
+        {
+          "symbol": "SUS4",
+          "locus": "AT3G43190"
+        }
+      ]
     }
   ],
   "edges": [
@@ -200,11 +200,11 @@
       "from": "SWEET_EFFLUX_UNIPORTERS",
       "to": "SUC2_PROTON_SYMPORTER",
       "start": [
-        204.358,
+        214.21212500000001,
         135.824
       ],
       "end": [
-        236.358,
+        246.21212500000001,
         135.824
       ],
       "class": "flux",
@@ -214,11 +214,11 @@
       "from": "AHA3_PHLOEM_PROTON_PUMP",
       "to": "SUC2_PROTON_SYMPORTER",
       "start": [
-        493.06700000000006,
+        506.9211250000001,
         135.824
       ],
       "end": [
-        461.067,
+        474.9211250000001,
         135.824
       ],
       "class": "flux",
@@ -226,14 +226,14 @@
     },
     {
       "from": "POLYMER_TRAPPING_GOLS",
-      "to": "SUC2_PROTON_SYMPORTER",
+      "to": "PHLOEM_SAP_TRANSLOCATION",
       "start": [
-        716.2990000000001,
-        135.824
+        834.2562762186116,
+        169.648
       ],
       "end": [
-        461.067,
-        135.824
+        773.7455993550855,
+        264.64799999999997
       ],
       "class": "flux",
       "label": "Raffinose Oligosaccharides"
@@ -242,12 +242,12 @@
       "from": "SUC2_PROTON_SYMPORTER",
       "to": "CALS7_SIEVE_PLATE_CALLOSE",
       "start": [
-        327.85218621023216,
+        345.49287866638537,
         158.648
       ],
       "end": [
-        267.5305637897678,
-        224.648
+        275.4868713336147,
+        264.64799999999997
       ],
       "class": "flux",
       "label": "Plasmodesmatal Sieve Loading"
@@ -256,12 +256,12 @@
       "from": "CALS7_SIEVE_PLATE_CALLOSE",
       "to": "SEOR_PROTECTIVE_FILAMENTS",
       "start": [
-        342.40324999999996,
-        247.472
+        364.19,
+        287.472
       ],
       "end": [
-        374.40324999999996,
-        247.47199999999998
+        396.19,
+        287.472
       ],
       "class": "flux",
       "label": ""
@@ -270,12 +270,12 @@
       "from": "SEOR_PROTECTIVE_FILAMENTS",
       "to": "PHLOEM_SAP_TRANSLOCATION",
       "start": [
-        598.99225,
-        247.47199999999998
+        624.779,
+        287.472
       ],
       "end": [
-        630.99225,
-        247.472
+        656.779,
+        287.472
       ],
       "class": "flux",
       "label": "Bulk Flow Translocation"
@@ -284,12 +284,12 @@
       "from": "PHLOEM_SAP_TRANSLOCATION",
       "to": "CWINV_CELL_WALL_INVERTASE",
       "start": [
-        630.99225,
-        269.0974720799282
+        702.3282740096761,
+        310.296
       ],
       "end": [
-        348.12275,
-        333.7101219629566
+        465.5796664439218,
+        405.296
       ],
       "class": "flux",
       "label": "Apoplastic Sink Unloading"
@@ -298,12 +298,12 @@
       "from": "PHLOEM_SAP_TRANSLOCATION",
       "to": "SUS_SUCROSE_SYNTHASE",
       "start": [
-        676.8297873969431,
-        270.296
+        768.1010501911152,
+        310.296
       ],
       "end": [
-        328.80687487231876,
-        432.944
+        862.6480842243132,
+        552.944
       ],
       "class": "flux",
       "label": "Symplastic Sink Unloading"
@@ -312,12 +312,12 @@
       "from": "CWINV_CELL_WALL_INVERTASE",
       "to": "STP_HEXOSE_TRANSPORTERS",
       "start": [
-        348.12275,
-        357.12
+        496.85075000000006,
+        437.12
       ],
       "end": [
-        380.12275,
-        357.12
+        528.8507500000001,
+        437.12
       ],
       "class": "flux",
       "label": "Glucose + Fructose"
@@ -326,12 +326,12 @@
       "from": "AHA2_SINK_PROTON_PUMP",
       "to": "STP_HEXOSE_TRANSPORTERS",
       "start": [
-        621.1912500000001,
-        357.12
+        220.2406209237677,
+        563.944
       ],
       "end": [
-        589.1912500000001,
-        357.12
+        531.4604000053458,
+        468.944
       ],
       "class": "flux",
       "label": "H+ Gradient"
@@ -340,12 +340,12 @@
       "from": "STP_HEXOSE_TRANSPORTERS",
       "to": "SINK_GLYCOLYSIS_ENTRY",
       "start": [
-        485.29305625273605,
-        388.944
+        635.7157500000001,
+        468.944
       ],
       "end": [
-        486.1724703779367,
-        432.944
+        629.3966250000001,
+        552.944
       ],
       "class": "flux",
       "label": "Hexose Uptake"
@@ -354,12 +354,12 @@
       "from": "SUS_SUCROSE_SYNTHASE",
       "to": "SINK_GLYCOLYSIS_ENTRY",
       "start": [
-        356.877875,
-        466.76800000000003
+        773.3822500000001,
+        586.7679999999999
       ],
       "end": [
-        388.877875,
-        466.76800000000003
+        741.3822500000001,
+        586.7679999999999
       ],
       "class": "flux",
       "label": "UDP-Glucose + Fructose"
@@ -368,12 +368,12 @@
       "from": "SINK_GLYCOLYSIS_ENTRY",
       "to": "ROOT_MITOCHONDRIAL_RESP",
       "start": [
-        584.819125,
-        466.76800000000003
+        517.4110000000001,
+        586.7679999999999
       ],
       "end": [
-        616.819125,
-        466.76800000000003
+        485.41100000000006,
+        586.7679999999999
       ],
       "class": "flux",
       "label": "Pyruvate -> Root ATP"

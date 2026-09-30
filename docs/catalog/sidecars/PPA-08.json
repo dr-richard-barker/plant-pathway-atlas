@@ -167,11 +167,11 @@
       "from": "PAL_PHENYLALANINE_LYASE",
       "to": "C4H_HYDROXYLASE",
       "start": [
-        255.03156250000004,
+        272.406875,
         133.824
       ],
       "end": [
-        287.03156250000006,
+        304.406875,
         133.824
       ],
       "class": "flux",
@@ -181,11 +181,11 @@
       "from": "C4H_HYDROXYLASE",
       "to": "FOUR_CL_LIGASE",
       "start": [
-        514.0415625,
+        546.8824999999999,
         133.824
       ],
       "end": [
-        546.0415625,
+        578.8824999999999,
         133.824
       ],
       "class": "flux",
@@ -195,12 +195,12 @@
       "from": "FOUR_CL_LIGASE",
       "to": "CCR_COA_REDUCTASE",
       "start": [
-        546.0415625,
-        156.57937086416177
+        578.8824999999999,
+        158.94138034279797
       ],
       "end": [
-        259.08625,
-        219.46562510727227
+        292.40768749999995,
+        220.70049735735836
       ],
       "class": "flux",
       "label": "4-Coumaroyl-CoA"
@@ -209,12 +209,12 @@
       "from": "FOUR_CL_LIGASE",
       "to": "CHALCONE_SYNTHASE_TT4",
       "start": [
-        578.098135889413,
+        632.0331220285412,
         165.648
       ],
       "end": [
-        227.03856119469705,
-        321.296
+        219.90064197839916,
+        372.656
       ],
       "class": "flux",
       "label": "3x Malonyl-CoA"
@@ -223,12 +223,12 @@
       "from": "CCR_COA_REDUCTASE",
       "to": "CAD_ALCOHOL_DH",
       "start": [
-        259.08625,
-        243.472
+        292.40768749999995,
+        247.15200000000002
       ],
       "end": [
-        291.08625,
-        243.47199999999998
+        324.40768749999995,
+        247.152
       ],
       "class": "flux",
       "label": "Cinnamaldehydes"
@@ -237,12 +237,12 @@
       "from": "CAD_ALCOHOL_DH",
       "to": "CELL_WALL_LIGNIFICATION",
       "start": [
-        516.12375,
-        243.47199999999998
+        527.3316875,
+        247.152
       ],
       "end": [
-        548.12375,
-        243.47199999999998
+        559.3316875,
+        247.152
       ],
       "class": "flux",
       "label": "Monolignols (Coniferyl/Sinapyl)"
@@ -251,12 +251,12 @@
       "from": "CHALCONE_SYNTHASE_TT4",
       "to": "CHALCONE_ISOMERASE_TT5",
       "start": [
-        276.75043750000003,
-        344.12
+        277.6510625,
+        395.48
       ],
       "end": [
-        308.75043750000003,
-        344.12
+        309.6510625,
+        395.48
       ],
       "class": "flux",
       "label": "Naringenin Chalcone"
@@ -265,12 +265,12 @@
       "from": "CHALCONE_ISOMERASE_TT5",
       "to": "FLAVANONE_3_HYDROXYLASE",
       "start": [
-        486.7104375,
-        344.12
+        510.0516875,
+        395.48
       ],
       "end": [
-        518.7104375,
-        344.12
+        542.0516875000001,
+        395.48
       ],
       "class": "flux",
       "label": "Naringenin"
@@ -279,12 +279,12 @@
       "from": "FLAVANONE_3_HYDROXYLASE",
       "to": "DFR_REDUCTASE_TT3",
       "start": [
-        518.7104375,
-        364.2957706516462
+        580.677748623733,
+        418.30400000000003
       ],
       "end": [
-        267.06156250000004,
-        412.603138057722
+        283.80846122422224,
+        502.30400000000003
       ],
       "class": "flux",
       "label": "Dihydrokaempferol"
@@ -293,12 +293,12 @@
       "from": "DFR_REDUCTASE_TT3",
       "to": "ANS_LDOX_SYNTHASE",
       "start": [
-        267.06156250000004,
-        433.76800000000003
+        280.19562499999995,
+        532.808
       ],
       "end": [
-        299.06156250000004,
-        433.76800000000003
+        312.19562499999995,
+        532.808
       ],
       "class": "flux",
       "label": "Leucocyanidin"
@@ -307,12 +307,12 @@
       "from": "ANS_LDOX_SYNTHASE",
       "to": "ANTHOCYANIN_EXPORT_TT19",
       "start": [
-        505.37156250000004,
-        433.76800000000003
+        546.35375,
+        532.808
       ],
       "end": [
-        537.3715625,
-        433.76800000000003
+        578.35375,
+        532.808
       ],
       "class": "flux",
       "label": "Cyanidin Pigment"

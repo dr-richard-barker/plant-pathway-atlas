@@ -6,20 +6,30 @@
   "species_anchor": "arabidopsis_thaliana",
   "nodes": [
     {
-      "id": "LHCII_ANTENNA",
-      "label": "LHCII Antenna Complex",
-      "kind": "family",
+      "id": "OEC_WATER_SPLITTING",
+      "label": "Oxygen Evolving Complex",
+      "kind": "complex",
       "compartment": "thylakoid_membrane",
-      "mapman_bin": "1.1.1.1",
+      "mapman_bin": "1.1.1.3",
       "loci": [
-        "AT1G29920",
-        "AT1G29910",
-        "AT2G34430",
-        "AT5G54270",
-        "AT4G10340",
-        "AT2G40100"
+        "AT5G66570",
+        "AT1G06680",
+        "AT4G21280"
       ],
-      "subunits": []
+      "subunits": [
+        {
+          "symbol": "PsbO",
+          "locus": "AT5G66570"
+        },
+        {
+          "symbol": "PsbP",
+          "locus": "AT1G06680"
+        },
+        {
+          "symbol": "PsbQ",
+          "locus": "AT4G21280"
+        }
+      ]
     },
     {
       "id": "PSII_CORE",
@@ -53,30 +63,20 @@
       ]
     },
     {
-      "id": "OEC_WATER_SPLITTING",
-      "label": "Oxygen Evolving Complex",
-      "kind": "complex",
+      "id": "LHCII_ANTENNA",
+      "label": "LHCII Antenna Complex",
+      "kind": "family",
       "compartment": "thylakoid_membrane",
-      "mapman_bin": "1.1.1.3",
+      "mapman_bin": "1.1.1.1",
       "loci": [
-        "AT5G66570",
-        "AT1G06680",
-        "AT4G21280"
+        "AT1G29920",
+        "AT1G29910",
+        "AT2G34430",
+        "AT5G54270",
+        "AT4G10340",
+        "AT2G40100"
       ],
-      "subunits": [
-        {
-          "symbol": "PsbO",
-          "locus": "AT5G66570"
-        },
-        {
-          "symbol": "PsbP",
-          "locus": "AT1G06680"
-        },
-        {
-          "symbol": "PsbQ",
-          "locus": "AT4G21280"
-        }
-      ]
+      "subunits": []
     },
     {
       "id": "PLASTOQUINONE_POOL",
@@ -253,11 +253,11 @@
       "from": "LHCII_ANTENNA",
       "to": "PSII_CORE",
       "start": [
-        204.330625,
+        477.16234375,
         135.824
       ],
       "end": [
-        236.330625,
+        445.16234375,
         135.824
       ],
       "class": "flux",
@@ -267,11 +267,11 @@
       "from": "OEC_WATER_SPLITTING",
       "to": "PSII_CORE",
       "start": [
-        435.29796875,
+        242.195,
         135.824
       ],
       "end": [
-        403.29796875,
+        274.195,
         135.824
       ],
       "class": "flux",
@@ -281,12 +281,12 @@
       "from": "PSII_CORE",
       "to": "PLASTOQUINONE_POOL",
       "start": [
-        263.16012691225995,
+        291.7644580670333,
         169.648
       ],
       "end": [
-        171.03680181911008,
-        224.648
+        189.3630595273484,
+        220.648
       ],
       "class": "flux",
       "label": "2 e- / 2 H+"
@@ -295,12 +295,12 @@
       "from": "PLASTOQUINONE_POOL",
       "to": "CYTOCHROME_B6F",
       "start": [
-        215.263234375,
-        247.472
+        238.761359375,
+        243.472
       ],
       "end": [
-        247.263234375,
-        247.47199999999998
+        270.761359375,
+        243.47199999999998
       ],
       "class": "flux",
       "label": "PQH2"
@@ -309,12 +309,12 @@
       "from": "CYTOCHROME_B6F",
       "to": "PLASTOCYANIN_POOL",
       "start": [
-        422.755734375,
-        247.47199999999998
+        467.704484375,
+        243.47199999999998
       ],
       "end": [
-        454.755734375,
-        247.472
+        499.704484375,
+        243.472
       ],
       "class": "flux",
       "label": "1 e-"
@@ -323,12 +323,12 @@
       "from": "PLASTOCYANIN_POOL",
       "to": "PSI_CORE",
       "start": [
-        454.755734375,
-        268.2587139550337
+        499.704484375,
+        262.2242154964066
       ],
       "end": [
-        208.54646875,
-        336.194142976608
+        218.18365624999998,
+        330.48791715254754
       ],
       "class": "flux",
       "label": ""
@@ -337,12 +337,12 @@
       "from": "PSI_CORE",
       "to": "FERREDOXIN_POOL",
       "start": [
-        208.54646875,
-        359.12
+        218.18365624999998,
+        351.12
       ],
       "end": [
-        240.54646875,
-        359.12
+        250.18365624999998,
+        351.12
       ],
       "class": "flux",
       "label": "Fd (red)"
@@ -351,12 +351,12 @@
       "from": "FERREDOXIN_POOL",
       "to": "FNR_REDUCTASE",
       "start": [
-        381.62446875,
-        359.12
+        395.26165625,
+        351.12
       ],
       "end": [
-        413.62446875,
-        359.12
+        427.26165625,
+        351.12
       ],
       "class": "flux",
       "label": ""
@@ -365,12 +365,12 @@
       "from": "FNR_REDUCTASE",
       "to": "NADPH_ATP_OUTPUT",
       "start": [
-        518.1237471080987,
-        381.944
+        547.9026096083996,
+        373.944
       ],
       "end": [
-        531.4532685169014,
-        447.94399999999996
+        566.7411560166004,
+        435.94399999999996
       ],
       "class": "flux",
       "label": "NADPH"
@@ -379,12 +379,12 @@
       "from": "FERREDOXIN_POOL",
       "to": "CYCLIC_FLOW_PGR5",
       "start": [
-        274.3133484354847,
-        381.944
+        286.1952326250836,
+        373.944
       ],
       "end": [
-        185.70194739717684,
-        436.94399999999996
+        204.5750694253493,
+        424.94399999999996
       ],
       "class": "flux",
       "label": "CEF"
@@ -393,12 +393,12 @@
       "from": "CYCLIC_FLOW_PGR5",
       "to": "PLASTOQUINONE_POOL",
       "start": [
-        131.44987071420888,
-        436.94399999999996
+        150.443296875,
+        424.94399999999996
       ],
       "end": [
-        132.6437798661866,
-        270.296
+        143.535421875,
+        266.296
       ],
       "class": "flux",
       "label": "PQ reduction"
@@ -407,12 +407,12 @@
       "from": "CYTOCHROME_B6F",
       "to": "CHLORO_ATP_SYNTHASE",
       "start": [
-        335.67187028428634,
-        281.296
+        369.232921875,
+        277.296
       ],
       "end": [
-        338.7199734657136,
-        436.94399999999996
+        372.777984375,
+        424.94399999999996
       ],
       "class": "flux",
       "label": "\u0394pH Gradient"
@@ -421,12 +421,12 @@
       "from": "CHLORO_ATP_SYNTHASE",
       "to": "NADPH_ATP_OUTPUT",
       "start": [
-        426.596859375,
-        470.768
+        462.210171875,
+        458.768
       ],
       "end": [
-        458.596859375,
-        470.768
+        494.210171875,
+        458.768
       ],
       "class": "flux",
       "label": "ATP"

@@ -24,12 +24,12 @@ lanes:
   - id: input_dehydrogenases
     compartment: mitochondrial_inner_membrane
     node_width: 220
-    nodes: [COMPLEX_I_NADH, COMPLEX_II_SDH, ROTENONE_INSENSITIVE_NDH]
+    nodes: [COMPLEX_I_NADH, ROTENONE_INSENSITIVE_NDH, COMPLEX_II_SDH]
 
   - id: ubiquinol_partitioning
     compartment: mitochondrial_inner_membrane
     node_width: 210
-    nodes: [UBIQUINONE_POOL, AOX_ALTERNATIVE_OXIDASE, UNCOUPLING_PROTEINS]
+    nodes: [AOX_ALTERNATIVE_OXIDASE, UBIQUINONE_POOL, UNCOUPLING_PROTEINS]
 
   - id: classical_terminal_etc
     compartment: mitochondrial_inner_membrane
@@ -39,7 +39,7 @@ lanes:
   - id: phosphorylation_complex
     compartment: mitochondrial_inner_membrane
     node_width: 210
-    nodes: [COMPLEX_V_F1F0, ADENINE_NUCLEOTIDE_TR, PHOSPHATE_CARRIER]
+    nodes: [PHOSPHATE_CARRIER, ADENINE_NUCLEOTIDE_TR, COMPLEX_V_F1F0]
 
 nodes:
   - id: TCA_SUBSTRATE_CORE

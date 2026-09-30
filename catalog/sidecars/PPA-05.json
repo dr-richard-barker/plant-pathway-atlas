@@ -45,47 +45,15 @@
       "subunits": []
     },
     {
-      "id": "CSD_SOD_CYT",
-      "label": "Cu/Zn Superoxide Dismutase",
-      "kind": "complex",
-      "compartment": "cytosol",
-      "mapman_bin": "21.1",
-      "loci": [
-        "AT1G08830",
-        "AT2G28190"
-      ],
-      "subunits": [
-        {
-          "symbol": "CSD1",
-          "locus": "AT1G08830"
-        },
-        {
-          "symbol": "CSD2",
-          "locus": "AT2G28190"
-        }
-      ]
-    },
-    {
       "id": "FSD_SOD_PLASTID",
       "label": "Fe Superoxide Dismutase",
       "kind": "simple",
-      "compartment": "cytosol",
+      "compartment": "chloroplast_stroma",
       "mapman_bin": "21.1",
       "loci": [
         "AT4G25100",
         "AT5G23310",
         "AT5G51100"
-      ],
-      "subunits": []
-    },
-    {
-      "id": "MSD_SOD_MITO",
-      "label": "Mn Superoxide Dismutase",
-      "kind": "simple",
-      "compartment": "cytosol",
-      "mapman_bin": "21.1",
-      "loci": [
-        "AT3G10920"
       ],
       "subunits": []
     },
@@ -147,32 +115,6 @@
       ]
     },
     {
-      "id": "CATALASE_SCAVENGING",
-      "label": "Catalases (CAT)",
-      "kind": "complex",
-      "compartment": "chloroplast_stroma",
-      "mapman_bin": "21.3",
-      "loci": [
-        "AT1G20630",
-        "AT4G35090",
-        "AT1G20620"
-      ],
-      "subunits": [
-        {
-          "symbol": "CAT1",
-          "locus": "AT1G20630"
-        },
-        {
-          "symbol": "CAT2",
-          "locus": "AT4G35090"
-        },
-        {
-          "symbol": "CAT3",
-          "locus": "AT1G20620"
-        }
-      ]
-    },
-    {
       "id": "MDHAR_ENZYME",
       "label": "Monodehydroascorbate Reductase",
       "kind": "simple",
@@ -220,17 +162,71 @@
       ]
     },
     {
-      "id": "THIOREDOXIN_FAMILY",
-      "label": "Thioredoxins (Trx)",
-      "kind": "family",
+      "id": "CSD_SOD_CYT",
+      "label": "Cu/Zn Superoxide Dismutase",
+      "kind": "complex",
       "compartment": "cytosol",
-      "mapman_bin": "21.5",
+      "mapman_bin": "21.1",
       "loci": [
-        "AT3G51030",
-        "AT5G39950",
-        "AT1G03680",
-        "AT3G06730",
-        "AT2G35010"
+        "AT1G08830",
+        "AT2G28190"
+      ],
+      "subunits": [
+        {
+          "symbol": "CSD1",
+          "locus": "AT1G08830"
+        },
+        {
+          "symbol": "CSD2",
+          "locus": "AT2G28190"
+        }
+      ]
+    },
+    {
+      "id": "MSD_SOD_MITO",
+      "label": "Mn Superoxide Dismutase",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "21.1",
+      "loci": [
+        "AT3G10920"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "CATALASE_SCAVENGING",
+      "label": "Catalases (CAT)",
+      "kind": "complex",
+      "compartment": "cytosol",
+      "mapman_bin": "21.3",
+      "loci": [
+        "AT1G20630",
+        "AT4G35090",
+        "AT1G20620"
+      ],
+      "subunits": [
+        {
+          "symbol": "CAT1",
+          "locus": "AT1G20630"
+        },
+        {
+          "symbol": "CAT2",
+          "locus": "AT4G35090"
+        },
+        {
+          "symbol": "CAT3",
+          "locus": "AT1G20620"
+        }
+      ]
+    },
+    {
+      "id": "NPR1_TRANSLOCATION",
+      "label": "NPR1 Redox Monomerization",
+      "kind": "simple",
+      "compartment": "cytosol",
+      "mapman_bin": "20.1",
+      "loci": [
+        "AT1G64280"
       ],
       "subunits": []
     },
@@ -249,13 +245,17 @@
       "subunits": []
     },
     {
-      "id": "NPR1_TRANSLOCATION",
-      "label": "NPR1 Redox Monomerization",
-      "kind": "simple",
+      "id": "THIOREDOXIN_FAMILY",
+      "label": "Thioredoxins (Trx)",
+      "kind": "family",
       "compartment": "cytosol",
-      "mapman_bin": "20.1",
+      "mapman_bin": "21.5",
       "loci": [
-        "AT1G64280"
+        "AT3G51030",
+        "AT5G39950",
+        "AT1G03680",
+        "AT3G06730",
+        "AT2G35010"
       ],
       "subunits": []
     }
@@ -265,11 +265,11 @@
       "from": "RBOH_BURST",
       "to": "APOPLAST_H2O2",
       "start": [
-        291.5605,
+        294.08393750000005,
         135.824
       ],
       "end": [
-        323.5605,
+        326.08393750000005,
         135.824
       ],
       "class": "flux",
@@ -279,12 +279,12 @@
       "from": "METABOLIC_ROS_LEAK",
       "to": "CSD_SOD_CYT",
       "start": [
-        489.512,
-        157.5832934198227
+        560.0845463797988,
+        158.648
       ],
       "end": [
-        271.5709375,
-        219.46420328040097
+        186.73774558577318,
+        512.944
       ],
       "class": "flux",
       "label": ""
@@ -293,12 +293,12 @@
       "from": "METABOLIC_ROS_LEAK",
       "to": "FSD_SOD_PLASTID",
       "start": [
-        530.311221544497,
+        520.0856939400784,
         158.648
       ],
       "end": [
-        426.68515345550304,
-        224.648
+        222.6219466849217,
+        264.64799999999997
       ],
       "class": "flux",
       "label": ""
@@ -307,12 +307,12 @@
       "from": "METABOLIC_ROS_LEAK",
       "to": "MSD_SOD_MITO",
       "start": [
-        572.9797954777515,
+        573.6747997719884,
         158.648
       ],
       "end": [
-        592.7381420222486,
-        224.648
+        406.24726272801155,
+        523.944
       ],
       "class": "flux",
       "label": ""
@@ -321,12 +321,12 @@
       "from": "FSD_SOD_PLASTID",
       "to": "ASCORBATE_PEROXIDASE",
       "start": [
-        344.7166789250591,
-        270.296
+        257.851515625,
+        287.472
       ],
       "end": [
-        233.5486854041273,
-        325.296
+        289.851515625,
+        287.472
       ],
       "class": "flux",
       "label": "H2O2"
@@ -335,12 +335,12 @@
       "from": "CSD_SOD_CYT",
       "to": "ASCORBATE_PEROXIDASE",
       "start": [
-        170.58219171413728,
-        281.296
+        183.3324829326329,
+        512.944
       ],
       "end": [
-        167.52926141086272,
-        325.296
+        365.991220192367,
+        321.296
       ],
       "class": "flux",
       "label": "H2O2"
@@ -349,12 +349,12 @@
       "from": "ASCORBATE_PEROXIDASE",
       "to": "MDHAR_ENZYME",
       "start": [
-        162.130370342505,
-        392.94399999999996
+        315.1109973385478,
+        321.296
       ],
       "end": [
-        157.16758901749245,
-        447.94399999999996
+        208.6582119001282,
+        364.616
       ],
       "class": "flux",
       "label": "MDHA"
@@ -363,12 +363,12 @@
       "from": "MDHAR_ENZYME",
       "to": "DHAR_ENZYME",
       "start": [
-        270.21624999999995,
-        470.768
+        226.80518750000002,
+        395.12
       ],
       "end": [
-        302.21624999999995,
-        470.768
+        258.8051875,
+        395.12
       ],
       "class": "flux",
       "label": "DHA"
@@ -377,12 +377,12 @@
       "from": "DHAR_ENZYME",
       "to": "GLUTATHIONE_REDUCTASE",
       "start": [
-        501.4106249999999,
-        470.768
+        484.33456249999995,
+        395.12
       ],
       "end": [
-        533.410625,
-        470.768
+        516.3345625,
+        395.12
       ],
       "class": "flux",
       "label": "GSSG -> GSH"
@@ -391,12 +391,12 @@
       "from": "ASCORBATE_PEROXIDASE",
       "to": "PEROXIREDOXINS",
       "start": [
-        259.583015625,
-        359.12
+        506.60589062500003,
+        287.472
       ],
       "end": [
-        291.583015625,
-        359.12
+        538.605890625,
+        287.472
       ],
       "class": "catalysis",
       "label": ""
@@ -405,12 +405,12 @@
       "from": "PEROXIREDOXINS",
       "to": "THIOREDOXIN_FAMILY",
       "start": [
-        346.6395611488685,
-        392.94399999999996
+        624.1605721754571,
+        321.296
       ],
       "end": [
-        208.36442153495764,
-        548.592
+        610.440306737472,
+        620.592
       ],
       "class": "flux",
       "label": "Disulfide exchange"
@@ -419,12 +419,12 @@
       "from": "THIOREDOXIN_FAMILY",
       "to": "NPR1_TRANSLOCATION",
       "start": [
-        252.09249999999997,
-        580.4159999999999
+        533.932375,
+        652.4159999999999
       ],
       "end": [
-        460.0925,
-        580.4159999999999
+        310.14050000000003,
+        652.4159999999999
       ],
       "class": "activation",
       "label": "Monomerization"
@@ -433,12 +433,12 @@
       "from": "METABOLIC_ROS_LEAK",
       "to": "CATALASE_SCAVENGING",
       "start": [
-        568.9077501763355,
+        586.7245338525444,
         158.648
       ],
       "end": [
-        589.0651938928597,
-        325.296
+        626.9091474312802,
+        512.944
       ],
       "class": "flux",
       "label": "Peroxisomal H2O2"

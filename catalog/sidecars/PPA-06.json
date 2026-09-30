@@ -160,15 +160,13 @@
       "subunits": []
     },
     {
-      "id": "ACYL_COA_OXIDASE_ACX",
-      "label": "Acyl-CoA Oxidase (ACX)",
-      "kind": "family",
+      "id": "KETOACYL_THIOLASE_PED1",
+      "label": "3-Ketoacyl-CoA Thiolase",
+      "kind": "simple",
       "compartment": "peroxisome",
-      "mapman_bin": "11.4.1",
+      "mapman_bin": "11.4.3",
       "loci": [
-        "AT4G16760",
-        "AT5G65110",
-        "AT1G06290"
+        "AT2G33150"
       ],
       "subunits": []
     },
@@ -184,13 +182,15 @@
       "subunits": []
     },
     {
-      "id": "KETOACYL_THIOLASE_PED1",
-      "label": "3-Ketoacyl-CoA Thiolase",
-      "kind": "simple",
+      "id": "ACYL_COA_OXIDASE_ACX",
+      "label": "Acyl-CoA Oxidase (ACX)",
+      "kind": "family",
       "compartment": "peroxisome",
-      "mapman_bin": "11.4.3",
+      "mapman_bin": "11.4.1",
       "loci": [
-        "AT2G33150"
+        "AT4G16760",
+        "AT5G65110",
+        "AT1G06290"
       ],
       "subunits": []
     }
@@ -200,11 +200,11 @@
       "from": "PLASTID_ACCASE",
       "to": "FAS_ELONGATION",
       "start": [
-        251.6486875,
+        299.3845625,
         135.824
       ],
       "end": [
-        283.6486875,
+        331.3845625,
         135.824
       ],
       "class": "flux",
@@ -214,11 +214,11 @@
       "from": "FAS_ELONGATION",
       "to": "THIOESTERASE_EXPORT",
       "start": [
-        473.4991875,
+        532.1564375,
         135.824
       ],
       "end": [
-        505.4991875,
+        564.1564375,
         135.824
       ],
       "class": "flux",
@@ -228,12 +228,12 @@
       "from": "THIOESTERASE_EXPORT",
       "to": "GLYCEROL_ACYLATION_GPAT",
       "start": [
-        505.4991875,
-        158.20070637640728
+        564.1564375,
+        164.00192137119225
       ],
       "end": [
-        241.3375,
-        222.8391058764935
+        269.369375,
+        252.89054869561758
       ],
       "class": "flux",
       "label": "Free Fatty Acids"
@@ -242,12 +242,12 @@
       "from": "GLYCEROL_ACYLATION_GPAT",
       "to": "PHOSPHATIDIC_ACID_POOL",
       "start": [
-        241.3375,
-        247.47199999999998
+        269.369375,
+        287.472
       ],
       "end": [
-        273.3375,
-        247.472
+        301.369375,
+        287.472
       ],
       "class": "flux",
       "label": "LPA -> PA"
@@ -256,12 +256,12 @@
       "from": "PHOSPHATIDIC_ACID_POOL",
       "to": "TRIACYLGLYCEROL_DGAT",
       "start": [
-        482.00062499999996,
-        247.472
+        539.834375,
+        287.472
       ],
       "end": [
-        514.0006249999999,
-        247.47199999999998
+        571.834375,
+        287.472
       ],
       "class": "flux",
       "label": "DAG -> TAG"
@@ -270,12 +270,12 @@
       "from": "PHOSPHATIDIC_ACID_POOL",
       "to": "MGDG_SYNTHASE_MGD1",
       "start": [
-        311.78175049248506,
-        279.296
+        368.9982583328878,
+        319.296
       ],
       "end": [
-        197.91164741262952,
-        334.296
+        214.95277117301936,
+        414.296
       ],
       "class": "flux",
       "label": "DAG -> MGDG"
@@ -284,12 +284,12 @@
       "from": "MGDG_SYNTHASE_MGD1",
       "to": "DGDG_SYNTHASE_DGD1",
       "start": [
-        232.993375,
-        357.12
+        262.27868749999993,
+        437.12
       ],
       "end": [
-        264.993375,
-        357.12
+        294.27868749999993,
+        437.12
       ],
       "class": "flux",
       "label": "MGDG -> DGDG"
@@ -298,12 +298,12 @@
       "from": "DGDG_SYNTHASE_DGD1",
       "to": "FATTY_ACID_DESATURASES",
       "start": [
-        461.656875,
-        357.12
+        494.94218749999993,
+        437.12
       ],
       "end": [
-        493.656875,
-        357.12
+        526.9421874999999,
+        437.12
       ],
       "class": "flux",
       "label": ""
@@ -312,12 +312,12 @@
       "from": "TRIACYLGLYCEROL_DGAT",
       "to": "ACYL_COA_OXIDASE_ACX",
       "start": [
-        545.0928849173476,
-        281.296
+        683.2304942380657,
+        321.296
       ],
       "end": [
-        227.74105313949633,
-        432.944
+        651.0132236390668,
+        552.944
       ],
       "class": "flux",
       "label": "Acyl-CoA"
@@ -326,12 +326,12 @@
       "from": "ACYL_COA_OXIDASE_ACX",
       "to": "MULTIFUNCTIONAL_MFP2",
       "start": [
-        252.440875,
-        464.76800000000003
+        552.9578125,
+        584.7679999999999
       ],
       "end": [
-        284.440875,
-        464.76800000000003
+        520.9578125,
+        584.7679999999999
       ],
       "class": "flux",
       "label": "Enoyl-CoA"
@@ -340,12 +340,12 @@
       "from": "MULTIFUNCTIONAL_MFP2",
       "to": "KETOACYL_THIOLASE_PED1",
       "start": [
-        473.733375,
-        464.76800000000003
+        326.1953125,
+        584.7679999999999
       ],
       "end": [
-        505.733375,
-        464.76800000000003
+        294.1953125,
+        584.7679999999999
       ],
       "class": "flux",
       "label": "Acetyl-CoA Export"

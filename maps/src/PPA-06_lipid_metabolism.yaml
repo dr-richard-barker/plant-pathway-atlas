@@ -33,7 +33,7 @@ lanes:
   - id: peroxisome_turnover
     compartment: peroxisome
     node_width: 220
-    nodes: [ACYL_COA_OXIDASE_ACX, MULTIFUNCTIONAL_MFP2, KETOACYL_THIOLASE_PED1]
+    nodes: [KETOACYL_THIOLASE_PED1, MULTIFUNCTIONAL_MFP2, ACYL_COA_OXIDASE_ACX]
 
 nodes:
   - id: PLASTID_ACCASE

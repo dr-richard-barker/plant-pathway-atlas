@@ -17,15 +17,15 @@ caption: >-
   Membrane depolarization (-40 mV) opens GORK potassium release channels, causing turgor collapse and pore closure.
 
 lanes:
-  - id: blue_light_opening_signal
-    compartment: guard_cell_cytosol
-    node_width: 220
-    nodes: [PHOT1_PHOT2_SENSORS, BLUS1_KINASE_RELAY, PM_PROTON_PUMP_AHA]
-
-  - id: osmotic_swelling_opening
+  - id: blue_light_membrane_activation
     compartment: guard_cell_plasma_membrane
     node_width: 220
-    nodes: [INWARD_POTASSIUM_KAT, MALATE_SYNTHESIS_PEPC, TONOPLAST_MALATE_ALMT9, AQUAPORIN_WATER_INFLUX]
+    nodes: [PHOT1_PHOT2_SENSORS, PM_PROTON_PUMP_AHA, INWARD_POTASSIUM_KAT, AQUAPORIN_WATER_INFLUX]
+
+  - id: osmotic_solute_accumulation
+    compartment: guard_cell_cytosol
+    node_width: 220
+    nodes: [BLUS1_KINASE_RELAY, MALATE_SYNTHESIS_PEPC, TONOPLAST_MALATE_ALMT9]
 
   - id: aba_drought_closing_signal
     compartment: guard_cell_cytosol
@@ -33,7 +33,7 @@ lanes:
     nodes: [PYR_ABA_RECEPTOR_HUB, OST1_SNRK2_KINASE, RBOHD_OXIDATIVE_BURST]
 
   - id: depolarization_turgor_collapse
-    compartment: guard_cell_plasma_membrane
+    compartment: vacuole
     node_width: 220
     nodes: [SLAC1_ANION_CHANNELS, OUTWARD_POTASSIUM_GORK, TURGOR_COLLAPSE_CLOSURE]
 

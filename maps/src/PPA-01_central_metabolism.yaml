@@ -22,8 +22,8 @@ lanes:
 
   - id: carbon_export
     compartment: cytosol
-    node_width: 190
-    nodes: [TRIOSE_P_EXPORT, SUCROSE_METABOLISM, HEXOSE_P_POOL]
+    node_width: 195
+    nodes: [TRIOSE_P_EXPORT, HEXOSE_P_POOL, SUCROSE_METABOLISM]
 
   - id: cytosolic_glycolysis
     compartment: cytosol
@@ -37,7 +37,7 @@ lanes:
 
   - id: mitochondrial_etc
     compartment: mitochondrial_inner_membrane
-    node_width: 210
+    node_width: 225
     nodes: [RESPIRATORY_ETC, AOX_BYPASS, ATP_SYNTHASE]
 
 nodes:

@@ -18,7 +18,7 @@ lanes:
   - id: photosystem_ii
     compartment: thylakoid_membrane
     node_width: 210
-    nodes: [LHCII_ANTENNA, PSII_CORE, OEC_WATER_SPLITTING]
+    nodes: [OEC_WATER_SPLITTING, PSII_CORE, LHCII_ANTENNA]
 
   - id: plastoquinone_cytochrome
     compartment: thylakoid_membrane

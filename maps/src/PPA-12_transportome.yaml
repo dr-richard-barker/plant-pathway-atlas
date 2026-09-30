@@ -15,25 +15,25 @@ caption: >-
   permeation (PIP/TIP), and regulated anion efflux (SLAC1, ALMT12) controlling guard cell movement.
 
 lanes:
-  - id: water_aquaporin_channels
+  - id: pm_proton_and_potassium
     compartment: plasma_membrane
     node_width: 220
-    nodes: [PLASMA_MEMBRANE_PIPS, TONOPLAST_TIPS, AQUAPORIN_GATING]
+    nodes: [PM_H_ATPASE_AHA, INWARD_K_CHANNELS, OUTWARD_K_CHANNELS]
 
-  - id: potassium_homeostasis
+  - id: pm_water_calcium_anion
     compartment: plasma_membrane
     node_width: 220
-    nodes: [INWARD_K_CHANNELS, OUTWARD_K_CHANNELS, CALCIUM_PERMEABLE_CNGC]
+    nodes: [PLASMA_MEMBRANE_PIPS, AQUAPORIN_GATING, CALCIUM_PERMEABLE_CNGC, SLAC1_ANION_CHANNEL]
 
-  - id: proton_electrochemical_driving
-    compartment: plasma_membrane
-    node_width: 220
-    nodes: [PM_H_ATPASE_AHA, VACUOLAR_V_ATPASE, TONOPLAST_PYROPHOSPHATASE]
-
-  - id: anion_efflux_abc_carriers
+  - id: tonoplast_energization
     compartment: vacuolar_membrane
     node_width: 220
-    nodes: [SLAC1_ANION_CHANNEL, ALMT_MALATE_TRANSPORTER, ABC_TRANSPORTERS_EXPORTERS]
+    nodes: [VACUOLAR_V_ATPASE, TONOPLAST_PYROPHOSPHATASE, TONOPLAST_TIPS]
+
+  - id: tonoplast_solute_transport
+    compartment: vacuolar_membrane
+    node_width: 220
+    nodes: [ALMT_MALATE_TRANSPORTER, ABC_TRANSPORTERS_EXPORTERS]
 
 nodes:
   - id: PLASMA_MEMBRANE_PIPS

@@ -52,6 +52,17 @@
       "subunits": []
     },
     {
+      "id": "WUS_APICAL_ORGANIZER",
+      "label": "WUSCHEL Stem Cell Factor",
+      "kind": "simple",
+      "compartment": "symplastic_cytoplasmic_sleeve",
+      "mapman_bin": "33.1.3",
+      "loci": [
+        "AT2G17950"
+      ],
+      "subunits": []
+    },
+    {
       "id": "MOBILE_SHR_SCR_AXIS",
       "label": "SHORT-ROOT / SCR Axis",
       "kind": "complex",
@@ -71,17 +82,6 @@
           "locus": "AT3G54220"
         }
       ]
-    },
-    {
-      "id": "WUS_APICAL_ORGANIZER",
-      "label": "WUSCHEL Stem Cell Factor",
-      "kind": "simple",
-      "compartment": "symplastic_cytoplasmic_sleeve",
-      "mapman_bin": "33.1.3",
-      "loci": [
-        "AT2G17950"
-      ],
-      "subunits": []
     },
     {
       "id": "MOBILE_SMALL_RNAS",
@@ -203,12 +203,12 @@
       "from": "CALLOSE_SYNTHASES_CALS",
       "to": "MOBILE_SHR_SCR_AXIS",
       "start": [
-        148.98000200359266,
+        217.77696311107115,
         177.936
       ],
       "end": [
-        150.06354836258117,
-        221.936
+        355.18548216211354,
+        261.93600000000004
       ],
       "class": "flux",
       "label": "Pore Constriction (Restricts SEL)"
@@ -217,12 +217,12 @@
       "from": "GLUCANASES_PDCB",
       "to": "MOBILE_SHR_SCR_AXIS",
       "start": [
-        320.5340231104049,
+        402.1580625,
         173.792
       ],
       "end": [
-        220.89722688959512,
-        221.936
+        410.5153125,
+        261.93600000000004
       ],
       "class": "flux",
       "label": "Pore Dilation (Increases SEL)"
@@ -231,12 +231,12 @@
       "from": "MOBILE_SHR_SCR_AXIS",
       "to": "WUS_APICAL_ORGANIZER",
       "start": [
-        261.793,
-        255.76
+        297.6188125,
+        295.76000000000005
       ],
       "end": [
-        293.793,
-        255.76
+        265.6188125,
+        295.76000000000005
       ],
       "class": "flux",
       "label": "Target Gene Activation"
@@ -245,12 +245,12 @@
       "from": "CLV3_CLV1_STEM_NICHE",
       "to": "WUS_APICAL_ORGANIZER",
       "start": [
-        238.67805796789915,
-        333.584
+        170.2814000184638,
+        413.58400000000006
       ],
       "end": [
-        341.87568078245914,
-        284.728
+        158.26502757702045,
+        324.72800000000007
       ],
       "class": "flux",
       "label": "Negative Feedback Loop"
@@ -259,11 +259,11 @@
       "from": "RALF_FERONIA_EXPANSION",
       "to": "CALLOSE_SYNTHASES_CALS",
       "start": [
-        361.28628517411187,
-        333.584
+        385.8711678961749,
+        413.58400000000006
       ],
       "end": [
-        189.86150852972213,
+        187.61213893442624,
         177.936
       ],
       "class": "flux",
@@ -273,12 +273,12 @@
       "from": "GLR_GLUTAMATE_CHANNELS",
       "to": "TPC1_VACUOLAR_CALCIUM",
       "start": [
-        260.62131250000004,
-        477.056
+        279.16437499999995,
+        597.056
       ],
       "end": [
-        292.62131250000004,
-        477.056
+        311.16437499999995,
+        597.056
       ],
       "class": "flux",
       "label": "Depolarization -> Ca2+ Wave"
@@ -287,12 +287,12 @@
       "from": "TPC1_VACUOLAR_CALCIUM",
       "to": "SYSTEMIC_WAVE_PROPAGATION",
       "start": [
-        494.5708125000001,
-        477.056
+        521.1256249999999,
+        597.056
       ],
       "end": [
-        526.5708125000001,
-        477.056
+        553.1256249999999,
+        597.056
       ],
       "class": "flux",
       "label": "Intercellular Wavefront"

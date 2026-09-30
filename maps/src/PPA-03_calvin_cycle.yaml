@@ -22,7 +22,7 @@ lanes:
   - id: rubp_regeneration
     compartment: chloroplast_stroma
     node_width: 210
-    nodes: [ALDOLASE_FBPASE, TRANSKETOLASE_SBPASE, PRK_REGENERATION]
+    nodes: [PRK_REGENERATION, TRANSKETOLASE_SBPASE, ALDOLASE_FBPASE]
 
   - id: photorespiration_peroxisome
     compartment: peroxisome
@@ -32,7 +32,7 @@ lanes:
   - id: photorespiration_mitochondria
     compartment: mitochondrial_matrix
     node_width: 220
-    nodes: [GLYCINE_DECARBOXYLASE, SERINE_HYDROXYMETHYL_TF, HYDROXYPYRUVATE_RED]
+    nodes: [HYDROXYPYRUVATE_RED, SERINE_HYDROXYMETHYL_TF, GLYCINE_DECARBOXYLASE]
 
 nodes:
   - id: RUBISCO_CARBOXYLATION

@@ -1,47 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
 <sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
   <map id="PPA-12" language="process description">
-    <bbox x="-18.00" y="0.00" w="920.00" h="680.00" />
+    <bbox x="-18.00" y="0.00" w="1078.27" h="680.00" />
     <glyph id="comp_plasma_membrane" class="compartment">
       <label text="Plasma Membrane" />
-      <bbox x="32.23" y="62.00" w="748.94" h="352.94" />
+      <bbox x="14.00" y="62.00" w="1014.27" h="237.30" />
     </glyph>
     <glyph id="comp_vacuolar_membrane" class="compartment">
       <label text="Vacuolar Membrane" />
-      <bbox x="14.00" y="392.94" w="785.39" h="129.65" />
+      <bbox x="135.29" y="317.30" w="771.69" h="237.30" />
     </glyph>
-    <glyph id="PLASMA_MEMBRANE_PIPS" class="macromolecule" compartmentRef="comp_plasma_membrane">
-      <label text="Plasma Membrane Aquaporins" />
-      <bbox x="71.57" y="102.00" w="205.06" h="63.65" />
+    <glyph id="PM_H_ATPASE_AHA" class="complex" compartmentRef="comp_plasma_membrane">
+      <label text="PM H+-ATPase (AHA)" />
+      <bbox x="147.39" y="102.00" w="206.23" h="67.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PLASMA_MEMBRANE_PIPS" compartment="plasma_membrane" mapmanBin="34.1.1">
-          <ns0:locus>AT3G61430</ns0:locus>
-          <ns0:locus>AT3G53420</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
-    <glyph id="TONOPLAST_TIPS" class="macromolecule" compartmentRef="comp_plasma_membrane">
-      <label text="Tonoplast Aquaporins (TIPs)" />
-      <bbox x="308.63" y="102.00" w="199.62" h="63.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TONOPLAST_TIPS" compartment="plasma_membrane" mapmanBin="34.1.2">
-          <ns0:locus>AT2G36830</ns0:locus>
-          <ns0:locus>AT3G26520</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
-    <glyph id="AQUAPORIN_GATING" class="macromolecule" compartmentRef="comp_plasma_membrane">
-      <label text="Phosphorylation Gating" />
-      <bbox x="540.25" y="111.00" w="201.57" h="45.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AQUAPORIN_GATING" compartment="plasma_membrane" mapmanBin="34.1.3">
-          <ns0:locus>AT2G38080</ns0:locus>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PM_H_ATPASE_AHA" compartment="plasma_membrane" mapmanBin="34.3.1">
+          <ns0:locus>AT2G18960</ns0:locus>
+          <ns0:locus>AT4G30190</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
     <glyph id="INWARD_K_CHANNELS" class="complex" compartmentRef="comp_plasma_membrane">
       <label text="Inward-Rectifying K+ (KAT/AKT)" />
-      <bbox x="62.90" y="209.65" w="209.97" h="67.65" />
+      <bbox x="385.62" y="102.00" w="241.85" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="INWARD_K_CHANNELS" compartment="plasma_membrane" mapmanBin="34.2.1">
           <ns0:locus>AT5G46240</ns0:locus>
@@ -51,16 +32,35 @@
     </glyph>
     <glyph id="OUTWARD_K_CHANNELS" class="macromolecule" compartmentRef="comp_plasma_membrane">
       <label text="Outward-Rectifying K+ (GORK)" />
-      <bbox x="304.86" y="220.65" w="207.25" h="45.65" />
+      <bbox x="659.47" y="113.00" w="235.42" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="OUTWARD_K_CHANNELS" compartment="plasma_membrane" mapmanBin="34.2.2">
           <ns0:locus>AT5G37500</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
+    <glyph id="PLASMA_MEMBRANE_PIPS" class="macromolecule" compartmentRef="comp_plasma_membrane">
+      <label text="Plasma Membrane Aquaporins" />
+      <bbox x="40.00" y="209.65" w="232.38" h="63.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PLASMA_MEMBRANE_PIPS" compartment="plasma_membrane" mapmanBin="34.1.1">
+          <ns0:locus>AT3G61430</ns0:locus>
+          <ns0:locus>AT3G53420</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="AQUAPORIN_GATING" class="macromolecule" compartmentRef="comp_plasma_membrane">
+      <label text="Phosphorylation Gating" />
+      <bbox x="304.38" y="218.65" w="205.57" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AQUAPORIN_GATING" compartment="plasma_membrane" mapmanBin="34.1.3">
+          <ns0:locus>AT2G38080</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
     <glyph id="CALCIUM_PERMEABLE_CNGC" class="macromolecule" compartmentRef="comp_plasma_membrane">
       <label text="Cyclic Nucleotide Channels" />
-      <bbox x="544.12" y="211.65" w="206.38" h="63.65" />
+      <bbox x="541.95" y="209.65" w="210.38" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CALCIUM_PERMEABLE_CNGC" compartment="plasma_membrane" mapmanBin="34.2.3">
           <ns0:locus>AT5G15410</ns0:locus>
@@ -68,47 +68,47 @@
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="PM_H_ATPASE_AHA" class="complex" compartmentRef="comp_plasma_membrane">
-      <label text="PM H+-ATPase (AHA)" />
-      <bbox x="58.23" y="321.30" w="202.23" h="67.65" />
+    <glyph id="SLAC1_ANION_CHANNEL" class="macromolecule" compartmentRef="comp_plasma_membrane">
+      <label text="Slow Anion Channel (SLAC1)" />
+      <bbox x="784.33" y="218.65" w="217.94" h="45.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PM_H_ATPASE_AHA" compartment="plasma_membrane" mapmanBin="34.3.1">
-          <ns0:locus>AT2G18960</ns0:locus>
-          <ns0:locus>AT4G30190</ns0:locus>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SLAC1_ANION_CHANNEL" compartment="plasma_membrane" mapmanBin="34.4.1">
+          <ns0:locus>AT1G12480</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="VACUOLAR_V_ATPASE" class="complex" compartmentRef="comp_plasma_membrane">
+    <glyph id="VACUOLAR_V_ATPASE" class="complex" compartmentRef="comp_vacuolar_membrane">
       <label text="Vacuolar V-ATPase Complex" />
-      <bbox x="292.46" y="321.30" w="217.76" h="67.65" />
+      <bbox x="161.29" y="357.30" w="221.76" h="67.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="VACUOLAR_V_ATPASE" compartment="plasma_membrane" mapmanBin="34.3.2">
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="VACUOLAR_V_ATPASE" compartment="vacuolar_membrane" mapmanBin="34.3.2">
           <ns0:locus>AT1G78900</ns0:locus>
           <ns0:locus>AT4G34720</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="TONOPLAST_PYROPHOSPHATASE" class="macromolecule" compartmentRef="comp_plasma_membrane">
+    <glyph id="TONOPLAST_PYROPHOSPHATASE" class="macromolecule" compartmentRef="comp_vacuolar_membrane">
       <label text="H+-PPase (AVP1)" />
-      <bbox x="542.22" y="332.30" w="212.95" h="45.65" />
+      <bbox x="415.05" y="368.30" w="216.95" h="45.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TONOPLAST_PYROPHOSPHATASE" compartment="plasma_membrane" mapmanBin="34.3.3">
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TONOPLAST_PYROPHOSPHATASE" compartment="vacuolar_membrane" mapmanBin="34.3.3">
           <ns0:locus>AT1G15690</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="SLAC1_ANION_CHANNEL" class="macromolecule" compartmentRef="comp_vacuolar_membrane">
-      <label text="Slow Anion Channel (SLAC1)" />
-      <bbox x="40.00" y="441.94" w="203.14" h="45.65" />
+    <glyph id="TONOPLAST_TIPS" class="macromolecule" compartmentRef="comp_vacuolar_membrane">
+      <label text="Tonoplast Aquaporins (TIPs)" />
+      <bbox x="664.00" y="359.30" w="216.98" h="63.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SLAC1_ANION_CHANNEL" compartment="vacuolar_membrane" mapmanBin="34.4.1">
-          <ns0:locus>AT1G12480</ns0:locus>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TONOPLAST_TIPS" compartment="vacuolar_membrane" mapmanBin="34.1.2">
+          <ns0:locus>AT2G36830</ns0:locus>
+          <ns0:locus>AT3G26520</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
     <glyph id="ALMT_MALATE_TRANSPORTER" class="macromolecule" compartmentRef="comp_vacuolar_membrane">
       <label text="ALMT Malate Channels" />
-      <bbox x="275.14" y="432.94" w="223.26" h="63.65" />
+      <bbox x="268.01" y="464.94" w="227.26" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ALMT_MALATE_TRANSPORTER" compartment="vacuolar_membrane" mapmanBin="34.4.2">
           <ns0:locus>AT1G25580</ns0:locus>
@@ -118,7 +118,7 @@
     </glyph>
     <glyph id="ABC_TRANSPORTERS_EXPORTERS" class="macromolecule" compartmentRef="comp_vacuolar_membrane">
       <label text="ABC Transporter Exporters" />
-      <bbox x="530.40" y="432.94" w="243.00" h="63.65" />
+      <bbox x="527.27" y="464.94" w="247.00" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ABC_TRANSPORTERS_EXPORTERS" compartment="vacuolar_membrane" mapmanBin="34.5.1">
           <ns0:locus>AT2G36910</ns0:locus>
@@ -127,28 +127,28 @@
       </extension>
     </glyph>
     <arc id="arc_0" class="consumption" source="PM_H_ATPASE_AHA" target="INWARD_K_CHANNELS">
-      <start x="161.93" y="321.30" />
-      <end x="165.29" y="277.30" />
+      <start x="353.62" y="135.82" />
+      <end x="385.62" y="135.82" />
     </arc>
     <arc id="arc_1" class="consumption" source="INWARD_K_CHANNELS" target="PLASMA_MEMBRANE_PIPS">
-      <start x="169.80" y="209.65" />
-      <end x="172.30" y="165.65" />
+      <start x="394.37" y="169.65" />
+      <end x="261.72" y="209.65" />
     </arc>
     <arc id="arc_2" class="consumption" source="CALCIUM_PERMEABLE_CNGC" target="SLAC1_ANION_CHANNEL">
-      <start x="574.58" y="275.30" />
-      <end x="193.73" y="441.94" />
+      <start x="752.33" y="241.47" />
+      <end x="784.33" y="241.47" />
     </arc>
     <arc id="arc_3" class="consumption" source="SLAC1_ANION_CHANNEL" target="OUTWARD_K_CHANNELS">
-      <start x="169.10" y="441.94" />
-      <end x="380.96" y="266.30" />
+      <start x="868.21" y="218.65" />
+      <end x="802.26" y="158.65" />
     </arc>
     <arc id="arc_4" class="consumption" source="VACUOLAR_V_ATPASE" target="ALMT_MALATE_TRANSPORTER">
-      <start x="396.84" y="388.94" />
-      <end x="391.00" y="432.94" />
+      <start x="307.22" y="424.94" />
+      <end x="348.66" y="464.94" />
     </arc>
     <arc id="arc_5" class="consumption" source="TONOPLAST_PYROPHOSPHATASE" target="TONOPLAST_TIPS">
-      <start x="623.91" y="332.30" />
-      <end x="442.99" y="165.65" />
+      <start x="632.00" y="391.12" />
+      <end x="664.00" y="391.12" />
     </arc>
   </map>
 </sbgn>

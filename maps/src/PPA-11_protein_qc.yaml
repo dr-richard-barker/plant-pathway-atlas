@@ -29,7 +29,7 @@ lanes:
   - id: proteasome_26s_core
     compartment: cytosol
     node_width: 220
-    nodes: [PROTEASOME_19S_LID, PROTEASOME_20S_BARREL, DEUBIQUITINATING_ENZYMES]
+    nodes: [DEUBIQUITINATING_ENZYMES, PROTEASOME_20S_BARREL, PROTEASOME_19S_LID]
 
   - id: autophagy_vacuole_turnover
     compartment: vacuole

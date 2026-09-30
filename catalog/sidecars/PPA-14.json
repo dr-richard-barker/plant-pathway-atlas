@@ -206,11 +206,11 @@
       "from": "ROOT_PM_PROTON_PUMPS",
       "to": "NITRATE_UPTAKE_NRT",
       "start": [
-        252.7135,
+        256.7135,
         135.824
       ],
       "end": [
-        284.7135,
+        288.7135,
         135.824
       ],
       "class": "flux",
@@ -220,11 +220,11 @@
       "from": "ROOT_PM_PROTON_PUMPS",
       "to": "PHOSPHATE_UPTAKE_PHT",
       "start": [
-        252.7135,
+        256.7135,
         135.824
       ],
       "end": [
-        513.1985,
+        521.1985,
         135.824
       ],
       "class": "flux",
@@ -234,11 +234,11 @@
       "from": "ROOT_PM_PROTON_PUMPS",
       "to": "POTASSIUM_UPTAKE_AKT",
       "start": [
-        252.7135,
+        256.7135,
         135.824
       ],
       "end": [
-        779.5405000000001,
+        791.5405000000001,
         135.824
       ],
       "class": "flux",
@@ -248,12 +248,12 @@
       "from": "ROOT_PM_PROTON_PUMPS",
       "to": "HIGH_AFFINITY_K_HAK5",
       "start": [
-        252.7135,
-        169.0191476482206
+        256.7135,
+        167.63026587439956
       ],
       "end": [
-        385.58725000000004,
-        210.49055167121634
+        394.601125,
+        208.10481371326978
       ],
       "class": "flux",
       "label": ""
@@ -262,12 +262,12 @@
       "from": "ROOT_PM_PROTON_PUMPS",
       "to": "IRON_REDUCTION_IRT1",
       "start": [
-        177.4233554026942,
+        182.1531388599881,
         169.648
       ],
       "end": [
-        217.83639459730585,
-        213.648
+        222.1204861400119,
+        209.648
       ],
       "class": "flux",
       "label": ""
@@ -276,12 +276,12 @@
       "from": "NITRATE_UPTAKE_NRT",
       "to": "CASP_MEMBRANE_SCAFFOLDS",
       "start": [
-        364.0096895922204,
+        371.4085001943287,
         169.648
       ],
       "end": [
-        276.8243974224568,
-        325.296
+        271.98373544866615,
+        361.296
       ],
       "class": "flux",
       "label": "Radial Symplastic Flow"
@@ -290,12 +290,12 @@
       "from": "POTASSIUM_UPTAKE_AKT",
       "to": "CASP_MEMBRANE_SCAFFOLDS",
       "start": [
-        813.4308029652593,
+        837.5437109690786,
         158.648
       ],
       "end": [
-        347.8988626635819,
-        325.296
+        334.4759639248182,
+        361.296
       ],
       "class": "flux",
       "label": ""
@@ -304,12 +304,12 @@
       "from": "TRANSCELLULAR_AQUAPORINS",
       "to": "CASP_MEMBRANE_SCAFFOLDS",
       "start": [
-        654.56325,
-        270.993177116359
+        667.577125,
+        275.0072264960871
       ],
       "end": [
-        366.549125,
-        333.70284397406937
+        365.0245625,
+        361.72170124952885
       ],
       "class": "flux",
       "label": "Transcellular Water"
@@ -318,12 +318,12 @@
       "from": "SGN3_RECEPTOR_INTEGRITY",
       "to": "CASP_MEMBRANE_SCAFFOLDS",
       "start": [
-        398.549125,
-        357.12
+        397.0245625,
+        393.12
       ],
       "end": [
-        366.549125,
-        357.12
+        365.0245625,
+        393.12
       ],
       "class": "flux",
       "label": "Endodermal Seal Check"
@@ -332,12 +332,12 @@
       "from": "PRX64_LIGNIN_PEROXIDASE",
       "to": "CASP_MEMBRANE_SCAFFOLDS",
       "start": [
-        633.502875,
-        357.12
+        657.0551875,
+        393.12
       ],
       "end": [
-        366.549125,
-        357.12
+        365.0245625,
+        393.12
       ],
       "class": "flux",
       "label": "Lignin Barrier"
@@ -346,12 +346,12 @@
       "from": "CASP_MEMBRANE_SCAFFOLDS",
       "to": "XYLEM_POTASSIUM_SKOR",
       "start": [
-        221.9796428412132,
-        388.944
+        231.09483368314002,
+        424.944
       ],
       "end": [
-        170.79738369759144,
-        432.944
+        166.74609623290635,
+        508.944
       ],
       "class": "flux",
       "label": "Endodermis to Stele"
@@ -360,12 +360,12 @@
       "from": "CASP_MEMBRANE_SCAFFOLDS",
       "to": "XYLEM_PHOSPHATE_PHO1",
       "start": [
-        295.6844847741465,
-        388.944
+        286.7852413125325,
+        424.944
       ],
       "end": [
-        346.4068587705782,
-        432.944
+        369.43230077245977,
+        508.944
       ],
       "class": "flux",
       "label": ""
@@ -374,12 +374,12 @@
       "from": "CASP_MEMBRANE_SCAFFOLDS",
       "to": "XYLEM_NITRATE_NRT15",
       "start": [
-        366.549125,
-        387.4744356896133
+        341.8282426973343,
+        424.944
       ],
       "end": [
-        507.5346875,
-        427.26529898038723
+        569.7622590553054,
+        508.944
       ],
       "class": "flux",
       "label": "Root-to-Shoot Xylem Stream"
@@ -388,12 +388,12 @@
       "from": "CASP_MEMBRANE_SCAFFOLDS",
       "to": "XYLEM_BORON_BOR1",
       "start": [
-        366.549125,
-        374.9849683513018
+        365.0245625,
+        417.43887114846444
       ],
       "end": [
-        741.5141875,
-        437.2694152231871
+        766.6849375,
+        506.6023584369486
       ],
       "class": "flux",
       "label": ""

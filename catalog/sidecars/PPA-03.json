@@ -69,25 +69,15 @@
       "subunits": []
     },
     {
-      "id": "ALDOLASE_FBPASE",
-      "label": "FBP Aldolase & FBPase",
-      "kind": "complex",
+      "id": "PRK_REGENERATION",
+      "label": "Phosphoribulokinase",
+      "kind": "simple",
       "compartment": "chloroplast_stroma",
-      "mapman_bin": "1.2.4",
+      "mapman_bin": "1.2.6",
       "loci": [
-        "AT2G21330",
-        "AT3G54050"
+        "AT1G32060"
       ],
-      "subunits": [
-        {
-          "symbol": "FBA1",
-          "locus": "AT2G21330"
-        },
-        {
-          "symbol": "cFBPase",
-          "locus": "AT3G54050"
-        }
-      ]
+      "subunits": []
     },
     {
       "id": "TRANSKETOLASE_SBPASE",
@@ -111,15 +101,25 @@
       ]
     },
     {
-      "id": "PRK_REGENERATION",
-      "label": "Phosphoribulokinase",
-      "kind": "simple",
+      "id": "ALDOLASE_FBPASE",
+      "label": "FBP Aldolase & FBPase",
+      "kind": "complex",
       "compartment": "chloroplast_stroma",
-      "mapman_bin": "1.2.6",
+      "mapman_bin": "1.2.4",
       "loci": [
-        "AT1G32060"
+        "AT2G21330",
+        "AT3G54050"
       ],
-      "subunits": []
+      "subunits": [
+        {
+          "symbol": "FBA1",
+          "locus": "AT2G21330"
+        },
+        {
+          "symbol": "cFBPase",
+          "locus": "AT3G54050"
+        }
+      ]
     },
     {
       "id": "PGLP_DEPHOSPHO",
@@ -166,6 +166,38 @@
       ]
     },
     {
+      "id": "HYDROXYPYRUVATE_RED",
+      "label": "Hydroxypyruvate Reductase & GLYK",
+      "kind": "complex",
+      "compartment": "mitochondrial_matrix",
+      "mapman_bin": "1.3.6",
+      "loci": [
+        "AT1G68010",
+        "AT1G80380"
+      ],
+      "subunits": [
+        {
+          "symbol": "HPR1",
+          "locus": "AT1G68010"
+        },
+        {
+          "symbol": "GLYK",
+          "locus": "AT1G80380"
+        }
+      ]
+    },
+    {
+      "id": "SERINE_HYDROXYMETHYL_TF",
+      "label": "Serine Hydroxymethyl-TF",
+      "kind": "simple",
+      "compartment": "mitochondrial_matrix",
+      "mapman_bin": "1.3.5",
+      "loci": [
+        "AT4G37930"
+      ],
+      "subunits": []
+    },
+    {
       "id": "GLYCINE_DECARBOXYLASE",
       "label": "Glycine Decarboxylase (GDC)",
       "kind": "complex",
@@ -190,38 +222,6 @@
           "locus": "AT1G11860"
         }
       ]
-    },
-    {
-      "id": "SERINE_HYDROXYMETHYL_TF",
-      "label": "Serine Hydroxymethyl-TF",
-      "kind": "simple",
-      "compartment": "mitochondrial_matrix",
-      "mapman_bin": "1.3.5",
-      "loci": [
-        "AT4G37930"
-      ],
-      "subunits": []
-    },
-    {
-      "id": "HYDROXYPYRUVATE_RED",
-      "label": "Hydroxypyruvate Reductase & GLYK",
-      "kind": "complex",
-      "compartment": "mitochondrial_matrix",
-      "mapman_bin": "1.3.6",
-      "loci": [
-        "AT1G68010",
-        "AT1G80380"
-      ],
-      "subunits": [
-        {
-          "symbol": "HPR1",
-          "locus": "AT1G68010"
-        },
-        {
-          "symbol": "GLYK",
-          "locus": "AT1G80380"
-        }
-      ]
     }
   ],
   "edges": [
@@ -229,11 +229,11 @@
       "from": "RUBISCO_CARBOXYLATION",
       "to": "PGA_REDUCTION",
       "start": [
-        287.54907812499994,
+        294.983515625,
         135.824
       ],
       "end": [
-        319.54907812499994,
+        326.983515625,
         135.824
       ],
       "class": "flux",
@@ -243,12 +243,12 @@
       "from": "RUBISCO_CARBOXYLATION",
       "to": "PGLP_DEPHOSPHO",
       "start": [
-        204.41686733752505,
+        209.94371143403677,
         169.648
       ],
       "end": [
-        178.0542888374624,
-        336.296
+        178.4398090550953,
+        372.296
       ],
       "class": "flux",
       "label": "2-PG"
@@ -257,11 +257,11 @@
       "from": "PGA_REDUCTION",
       "to": "TRIOSE_ISOMERIZATION",
       "start": [
-        461.98189062499995,
+        473.416328125,
         135.824
       ],
       "end": [
-        493.98189062499995,
+        505.416328125,
         135.824
       ],
       "class": "flux",
@@ -271,12 +271,12 @@
       "from": "TRIOSE_ISOMERIZATION",
       "to": "ALDOLASE_FBPASE",
       "start": [
-        493.98189062499995,
-        156.3517757590037
+        588.6533294104396,
+        158.648
       ],
       "end": [
-        272.27649999999994,
-        223.42177363410457
+        600.8804616202809,
+        209.648
       ],
       "class": "flux",
       "label": ""
@@ -285,12 +285,12 @@
       "from": "ALDOLASE_FBPASE",
       "to": "TRANSKETOLASE_SBPASE",
       "start": [
-        272.27649999999994,
-        247.47199999999998
+        517.8015625,
+        243.47199999999998
       ],
       "end": [
-        304.27649999999994,
-        247.47199999999998
+        485.8015625,
+        243.47199999999998
       ],
       "class": "flux",
       "label": ""
@@ -299,12 +299,12 @@
       "from": "TRANSKETOLASE_SBPASE",
       "to": "PRK_REGENERATION",
       "start": [
-        470.17837499999996,
-        247.47199999999998
+        296.1428125,
+        243.47199999999998
       ],
       "end": [
-        502.17837499999996,
-        247.472
+        264.1428125,
+        243.472
       ],
       "class": "flux",
       "label": "Ribulose-5P"
@@ -313,12 +313,12 @@
       "from": "PRK_REGENERATION",
       "to": "RUBISCO_CARBOXYLATION",
       "start": [
-        502.17837499999996,
-        225.139927790229
+        187.5944434058227,
+        220.648
       ],
       "end": [
-        287.54907812499994,
-        159.5821029405164
+        204.19336564543698,
+        169.648
       ],
       "class": "flux",
       "label": "RuBP"
@@ -327,12 +327,12 @@
       "from": "PGLP_DEPHOSPHO",
       "to": "GLYCOLATE_OXIDASE",
       "start": [
-        241.8971875,
-        359.12
+        249.73718749999998,
+        395.12
       ],
       "end": [
-        273.8971875,
-        359.12
+        281.7371875,
+        395.12
       ],
       "class": "flux",
       "label": "Glycolate"
@@ -341,12 +341,12 @@
       "from": "GLYCOLATE_OXIDASE",
       "to": "GLUTAMATE_GLYOXYLATE_AT",
       "start": [
-        417.8971875,
-        359.12
+        429.9903125,
+        395.12
       ],
       "end": [
-        449.8971875,
-        359.12
+        461.9903125,
+        395.12
       ],
       "class": "flux",
       "label": "Glyoxylate"
@@ -355,12 +355,12 @@
       "from": "GLUTAMATE_GLYOXYLATE_AT",
       "to": "GLYCINE_DECARBOXYLASE",
       "start": [
-        449.8971875,
-        386.83145982346093
+        593.0920394406508,
+        428.94399999999996
       ],
       "end": [
-        239.486875,
-        443.77455223718925
+        630.8667105593493,
+        520.624
       ],
       "class": "flux",
       "label": "Glycine"
@@ -369,12 +369,12 @@
       "from": "GLYCINE_DECARBOXYLASE",
       "to": "SERINE_HYDROXYMETHYL_TF",
       "start": [
-        239.486875,
-        470.768
+        533.239375,
+        554.448
       ],
       "end": [
-        271.486875,
-        470.768
+        501.239375,
+        554.4479999999999
       ],
       "class": "flux",
       "label": "Methylene-THF"
@@ -383,12 +383,12 @@
       "from": "SERINE_HYDROXYMETHYL_TF",
       "to": "HYDROXYPYRUVATE_RED",
       "start": [
-        450.124875,
-        470.768
+        304.80062499999997,
+        554.4479999999999
       ],
       "end": [
-        482.124875,
-        470.768
+        272.80062499999997,
+        554.448
       ],
       "class": "flux",
       "label": "Serine"
@@ -397,11 +397,11 @@
       "from": "HYDROXYPYRUVATE_RED",
       "to": "PGA_REDUCTION",
       "start": [
-        580.5811986585817,
-        436.94399999999996
+        180.57154727750918,
+        512.944
       ],
       "end": [
-        412.0869732164182,
+        380.5013905258657,
         169.648
       ],
       "class": "flux",

@@ -94,25 +94,16 @@
       ]
     },
     {
-      "id": "PROTEASOME_19S_LID",
-      "label": "19S Regulatory Particle",
-      "kind": "complex",
+      "id": "DEUBIQUITINATING_ENZYMES",
+      "label": "Deubiquitinating Enzymes",
+      "kind": "family",
       "compartment": "cytosol",
-      "mapman_bin": "29.3.1",
+      "mapman_bin": "29.3.3",
       "loci": [
-        "AT2G20580",
-        "AT1G53750"
+        "AT5G06600",
+        "AT3G11910"
       ],
-      "subunits": [
-        {
-          "symbol": "RPN1A",
-          "locus": "AT2G20580"
-        },
-        {
-          "symbol": "RPT1A",
-          "locus": "AT1G53750"
-        }
-      ]
+      "subunits": []
     },
     {
       "id": "PROTEASOME_20S_BARREL",
@@ -136,16 +127,25 @@
       ]
     },
     {
-      "id": "DEUBIQUITINATING_ENZYMES",
-      "label": "Deubiquitinating Enzymes",
-      "kind": "family",
+      "id": "PROTEASOME_19S_LID",
+      "label": "19S Regulatory Particle",
+      "kind": "complex",
       "compartment": "cytosol",
-      "mapman_bin": "29.3.3",
+      "mapman_bin": "29.3.1",
       "loci": [
-        "AT5G06600",
-        "AT3G11910"
+        "AT2G20580",
+        "AT1G53750"
       ],
-      "subunits": []
+      "subunits": [
+        {
+          "symbol": "RPN1A",
+          "locus": "AT2G20580"
+        },
+        {
+          "symbol": "RPT1A",
+          "locus": "AT1G53750"
+        }
+      ]
     },
     {
       "id": "ATG1_KINASE_INITIATION",
@@ -196,11 +196,11 @@
       "from": "RIBOSOME_TRANSLATION",
       "to": "BIP_ER_CHAPERONES",
       "start": [
-        260.3081875000001,
+        264.4758125,
         135.824
       ],
       "end": [
-        292.3081875000001,
+        296.4758125,
         135.824
       ],
       "class": "flux",
@@ -210,11 +210,11 @@
       "from": "BIP_ER_CHAPERONES",
       "to": "PDI_DISULFIDE_ISOMERASE",
       "start": [
-        479.69756250000006,
+        508.5539375,
         135.824
       ],
       "end": [
-        511.69756250000006,
+        540.5539375000001,
         135.824
       ],
       "class": "flux",
@@ -224,12 +224,12 @@
       "from": "PDI_DISULFIDE_ISOMERASE",
       "to": "UBIQUITIN_E1_ACTIVATING",
       "start": [
-        531.3827661892735,
+        580.9662831326494,
         158.648
       ],
       "end": [
-        276.4892963107267,
-        224.648
+        258.5651543673508,
+        264.64799999999997
       ],
       "class": "flux",
       "label": "Terminally Misfolded (ERAD)"
@@ -238,12 +238,12 @@
       "from": "UBIQUITIN_E1_ACTIVATING",
       "to": "UBIQUITIN_E2_CONJUGATING",
       "start": [
-        287.11600000000004,
-        247.472
+        289.91900000000004,
+        287.472
       ],
       "end": [
-        319.11600000000004,
-        247.472
+        321.91900000000004,
+        287.472
       ],
       "class": "flux",
       "label": "Ub-AMP"
@@ -252,12 +252,12 @@
       "from": "UBIQUITIN_E2_CONJUGATING",
       "to": "CULLIN_RING_E3_LIGASES",
       "start": [
-        505.3230000000001,
-        247.472
+        517.482125,
+        287.472
       ],
       "end": [
-        537.3230000000001,
-        247.47199999999998
+        549.482125,
+        287.472
       ],
       "class": "flux",
       "label": "Ub-Thioester"
@@ -266,12 +266,12 @@
       "from": "CULLIN_RING_E3_LIGASES",
       "to": "PROTEASOME_19S_LID",
       "start": [
-        537.3230000000001,
-        269.6819025018932
+        654.1835014120095,
+        321.296
       ],
       "end": [
-        273.547,
-        331.67547654590226
+        663.8814985879906,
+        361.296
       ],
       "class": "flux",
       "label": "Polyubiquitin-Tagged Target"
@@ -280,12 +280,12 @@
       "from": "PROTEASOME_19S_LID",
       "to": "PROTEASOME_20S_BARREL",
       "start": [
-        273.547,
-        359.12
+        553.308625,
+        395.12
       ],
       "end": [
-        305.547,
-        359.12
+        521.308625,
+        395.12
       ],
       "class": "flux",
       "label": "Unfolded Peptide"
@@ -294,12 +294,12 @@
       "from": "PROTEASOME_19S_LID",
       "to": "DEUBIQUITINATING_ENZYMES",
       "start": [
-        273.547,
-        359.12
+        553.308625,
+        395.12
       ],
       "end": [
-        578.9525000000001,
-        359.12
+        243.903125,
+        395.12
       ],
       "class": "flux",
       "label": "Free Ubiquitin Recycling"
@@ -308,12 +308,12 @@
       "from": "ATG1_KINASE_INITIATION",
       "to": "ATG8_AUTOPHAGOSOME",
       "start": [
-        253.00825000000006,
-        470.768
+        251.6538125,
+        546.7679999999999
       ],
       "end": [
-        285.0082500000001,
-        470.768
+        283.65381249999996,
+        546.7679999999999
       ],
       "class": "flux",
       "label": "Autophagosome Nucleation"
@@ -322,12 +322,12 @@
       "from": "ATG8_AUTOPHAGOSOME",
       "to": "VACUOLAR_VPE_PROTEASES",
       "start": [
-        513.8302500000001,
-        470.768
+        516.4758125,
+        546.7679999999999
       ],
       "end": [
-        545.8302500000001,
-        470.768
+        548.4758125,
+        546.7679999999999
       ],
       "class": "flux",
       "label": "Vacuolar Fusion"

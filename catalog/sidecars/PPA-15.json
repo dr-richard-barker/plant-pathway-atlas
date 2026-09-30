@@ -9,7 +9,7 @@
       "id": "PHOT1_PHOT2_SENSORS",
       "label": "Phototropins (PHOT1/2)",
       "kind": "complex",
-      "compartment": "guard_cell_cytosol",
+      "compartment": "guard_cell_plasma_membrane",
       "mapman_bin": "30.1.5",
       "loci": [
         "AT3G45780",
@@ -27,31 +27,10 @@
       ]
     },
     {
-      "id": "BLUS1_KINASE_RELAY",
-      "label": "BLUS1 Kinase & 14-3-3",
-      "kind": "complex",
-      "compartment": "guard_cell_cytosol",
-      "mapman_bin": "30.1.6",
-      "loci": [
-        "AT4G14480",
-        "AT1G22300"
-      ],
-      "subunits": [
-        {
-          "symbol": "BLUS1",
-          "locus": "AT4G14480"
-        },
-        {
-          "symbol": "14-3-3",
-          "locus": "AT1G22300"
-        }
-      ]
-    },
-    {
       "id": "PM_PROTON_PUMP_AHA",
       "label": "PM H+-ATPase (AHA1/2)",
       "kind": "complex",
-      "compartment": "guard_cell_cytosol",
+      "compartment": "guard_cell_plasma_membrane",
       "mapman_bin": "34.3.1",
       "loci": [
         "AT2G18960",
@@ -81,10 +60,42 @@
       "subunits": []
     },
     {
+      "id": "AQUAPORIN_WATER_INFLUX",
+      "label": "Aquaporins (PIP2;1)",
+      "kind": "simple",
+      "compartment": "guard_cell_plasma_membrane",
+      "mapman_bin": "34.1.1",
+      "loci": [
+        "AT3G53420"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "BLUS1_KINASE_RELAY",
+      "label": "BLUS1 Kinase & 14-3-3",
+      "kind": "complex",
+      "compartment": "guard_cell_cytosol",
+      "mapman_bin": "30.1.6",
+      "loci": [
+        "AT4G14480",
+        "AT1G22300"
+      ],
+      "subunits": [
+        {
+          "symbol": "BLUS1",
+          "locus": "AT4G14480"
+        },
+        {
+          "symbol": "14-3-3",
+          "locus": "AT1G22300"
+        }
+      ]
+    },
+    {
       "id": "MALATE_SYNTHESIS_PEPC",
       "label": "PEP Carboxylase (PEPC)",
       "kind": "simple",
-      "compartment": "guard_cell_plasma_membrane",
+      "compartment": "guard_cell_cytosol",
       "mapman_bin": "1.2.7",
       "loci": [
         "AT1G53310"
@@ -95,21 +106,10 @@
       "id": "TONOPLAST_MALATE_ALMT9",
       "label": "Vacuolar ALMT9 Channel",
       "kind": "simple",
-      "compartment": "guard_cell_plasma_membrane",
+      "compartment": "guard_cell_cytosol",
       "mapman_bin": "34.4.2",
       "loci": [
         "AT3G18440"
-      ],
-      "subunits": []
-    },
-    {
-      "id": "AQUAPORIN_WATER_INFLUX",
-      "label": "Aquaporins (PIP2;1)",
-      "kind": "simple",
-      "compartment": "guard_cell_plasma_membrane",
-      "mapman_bin": "34.1.1",
-      "loci": [
-        "AT3G53420"
       ],
       "subunits": []
     },
@@ -161,7 +161,7 @@
       "id": "SLAC1_ANION_CHANNELS",
       "label": "SLAC1 / SLAH3 Anion Vent",
       "kind": "complex",
-      "compartment": "guard_cell_plasma_membrane",
+      "compartment": "vacuole",
       "mapman_bin": "34.4.1",
       "loci": [
         "AT1G12480",
@@ -182,7 +182,7 @@
       "id": "OUTWARD_POTASSIUM_GORK",
       "label": "Outward K+ Channel (GORK)",
       "kind": "simple",
-      "compartment": "guard_cell_plasma_membrane",
+      "compartment": "vacuole",
       "mapman_bin": "34.2.2",
       "loci": [
         "AT5G37500"
@@ -193,7 +193,7 @@
       "id": "TURGOR_COLLAPSE_CLOSURE",
       "label": "Stomatal Pore Closure",
       "kind": "simple",
-      "compartment": "guard_cell_plasma_membrane",
+      "compartment": "vacuole",
       "mapman_bin": "33.3.1",
       "loci": [
         "AT4G33950"
@@ -206,12 +206,12 @@
       "from": "PHOT1_PHOT2_SENSORS",
       "to": "BLUS1_KINASE_RELAY",
       "start": [
-        342.40475000000004,
-        135.824
+        173.23839632570161,
+        169.648
       ],
       "end": [
-        374.40475000000004,
-        135.824
+        254.47779117429843,
+        253.648
       ],
       "class": "flux",
       "label": "Blue Light Activation"
@@ -220,12 +220,12 @@
       "from": "BLUS1_KINASE_RELAY",
       "to": "PM_PROTON_PUMP_AHA",
       "start": [
-        577.9802500000001,
-        135.824
+        308.3591970088627,
+        253.648
       ],
       "end": [
-        609.9802500000001,
-        135.824
+        360.9312404911374,
+        169.648
       ],
       "class": "flux",
       "label": "Thr947 Phosphorylation"
@@ -234,12 +234,12 @@
       "from": "PM_PROTON_PUMP_AHA",
       "to": "INWARD_POTASSIUM_KAT",
       "start": [
-        609.9802500000001,
-        156.71298749076803
+        491.1485,
+        135.824
       ],
       "end": [
-        270.247,
-        223.00723900303433
+        523.1485,
+        135.824
       ],
       "class": "flux",
       "label": "Hyperpolarization (-150 mV)"
@@ -248,12 +248,12 @@
       "from": "PM_PROTON_PUMP_AHA",
       "to": "MALATE_SYNTHESIS_PEPC",
       "start": [
-        617.7965132788561,
+        412.4288760155096,
         169.648
       ],
       "end": [
-        462.306467860791,
-        222.648
+        497.6115708911427,
+        264.64799999999997
       ],
       "class": "flux",
       "label": ""
@@ -262,12 +262,12 @@
       "from": "MALATE_SYNTHESIS_PEPC",
       "to": "TONOPLAST_MALATE_ALMT9",
       "start": [
-        488.44500000000005,
-        245.472
+        613.1759375,
+        287.472
       ],
       "end": [
-        520.445,
-        245.472
+        645.1759375,
+        287.472
       ],
       "class": "flux",
       "label": "Malate2- Storage"
@@ -276,12 +276,12 @@
       "from": "INWARD_POTASSIUM_KAT",
       "to": "AQUAPORIN_WATER_INFLUX",
       "start": [
-        270.247,
-        245.472
+        757.3955000000001,
+        135.824
       ],
       "end": [
-        740.0035,
-        245.472
+        789.3955000000001,
+        135.824
       ],
       "class": "flux",
       "label": "Osmotic Potential Drop"
@@ -290,12 +290,12 @@
       "from": "PYR_ABA_RECEPTOR_HUB",
       "to": "OST1_SNRK2_KINASE",
       "start": [
-        336.35,
-        355.12
+        361.04599999999994,
+        395.12
       ],
       "end": [
-        368.35,
-        355.12
+        393.04599999999994,
+        395.12
       ],
       "class": "flux",
       "label": "ABA Relieves PP2C Block"
@@ -304,12 +304,12 @@
       "from": "OST1_SNRK2_KINASE",
       "to": "SLAC1_ANION_CHANNELS",
       "start": [
-        434.70744239036975,
-        377.944
+        472.4211905333403,
+        417.944
       ],
       "end": [
-        319.4112884064202,
-        432.94399999999996
+        319.13229948301324,
+        512.944
       ],
       "class": "flux",
       "label": "Ser120 Phosphorylation"
@@ -318,12 +318,12 @@
       "from": "OST1_SNRK2_KINASE",
       "to": "RBOHD_OXIDATIVE_BURST",
       "start": [
-        596.7565000000001,
-        355.12
+        625.4525,
+        395.12
       ],
       "end": [
-        628.7565000000001,
-        355.12
+        657.4525,
+        395.12
       ],
       "class": "flux",
       "label": ""
@@ -332,12 +332,12 @@
       "from": "SLAC1_ANION_CHANNELS",
       "to": "OUTWARD_POTASSIUM_GORK",
       "start": [
-        344.5377500000001,
-        466.768
+        366.7728125,
+        546.7679999999999
       ],
       "end": [
-        376.5377500000001,
-        466.768
+        398.7728125,
+        546.7679999999999
       ],
       "class": "flux",
       "label": "Membrane Depolarization (-40 mV)"
@@ -346,12 +346,12 @@
       "from": "OUTWARD_POTASSIUM_GORK",
       "to": "TURGOR_COLLAPSE_CLOSURE",
       "start": [
-        580.01575,
-        466.768
+        619.5453124999999,
+        546.7679999999999
       ],
       "end": [
-        612.01575,
-        466.768
+        651.5453124999999,
+        546.7679999999999
       ],
       "class": "flux",
       "label": "K+ / H2O Loss"

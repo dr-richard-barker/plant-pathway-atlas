@@ -20,25 +20,25 @@ lanes:
     node_width: 210
     nodes: [RBOH_BURST, APOPLAST_H2O2, METABOLIC_ROS_LEAK]
 
-  - id: superoxide_dismutation
-    compartment: cytosol
-    node_width: 200
-    nodes: [CSD_SOD_CYT, FSD_SOD_PLASTID, MSD_SOD_MITO]
-
-  - id: peroxide_detoxification
+  - id: chloroplast_antioxidants
     compartment: chloroplast_stroma
-    node_width: 210
-    nodes: [ASCORBATE_PEROXIDASE, PEROXIREDOXINS, CATALASE_SCAVENGING]
+    node_width: 215
+    nodes: [FSD_SOD_PLASTID, ASCORBATE_PEROXIDASE, PEROXIREDOXINS]
 
   - id: ascorbate_glutathione_cycle
     compartment: chloroplast_stroma
-    node_width: 210
+    node_width: 220
     nodes: [MDHAR_ENZYME, DHAR_ENZYME, GLUTATHIONE_REDUCTASE]
+
+  - id: cellular_dismutation_peroxisome
+    compartment: cytosol
+    node_width: 210
+    nodes: [CSD_SOD_CYT, MSD_SOD_MITO, CATALASE_SCAVENGING]
 
   - id: redox_relays
     compartment: cytosol
-    node_width: 200
-    nodes: [THIOREDOXIN_FAMILY, GLUTAREDOXIN_FAMILY, NPR1_TRANSLOCATION]
+    node_width: 210
+    nodes: [NPR1_TRANSLOCATION, GLUTAREDOXIN_FAMILY, THIOREDOXIN_FAMILY]
 
 nodes:
   - id: RBOH_BURST

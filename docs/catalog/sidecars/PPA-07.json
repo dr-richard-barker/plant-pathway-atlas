@@ -141,13 +141,13 @@
       "subunits": []
     },
     {
-      "id": "SULFITE_REDUCTASE_SIR",
-      "label": "Sulfite Reductase (SiR)",
+      "id": "CGS_METHIONINE_SYNTH",
+      "label": "Cystathionine Synthase (CGS)",
       "kind": "simple",
       "compartment": "chloroplast_stroma",
-      "mapman_bin": "14.3",
+      "mapman_bin": "14.5",
       "loci": [
-        "AT5G04590"
+        "AT3G01120"
       ],
       "subunits": []
     },
@@ -173,13 +173,13 @@
       ]
     },
     {
-      "id": "CGS_METHIONINE_SYNTH",
-      "label": "Cystathionine Synthase (CGS)",
+      "id": "SULFITE_REDUCTASE_SIR",
+      "label": "Sulfite Reductase (SiR)",
       "kind": "simple",
       "compartment": "chloroplast_stroma",
-      "mapman_bin": "14.5",
+      "mapman_bin": "14.3",
       "loci": [
-        "AT3G01120"
+        "AT5G04590"
       ],
       "subunits": []
     }
@@ -189,11 +189,11 @@
       "from": "NITRATE_TRANSPORTERS",
       "to": "NITRATE_REDUCTASE_NIA",
       "start": [
-        247.12750000000003,
+        251.12750000000003,
         135.824
       ],
       "end": [
-        279.12750000000005,
+        283.12750000000005,
         135.824
       ],
       "class": "flux",
@@ -203,12 +203,12 @@
       "from": "NITRATE_REDUCTASE_NIA",
       "to": "NITRITE_REDUCTASE_NIR",
       "start": [
-        306.1344481405848,
+        329.5271801342584,
         167.648
       ],
       "end": [
-        181.5131259941961,
-        224.648
+        170.46559054850712,
+        264.64799999999997
       ],
       "class": "flux",
       "label": "NO2-"
@@ -217,12 +217,12 @@
       "from": "NITRITE_REDUCTASE_NIR",
       "to": "GS_GLUTAMINE_SYNTH",
       "start": [
-        219.14837500000002,
-        247.472
+        224.7760625,
+        287.472
       ],
       "end": [
-        251.14837500000002,
-        247.47199999999998
+        256.77606249999997,
+        287.472
       ],
       "class": "flux",
       "label": "NH4+"
@@ -231,12 +231,12 @@
       "from": "GS_GLUTAMINE_SYNTH",
       "to": "GOGAT_GLUTAMATE_SYNTH",
       "start": [
-        437.36962500000004,
-        247.47199999999998
+        467.14043749999996,
+        287.472
       ],
       "end": [
-        469.36962500000004,
-        247.47199999999998
+        499.14043749999996,
+        287.472
       ],
       "class": "flux",
       "label": "Glutamine"
@@ -245,12 +245,12 @@
       "from": "GOGAT_GLUTAMATE_SYNTH",
       "to": "GS_GLUTAMINE_SYNTH",
       "start": [
-        469.36962500000004,
-        247.47199999999998
+        499.14043749999996,
+        287.472
       ],
       "end": [
-        437.36962500000004,
-        247.47199999999998
+        467.14043749999996,
+        287.472
       ],
       "class": "flux",
       "label": "Glutamate recycled"
@@ -259,11 +259,11 @@
       "from": "GOGAT_GLUTAMATE_SYNTH",
       "to": "AMINO_ACID_EXPORT",
       "start": [
-        591.5682596732589,
-        213.648
+        617.4309375,
+        253.648
       ],
       "end": [
-        599.2538653267412,
+        624.6600000000001,
         169.648
       ],
       "class": "flux",
@@ -273,12 +273,12 @@
       "from": "SULFATE_TRANSPORTERS",
       "to": "ATP_SULFURYLASE_APS",
       "start": [
-        272.10325,
-        357.12
+        291.882875,
+        393.12
       ],
       "end": [
-        304.10325,
-        357.12
+        323.882875,
+        393.12
       ],
       "class": "flux",
       "label": "SO4(2-)"
@@ -287,12 +287,12 @@
       "from": "ATP_SULFURYLASE_APS",
       "to": "APS_REDUCTASE_APR",
       "start": [
-        479.98875,
-        357.12
+        503.768375,
+        393.12
       ],
       "end": [
-        511.98875,
-        357.12
+        535.768375,
+        393.12
       ],
       "class": "flux",
       "label": "APS"
@@ -301,12 +301,12 @@
       "from": "APS_REDUCTASE_APR",
       "to": "SULFITE_REDUCTASE_SIR",
       "start": [
-        511.98875,
-        377.1003541808845
+        621.279,
+        424.944
       ],
       "end": [
-        236.57968750000006,
-        445.69634786544384
+        633.41625,
+        475.944
       ],
       "class": "flux",
       "label": "Sulfite (SO3(2-))"
@@ -315,12 +315,12 @@
       "from": "SULFITE_REDUCTASE_SIR",
       "to": "OASTL_CYSTEINE_SYNTH",
       "start": [
-        236.57968750000006,
-        466.76800000000003
+        542.2984375,
+        498.76800000000003
       ],
       "end": [
-        268.5796875000001,
-        466.76800000000003
+        510.2984375,
+        498.76800000000003
       ],
       "class": "flux",
       "label": "Sulfide (S(2-))"
@@ -329,12 +329,12 @@
       "from": "OASTL_CYSTEINE_SYNTH",
       "to": "CGS_METHIONINE_SYNTH",
       "start": [
-        443.73918750000007,
-        466.76800000000003
+        313.7246875,
+        498.76800000000003
       ],
       "end": [
-        475.73918750000007,
-        466.76800000000003
+        281.7246875,
+        498.76800000000003
       ],
       "class": "flux",
       "label": "Cysteine"

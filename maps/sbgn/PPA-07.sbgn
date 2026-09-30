@@ -4,15 +4,15 @@
     <bbox x="-18.00" y="0.00" w="920.00" h="680.00" />
     <glyph id="comp_cytosol" class="compartment">
       <label text="Cytosol" />
-      <bbox x="14.00" y="62.00" w="718.03" h="133.65" />
+      <bbox x="14.00" y="62.00" w="749.02" h="133.65" />
     </glyph>
     <glyph id="comp_chloroplast_stroma" class="compartment">
       <label text="Chloroplast Stroma" />
-      <bbox x="18.08" y="173.65" w="709.87" h="352.94" />
+      <bbox x="15.30" y="213.65" w="746.42" h="344.94" />
     </glyph>
     <glyph id="NITRATE_TRANSPORTERS" class="macromolecule" compartmentRef="comp_cytosol">
       <label text="Nitrate Transporters (NRT)" />
-      <bbox x="40.00" y="104.00" w="207.13" h="63.65" />
+      <bbox x="40.00" y="104.00" w="211.13" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="NITRATE_TRANSPORTERS" compartment="cytosol" mapmanBin="34.4">
           <ns0:locus>AT1G12110</ns0:locus>
@@ -22,7 +22,7 @@
     </glyph>
     <glyph id="NITRATE_REDUCTASE_NIA" class="macromolecule" compartmentRef="comp_cytosol">
       <label text="Nitrate Reductase (NR)" />
-      <bbox x="279.13" y="104.00" w="193.17" h="63.65" />
+      <bbox x="283.13" y="104.00" w="197.17" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="NITRATE_REDUCTASE_NIA" compartment="cytosol" mapmanBin="12.1">
           <ns0:locus>AT1G77760</ns0:locus>
@@ -32,7 +32,7 @@
     </glyph>
     <glyph id="AMINO_ACID_EXPORT" class="complex" compartmentRef="comp_cytosol">
       <label text="Aspartate &amp; Asparagine Core" />
-      <bbox x="504.30" y="102.00" w="201.73" h="67.65" />
+      <bbox x="512.30" y="102.00" w="224.72" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AMINO_ACID_EXPORT" compartment="cytosol" mapmanBin="12.5">
           <ns0:locus>AT2G30970</ns0:locus>
@@ -42,7 +42,7 @@
     </glyph>
     <glyph id="NITRITE_REDUCTASE_NIR" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
       <label text="Nitrite Reductase (NIR)" />
-      <bbox x="44.08" y="224.65" w="175.07" h="45.65" />
+      <bbox x="41.30" y="264.65" w="183.47" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="NITRITE_REDUCTASE_NIR" compartment="chloroplast_stroma" mapmanBin="12.2">
           <ns0:locus>AT2G15620</ns0:locus>
@@ -51,7 +51,7 @@
     </glyph>
     <glyph id="GS_GLUTAMINE_SYNTH" class="complex" compartmentRef="comp_chloroplast_stroma">
       <label text="Glutamine Synthetase (GS)" />
-      <bbox x="251.15" y="213.65" w="186.22" h="67.65" />
+      <bbox x="256.78" y="253.65" w="210.36" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GS_GLUTAMINE_SYNTH" compartment="chloroplast_stroma" mapmanBin="12.3">
           <ns0:locus>AT5G37600</ns0:locus>
@@ -61,7 +61,7 @@
     </glyph>
     <glyph id="GOGAT_GLUTAMATE_SYNTH" class="complex" compartmentRef="comp_chloroplast_stroma">
       <label text="Glutamate Synthase (GOGAT)" />
-      <bbox x="469.37" y="213.65" w="232.58" h="67.65" />
+      <bbox x="499.14" y="253.65" w="236.58" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="GOGAT_GLUTAMATE_SYNTH" compartment="chloroplast_stroma" mapmanBin="12.4">
           <ns0:locus>AT5G04140</ns0:locus>
@@ -71,7 +71,7 @@
     </glyph>
     <glyph id="SULFATE_TRANSPORTERS" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
       <label text="Sulfate Transporters (SULTR)" />
-      <bbox x="73.60" y="325.30" w="198.51" h="63.65" />
+      <bbox x="70.23" y="361.30" w="221.65" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SULFATE_TRANSPORTERS" compartment="chloroplast_stroma" mapmanBin="34.5">
           <ns0:locus>AT4G08620</ns0:locus>
@@ -81,7 +81,7 @@
     </glyph>
     <glyph id="ATP_SULFURYLASE_APS" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
       <label text="ATP Sulfurylase (APS)" />
-      <bbox x="304.10" y="325.30" w="175.89" h="63.65" />
+      <bbox x="323.88" y="361.30" w="179.89" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ATP_SULFURYLASE_APS" compartment="chloroplast_stroma" mapmanBin="14.1">
           <ns0:locus>AT3G22890</ns0:locus>
@@ -91,7 +91,7 @@
     </glyph>
     <glyph id="APS_REDUCTASE_APR" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
       <label text="APS Reductase (APR)" />
-      <bbox x="511.99" y="325.30" w="160.44" h="63.65" />
+      <bbox x="535.77" y="361.30" w="171.02" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="APS_REDUCTASE_APR" compartment="chloroplast_stroma" mapmanBin="14.2">
           <ns0:locus>AT4G04610</ns0:locus>
@@ -100,18 +100,18 @@
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="SULFITE_REDUCTASE_SIR" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
-      <label text="Sulfite Reductase (SiR)" />
-      <bbox x="67.38" y="443.94" w="169.20" h="45.65" />
+    <glyph id="CGS_METHIONINE_SYNTH" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
+      <label text="Cystathionine Synthase (CGS)" />
+      <bbox x="52.49" y="475.94" w="229.24" h="45.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SULFITE_REDUCTASE_SIR" compartment="chloroplast_stroma" mapmanBin="14.3">
-          <ns0:locus>AT5G04590</ns0:locus>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CGS_METHIONINE_SYNTH" compartment="chloroplast_stroma" mapmanBin="14.5">
+          <ns0:locus>AT3G01120</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
     <glyph id="OASTL_CYSTEINE_SYNTH" class="complex" compartmentRef="comp_chloroplast_stroma">
       <label text="OAS Thiol-Lyase (OAS-TL)" />
-      <bbox x="268.58" y="432.94" w="175.16" h="67.65" />
+      <bbox x="313.72" y="464.94" w="196.57" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="OASTL_CYSTEINE_SYNTH" compartment="chloroplast_stroma" mapmanBin="14.4">
           <ns0:locus>AT4G14880</ns0:locus>
@@ -119,58 +119,58 @@
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="CGS_METHIONINE_SYNTH" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
-      <label text="Cystathionine Synthase (CGS)" />
-      <bbox x="475.74" y="443.94" w="202.91" h="45.65" />
+    <glyph id="SULFITE_REDUCTASE_SIR" class="macromolecule" compartmentRef="comp_chloroplast_stroma">
+      <label text="Sulfite Reductase (SiR)" />
+      <bbox x="542.30" y="475.94" w="182.24" h="45.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CGS_METHIONINE_SYNTH" compartment="chloroplast_stroma" mapmanBin="14.5">
-          <ns0:locus>AT3G01120</ns0:locus>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SULFITE_REDUCTASE_SIR" compartment="chloroplast_stroma" mapmanBin="14.3">
+          <ns0:locus>AT5G04590</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
     <arc id="arc_0" class="consumption" source="NITRATE_TRANSPORTERS" target="NITRATE_REDUCTASE_NIA">
-      <start x="247.13" y="135.82" />
-      <end x="279.13" y="135.82" />
+      <start x="251.13" y="135.82" />
+      <end x="283.13" y="135.82" />
     </arc>
     <arc id="arc_1" class="consumption" source="NITRATE_REDUCTASE_NIA" target="NITRITE_REDUCTASE_NIR">
-      <start x="306.13" y="167.65" />
-      <end x="181.51" y="224.65" />
+      <start x="329.53" y="167.65" />
+      <end x="170.47" y="264.65" />
     </arc>
     <arc id="arc_2" class="consumption" source="NITRITE_REDUCTASE_NIR" target="GS_GLUTAMINE_SYNTH">
-      <start x="219.15" y="247.47" />
-      <end x="251.15" y="247.47" />
+      <start x="224.78" y="287.47" />
+      <end x="256.78" y="287.47" />
     </arc>
     <arc id="arc_3" class="consumption" source="GS_GLUTAMINE_SYNTH" target="GOGAT_GLUTAMATE_SYNTH">
-      <start x="437.37" y="247.47" />
-      <end x="469.37" y="247.47" />
+      <start x="467.14" y="287.47" />
+      <end x="499.14" y="287.47" />
     </arc>
     <arc id="arc_4" class="consumption" source="GOGAT_GLUTAMATE_SYNTH" target="GS_GLUTAMINE_SYNTH">
-      <start x="469.37" y="247.47" />
-      <end x="437.37" y="247.47" />
+      <start x="499.14" y="287.47" />
+      <end x="467.14" y="287.47" />
     </arc>
     <arc id="arc_5" class="consumption" source="GOGAT_GLUTAMATE_SYNTH" target="AMINO_ACID_EXPORT">
-      <start x="591.57" y="213.65" />
-      <end x="599.25" y="169.65" />
+      <start x="617.43" y="253.65" />
+      <end x="624.66" y="169.65" />
     </arc>
     <arc id="arc_6" class="consumption" source="SULFATE_TRANSPORTERS" target="ATP_SULFURYLASE_APS">
-      <start x="272.10" y="357.12" />
-      <end x="304.10" y="357.12" />
+      <start x="291.88" y="393.12" />
+      <end x="323.88" y="393.12" />
     </arc>
     <arc id="arc_7" class="consumption" source="ATP_SULFURYLASE_APS" target="APS_REDUCTASE_APR">
-      <start x="479.99" y="357.12" />
-      <end x="511.99" y="357.12" />
+      <start x="503.77" y="393.12" />
+      <end x="535.77" y="393.12" />
     </arc>
     <arc id="arc_8" class="consumption" source="APS_REDUCTASE_APR" target="SULFITE_REDUCTASE_SIR">
-      <start x="511.99" y="377.10" />
-      <end x="236.58" y="445.70" />
+      <start x="621.28" y="424.94" />
+      <end x="633.42" y="475.94" />
     </arc>
     <arc id="arc_9" class="consumption" source="SULFITE_REDUCTASE_SIR" target="OASTL_CYSTEINE_SYNTH">
-      <start x="236.58" y="466.77" />
-      <end x="268.58" y="466.77" />
+      <start x="542.30" y="498.77" />
+      <end x="510.30" y="498.77" />
     </arc>
     <arc id="arc_10" class="consumption" source="OASTL_CYSTEINE_SYNTH" target="CGS_METHIONINE_SYNTH">
-      <start x="443.74" y="466.77" />
-      <end x="475.74" y="466.77" />
+      <start x="313.72" y="498.77" />
+      <end x="281.72" y="498.77" />
     </arc>
   </map>
 </sbgn>

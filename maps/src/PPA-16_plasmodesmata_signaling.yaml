@@ -25,7 +25,7 @@ lanes:
   - id: symplastic_mobile_factors
     compartment: symplastic_cytoplasmic_sleeve
     node_width: 220
-    nodes: [MOBILE_SHR_SCR_AXIS, WUS_APICAL_ORGANIZER, MOBILE_SMALL_RNAS]
+    nodes: [WUS_APICAL_ORGANIZER, MOBILE_SHR_SCR_AXIS, MOBILE_SMALL_RNAS]
 
   - id: apoplastic_peptide_receptors
     compartment: apoplast_plasma_membrane

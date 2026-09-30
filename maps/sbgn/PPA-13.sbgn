@@ -1,26 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
 <sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
   <map id="PPA-13" language="process description">
-    <bbox x="-18.00" y="0.00" w="1007.28" h="680.00" />
+    <bbox x="-18.00" y="0.00" w="1054.27" h="716.59" />
     <glyph id="comp_source_companion_cell" class="compartment">
       <label text="Source Companion Cell" />
-      <bbox x="14.00" y="62.00" w="943.28" h="133.65" />
+      <bbox x="14.82" y="62.00" w="988.62" h="133.65" />
     </glyph>
     <glyph id="comp_sieve_element_conduit" class="compartment">
       <label text="Sieve Element Conduit" />
-      <bbox x="124.94" y="173.65" w="721.40" h="133.65" />
+      <bbox x="130.64" y="213.65" w="757.00" h="133.65" />
     </glyph>
     <glyph id="comp_sink_apoplast_root" class="compartment">
       <label text="Sink Apoplast Root" />
-      <bbox x="117.15" y="285.30" w="736.98" h="129.65" />
+      <bbox x="249.69" y="365.30" w="518.89" h="129.65" />
     </glyph>
     <glyph id="comp_sink_cytosol_root" class="compartment">
       <label text="Sink Cytosol Root" />
-      <bbox x="129.99" y="392.94" w="711.30" h="133.65" />
+      <bbox x="14.00" y="512.94" w="990.27" h="133.65" />
     </glyph>
     <glyph id="SWEET_EFFLUX_UNIPORTERS" class="macromolecule" compartmentRef="comp_source_companion_cell">
       <label text="SWEET Sucrose Efflux" />
-      <bbox x="40.00" y="104.00" w="164.36" h="63.65" />
+      <bbox x="40.82" y="104.00" w="173.39" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SWEET_EFFLUX_UNIPORTERS" compartment="source_companion_cell" mapmanBin="34.1.1">
           <ns0:locus>AT3G48740</ns0:locus>
@@ -31,7 +31,7 @@
     </glyph>
     <glyph id="SUC2_PROTON_SYMPORTER" class="macromolecule" compartmentRef="comp_source_companion_cell">
       <label text="SUC2 / SUT1 Symporter" />
-      <bbox x="236.36" y="113.00" w="224.71" h="45.65" />
+      <bbox x="246.21" y="113.00" w="228.71" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SUC2_PROTON_SYMPORTER" compartment="source_companion_cell" mapmanBin="34.1.2">
           <ns0:locus>AT1G22710</ns0:locus>
@@ -40,7 +40,7 @@
     </glyph>
     <glyph id="AHA3_PHLOEM_PROTON_PUMP" class="macromolecule" compartmentRef="comp_source_companion_cell">
       <label text="AHA3 H+-ATPase" />
-      <bbox x="493.07" y="113.00" w="191.23" h="45.65" />
+      <bbox x="506.92" y="113.00" w="195.23" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AHA3_PHLOEM_PROTON_PUMP" compartment="source_companion_cell" mapmanBin="34.1.3">
           <ns0:locus>AT5G57350</ns0:locus>
@@ -49,7 +49,7 @@
     </glyph>
     <glyph id="POLYMER_TRAPPING_GOLS" class="complex" compartmentRef="comp_source_companion_cell">
       <label text="Galactinol &amp; Raffinose Synthase" />
-      <bbox x="716.30" y="102.00" w="214.98" h="67.65" />
+      <bbox x="734.15" y="102.00" w="243.29" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="POLYMER_TRAPPING_GOLS" compartment="source_companion_cell" mapmanBin="2.1.3">
           <ns0:locus>AT2G47180</ns0:locus>
@@ -59,7 +59,7 @@
     </glyph>
     <glyph id="CALS7_SIEVE_PLATE_CALLOSE" class="macromolecule" compartmentRef="comp_sieve_element_conduit">
       <label text="Callose Synthase 7 (CalS7)" />
-      <bbox x="150.94" y="224.65" w="191.47" h="45.65" />
+      <bbox x="156.64" y="264.65" w="207.55" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CALS7_SIEVE_PLATE_CALLOSE" compartment="sieve_element_conduit" mapmanBin="29.1.4">
           <ns0:locus>AT1G06490</ns0:locus>
@@ -68,7 +68,7 @@
     </glyph>
     <glyph id="SEOR_PROTECTIVE_FILAMENTS" class="complex" compartmentRef="comp_sieve_element_conduit">
       <label text="SEOR Protective Filaments" />
-      <bbox x="374.40" y="213.65" w="224.59" h="67.65" />
+      <bbox x="396.19" y="253.65" w="228.59" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SEOR_PROTECTIVE_FILAMENTS" compartment="sieve_element_conduit" mapmanBin="33.1.1">
           <ns0:locus>AT3G01680</ns0:locus>
@@ -78,7 +78,7 @@
     </glyph>
     <glyph id="PHLOEM_SAP_TRANSLOCATION" class="macromolecule" compartmentRef="comp_sieve_element_conduit">
       <label text="Münch Pressure Bulk Flow" />
-      <bbox x="630.99" y="224.65" w="189.35" h="45.65" />
+      <bbox x="656.78" y="264.65" w="204.86" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PHLOEM_SAP_TRANSLOCATION" compartment="sieve_element_conduit" mapmanBin="34.1.4">
           <ns0:locus>AT1G22710</ns0:locus>
@@ -87,7 +87,7 @@
     </glyph>
     <glyph id="CWINV_CELL_WALL_INVERTASE" class="macromolecule" compartmentRef="comp_sink_apoplast_root">
       <label text="Cell Wall Invertases (CWINV)" />
-      <bbox x="143.15" y="325.30" w="204.97" h="63.65" />
+      <bbox x="275.69" y="405.30" w="221.16" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CWINV_CELL_WALL_INVERTASE" compartment="sink_apoplast_root" mapmanBin="2.1.4">
           <ns0:locus>AT3G13790</ns0:locus>
@@ -98,7 +98,7 @@
     </glyph>
     <glyph id="STP_HEXOSE_TRANSPORTERS" class="macromolecule" compartmentRef="comp_sink_apoplast_root">
       <label text="STP Hexose-H+ Symporters" />
-      <bbox x="380.12" y="325.30" w="209.07" h="63.65" />
+      <bbox x="528.85" y="405.30" w="213.73" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="STP_HEXOSE_TRANSPORTERS" compartment="sink_apoplast_root" mapmanBin="34.1.5">
           <ns0:locus>AT1G11260</ns0:locus>
@@ -107,28 +107,27 @@
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="AHA2_SINK_PROTON_PUMP" class="macromolecule" compartmentRef="comp_sink_apoplast_root">
+    <glyph id="AHA2_SINK_PROTON_PUMP" class="macromolecule" compartmentRef="comp_sink_cytosol_root">
       <label text="AHA2 Root PM H+-ATPase" />
-      <bbox x="621.19" y="334.30" w="206.94" h="45.65" />
+      <bbox x="40.00" y="563.94" w="210.94" h="45.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AHA2_SINK_PROTON_PUMP" compartment="sink_apoplast_root" mapmanBin="34.3.1">
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AHA2_SINK_PROTON_PUMP" compartment="sink_cytosol_root" mapmanBin="34.3.1">
           <ns0:locus>AT4G30190</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="SUS_SUCROSE_SYNTHASE" class="complex" compartmentRef="comp_sink_cytosol_root">
-      <label text="Sucrose Synthase (SUS)" />
-      <bbox x="155.99" y="432.94" w="200.89" h="67.65" />
+    <glyph id="ROOT_MITOCHONDRIAL_RESP" class="macromolecule" compartmentRef="comp_sink_cytosol_root">
+      <label text="Root Respiration &amp; ATP" />
+      <bbox x="282.94" y="563.94" w="202.47" h="45.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SUS_SUCROSE_SYNTHASE" compartment="sink_cytosol_root" mapmanBin="2.1.5">
-          <ns0:locus>AT5G20830</ns0:locus>
-          <ns0:locus>AT3G43190</ns0:locus>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ROOT_MITOCHONDRIAL_RESP" compartment="sink_cytosol_root" mapmanBin="8.1">
+          <ns0:locus>AT3G58750</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
     <glyph id="SINK_GLYCOLYSIS_ENTRY" class="complex" compartmentRef="comp_sink_cytosol_root">
       <label text="Sink Hexose Phosphorylation" />
-      <bbox x="388.88" y="432.94" w="195.94" h="67.65" />
+      <bbox x="517.41" y="552.94" w="223.97" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SINK_GLYCOLYSIS_ENTRY" compartment="sink_cytosol_root" mapmanBin="4.1">
           <ns0:locus>AT4G29130</ns0:locus>
@@ -136,66 +135,67 @@
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="ROOT_MITOCHONDRIAL_RESP" class="macromolecule" compartmentRef="comp_sink_cytosol_root">
-      <label text="Root Respiration &amp; ATP" />
-      <bbox x="616.82" y="443.94" w="198.47" h="45.65" />
+    <glyph id="SUS_SUCROSE_SYNTHASE" class="complex" compartmentRef="comp_sink_cytosol_root">
+      <label text="Sucrose Synthase (SUS)" />
+      <bbox x="773.38" y="552.94" w="204.89" h="67.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ROOT_MITOCHONDRIAL_RESP" compartment="sink_cytosol_root" mapmanBin="8.1">
-          <ns0:locus>AT3G58750</ns0:locus>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SUS_SUCROSE_SYNTHASE" compartment="sink_cytosol_root" mapmanBin="2.1.5">
+          <ns0:locus>AT5G20830</ns0:locus>
+          <ns0:locus>AT3G43190</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
     <arc id="arc_0" class="consumption" source="SWEET_EFFLUX_UNIPORTERS" target="SUC2_PROTON_SYMPORTER">
-      <start x="204.36" y="135.82" />
-      <end x="236.36" y="135.82" />
+      <start x="214.21" y="135.82" />
+      <end x="246.21" y="135.82" />
     </arc>
     <arc id="arc_1" class="consumption" source="AHA3_PHLOEM_PROTON_PUMP" target="SUC2_PROTON_SYMPORTER">
-      <start x="493.07" y="135.82" />
-      <end x="461.07" y="135.82" />
+      <start x="506.92" y="135.82" />
+      <end x="474.92" y="135.82" />
     </arc>
-    <arc id="arc_2" class="consumption" source="POLYMER_TRAPPING_GOLS" target="SUC2_PROTON_SYMPORTER">
-      <start x="716.30" y="135.82" />
-      <end x="461.07" y="135.82" />
+    <arc id="arc_2" class="consumption" source="POLYMER_TRAPPING_GOLS" target="PHLOEM_SAP_TRANSLOCATION">
+      <start x="834.26" y="169.65" />
+      <end x="773.75" y="264.65" />
     </arc>
     <arc id="arc_3" class="consumption" source="SUC2_PROTON_SYMPORTER" target="CALS7_SIEVE_PLATE_CALLOSE">
-      <start x="327.85" y="158.65" />
-      <end x="267.53" y="224.65" />
+      <start x="345.49" y="158.65" />
+      <end x="275.49" y="264.65" />
     </arc>
     <arc id="arc_4" class="consumption" source="CALS7_SIEVE_PLATE_CALLOSE" target="SEOR_PROTECTIVE_FILAMENTS">
-      <start x="342.40" y="247.47" />
-      <end x="374.40" y="247.47" />
+      <start x="364.19" y="287.47" />
+      <end x="396.19" y="287.47" />
     </arc>
     <arc id="arc_5" class="consumption" source="SEOR_PROTECTIVE_FILAMENTS" target="PHLOEM_SAP_TRANSLOCATION">
-      <start x="598.99" y="247.47" />
-      <end x="630.99" y="247.47" />
+      <start x="624.78" y="287.47" />
+      <end x="656.78" y="287.47" />
     </arc>
     <arc id="arc_6" class="consumption" source="PHLOEM_SAP_TRANSLOCATION" target="CWINV_CELL_WALL_INVERTASE">
-      <start x="630.99" y="269.10" />
-      <end x="348.12" y="333.71" />
+      <start x="702.33" y="310.30" />
+      <end x="465.58" y="405.30" />
     </arc>
     <arc id="arc_7" class="consumption" source="PHLOEM_SAP_TRANSLOCATION" target="SUS_SUCROSE_SYNTHASE">
-      <start x="676.83" y="270.30" />
-      <end x="328.81" y="432.94" />
+      <start x="768.10" y="310.30" />
+      <end x="862.65" y="552.94" />
     </arc>
     <arc id="arc_8" class="consumption" source="CWINV_CELL_WALL_INVERTASE" target="STP_HEXOSE_TRANSPORTERS">
-      <start x="348.12" y="357.12" />
-      <end x="380.12" y="357.12" />
+      <start x="496.85" y="437.12" />
+      <end x="528.85" y="437.12" />
     </arc>
     <arc id="arc_9" class="consumption" source="AHA2_SINK_PROTON_PUMP" target="STP_HEXOSE_TRANSPORTERS">
-      <start x="621.19" y="357.12" />
-      <end x="589.19" y="357.12" />
+      <start x="220.24" y="563.94" />
+      <end x="531.46" y="468.94" />
     </arc>
     <arc id="arc_10" class="consumption" source="STP_HEXOSE_TRANSPORTERS" target="SINK_GLYCOLYSIS_ENTRY">
-      <start x="485.29" y="388.94" />
-      <end x="486.17" y="432.94" />
+      <start x="635.72" y="468.94" />
+      <end x="629.40" y="552.94" />
     </arc>
     <arc id="arc_11" class="consumption" source="SUS_SUCROSE_SYNTHASE" target="SINK_GLYCOLYSIS_ENTRY">
-      <start x="356.88" y="466.77" />
-      <end x="388.88" y="466.77" />
+      <start x="773.38" y="586.77" />
+      <end x="741.38" y="586.77" />
     </arc>
     <arc id="arc_12" class="consumption" source="SINK_GLYCOLYSIS_ENTRY" target="ROOT_MITOCHONDRIAL_RESP">
-      <start x="584.82" y="466.77" />
-      <end x="616.82" y="466.77" />
+      <start x="517.41" y="586.77" />
+      <end x="485.41" y="586.77" />
     </arc>
   </map>
 </sbgn>

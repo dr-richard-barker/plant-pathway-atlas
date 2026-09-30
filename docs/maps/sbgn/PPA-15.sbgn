@@ -1,40 +1,34 @@
 <?xml version='1.0' encoding='utf-8'?>
 <sbgn xmlns:ns0="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" xmlns="http://sbgn.org/libsbgn/0.3">
   <map id="PPA-15" language="process description">
-    <bbox x="-18.00" y="0.00" w="1005.43" h="680.00" />
-    <glyph id="comp_guard_cell_cytosol" class="compartment">
-      <label text="Guard Cell Cytosol" />
-      <bbox x="111.93" y="62.00" w="745.57" h="352.94" />
-    </glyph>
+    <bbox x="-18.00" y="0.00" w="1058.82" h="680.00" />
     <glyph id="comp_guard_cell_plasma_membrane" class="compartment">
       <label text="Guard Cell Plasma Membrane" />
-      <bbox x="14.00" y="173.65" w="941.43" h="352.94" />
+      <bbox x="14.00" y="62.00" w="994.82" h="133.65" />
     </glyph>
-    <glyph id="PHOT1_PHOT2_SENSORS" class="complex" compartmentRef="comp_guard_cell_cytosol">
+    <glyph id="comp_guard_cell_cytosol" class="compartment">
+      <label text="Guard Cell Cytosol" />
+      <bbox x="132.63" y="213.65" w="757.57" h="241.30" />
+    </glyph>
+    <glyph id="comp_vacuole" class="compartment">
+      <label text="Vacuole" />
+      <bbox x="136.34" y="472.94" w="750.15" h="133.65" />
+    </glyph>
+    <glyph id="PHOT1_PHOT2_SENSORS" class="complex" compartmentRef="comp_guard_cell_plasma_membrane">
       <label text="Phototropins (PHOT1/2)" />
-      <bbox x="145.35" y="102.00" w="197.05" h="67.65" />
+      <bbox x="40.00" y="102.00" w="201.05" h="67.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PHOT1_PHOT2_SENSORS" compartment="guard_cell_cytosol" mapmanBin="30.1.5">
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PHOT1_PHOT2_SENSORS" compartment="guard_cell_plasma_membrane" mapmanBin="30.1.5">
           <ns0:locus>AT3G45780</ns0:locus>
           <ns0:locus>AT5G58140</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="BLUS1_KINASE_RELAY" class="complex" compartmentRef="comp_guard_cell_cytosol">
-      <label text="BLUS1 Kinase &amp; 14-3-3" />
-      <bbox x="374.40" y="102.00" w="203.58" h="67.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="BLUS1_KINASE_RELAY" compartment="guard_cell_cytosol" mapmanBin="30.1.6">
-          <ns0:locus>AT4G14480</ns0:locus>
-          <ns0:locus>AT1G22300</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
-    <glyph id="PM_PROTON_PUMP_AHA" class="complex" compartmentRef="comp_guard_cell_cytosol">
+    <glyph id="PM_PROTON_PUMP_AHA" class="complex" compartmentRef="comp_guard_cell_plasma_membrane">
       <label text="PM H+-ATPase (AHA1/2)" />
-      <bbox x="609.98" y="102.00" w="214.10" h="67.65" />
+      <bbox x="273.05" y="102.00" w="218.10" h="67.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PM_PROTON_PUMP_AHA" compartment="guard_cell_cytosol" mapmanBin="34.3.1">
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PM_PROTON_PUMP_AHA" compartment="guard_cell_plasma_membrane" mapmanBin="34.3.1">
           <ns0:locus>AT2G18960</ns0:locus>
           <ns0:locus>AT4G30190</ns0:locus>
         </ns0:annotation>
@@ -42,7 +36,7 @@
     </glyph>
     <glyph id="INWARD_POTASSIUM_KAT" class="macromolecule" compartmentRef="comp_guard_cell_plasma_membrane">
       <label text="Inward K+ (KAT1 / KAT2)" />
-      <bbox x="40.00" y="213.65" w="230.25" h="63.65" />
+      <bbox x="523.15" y="104.00" w="234.25" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="INWARD_POTASSIUM_KAT" compartment="guard_cell_plasma_membrane" mapmanBin="34.2.1">
           <ns0:locus>AT5G46240</ns0:locus>
@@ -50,36 +44,46 @@
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="MALATE_SYNTHESIS_PEPC" class="macromolecule" compartmentRef="comp_guard_cell_plasma_membrane">
-      <label text="PEP Carboxylase (PEPC)" />
-      <bbox x="302.25" y="222.65" w="186.20" h="45.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="MALATE_SYNTHESIS_PEPC" compartment="guard_cell_plasma_membrane" mapmanBin="1.2.7">
-          <ns0:locus>AT1G53310</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
-    <glyph id="TONOPLAST_MALATE_ALMT9" class="macromolecule" compartmentRef="comp_guard_cell_plasma_membrane">
-      <label text="Vacuolar ALMT9 Channel" />
-      <bbox x="520.45" y="222.65" w="187.56" h="45.65" />
-      <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TONOPLAST_MALATE_ALMT9" compartment="guard_cell_plasma_membrane" mapmanBin="34.4.2">
-          <ns0:locus>AT3G18440</ns0:locus>
-        </ns0:annotation>
-      </extension>
-    </glyph>
     <glyph id="AQUAPORIN_WATER_INFLUX" class="macromolecule" compartmentRef="comp_guard_cell_plasma_membrane">
       <label text="Aquaporins (PIP2;1)" />
-      <bbox x="740.00" y="222.65" w="189.43" h="45.65" />
+      <bbox x="789.40" y="113.00" w="193.43" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="AQUAPORIN_WATER_INFLUX" compartment="guard_cell_plasma_membrane" mapmanBin="34.1.1">
           <ns0:locus>AT3G53420</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
+    <glyph id="BLUS1_KINASE_RELAY" class="complex" compartmentRef="comp_guard_cell_cytosol">
+      <label text="BLUS1 Kinase &amp; 14-3-3" />
+      <bbox x="183.40" y="253.65" w="207.58" h="67.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="BLUS1_KINASE_RELAY" compartment="guard_cell_cytosol" mapmanBin="30.1.6">
+          <ns0:locus>AT4G14480</ns0:locus>
+          <ns0:locus>AT1G22300</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="MALATE_SYNTHESIS_PEPC" class="macromolecule" compartmentRef="comp_guard_cell_cytosol">
+      <label text="PEP Carboxylase (PEPC)" />
+      <bbox x="422.98" y="264.65" w="190.20" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="MALATE_SYNTHESIS_PEPC" compartment="guard_cell_cytosol" mapmanBin="1.2.7">
+          <ns0:locus>AT1G53310</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
+    <glyph id="TONOPLAST_MALATE_ALMT9" class="macromolecule" compartmentRef="comp_guard_cell_cytosol">
+      <label text="Vacuolar ALMT9 Channel" />
+      <bbox x="645.18" y="264.65" w="194.24" h="45.65" />
+      <extension>
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TONOPLAST_MALATE_ALMT9" compartment="guard_cell_cytosol" mapmanBin="34.4.2">
+          <ns0:locus>AT3G18440</ns0:locus>
+        </ns0:annotation>
+      </extension>
+    </glyph>
     <glyph id="PYR_ABA_RECEPTOR_HUB" class="complex" compartmentRef="comp_guard_cell_cytosol">
       <label text="PYR/PYL &amp; PP2C (ABI1)" />
-      <bbox x="137.93" y="321.30" w="198.42" h="67.65" />
+      <bbox x="158.63" y="361.30" w="202.42" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PYR_ABA_RECEPTOR_HUB" compartment="guard_cell_cytosol" mapmanBin="30.2.1">
           <ns0:locus>AT5G05440</ns0:locus>
@@ -89,7 +93,7 @@
     </glyph>
     <glyph id="OST1_SNRK2_KINASE" class="macromolecule" compartmentRef="comp_guard_cell_cytosol">
       <label text="OST1 / SnRK2.6 Kinase" />
-      <bbox x="368.35" y="332.30" w="228.41" h="45.65" />
+      <bbox x="393.05" y="372.30" w="232.41" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="OST1_SNRK2_KINASE" compartment="guard_cell_cytosol" mapmanBin="30.2.2">
           <ns0:locus>AT4G33950</ns0:locus>
@@ -98,7 +102,7 @@
     </glyph>
     <glyph id="RBOHD_OXIDATIVE_BURST" class="macromolecule" compartmentRef="comp_guard_cell_cytosol">
       <label text="RBOHD / RBOHF ROS Hub" />
-      <bbox x="628.76" y="323.30" w="202.74" h="63.65" />
+      <bbox x="657.45" y="363.30" w="206.74" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="RBOHD_OXIDATIVE_BURST" compartment="guard_cell_cytosol" mapmanBin="21.1.1">
           <ns0:locus>AT5G47910</ns0:locus>
@@ -106,77 +110,77 @@
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="SLAC1_ANION_CHANNELS" class="complex" compartmentRef="comp_guard_cell_plasma_membrane">
+    <glyph id="SLAC1_ANION_CHANNELS" class="complex" compartmentRef="comp_vacuole">
       <label text="SLAC1 / SLAH3 Anion Vent" />
-      <bbox x="152.47" y="432.94" w="192.06" h="67.65" />
+      <bbox x="162.34" y="512.94" w="204.44" h="67.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SLAC1_ANION_CHANNELS" compartment="guard_cell_plasma_membrane" mapmanBin="34.4.1">
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="SLAC1_ANION_CHANNELS" compartment="vacuole" mapmanBin="34.4.1">
           <ns0:locus>AT1G12480</ns0:locus>
           <ns0:locus>AT5G24030</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="OUTWARD_POTASSIUM_GORK" class="macromolecule" compartmentRef="comp_guard_cell_plasma_membrane">
+    <glyph id="OUTWARD_POTASSIUM_GORK" class="macromolecule" compartmentRef="comp_vacuole">
       <label text="Outward K+ Channel (GORK)" />
-      <bbox x="376.54" y="443.94" w="203.48" h="45.65" />
+      <bbox x="398.77" y="523.94" w="220.77" h="45.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="OUTWARD_POTASSIUM_GORK" compartment="guard_cell_plasma_membrane" mapmanBin="34.2.2">
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="OUTWARD_POTASSIUM_GORK" compartment="vacuole" mapmanBin="34.2.2">
           <ns0:locus>AT5G37500</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
-    <glyph id="TURGOR_COLLAPSE_CLOSURE" class="macromolecule" compartmentRef="comp_guard_cell_plasma_membrane">
+    <glyph id="TURGOR_COLLAPSE_CLOSURE" class="macromolecule" compartmentRef="comp_vacuole">
       <label text="Stomatal Pore Closure" />
-      <bbox x="612.02" y="443.94" w="204.94" h="45.65" />
+      <bbox x="651.55" y="523.94" w="208.94" h="45.65" />
       <extension>
-        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TURGOR_COLLAPSE_CLOSURE" compartment="guard_cell_plasma_membrane" mapmanBin="33.3.1">
+        <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="TURGOR_COLLAPSE_CLOSURE" compartment="vacuole" mapmanBin="33.3.1">
           <ns0:locus>AT4G33950</ns0:locus>
         </ns0:annotation>
       </extension>
     </glyph>
     <arc id="arc_0" class="consumption" source="PHOT1_PHOT2_SENSORS" target="BLUS1_KINASE_RELAY">
-      <start x="342.40" y="135.82" />
-      <end x="374.40" y="135.82" />
+      <start x="173.24" y="169.65" />
+      <end x="254.48" y="253.65" />
     </arc>
     <arc id="arc_1" class="consumption" source="BLUS1_KINASE_RELAY" target="PM_PROTON_PUMP_AHA">
-      <start x="577.98" y="135.82" />
-      <end x="609.98" y="135.82" />
+      <start x="308.36" y="253.65" />
+      <end x="360.93" y="169.65" />
     </arc>
     <arc id="arc_2" class="consumption" source="PM_PROTON_PUMP_AHA" target="INWARD_POTASSIUM_KAT">
-      <start x="609.98" y="156.71" />
-      <end x="270.25" y="223.01" />
+      <start x="491.15" y="135.82" />
+      <end x="523.15" y="135.82" />
     </arc>
     <arc id="arc_3" class="consumption" source="PM_PROTON_PUMP_AHA" target="MALATE_SYNTHESIS_PEPC">
-      <start x="617.80" y="169.65" />
-      <end x="462.31" y="222.65" />
+      <start x="412.43" y="169.65" />
+      <end x="497.61" y="264.65" />
     </arc>
     <arc id="arc_4" class="consumption" source="MALATE_SYNTHESIS_PEPC" target="TONOPLAST_MALATE_ALMT9">
-      <start x="488.45" y="245.47" />
-      <end x="520.45" y="245.47" />
+      <start x="613.18" y="287.47" />
+      <end x="645.18" y="287.47" />
     </arc>
     <arc id="arc_5" class="consumption" source="INWARD_POTASSIUM_KAT" target="AQUAPORIN_WATER_INFLUX">
-      <start x="270.25" y="245.47" />
-      <end x="740.00" y="245.47" />
+      <start x="757.40" y="135.82" />
+      <end x="789.40" y="135.82" />
     </arc>
     <arc id="arc_6" class="consumption" source="PYR_ABA_RECEPTOR_HUB" target="OST1_SNRK2_KINASE">
-      <start x="336.35" y="355.12" />
-      <end x="368.35" y="355.12" />
+      <start x="361.05" y="395.12" />
+      <end x="393.05" y="395.12" />
     </arc>
     <arc id="arc_7" class="consumption" source="OST1_SNRK2_KINASE" target="SLAC1_ANION_CHANNELS">
-      <start x="434.71" y="377.94" />
-      <end x="319.41" y="432.94" />
+      <start x="472.42" y="417.94" />
+      <end x="319.13" y="512.94" />
     </arc>
     <arc id="arc_8" class="consumption" source="OST1_SNRK2_KINASE" target="RBOHD_OXIDATIVE_BURST">
-      <start x="596.76" y="355.12" />
-      <end x="628.76" y="355.12" />
+      <start x="625.45" y="395.12" />
+      <end x="657.45" y="395.12" />
     </arc>
     <arc id="arc_9" class="consumption" source="SLAC1_ANION_CHANNELS" target="OUTWARD_POTASSIUM_GORK">
-      <start x="344.54" y="466.77" />
-      <end x="376.54" y="466.77" />
+      <start x="366.77" y="546.77" />
+      <end x="398.77" y="546.77" />
     </arc>
     <arc id="arc_10" class="consumption" source="OUTWARD_POTASSIUM_GORK" target="TURGOR_COLLAPSE_CLOSURE">
-      <start x="580.02" y="466.77" />
-      <end x="612.02" y="466.77" />
+      <start x="619.55" y="546.77" />
+      <end x="651.55" y="546.77" />
     </arc>
   </map>
 </sbgn>

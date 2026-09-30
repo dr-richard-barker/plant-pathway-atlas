@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 680" width="920" height="680" data-theme="dark" data-map-id="PPA-16"><defs><style>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 724" width="920" height="724" data-theme="dark" data-map-id="PPA-16"><defs><style>
 :root {
   --ppa-bg: #ffffff;
   --ppa-ink: #0f172a;
@@ -36,7 +36,16 @@ text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-seri
 .ppa-label { font-size: 12.0px; font-weight: 600; text-anchor: middle; }
 .ppa-sub { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }
 .ppa-subunit-text { font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }
-.ppa-edge-label { font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }
+.ppa-edge-label {
+  font-size: 9.5px;
+  fill: var(--ppa-ink-soft);
+  font-weight: 500;
+  text-anchor: middle;
+  paint-order: stroke fill;
+  stroke: var(--ppa-bg, #ffffff);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
 
 .ppa-compartment-band {
   fill: var(--ppa-compartment-fill);
@@ -78,118 +87,118 @@ text { font-family: 'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-seri
 <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="var(--ppa-edge)" /></marker>
 <marker id="inhibit" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><line x1="5" y1="1" x2="5" y2="9" stroke="var(--ppa-edge)" stroke-width="2" /></marker>
 </defs>
-<rect class="ppa-canvas" width="920" height="680" />
+<rect class="ppa-canvas" width="920" height="724" />
 <text class="ppa-title" x="40.0" y="36.0">Plasmodesmata Gating &amp; Intercellular Signaling</text>
 <text class="ppa-subtitle" x="40.0" y="56.0">Callose neck constriction, symplastic mobile factors, peptide receptors, and electrical waves</text>
-<rect class="ppa-compartment-band" x="18.6" y="62.0" width="758.4" height="141.9" />
-<text class="ppa-compartment-title" x="32.6" y="80.0">Plasmodesmata Neck</text>
-<rect class="ppa-compartment-band" x="14.0" y="181.9" width="767.6" height="133.6" />
-<text class="ppa-compartment-title" x="28.0" y="199.9">Symplastic Cytoplasmic Sleeve</text>
-<rect class="ppa-compartment-band" x="42.6" y="293.6" width="710.5" height="133.6" />
-<text class="ppa-compartment-title" x="56.6" y="311.6">Apoplast Plasma Membrane</text>
-<rect class="ppa-compartment-band" x="21.3" y="405.2" width="753.0" height="129.6" />
-<text class="ppa-compartment-title" x="35.3" y="423.2">Plasma Membrane Calcium</text>
-<path d="M 149.0 177.9 L 150.1 221.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="149.5" y="195.9">Pore Constriction (Restricts SEL)</text>
-<path d="M 320.5 173.8 L 220.9 221.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="270.7" y="193.9">Pore Dilation (Increases SEL)</text>
-<path d="M 261.8 255.8 L 293.8 255.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="277.8" y="251.8">Target Gene Activation</text>
-<path d="M 238.7 333.6 L 341.9 284.7" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="290.3" y="305.2">Negative Feedback Loop</text>
-<path d="M 361.3 333.6 L 189.9 177.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="275.6" y="251.8">Wall Strain Sensing</text>
-<path d="M 260.6 477.1 L 292.6 477.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="276.6" y="473.1">Depolarization -&gt; Ca2+ Wave</text>
-<path d="M 494.6 477.1 L 526.6 477.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
-<text class="ppa-edge-label" x="510.6" y="473.1">Intercellular Wavefront</text>
+<rect class="ppa-compartment-band" x="24.2" y="62.0" width="770.4" height="141.9" />
+<text class="ppa-compartment-title" x="38.2" y="80.0">Plasmodesmata Neck</text>
+<rect class="ppa-compartment-band" x="17.1" y="221.9" width="784.7" height="133.6" />
+<text class="ppa-compartment-title" x="31.1" y="239.9">Symplastic Cytoplasmic Sleeve</text>
+<rect class="ppa-compartment-band" x="44.0" y="373.6" width="730.8" height="133.6" />
+<text class="ppa-compartment-title" x="58.0" y="391.6">Apoplast Plasma Membrane</text>
+<rect class="ppa-compartment-band" x="14.0" y="525.2" width="790.8" height="129.6" />
+<text class="ppa-compartment-title" x="28.0" y="543.2">Plasma Membrane Calcium</text>
+<path d="M 217.8 177.9 L 355.2 261.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="286.5" y="215.9">Pore Constriction (Restricts SEL)</text>
+<path d="M 402.2 173.8 L 410.5 261.9" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="406.3" y="213.9">Pore Dilation (Increases SEL)</text>
+<path d="M 297.6 295.8 L 265.6 295.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="281.6" y="291.8">Target Gene Activation</text>
+<path d="M 70.0 447.4 C 3.1 447.4, 3.1 295.8, 43.1 295.8" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="-0.9" y="371.6">Negative Feedback Loop</text>
+<path d="M 311.7 447.4 C 10.2 447.4, 10.2 140.0, 50.2 140.0" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="6.2" y="293.7">Wall Strain Sensing</text>
+<path d="M 279.2 597.1 L 311.2 597.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="295.2" y="593.1">Depolarization -&gt; Ca2+ Wave</text>
+<path d="M 521.1 597.1 L 553.1 597.1" stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" marker-end="url(#arrow)"  />
+<text class="ppa-edge-label" x="537.1" y="593.1">Intercellular Wavefront</text>
 <g class="ppa-node family " id="node-CALLOSE_SYNTHASES_CALS" data-node-id="CALLOSE_SYNTHASES_CALS" data-loci="AT1G05570,AT2G36850,AT2G13680" data-bin="29.1.5">
-<rect x="44.6" y="102.0" width="206.9" height="75.9" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="148.0" y="120.0">Callose Synthases (CalS)</text>
-<text class="ppa-sub" x="148.0" y="135.4">BIN 29.1.5 CalS1 / CalS8 / CalS10 Pore</text>
-<text class="ppa-sub" x="148.0" y="147.5">Closure</text>
-<rect class="ppa-family-tile" x="130.0" y="161.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-<rect class="ppa-family-tile" x="142.0" y="161.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-<rect class="ppa-family-tile" x="154.0" y="161.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect x="50.2" y="102.0" width="210.9" height="75.9" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="155.7" y="120.0">Callose Synthases (CalS)</text>
+<text class="ppa-sub" x="155.7" y="135.4">BIN 29.1.5 CalS1 / CalS8 / CalS10 Pore</text>
+<text class="ppa-sub" x="155.7" y="147.5">Closure</text>
+<rect class="ppa-family-tile" x="137.7" y="161.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="149.7" y="161.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="161.7" y="161.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
 </g>
 <g class="ppa-node complex " id="node-GLUCANASES_PDCB" data-node-id="GLUCANASES_PDCB" data-loci="AT5G61130,AT1G19430" data-bin="29.1.6">
-<rect x="283.5" y="106.1" width="214.0" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="390.5" y="124.1">beta-1,3-Glucanases (PDCB)</text>
-<text class="ppa-sub" x="390.5" y="139.5">BIN 29.1.6 PDCB1 / PDCB2 Pore Dilation</text>
-<g class="ppa-subunit" data-locus="AT5G61130"><rect x="346.0" y="153.8" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="367.3" y="164.3">PDCB1</text></g>
-<g class="ppa-subunit" data-locus="AT1G19430"><rect x="392.5" y="153.8" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="413.8" y="164.3">PDCB2</text></g>
+<rect x="293.1" y="106.1" width="218.0" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="402.2" y="124.1">beta-1,3-Glucanases (PDCB)</text>
+<text class="ppa-sub" x="402.2" y="139.5">BIN 29.1.6 PDCB1 / PDCB2 Pore Dilation</text>
+<g class="ppa-subunit" data-locus="AT5G61130"><rect x="357.7" y="153.8" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="378.9" y="164.3">PDCB1</text></g>
+<g class="ppa-subunit" data-locus="AT1G19430"><rect x="404.2" y="153.8" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="425.4" y="164.3">PDCB2</text></g>
 </g>
 <g class="ppa-node family " id="node-PDLP_IMMUNE_SENSORS" data-node-id="PDLP_IMMUNE_SENSORS" data-loci="AT5G43980,AT1G70690" data-bin="30.1.7">
-<rect x="529.6" y="108.1" width="221.5" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="640.3" y="126.1">PDLP Receptors (PDLP1/5)</text>
-<text class="ppa-sub" x="640.3" y="141.5">BIN 30.1.7 Immune Symplastic Lockdown</text>
-<rect class="ppa-family-tile" x="628.3" y="155.8" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-<rect class="ppa-family-tile" x="640.3" y="155.8" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-</g>
-<g class="ppa-node complex " id="node-MOBILE_SHR_SCR_AXIS" data-node-id="MOBILE_SHR_SCR_AXIS" data-loci="AT4G37650,AT3G54220" data-bin="33.1.2">
-<rect x="40.0" y="221.9" width="221.8" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="150.9" y="239.9">SHORT-ROOT / SCR Axis</text>
-<text class="ppa-sub" x="150.9" y="255.3">BIN 33.1.2 Stele-to-Endodermis Migration</text>
-<g class="ppa-subunit" data-locus="AT4G37650"><rect x="119.4" y="269.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="134.1" y="280.1">SHR</text></g>
-<g class="ppa-subunit" data-locus="AT3G54220"><rect x="152.9" y="269.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="167.6" y="280.1">SCR</text></g>
+<rect x="543.2" y="108.1" width="225.5" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="655.9" y="126.1">PDLP Receptors (PDLP1/5)</text>
+<text class="ppa-sub" x="655.9" y="141.5">BIN 30.1.7 Immune Symplastic Lockdown</text>
+<rect class="ppa-family-tile" x="643.9" y="155.8" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="655.9" y="155.8" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
 </g>
 <g class="ppa-node simple " id="node-WUS_APICAL_ORGANIZER" data-node-id="WUS_APICAL_ORGANIZER" data-loci="AT2G17950" data-bin="33.1.3">
-<rect x="293.8" y="226.8" width="218.5" height="57.9" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="403.1" y="244.8">WUSCHEL Stem Cell Factor</text>
-<text class="ppa-sub" x="403.1" y="260.2">BIN 33.1.3 Organizing Center Symplastic</text>
-<text class="ppa-sub" x="403.1" y="272.3">Movement</text>
+<rect x="43.1" y="266.8" width="222.5" height="57.9" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="154.3" y="284.8">WUSCHEL Stem Cell Factor</text>
+<text class="ppa-sub" x="154.3" y="300.2">BIN 33.1.3 Organizing Center Symplastic</text>
+<text class="ppa-sub" x="154.3" y="312.3">Movement</text>
+</g>
+<g class="ppa-node complex " id="node-MOBILE_SHR_SCR_AXIS" data-node-id="MOBILE_SHR_SCR_AXIS" data-loci="AT4G37650,AT3G54220" data-bin="33.1.2">
+<rect x="297.6" y="261.9" width="225.8" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="410.5" y="279.9">SHORT-ROOT / SCR Axis</text>
+<text class="ppa-sub" x="410.5" y="295.3">BIN 33.1.2 Stele-to-Endodermis Migration</text>
+<g class="ppa-subunit" data-locus="AT4G37650"><rect x="379.0" y="309.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="393.8" y="320.1">SHR</text></g>
+<g class="ppa-subunit" data-locus="AT3G54220"><rect x="412.5" y="309.6" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="427.3" y="320.1">SCR</text></g>
 </g>
 <g class="ppa-node family " id="node-MOBILE_SMALL_RNAS" data-node-id="MOBILE_SMALL_RNAS" data-loci="AT1G31280,AT4G00885" data-bin="30.7.1">
-<rect x="544.3" y="223.9" width="211.3" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="650.0" y="241.9">Non-Cell-Autonomous sRNAs</text>
-<text class="ppa-sub" x="650.0" y="257.3">BIN 30.7.1 miR165 / miR166 / tasiRNAs</text>
-<rect class="ppa-family-tile" x="638.0" y="271.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-<rect class="ppa-family-tile" x="650.0" y="271.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect x="555.4" y="263.9" width="220.4" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="665.6" y="281.9">Non-Cell-Autonomous sRNAs</text>
+<text class="ppa-sub" x="665.6" y="297.3">BIN 30.7.1 miR165 / miR166 / tasiRNAs</text>
+<rect class="ppa-family-tile" x="653.6" y="311.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="665.6" y="311.6" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
 </g>
 <g class="ppa-node complex " id="node-CLV3_CLV1_STEM_NICHE" data-node-id="CLV3_CLV1_STEM_NICHE" data-loci="AT2G27250,AT1G75820,AT5G65700" data-bin="30.1.8">
-<rect x="68.6" y="333.6" width="197.3" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="167.2" y="351.6">CLV3 Peptide &amp; CLV1/BAM1</text>
-<text class="ppa-sub" x="167.2" y="366.9">BIN 30.1.8 Apical LRR-RLK Feedback</text>
-<g class="ppa-subunit" data-locus="AT2G27250"><rect x="109.2" y="381.2" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="127.2" y="391.7">CLV3</text></g>
-<g class="ppa-subunit" data-locus="AT1G75820"><rect x="149.2" y="381.2" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="167.2" y="391.7">CLV1</text></g>
-<g class="ppa-subunit" data-locus="AT5G65700"><rect x="189.2" y="381.2" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="207.2" y="391.7">BAM1</text></g>
+<rect x="70.0" y="413.6" width="209.7" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="174.9" y="431.6">CLV3 Peptide &amp; CLV1/BAM1</text>
+<text class="ppa-sub" x="174.9" y="446.9">BIN 30.1.8 Apical LRR-RLK Feedback</text>
+<g class="ppa-subunit" data-locus="AT2G27250"><rect x="116.9" y="461.2" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="134.9" y="471.7">CLV3</text></g>
+<g class="ppa-subunit" data-locus="AT1G75820"><rect x="156.9" y="461.2" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="174.9" y="471.7">CLV1</text></g>
+<g class="ppa-subunit" data-locus="AT5G65700"><rect x="196.9" y="461.2" width="36.0" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="214.9" y="471.7">BAM1</text></g>
 </g>
 <g class="ppa-node complex " id="node-RALF_FERONIA_EXPANSION" data-node-id="RALF_FERONIA_EXPANSION" data-loci="AT1G02900,AT3G51550" data-bin="30.1.9">
-<rect x="297.9" y="333.6" width="201.3" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="398.5" y="351.6">RALF1 &amp; FERONIA RLK</text>
-<text class="ppa-sub" x="398.5" y="366.9">BIN 30.1.9 Cell Wall Integrity Sensing</text>
-<g class="ppa-subunit" data-locus="AT1G02900"><rect x="347.5" y="381.2" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="368.8" y="391.7">RALF1</text></g>
-<g class="ppa-subunit" data-locus="AT3G51550"><rect x="394.0" y="381.2" width="55.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="421.8" y="391.7">FERONIA</text></g>
+<rect x="311.7" y="413.6" width="205.3" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="414.3" y="431.6">RALF1 &amp; FERONIA RLK</text>
+<text class="ppa-sub" x="414.3" y="446.9">BIN 30.1.9 Cell Wall Integrity Sensing</text>
+<g class="ppa-subunit" data-locus="AT1G02900"><rect x="363.3" y="461.2" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="384.6" y="471.7">RALF1</text></g>
+<g class="ppa-subunit" data-locus="AT3G51550"><rect x="409.8" y="461.2" width="55.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="437.6" y="471.7">FERONIA</text></g>
 </g>
 <g class="ppa-node complex " id="node-IDA_HAE_ABSCISSION" data-node-id="IDA_HAE_ABSCISSION" data-loci="AT1G68765,AT4G28490" data-bin="30.1.10">
-<rect x="531.2" y="333.6" width="195.8" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="629.1" y="351.6">IDA Peptide &amp; HAESA</text>
-<text class="ppa-sub" x="629.1" y="366.9">BIN 30.1.10 Floral Organ Separation</text>
-<g class="ppa-subunit" data-locus="AT1G68765"><rect x="591.1" y="381.2" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="605.9" y="391.7">IDA</text></g>
-<g class="ppa-subunit" data-locus="AT4G28490"><rect x="624.6" y="381.2" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="645.9" y="391.7">HAESA</text></g>
+<rect x="549.0" y="413.6" width="199.8" height="67.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="648.9" y="431.6">IDA Peptide &amp; HAESA</text>
+<text class="ppa-sub" x="648.9" y="446.9">BIN 30.1.10 Floral Organ Separation</text>
+<g class="ppa-subunit" data-locus="AT1G68765"><rect x="610.9" y="461.2" width="29.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="625.6" y="471.7">IDA</text></g>
+<g class="ppa-subunit" data-locus="AT4G28490"><rect x="644.4" y="461.2" width="42.5" height="14" rx="4" fill="rgba(0,0,0,0.06)" stroke="var(--ppa-hairline)" stroke-width="0.8" /><text class="ppa-subunit-text" x="665.6" y="471.7">HAESA</text></g>
 </g>
 <g class="ppa-node family " id="node-GLR_GLUTAMATE_CHANNELS" data-node-id="GLR_GLUTAMATE_CHANNELS" data-loci="AT1G42540,AT3G51480" data-bin="34.2.4">
-<rect x="47.3" y="445.2" width="213.3" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="154.0" y="463.2">Glutamate Channels (GLR3.3/6)</text>
-<text class="ppa-sub" x="154.0" y="478.6">BIN 34.2.4 Systemic Action Potentials</text>
-<rect class="ppa-family-tile" x="142.0" y="492.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
-<rect class="ppa-family-tile" x="154.0" y="492.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect x="40.0" y="565.2" width="239.2" height="63.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="159.6" y="583.2">Glutamate Channels (GLR3.3/6)</text>
+<text class="ppa-sub" x="159.6" y="598.6">BIN 34.2.4 Systemic Action Potentials</text>
+<rect class="ppa-family-tile" x="147.6" y="612.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
+<rect class="ppa-family-tile" x="159.6" y="612.9" width="10.5" height="9" rx="1.5" fill="rgba(0,0,0,0.12)" stroke="var(--ppa-hairline)" stroke-width="0.5" />
 </g>
 <g class="ppa-node simple " id="node-TPC1_VACUOLAR_CALCIUM" data-node-id="TPC1_VACUOLAR_CALCIUM" data-loci="AT4G03560" data-bin="34.2.5">
-<rect x="292.6" y="454.2" width="201.9" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="393.6" y="472.2">Two-Pore Channel 1 (TPC1)</text>
-<text class="ppa-sub" x="393.6" y="487.6">BIN 34.2.5 Slow Vacuolar Ca2+ Wave</text>
+<rect x="311.2" y="574.2" width="210.0" height="45.6" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="416.1" y="592.2">Two-Pore Channel 1 (TPC1)</text>
+<text class="ppa-sub" x="416.1" y="607.6">BIN 34.2.5 Slow Vacuolar Ca2+ Wave</text>
 </g>
 <g class="ppa-node simple " id="node-SYSTEMIC_WAVE_PROPAGATION" data-node-id="SYSTEMIC_WAVE_PROPAGATION" data-loci="AT1G42540" data-bin="30.6.1">
-<rect x="526.6" y="448.1" width="221.7" height="57.9" rx="8" ry="8" fill="var(--ppa-node-fill)" />
-<text class="ppa-label" x="637.4" y="466.1">Organ-to-Organ Relay</text>
-<text class="ppa-sub" x="637.4" y="481.4">BIN 30.6.1 Wound &amp; Touch Long-Distance</text>
-<text class="ppa-sub" x="637.4" y="493.6">Signal</text>
+<rect x="553.1" y="568.1" width="225.7" height="57.9" rx="8" ry="8" fill="var(--ppa-node-fill)" />
+<text class="ppa-label" x="666.0" y="586.1">Organ-to-Organ Relay</text>
+<text class="ppa-sub" x="666.0" y="601.4">BIN 30.6.1 Wound &amp; Touch Long-Distance</text>
+<text class="ppa-sub" x="666.0" y="613.6">Signal</text>
 </g>
-<text class="ppa-caption" x="40.0" y="654.0">Spatial regulation of symplastic connectivity and short-to-long distance cell-to-cell communication. Transport through</text>
-<text class="ppa-caption" x="40.0" y="668.9">plasmodesmata (PD) cytoplasmic sleeves is governed by dynamic callose deposition: callose synthases (CalS1/8/10) constrict the</text>
-<text class="ppa-caption" x="40.0" y="683.7">pore to restrict the size exclusion limit (SEL), while beta-1,3-glucanases (PDCB1/2) degrade callose to permit passage of mobile</text>
-<text class="ppa-caption" x="40.0" y="698.6">transcription factors (SHR, WUS) and non-cell-autonomous small RNAs. Apoplastic peptide hormones (CLV3, RALF1) signal via LRR</text>
-<text class="ppa-caption" x="40.0" y="713.4">receptor-like kinases (CLV1, FERONIA) to coordinate stem-cell niches and cell expansion, while systemic electrical and calcium</text>
-<text class="ppa-caption" x="40.0" y="728.3">waves propagate through glutamate receptor-like channels (GLR3.3/3.6) and vacuolar TPC1.</text>
+<text class="ppa-caption" x="40.0" y="698.9">Spatial regulation of symplastic connectivity and short-to-long distance cell-to-cell communication. Transport through</text>
+<text class="ppa-caption" x="40.0" y="713.7">plasmodesmata (PD) cytoplasmic sleeves is governed by dynamic callose deposition: callose synthases (CalS1/8/10) constrict the</text>
+<text class="ppa-caption" x="40.0" y="728.6">pore to restrict the size exclusion limit (SEL), while beta-1,3-glucanases (PDCB1/2) degrade callose to permit passage of mobile</text>
+<text class="ppa-caption" x="40.0" y="743.4">transcription factors (SHR, WUS) and non-cell-autonomous small RNAs. Apoplastic peptide hormones (CLV3, RALF1) signal via LRR</text>
+<text class="ppa-caption" x="40.0" y="758.3">receptor-like kinases (CLV1, FERONIA) to coordinate stem-cell niches and cell expansion, while systemic electrical and calcium</text>
+<text class="ppa-caption" x="40.0" y="773.1">waves propagate through glutamate receptor-like channels (GLR3.3/3.6) and vacuolar TPC1.</text>
 </svg>

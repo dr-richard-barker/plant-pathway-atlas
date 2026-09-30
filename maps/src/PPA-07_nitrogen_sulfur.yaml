@@ -33,7 +33,7 @@ lanes:
   - id: cysteine_methionine_branch
     compartment: chloroplast_stroma
     node_width: 220
-    nodes: [SULFITE_REDUCTASE_SIR, OASTL_CYSTEINE_SYNTH, CGS_METHIONINE_SYNTH]
+    nodes: [CGS_METHIONINE_SYNTH, OASTL_CYSTEINE_SYNTH, SULFITE_REDUCTASE_SIR]
 
 nodes:
   - id: NITRATE_TRANSPORTERS

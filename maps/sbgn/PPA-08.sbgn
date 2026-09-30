@@ -4,19 +4,19 @@
     <bbox x="-18.00" y="0.00" w="920.00" h="680.00" />
     <glyph id="comp_cytosol" class="compartment">
       <label text="Cytosol" />
-      <bbox x="14.00" y="62.00" w="775.28" h="241.30" />
+      <bbox x="14.00" y="62.00" w="823.90" h="252.66" />
     </glyph>
     <glyph id="comp_endoplasmic_reticulum" class="compartment">
       <label text="Endoplasmic Reticulum" />
-      <bbox x="48.37" y="281.30" w="706.55" h="111.65" />
+      <bbox x="45.27" y="332.66" w="761.36" h="111.65" />
     </glyph>
     <glyph id="comp_vacuole" class="compartment">
       <label text="Vacuole" />
-      <bbox x="20.55" y="370.94" w="762.18" h="111.65" />
+      <bbox x="45.81" y="462.30" w="760.28" h="127.01" />
     </glyph>
     <glyph id="PAL_PHENYLALANINE_LYASE" class="macromolecule" compartmentRef="comp_cytosol">
       <label text="Phenylalanine Ammonia-Lyase" />
-      <bbox x="49.57" y="102.00" w="205.46" h="63.65" />
+      <bbox x="40.00" y="102.00" w="232.41" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="PAL_PHENYLALANINE_LYASE" compartment="cytosol" mapmanBin="16.1.1">
           <ns0:locus>AT2G37040</ns0:locus>
@@ -27,7 +27,7 @@
     </glyph>
     <glyph id="C4H_HYDROXYLASE" class="macromolecule" compartmentRef="comp_cytosol">
       <label text="Cinnamate 4-Hydroxylase (C4H)" />
-      <bbox x="287.03" y="111.00" w="227.01" h="45.65" />
+      <bbox x="304.41" y="111.00" w="242.48" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="C4H_HYDROXYLASE" compartment="cytosol" mapmanBin="16.1.2">
           <ns0:locus>AT2G30490</ns0:locus>
@@ -36,7 +36,7 @@
     </glyph>
     <glyph id="FOUR_CL_LIGASE" class="macromolecule" compartmentRef="comp_cytosol">
       <label text="4-Coumarate-CoA Ligase (4CL)" />
-      <bbox x="546.04" y="102.00" w="207.67" h="63.65" />
+      <bbox x="578.88" y="102.00" w="233.02" h="63.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="FOUR_CL_LIGASE" compartment="cytosol" mapmanBin="16.1.3">
           <ns0:locus>AT1G51680</ns0:locus>
@@ -47,7 +47,7 @@
     </glyph>
     <glyph id="CCR_COA_REDUCTASE" class="macromolecule" compartmentRef="comp_cytosol">
       <label text="Cinnamoyl-CoA Reductase (CCR)" />
-      <bbox x="40.00" y="220.65" w="219.09" h="45.65" />
+      <bbox x="47.01" y="224.33" w="245.39" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CCR_COA_REDUCTASE" compartment="cytosol" mapmanBin="16.2.1">
           <ns0:locus>AT1G15950</ns0:locus>
@@ -56,7 +56,7 @@
     </glyph>
     <glyph id="CAD_ALCOHOL_DH" class="complex" compartmentRef="comp_cytosol">
       <label text="Cinnamyl Alcohol Dehydrogenase" />
-      <bbox x="291.09" y="209.65" w="225.04" h="67.65" />
+      <bbox x="324.41" y="205.65" w="202.92" h="83.01" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CAD_ALCOHOL_DH" compartment="cytosol" mapmanBin="16.2.2">
           <ns0:locus>AT3G19450</ns0:locus>
@@ -66,7 +66,7 @@
     </glyph>
     <glyph id="CELL_WALL_LIGNIFICATION" class="complex" compartmentRef="comp_cytosol">
       <label text="Laccases &amp; Class-III Peroxidases" />
-      <bbox x="548.12" y="209.65" w="215.16" h="67.65" />
+      <bbox x="559.33" y="213.33" w="245.56" h="67.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CELL_WALL_LIGNIFICATION" compartment="cytosol" mapmanBin="16.2.3">
           <ns0:locus>AT2G38080</ns0:locus>
@@ -76,7 +76,7 @@
     </glyph>
     <glyph id="CHALCONE_SYNTHASE_TT4" class="macromolecule" compartmentRef="comp_endoplasmic_reticulum">
       <label text="Chalcone Synthase (CHS)" />
-      <bbox x="74.37" y="321.30" w="202.38" h="45.65" />
+      <bbox x="71.27" y="372.66" w="206.38" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CHALCONE_SYNTHASE_TT4" compartment="endoplasmic_reticulum" mapmanBin="16.3.1">
           <ns0:locus>AT5G13930</ns0:locus>
@@ -85,7 +85,7 @@
     </glyph>
     <glyph id="CHALCONE_ISOMERASE_TT5" class="macromolecule" compartmentRef="comp_endoplasmic_reticulum">
       <label text="Chalcone Isomerase (CHI)" />
-      <bbox x="308.75" y="321.30" w="177.96" h="45.65" />
+      <bbox x="309.65" y="372.66" w="200.40" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="CHALCONE_ISOMERASE_TT5" compartment="endoplasmic_reticulum" mapmanBin="16.3.2">
           <ns0:locus>AT3G55120</ns0:locus>
@@ -94,7 +94,7 @@
     </glyph>
     <glyph id="FLAVANONE_3_HYDROXYLASE" class="macromolecule" compartmentRef="comp_endoplasmic_reticulum">
       <label text="Flavanone 3-Hydroxylase (F3H)" />
-      <bbox x="518.71" y="321.30" w="210.20" h="45.65" />
+      <bbox x="542.05" y="372.66" w="238.58" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="FLAVANONE_3_HYDROXYLASE" compartment="endoplasmic_reticulum" mapmanBin="16.3.3">
           <ns0:locus>AT3G51240</ns0:locus>
@@ -103,7 +103,7 @@
     </glyph>
     <glyph id="DFR_REDUCTASE_TT3" class="macromolecule" compartmentRef="comp_vacuole">
       <label text="Dihydroflavonol Reductase (DFR)" />
-      <bbox x="46.55" y="410.94" w="220.51" h="45.65" />
+      <bbox x="71.81" y="502.30" w="208.39" h="61.01" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="DFR_REDUCTASE_TT3" compartment="vacuole" mapmanBin="16.3.4">
           <ns0:locus>AT5G42800</ns0:locus>
@@ -112,7 +112,7 @@
     </glyph>
     <glyph id="ANS_LDOX_SYNTHASE" class="macromolecule" compartmentRef="comp_vacuole">
       <label text="Anthocyanidin Synthase (ANS)" />
-      <bbox x="299.06" y="410.94" w="206.31" h="45.65" />
+      <bbox x="312.20" y="509.98" w="234.16" h="45.65" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ANS_LDOX_SYNTHASE" compartment="vacuole" mapmanBin="16.3.5">
           <ns0:locus>AT4G22880</ns0:locus>
@@ -121,7 +121,7 @@
     </glyph>
     <glyph id="ANTHOCYANIN_EXPORT_TT19" class="macromolecule" compartmentRef="comp_vacuole">
       <label text="Glutathione S-Transferase (TT19)" />
-      <bbox x="537.37" y="410.94" w="219.36" h="45.65" />
+      <bbox x="578.35" y="502.30" w="201.74" h="61.01" />
       <extension>
         <ns0:annotation xmlns:ppa="https://dr-richard-barker.github.io/plant-pathway-atlas/ppa/1.0" nodeId="ANTHOCYANIN_EXPORT_TT19" compartment="vacuole" mapmanBin="16.3.6">
           <ns0:locus>AT5G17220</ns0:locus>
@@ -129,48 +129,48 @@
       </extension>
     </glyph>
     <arc id="arc_0" class="consumption" source="PAL_PHENYLALANINE_LYASE" target="C4H_HYDROXYLASE">
-      <start x="255.03" y="133.82" />
-      <end x="287.03" y="133.82" />
+      <start x="272.41" y="133.82" />
+      <end x="304.41" y="133.82" />
     </arc>
     <arc id="arc_1" class="consumption" source="C4H_HYDROXYLASE" target="FOUR_CL_LIGASE">
-      <start x="514.04" y="133.82" />
-      <end x="546.04" y="133.82" />
+      <start x="546.88" y="133.82" />
+      <end x="578.88" y="133.82" />
     </arc>
     <arc id="arc_2" class="consumption" source="FOUR_CL_LIGASE" target="CCR_COA_REDUCTASE">
-      <start x="546.04" y="156.58" />
-      <end x="259.09" y="219.47" />
+      <start x="578.88" y="158.94" />
+      <end x="292.41" y="220.70" />
     </arc>
     <arc id="arc_3" class="consumption" source="FOUR_CL_LIGASE" target="CHALCONE_SYNTHASE_TT4">
-      <start x="578.10" y="165.65" />
-      <end x="227.04" y="321.30" />
+      <start x="632.03" y="165.65" />
+      <end x="219.90" y="372.66" />
     </arc>
     <arc id="arc_4" class="consumption" source="CCR_COA_REDUCTASE" target="CAD_ALCOHOL_DH">
-      <start x="259.09" y="243.47" />
-      <end x="291.09" y="243.47" />
+      <start x="292.41" y="247.15" />
+      <end x="324.41" y="247.15" />
     </arc>
     <arc id="arc_5" class="consumption" source="CAD_ALCOHOL_DH" target="CELL_WALL_LIGNIFICATION">
-      <start x="516.12" y="243.47" />
-      <end x="548.12" y="243.47" />
+      <start x="527.33" y="247.15" />
+      <end x="559.33" y="247.15" />
     </arc>
     <arc id="arc_6" class="consumption" source="CHALCONE_SYNTHASE_TT4" target="CHALCONE_ISOMERASE_TT5">
-      <start x="276.75" y="344.12" />
-      <end x="308.75" y="344.12" />
+      <start x="277.65" y="395.48" />
+      <end x="309.65" y="395.48" />
     </arc>
     <arc id="arc_7" class="consumption" source="CHALCONE_ISOMERASE_TT5" target="FLAVANONE_3_HYDROXYLASE">
-      <start x="486.71" y="344.12" />
-      <end x="518.71" y="344.12" />
+      <start x="510.05" y="395.48" />
+      <end x="542.05" y="395.48" />
     </arc>
     <arc id="arc_8" class="consumption" source="FLAVANONE_3_HYDROXYLASE" target="DFR_REDUCTASE_TT3">
-      <start x="518.71" y="364.30" />
-      <end x="267.06" y="412.60" />
+      <start x="580.68" y="418.30" />
+      <end x="283.81" y="502.30" />
     </arc>
     <arc id="arc_9" class="consumption" source="DFR_REDUCTASE_TT3" target="ANS_LDOX_SYNTHASE">
-      <start x="267.06" y="433.77" />
-      <end x="299.06" y="433.77" />
+      <start x="280.20" y="532.81" />
+      <end x="312.20" y="532.81" />
     </arc>
     <arc id="arc_10" class="consumption" source="ANS_LDOX_SYNTHASE" target="ANTHOCYANIN_EXPORT_TT19">
-      <start x="505.37" y="433.77" />
-      <end x="537.37" y="433.77" />
+      <start x="546.35" y="532.81" />
+      <end x="578.35" y="532.81" />
     </arc>
   </map>
 </sbgn>

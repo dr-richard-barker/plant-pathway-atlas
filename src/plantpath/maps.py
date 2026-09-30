@@ -179,14 +179,23 @@ def compile_map(spec: MapSpec) -> LaidOutMap:
 
         rows_by_lane.append(current_row)
 
-    # 2. Place rows in vertical progression
+    # 2. Place rows in vertical progression with dynamic inter-compartment gutters
+    gutters_y: list[float] = []
+    for i in range(len(spec.lanes) - 1):
+        c1 = spec.lanes[i].get("compartment", "general")
+        c2 = spec.lanes[i + 1].get("compartment", "general")
+        if c1 == c2:
+            gutters_y.append(MIN_GUTTER_Y + 12.0)
+        else:
+            gutters_y.append(COMPARTMENT_PAD * 2.0 + 32.0)
+
     top_offset = 72.0  # Room for title and subtitle
     grid_box = place_rows(
         rows_by_lane,
         origin_x=40.0,
         origin_y=top_offset + 30.0,
         gutter_x=MIN_GUTTER_X,
-        gutter_y=MIN_GUTTER_Y + 16.0,
+        gutter_y=gutters_y if gutters_y else (MIN_GUTTER_Y + 16.0),
         align="center",
     )
 

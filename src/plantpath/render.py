@@ -133,7 +133,16 @@ def _stylesheet() -> str:
         .ppa-label {{ font-size: {NODE_SIZE}px; font-weight: 600; text-anchor: middle; }}
         .ppa-sub {{ font-size: {SUB_SIZE}px; fill: var(--ppa-ink-soft); font-weight: 400; text-anchor: middle; }}
         .ppa-subunit-text {{ font-size: 8.5px; font-weight: 600; fill: var(--ppa-ink); text-anchor: middle; }}
-        .ppa-edge-label {{ font-size: 9.5px; fill: var(--ppa-ink-soft); font-weight: 500; text-anchor: middle; }}
+        .ppa-edge-label {{
+          font-size: 9.5px;
+          fill: var(--ppa-ink-soft);
+          font-weight: 500;
+          text-anchor: middle;
+          paint-order: stroke fill;
+          stroke: var(--ppa-bg, #ffffff);
+          stroke-width: 3px;
+          stroke-linejoin: round;
+        }}
 
         .ppa-compartment-band {{
           fill: var(--ppa-compartment-fill);
@@ -239,19 +248,51 @@ def render_svg(
 
     # Directed Edges
     for e in edges:
-        sx, sy = e["start"]
-        ex, ey = e["end"]
+        fn = laid_out_map.node_by_id(e["from"])
+        tn = laid_out_map.node_by_id(e["to"])
         e_class = e.get("class", "flux")
         marker = 'marker-end="url(#inhibit)"' if e_class == "inhibition" else 'marker-end="url(#arrow)"'
         dash = 'stroke-dasharray="4 3"' if e_class == "catalysis" else ""
+
+        path_d = ""
+        mx, my = 0.0, 0.0
+
+        if fn and tn:
+            fa, ta = fn.box, tn.box
+            dx = ta.cx - fa.cx
+            dy = ta.cy - fa.cy
+
+            # Same lane non-adjacent arch
+            if fn.lane == tn.lane and abs(fa.cy - ta.cy) < 22.0 and abs(dx) > 1.25 * fa.w:
+                arc_y = min(fa.y, ta.y) - 24.0
+                path_d = f"M {fa.cx:.1f} {fa.y:.1f} C {fa.cx:.1f} {arc_y:.1f}, {ta.cx:.1f} {arc_y:.1f}, {ta.cx:.1f} {ta.y:.1f}"
+                mx, my = (fa.cx + ta.cx) / 2.0, arc_y - 4.0
+
+            # Upward flow / feedback loop
+            elif ta.cy < fa.cy - 35.0:
+                left_space = min(fa.x, ta.x)
+                right_space = canvas.w - max(fa.x2, ta.x2)
+                if left_space <= right_space:
+                    loop_x = min(fa.x, ta.x) - 40.0
+                    path_d = f"M {fa.x:.1f} {fa.cy:.1f} C {loop_x:.1f} {fa.cy:.1f}, {loop_x:.1f} {ta.cy:.1f}, {ta.x:.1f} {ta.cy:.1f}"
+                    mx, my = loop_x - 4.0, (fa.cy + ta.cy) / 2.0
+                else:
+                    loop_x = max(fa.x2, ta.x2) + 40.0
+                    path_d = f"M {fa.x2:.1f} {fa.cy:.1f} C {loop_x:.1f} {fa.cy:.1f}, {loop_x:.1f} {ta.cy:.1f}, {ta.x2:.1f} {ta.cy:.1f}"
+                    mx, my = loop_x + 4.0, (fa.cy + ta.cy) / 2.0
+
+        if not path_d:
+            sx, sy = e["start"]
+            ex, ey = e["end"]
+            path_d = f"M {sx:.1f} {sy:.1f} L {ex:.1f} {ey:.1f}"
+            mx, my = (sx + ex) / 2.0, (sy + ey) / 2.0 - 4.0
+
         parts.append(
-            f'<path d="M {sx:.1f} {sy:.1f} L {ex:.1f} {ey:.1f}" '
+            f'<path d="{path_d}" '
             f'stroke="var(--ppa-edge)" stroke-width="1.6" fill="none" '
             f"{marker} {dash} />"
         )
         if e.get("label"):
-            mx = (sx + ex) / 2.0
-            my = (sy + ey) / 2.0 - 4.0
             parts.append(f'<text class="ppa-edge-label" x="{mx:.1f}" y="{my:.1f}">{esc(e["label"])}</text>')
 
     # Nodes

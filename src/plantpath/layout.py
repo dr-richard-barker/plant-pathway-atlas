@@ -23,7 +23,7 @@ FONT_FAMILY = "DejaVu Sans"
 SVG_FONT_STACK = "'DejaVu Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 
 # Geometry constants (SVG px user units at 1:1)
-PAD_X = 12.0
+PAD_X = 14.0
 PAD_Y = 9.0
 LINE_SPACING = 1.28
 MIN_GUTTER_X = 32.0
@@ -182,7 +182,7 @@ def size_node(
     sub_font_size: float = 0.0,
     preferred_width: float = 190.0,
     min_width: float = 96.0,
-    weight: str = "normal",
+    weight: str = "bold",
     subunits: Sequence[dict] | None = None,
     n_family_loci: int = 0,
 ) -> tuple[Box, list[str], list[str]]:
@@ -329,12 +329,12 @@ def edge_anchors(a: Box, b: Box) -> tuple[tuple[float, float], tuple[float, floa
     dy = b.cy - a.cy
     if abs(dx) * a.h >= abs(dy) * a.w:  # horizontal departure
         sx = a.x2 if dx > 0 else a.x
-        sy = a.cy + (dy / dx * (sx - a.cx) if dx else 0.0)
+        sy = a.cy if abs(dy) < 14.0 else a.cy + (dy / dx * (sx - a.cx) if dx else 0.0)
         ex = b.x if dx > 0 else b.x2
-        ey = b.cy + (dy / dx * (ex - b.cx) if dx else 0.0)
+        ey = b.cy if abs(dy) < 14.0 else b.cy + (dy / dx * (ex - b.cx) if dx else 0.0)
     else:  # vertical departure
         sy = a.y2 if dy > 0 else a.y
-        sx = a.cx + (dx / dy * (sy - a.cy) if dy else 0.0)
+        sx = a.cx if abs(dx) < 14.0 else a.cx + (dx / dy * (sy - a.cy) if dy else 0.0)
         ey = b.y if dy > 0 else b.y2
-        ex = b.cx + (dx / dy * (ey - b.cy) if dy else 0.0)
+        ex = b.cx if abs(dx) < 14.0 else b.cx + (dx / dy * (ey - b.cy) if dy else 0.0)
     return (sx, sy), (ex, ey)

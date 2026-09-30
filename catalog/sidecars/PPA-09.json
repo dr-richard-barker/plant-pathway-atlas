@@ -227,11 +227,11 @@
       "from": "AUXIN_BIOSYNTHESIS",
       "to": "PIN_POLAR_TRANSPORTERS",
       "start": [
-        259.9855,
+        278.51093750000007,
         135.824
       ],
       "end": [
-        291.9855,
+        310.51093750000007,
         135.824
       ],
       "class": "flux",
@@ -241,11 +241,11 @@
       "from": "PIN_POLAR_TRANSPORTERS",
       "to": "AUXIN_RECEPTOR_TIR1",
       "start": [
-        477.84000000000003,
+        502.82843750000006,
         135.824
       ],
       "end": [
-        509.84000000000003,
+        534.8284375000001,
         135.824
       ],
       "class": "flux",
@@ -255,12 +255,12 @@
       "from": "ABA_BIOSYNTHESIS_NCED3",
       "to": "PYR_PYL_RECEPTORS",
       "start": [
-        244.4575,
-        247.472
+        264.93668750000006,
+        243.472
       ],
       "end": [
-        276.4575,
-        247.472
+        296.93668750000006,
+        243.472
       ],
       "class": "flux",
       "label": "(+)-Abscisic Acid"
@@ -269,12 +269,12 @@
       "from": "PYR_PYL_RECEPTORS",
       "to": "SNRK2_KINASE_OST1",
       "start": [
-        461.394,
-        247.472
+        492.9010625000001,
+        243.472
       ],
       "end": [
-        493.394,
-        247.47199999999998
+        524.9010625000001,
+        243.47199999999998
       ],
       "class": "flux",
       "label": "Inhibits PP2C -> Activates Kinase"
@@ -283,12 +283,12 @@
       "from": "JA_BIOSYNTHESIS_LOX_AOS",
       "to": "COI1_JAZ_DEREPRESSION",
       "start": [
-        244.32906250000002,
-        359.12
+        244.52750000000003,
+        351.12
       ],
       "end": [
-        276.3290625,
-        359.12
+        276.52750000000003,
+        351.12
       ],
       "class": "flux",
       "label": "(+)-7-iso-JA-Ile"
@@ -297,12 +297,12 @@
       "from": "COI1_JAZ_DEREPRESSION",
       "to": "MYC2_TRANSCRIPTION",
       "start": [
-        492.0909375,
-        359.12
+        521.54375,
+        351.12
       ],
       "end": [
-        524.0909375,
-        359.12
+        553.54375,
+        351.12
       ],
       "class": "flux",
       "label": "26S JAZ Degradation"
@@ -311,12 +311,12 @@
       "from": "GA_GID1_DELLA_CASCADE",
       "to": "NUCLEAR_TRANSCRIPTION_FACTORS",
       "start": [
-        234.50424999999998,
-        470.768
+        262.118,
+        502.768
       ],
       "end": [
-        522.91025,
-        470.768
+        554.5240000000001,
+        502.768
       ],
       "class": "flux",
       "label": "DELLA Destruction"
@@ -325,12 +325,12 @@
       "from": "ETHYLENE_ETR1_EIN2",
       "to": "NUCLEAR_TRANSCRIPTION_FACTORS",
       "start": [
-        490.91025,
-        470.768
+        522.524,
+        502.768
       ],
       "end": [
-        522.91025,
-        470.768
+        554.5240000000001,
+        502.768
       ],
       "class": "flux",
       "label": "EIN2 C-term Cleavage"

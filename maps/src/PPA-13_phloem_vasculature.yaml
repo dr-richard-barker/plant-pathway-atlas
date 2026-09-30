@@ -30,12 +30,12 @@ lanes:
   - id: sink_root_apoplastic_unloading
     compartment: sink_apoplast_root
     node_width: 220
-    nodes: [CWINV_CELL_WALL_INVERTASE, STP_HEXOSE_TRANSPORTERS, AHA2_SINK_PROTON_PUMP]
+    nodes: [CWINV_CELL_WALL_INVERTASE, STP_HEXOSE_TRANSPORTERS]
 
   - id: sink_metabolic_utilization
     compartment: sink_cytosol_root
     node_width: 220
-    nodes: [SUS_SUCROSE_SYNTHASE, SINK_GLYCOLYSIS_ENTRY, ROOT_MITOCHONDRIAL_RESP]
+    nodes: [AHA2_SINK_PROTON_PUMP, ROOT_MITOCHONDRIAL_RESP, SINK_GLYCOLYSIS_ENTRY, SUS_SUCROSE_SYNTHASE]
 
 nodes:
   - id: SWEET_EFFLUX_UNIPORTERS
@@ -162,7 +162,7 @@ edges:
     class: flux
     label: "Proton Motive Force"
   - from: POLYMER_TRAPPING_GOLS
-    to: SUC2_PROTON_SYMPORTER
+    to: PHLOEM_SAP_TRANSLOCATION
     class: flux
     label: "Raffinose Oligosaccharides"
   - from: SUC2_PROTON_SYMPORTER

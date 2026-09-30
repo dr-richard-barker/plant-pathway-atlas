@@ -6,39 +6,25 @@
   "species_anchor": "arabidopsis_thaliana",
   "nodes": [
     {
-      "id": "PLASMA_MEMBRANE_PIPS",
-      "label": "Plasma Membrane Aquaporins",
-      "kind": "family",
+      "id": "PM_H_ATPASE_AHA",
+      "label": "PM H+-ATPase (AHA)",
+      "kind": "complex",
       "compartment": "plasma_membrane",
-      "mapman_bin": "34.1.1",
+      "mapman_bin": "34.3.1",
       "loci": [
-        "AT3G61430",
-        "AT3G53420"
+        "AT2G18960",
+        "AT4G30190"
       ],
-      "subunits": []
-    },
-    {
-      "id": "TONOPLAST_TIPS",
-      "label": "Tonoplast Aquaporins (TIPs)",
-      "kind": "family",
-      "compartment": "plasma_membrane",
-      "mapman_bin": "34.1.2",
-      "loci": [
-        "AT2G36830",
-        "AT3G26520"
-      ],
-      "subunits": []
-    },
-    {
-      "id": "AQUAPORIN_GATING",
-      "label": "Phosphorylation Gating",
-      "kind": "simple",
-      "compartment": "plasma_membrane",
-      "mapman_bin": "34.1.3",
-      "loci": [
-        "AT2G38080"
-      ],
-      "subunits": []
+      "subunits": [
+        {
+          "symbol": "AHA1",
+          "locus": "AT2G18960"
+        },
+        {
+          "symbol": "AHA2",
+          "locus": "AT4G30190"
+        }
+      ]
     },
     {
       "id": "INWARD_K_CHANNELS",
@@ -73,6 +59,29 @@
       "subunits": []
     },
     {
+      "id": "PLASMA_MEMBRANE_PIPS",
+      "label": "Plasma Membrane Aquaporins",
+      "kind": "family",
+      "compartment": "plasma_membrane",
+      "mapman_bin": "34.1.1",
+      "loci": [
+        "AT3G61430",
+        "AT3G53420"
+      ],
+      "subunits": []
+    },
+    {
+      "id": "AQUAPORIN_GATING",
+      "label": "Phosphorylation Gating",
+      "kind": "simple",
+      "compartment": "plasma_membrane",
+      "mapman_bin": "34.1.3",
+      "loci": [
+        "AT2G38080"
+      ],
+      "subunits": []
+    },
+    {
       "id": "CALCIUM_PERMEABLE_CNGC",
       "label": "Cyclic Nucleotide Channels",
       "kind": "family",
@@ -85,31 +94,21 @@
       "subunits": []
     },
     {
-      "id": "PM_H_ATPASE_AHA",
-      "label": "PM H+-ATPase (AHA)",
-      "kind": "complex",
+      "id": "SLAC1_ANION_CHANNEL",
+      "label": "Slow Anion Channel (SLAC1)",
+      "kind": "simple",
       "compartment": "plasma_membrane",
-      "mapman_bin": "34.3.1",
+      "mapman_bin": "34.4.1",
       "loci": [
-        "AT2G18960",
-        "AT4G30190"
+        "AT1G12480"
       ],
-      "subunits": [
-        {
-          "symbol": "AHA1",
-          "locus": "AT2G18960"
-        },
-        {
-          "symbol": "AHA2",
-          "locus": "AT4G30190"
-        }
-      ]
+      "subunits": []
     },
     {
       "id": "VACUOLAR_V_ATPASE",
       "label": "Vacuolar V-ATPase Complex",
       "kind": "complex",
-      "compartment": "plasma_membrane",
+      "compartment": "vacuolar_membrane",
       "mapman_bin": "34.3.2",
       "loci": [
         "AT1G78900",
@@ -130,7 +129,7 @@
       "id": "TONOPLAST_PYROPHOSPHATASE",
       "label": "H+-PPase (AVP1)",
       "kind": "simple",
-      "compartment": "plasma_membrane",
+      "compartment": "vacuolar_membrane",
       "mapman_bin": "34.3.3",
       "loci": [
         "AT1G15690"
@@ -138,13 +137,14 @@
       "subunits": []
     },
     {
-      "id": "SLAC1_ANION_CHANNEL",
-      "label": "Slow Anion Channel (SLAC1)",
-      "kind": "simple",
+      "id": "TONOPLAST_TIPS",
+      "label": "Tonoplast Aquaporins (TIPs)",
+      "kind": "family",
       "compartment": "vacuolar_membrane",
-      "mapman_bin": "34.4.1",
+      "mapman_bin": "34.1.2",
       "loci": [
-        "AT1G12480"
+        "AT2G36830",
+        "AT3G26520"
       ],
       "subunits": []
     },
@@ -178,12 +178,12 @@
       "from": "PM_H_ATPASE_AHA",
       "to": "INWARD_K_CHANNELS",
       "start": [
-        161.9279233662941,
-        321.296
+        353.61856250000005,
+        135.824
       ],
       "end": [
-        165.29345163370598,
-        277.296
+        385.61856250000005,
+        135.824
       ],
       "class": "flux",
       "label": "Hyperpolarization (-120mV)"
@@ -192,12 +192,12 @@
       "from": "INWARD_K_CHANNELS",
       "to": "PLASMA_MEMBRANE_PIPS",
       "start": [
-        169.79962831971406,
-        209.648
+        394.37359015788286,
+        169.648
       ],
       "end": [
-        172.29596660221804,
-        165.648
+        261.72372929918225,
+        209.648
       ],
       "class": "flux",
       "label": "K+ Osmotic Influx -> H2O Influx"
@@ -206,12 +206,12 @@
       "from": "CALCIUM_PERMEABLE_CNGC",
       "to": "SLAC1_ANION_CHANNEL",
       "start": [
-        574.5781569933484,
-        275.296
+        752.3300000000002,
+        241.472
       ],
       "end": [
-        193.7301864719652,
-        441.94399999999996
+        784.3300000000002,
+        241.472
       ],
       "class": "flux",
       "label": "Ca2+ Elevation Activation"
@@ -220,12 +220,12 @@
       "from": "SLAC1_ANION_CHANNEL",
       "to": "OUTWARD_K_CHANNELS",
       "start": [
-        169.09914637634665,
-        441.94399999999996
+        868.2140226317584,
+        218.648
       ],
       "end": [
-        380.9606661236535,
-        266.296
+        802.2636023682418,
+        158.648
       ],
       "class": "flux",
       "label": "Depolarization -> K+ Efflux"
@@ -234,12 +234,12 @@
       "from": "VACUOLAR_V_ATPASE",
       "to": "ALMT_MALATE_TRANSPORTER",
       "start": [
-        396.8423419305414,
-        388.94399999999996
+        307.21646930372555,
+        424.94399999999996
       ],
       "end": [
-        390.9964350284547,
-        432.94399999999996
+        348.6631128748296,
+        464.94399999999996
       ],
       "class": "flux",
       "label": "Tonoplast pH Gradient"
@@ -248,12 +248,12 @@
       "from": "TONOPLAST_PYROPHOSPHATASE",
       "to": "TONOPLAST_TIPS",
       "start": [
-        623.9137328329477,
-        332.296
+        632.0024375,
+        391.12
       ],
       "end": [
-        442.9912979900225,
-        165.648
+        664.0024375,
+        391.12
       ],
       "class": "flux",
       "label": "Vacuolar Osmolyte Packing"

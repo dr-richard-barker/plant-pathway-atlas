@@ -88,6 +88,15 @@
       "subunits": []
     },
     {
+      "id": "HEXOSE_P_POOL",
+      "label": "Hexose Phosphates",
+      "kind": "metabolite",
+      "compartment": "cytosol",
+      "mapman_bin": "",
+      "loci": [],
+      "subunits": []
+    },
+    {
       "id": "SUCROSE_METABOLISM",
       "label": "Sucrose Metabolism",
       "kind": "complex",
@@ -112,15 +121,6 @@
           "locus": "AT3G13790"
         }
       ]
-    },
-    {
-      "id": "HEXOSE_P_POOL",
-      "label": "Hexose Phosphates",
-      "kind": "metabolite",
-      "compartment": "cytosol",
-      "mapman_bin": "",
-      "loci": [],
-      "subunits": []
     },
     {
       "id": "GLYCOLYSIS_UPPER",
@@ -291,11 +291,11 @@
       "from": "CALVIN_CYCLE",
       "to": "STARCH_TURNOVER",
       "start": [
-        257.859015625,
+        253.629078125,
         135.824
       ],
       "end": [
-        289.859015625,
+        285.629078125,
         135.824
       ],
       "class": "flux",
@@ -305,12 +305,12 @@
       "from": "CALVIN_CYCLE",
       "to": "TRIOSE_P_EXPORT",
       "start": [
-        173.69223344797936,
+        164.2711875,
         169.648
       ],
       "end": [
-        178.88118107803095,
-        224.648
+        176.97018749999995,
+        264.64799999999997
       ],
       "class": "flux",
       "label": "Triose-P"
@@ -319,12 +319,12 @@
       "from": "TRIOSE_P_EXPORT",
       "to": "HEXOSE_P_POOL",
       "start": [
-        260.5585,
-        247.472
+        262.131125,
+        287.472
       ],
       "end": [
-        499.4375,
-        247.472
+        294.131125,
+        287.472
       ],
       "class": "flux",
       "label": ""
@@ -333,12 +333,12 @@
       "from": "HEXOSE_P_POOL",
       "to": "SUCROSE_METABOLISM",
       "start": [
-        499.4375,
-        247.472
+        453.05674999999997,
+        287.472
       ],
       "end": [
-        467.4375,
-        247.47199999999998
+        485.05674999999997,
+        287.472
       ],
       "class": "flux",
       "label": ""
@@ -347,12 +347,12 @@
       "from": "HEXOSE_P_POOL",
       "to": "GLYCOLYSIS_UPPER",
       "start": [
-        499.4375,
-        266.88237371100126
+        334.3221923578346,
+        310.296
       ],
       "end": [
-        269.146,
-        331.05614477070395
+        246.56987014216543,
+        361.296
       ],
       "class": "flux",
       "label": ""
@@ -361,12 +361,12 @@
       "from": "GLYCOLYSIS_UPPER",
       "to": "GLYCOLYSIS_LOWER",
       "start": [
-        269.146,
-        348.12
+        276.78031250000004,
+        384.12
       ],
       "end": [
-        301.146,
-        348.12
+        308.78031250000004,
+        384.12
       ],
       "class": "flux",
       "label": ""
@@ -375,12 +375,12 @@
       "from": "GLYCOLYSIS_LOWER",
       "to": "PYRUVATE_POOL",
       "start": [
-        427.452,
-        348.12
+        447.7990625,
+        384.12
       ],
       "end": [
-        459.452,
-        348.12
+        479.7990625,
+        384.12
       ],
       "class": "flux",
       "label": ""
@@ -389,12 +389,12 @@
       "from": "PYRUVATE_POOL",
       "to": "PYRUVATE_DH",
       "start": [
-        459.452,
-        366.2880854268677
+        482.3084477205506,
+        406.944
       ],
       "end": [
-        241.97556250000002,
-        425.20302607893444
+        237.36139017262957,
+        490.944
       ],
       "class": "flux",
       "label": ""
@@ -403,12 +403,12 @@
       "from": "PYRUVATE_DH",
       "to": "TCA_CYCLE",
       "start": [
-        241.97556250000002,
-        448.76800000000003
+        237.45875,
+        524.768
       ],
       "end": [
-        273.9755625,
-        448.76800000000003
+        269.45875,
+        524.768
       ],
       "class": "flux",
       "label": "Acetyl-CoA"
@@ -417,12 +417,12 @@
       "from": "TCA_CYCLE",
       "to": "AMINO_ACID_PRECURSORS",
       "start": [
-        429.91931250000005,
-        448.76800000000003
+        446.51187500000003,
+        524.768
       ],
       "end": [
-        461.91931250000005,
-        448.76800000000003
+        478.51187500000003,
+        524.768
       ],
       "class": "flux",
       "label": ""
@@ -431,12 +431,12 @@
       "from": "TCA_CYCLE",
       "to": "RESPIRATORY_ETC",
       "start": [
-        285.69773201490403,
-        482.592
+        315.15750723036757,
+        558.592
       ],
       "end": [
-        199.516705485096,
-        526.592
+        199.07268026963243,
+        650.2719999999999
       ],
       "class": "flux",
       "label": "NADH / FADH2"
@@ -445,12 +445,12 @@
       "from": "TCA_CYCLE",
       "to": "AOX_BYPASS",
       "start": [
-        351.485,
-        482.592
+        362.1066492267524,
+        558.592
       ],
       "end": [
-        350.733046875,
-        537.592
+        374.61785000439346,
+        661.2719999999999
       ],
       "class": "flux",
       "label": "Ubiquinol"
